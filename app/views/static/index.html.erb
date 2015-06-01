@@ -1,0 +1,254 @@
+<div1 xmlns="http://www.tei-c.org/ns/1.0" type="html">
+
+  <p>This project explores multigenerational black and white family networks in early Washington, D.C., by collecting, digitizing, making accessible, and analyzing case files from the Circuit Court for the District of Columbia between 1808 to 1862.</p>
+
+  <!-- <img class="map" src="files/template/dc_800.jpg"> -->
+  <%= image_tag "dc_800.jpg", :class=>"map" %>
+  <div id="browse">  
+  <hr class="clear-browse">
+
+    <h2>Browse Records</h2>
+    <h3><a href="cases.html" style="text-decoration:none;">Browse by Case File</a></h3>
+    <hr class="clear-browse">
+
+    <h3>Browse by Document Type</h3>
+
+    <span class="custom-dropdown custom-dropdown">
+      <select class="custom-dropdown__select custom-dropdown__select" id="document">
+        <option value="./home.html">Select Document</option>
+        <!-- <option value="./search/?q=subtype:Affidavit&amp;sort=title">Affidavits</option>
+        <option value="./search/?q=subtype:Agreement&amp;sort=title">Agreements</option>
+        <option value="./search/?q=subtype:Answer&amp;sort=title">Answers</option>
+        <option value="./search/?q=subtype:Argument&amp;sort=title">Argument</option>
+        <option value="./search/?q=subtype:%22Bill%20of%20Exceptions%22&amp;sort=title">Bills of Exceptions</option>
+        <option value="./search/?q=subtype:Bond&amp;sort=title">Bonds</option>
+        <option value="./search/?q=subtype:Certificate&amp;sort=title">Certificates</option>
+        <option value="./search/?q=subtype:Complaint&amp;sort=title">Complaints</option>
+        <option value="./search/?q=subtype:Correspondence&amp;sort=title">Correspondence</option>
+        <option value="./search/?q=subtype:%22Court%20Report%22&amp;sort=title">Court Reports</option>
+        <option value="./search/?q=subtype:Demurrer&amp;sort=title">Demurrers</option>
+        <option value="./search/?q=subtype:Deposition&amp;sort=title">Depositions</option>
+        <option value="./search/?q=subtype:Disclaimer&amp;sort=title">Disclaimers</option>
+        <option value="./search/?q=subtype:Exhibit&amp;sort=title">Exhibits</option>
+        <option value="./search/?q=subtype:Injunction&amp;sort=title">Injunctions</option>
+        <option value="./search/?q=subtype:Interrogatories&amp;sort=title">Interrogatories</option>
+        <option value="./search/?q=subtype:%22Jury%20Instructions%22&amp;sort=title">Jury Instructions</option>
+        <option value="./search/?q=subtype:%22Minute%20Book%22&amp;sort=title">Minute Book Entries</option>
+        <option value="./search/?q=subtype:Motion&amp;sort=title">Motions</option>
+        <option value="./search/?q=subtype:Notes&amp;sort=title">Notes</option>
+        <option value="./search/?q=subtype:Order&amp;sort=title">Orders</option>
+        <option value="./search/?q=subtype:Petition&amp;sort=title">Petitions</option>
+        <option value="./search/?q=subtype:Replication&amp;sort=title">Replications</option>
+        <option value="./search/?q=subtype:%22Statement%20of%20Facts%22&amp;sort=title">Statements of Facts</option>
+        <option value="./search/?q=subtype:Summons&amp;sort=title">Summonses</option>
+        <option value="./search/?q=subtype:Testimony&amp;sort=title">Testimony</option>
+        <option value="./search/?q=subtype:Verdict&amp;sort=title">Verdicts</option>
+        <option value="./search/?q=subtype:Warrant&amp;sort=title">Warrants</option>
+        <option value="./search/?q=subtype:%22Witness%20List%22&amp;sort=title">Witness Lists</option>
+        <option value="./search/?q=subtype:Writ&amp;sort=title">Writs</option> -->
+      </select>
+    </span>
+    <script type="text/javascript">
+     var urlmenu = document.getElementById( 'document' );
+     urlmenu.onchange = function() {
+      window.open( this.options[ this.selectedIndex ].value,'_self',false );
+    };
+  </script>
+
+  <hr class="clear-browse">
+
+  <h3>Browse by Term</h3>
+
+  <span class="custom-dropdown custom-dropdown">
+    <select class="custom-dropdown__select custom-dropdown__select" id="term">
+      <option value="./home.html">Select Term</option>
+      <!-- <option value="./search/?q=term:%22December%201808%22&amp;sort=title">1808 December</option>
+      <option value="./search/?q=term:%22June%201809%22&amp;sort=title">1809 June</option>
+      <option value="./search/?q=term:%22December%201809%22&amp;sort=title">1809 December</option>
+      <option value="./search/?q=term:%22June%201810%22&amp;sort=title">1810 June</option>
+      <option value="./search/?q=term:%22December%201810%22&amp;sort=title">1810 December</option>
+      <option value="./search/?q=term:%22June%201811%22&amp;sort=title">1811 June</option>
+      <option value="./search/?q=term:%22December%201811%22&amp;sort=title">1811 December</option>
+      <option value="./search/?q=term:%22June%201812%22&amp;sort=title">1812 June</option>
+      <option value="./search/?q=term:%22June%201813%22&amp;sort=title">1813 June</option>
+      <option value="./search/?q=term:%22June%201814%22&amp;sort=title">1814 June</option>
+      <option value="./search/?q=term:%22December%201814%22&amp;sort=title">1814 December</option>
+      <option value="./search/?q=term:%22June%201815%22&amp;sort=title">1815 June</option>
+      <option value="./search/?q=term:%22December%201815%22&amp;sort=title">1815 December</option>
+      <option value="./search/?q=term:%22June%201816%22&amp;sort=title">1816 June</option>
+      <option value="./search/?q=term:%22December%201816%22&amp;sort=title">1816 December</option>
+      <option value="./search/?q=term:%22June%201817%22&amp;sort=title">1817 June</option>
+      <option value="./search/?q=term:%22December%201817%22&amp;sort=title">1817 December</option>
+      <option value="./search/?q=term:%22December%201818%22&amp;sort=title">1818 December</option>
+      <option value="./search/?q=term:%22December%201819%22&amp;sort=title">1819 December</option>
+      <option value="./search/?q=term:%22April%201821%22&amp;sort=title">1821 April</option>
+      <option value="./search/?q=term:%22October%201822%22&amp;sort=title">1822 October</option>
+      <option value="./search/?q=term:%22April%201823%22&amp;sort=title">1823 April</option>
+      <option value="./search/?q=term:%22October%201823%22&amp;sort=title">1823 October</option>
+      <option value="./search/?q=term:%22April%201824%22&amp;sort=title">1824 April</option>
+      <option value="./search/?q=term:%22December%201824%22&amp;sort=title">1824 December</option>
+      <option value="./search/?q=term:%22May%201825%22&amp;sort=title">1825 May</option>
+      <option value="./search/?q=term:%22December%201825%22&amp;sort=title">1825 December</option>
+      <option value="./search/?q=term:%22May%201826%22&amp;sort=title">1826 May</option>
+      <option value="./search/?q=term:%22December%201826%22&amp;sort=title">1826 December</option> 
+      <option value="./search/?q=term:%22May%201827%22&amp;sort=title">1827 May</option>
+      <option value="./search/?q=term:%22December%201827%22&amp;sort=title">1827 December</option>
+      <option value="./search/?q=term:%22May%201828%22&amp;sort=title">1828 May</option>
+      <option value="./search/?q=term:%22December%201828%22&amp;sort=title">1828 December</option>
+      <option value="./search/?q=term:%22May%201829%22&amp;sort=title">1829 May</option>
+      <option value="./search/?q=term:%22December%201829%22&amp;sort=title">1829 December</option>  
+
+      <option value="./search/?q=term:%22May%201831%22&amp;sort=title">1831 May</option> 
+      <option value="./search/?q=term:%22December%201831%22&amp;sort=title">1831 December</option>
+      <option value="./search/?q=term:%22May%201832%22&amp;sort=title">1832 May</option>  
+      <option value="./search/?q=term:%22November%201832%22&amp;sort=title">1832 November</option>      
+      <option value="./search/?q=term:%22March%201833%22&amp;sort=title">1833 March</option>
+      <option value="./search/?q=term:%22November%201833%22&amp;sort=title">1833 November</option>
+      <option value="./search/?q=term:%22March%201834%22&amp;sort=title">1834 March</option>
+      <option value="./search/?q=term:%22November%201834%22&amp;sort=title">1834 November</option>
+      <option value="./search/?q=term:%22March%201835%22&amp;sort=title">1835 March</option>
+      <option value="./search/?q=term:%22November%201835%22&amp;sort=title">1835 November</option>      
+      <option value="./search/?q=term:%22March%201836%22&amp;sort=title">1836 March</option>
+      <option value="./search/?q=term:%22November%201836%22&amp;sort=title">1836 November</option>
+      <option value="./search/?q=term:%22March%201837%22&amp;sort=title">1837 March</option>
+      <option value="./search/?q=term:%22November%201835%22&amp;sort=title">1837 November</option>  
+      <option value="./search/?q=term:%22March%201838%22&amp;sort=title">1838 March</option>  
+      <option value="./search/?q=term:%22November%201838%22&amp;sort=title">1838 November</option>     
+      <option value="./search/?q=term:%22March%201839%22&amp;sort=title">1839 March</option>
+      <option value="./search/?q=term:%22November%201839%22&amp;sort=title">1839 November</option>                    
+      <option value="./search/?q=term:%22March%201840%22&amp;sort=title">1840 March</option> 
+      <option value="./search/?q=term:%22November%201840%22&amp;sort=title">1840 November</option>
+      <option value="./search/?q=term:%22March%201841%22&amp;sort=title">1841 March</option> 
+      <option value="./search/?q=term:%22November%201841%22&amp;sort=title">1841 November</option>  
+      <option value="./search/?q=term:%22March%201842%22&amp;sort=title">1842 March</option>      
+      <option value="./search/?q=term:%22November%201842%22&amp;sort=title">1842 November</option>
+      <option value="./search/?q=term:%22March%201843%22&amp;sort=title">1843 March</option>        
+      <option value="./search/?q=term:%22November%201843%22&amp;sort=title">1843 November</option>
+      <option value="./search/?q=term:%22March%201844%22&amp;sort=title">1844 March</option> 
+      <option value="./search/?q=term:%22November%201844%22&amp;sort=title">1844 November</option>  
+      <option value="./search/?q=term:%22March%201845%22&amp;sort=title">1845 March</option> 
+      <option value="./search/?q=term:%22October%201845%22&amp;sort=title">1845 October</option>
+      <option value="./search/?q=term:%22March%201846%22&amp;sort=title">1846 March</option>
+      <option value="./search/?q=term:%22October%201846%22&amp;sort=title">1846 October</option>  
+      <option value="./search/?q=term:%22March%201847%22&amp;sort=title">1847 March</option> 
+      <option value="./search/?q=term:%22October%201847%22&amp;sort=title">1847 October</option>       
+      <option value="./search/?q=term:%22March%201848%22&amp;sort=title">1848 March</option> 
+      <option value="./search/?q=term:%22October%201848%22&amp;sort=title">1848 October</option>     
+      <option value="./search/?q=term:%22March%201849%22&amp;sort=title">1849 March</option>  
+      <option value="./search/?q=term:%22October%201849%22&amp;sort=title">1849 October</option>
+      <option value="./search/?q=term:%22March%201850%22&amp;sort=title">1850 March</option>  
+      <option value="./search/?q=term:%22October%201850%22&amp;sort=title">1850 October</option>
+      <option value="./search/?q=term:%22March%201851%22&amp;sort=title">1851 March</option> 
+      <option value="./search/?q=term:%22October%201851%22&amp;sort=title">1851 October</option> -->                   
+    </select>
+  </span>
+
+  <script type="text/javascript">
+   var urlmenu = document.getElementById( 'term' );
+   urlmenu.onchange = function() {
+    window.open( this.options[ this.selectedIndex ].value,'_self',false );
+  };
+</script>
+
+<hr class="clear-browse">
+
+<h3>Browse by Attorney</h3>
+
+<span class="custom-dropdown custom-dropdown">
+  <select class="custom-dropdown__select custom-dropdown__select" id="attorney">
+    <option value="./home.html">Select Attorney</option>
+    <!-- <option value="./search/?q=person:%22Addison,%20J.%20E.%22">Addison, J. E.</option>
+    <option value="./search/?q=person:%22Ashton,%20N.%22">Ashton, N.</option>
+    <option value="./search/?q=person:%22Balch,%20Lewis%20P.%20W.%22">Balch, Lewis P. W.</option>
+    <option value="./search/?q=person:%22Barrell,%20S.%20B.%22">Barrell, S. B.</option>    
+    <option value="./search/?q=person:%22Beale,%20Robert%22">Beale, Robert</option>  
+    <option value="./search/?q=person:%22Bradley,%20Joseph%20H.%22">Bradley, Joseph H.</option>
+    <option value="./search/?q=person:%22Brent,%20Robert%20James%22">Brent, Robert James</option>
+    <option value="./search/?q=person:%22Brent,%20William%20Leigh%22">Brent, William Leigh</option>
+    <option value="./search/?q=person:%22Burr%22">Burr</option>
+    <option value="./search/?q=person:%22Bussard,%20William%22">Bussard, William</option>
+    <option value="./search/?q=person:%22Caldwell,%20Elias%20Boudinot,%201776-1825%22">Caldwell, Elias Boudinot</option>
+    <option value="./search/?q=person:%22Carlisle,%20James%20M.%22">Carlisle, James M.</option>
+    <option value="./search/?q=person:%22Clark%22">Clark</option>
+    <option value="./search/?q=person:%22Cleary%22">Cleary</option>
+    <option value="./search/?q=person:%22Cox,%20Clement%22">Cox, Clement</option>
+    <option value="./search/?q=person:%22Coxe,%20Richard%20S.%20(Richard%20Smith),%201792-1865%22">Coxe, Richard S.</option> 
+    <option value="./search/?q=person:%22Crawford,%20James%22">Crawford, James</option>
+    <option value="./search/?q=person:%22Dandridge%22">Dandridge</option>
+    <option value="./search/?q=person:%22Dent,%20H.%20H.%22">Dent, H. H.</option> 
+    <option value="./search/?q=person:%22Dermott,%20John%20J.%22">Dermott, John J.</option> 
+    <option value="./search/?q=person:%22Dunlop,%20James,%20b.%201793%22">Dunlop, James</option>
+    <option value="./search/?q=person:%22Elkins,%20Jeremiah%22">Elkins, Jeremiah</option>
+    <option value="./search/?q=person:%22Ennis%22">Ennis</option>
+    <option value="./search/?q=person:%22Fendall,%20P.%20R.%22">Fendall, P. R.</option>
+    <option value="./search/?q=person:%22Forrest%22">Forrest</option>
+    <option value="./search/?q=person:%22Giberson,%20Gilbert%20L.%22">Giberson, Gilbert L.</option>
+    <option value="./search/?q=person:%22Green%22">Green</option>
+    <option value="./search/?q=person:%22Green,%20Benjamin%20Edwards,%201822-1907%22">Green, Benjamin Edwards</option>
+    <option value="./search/?q=person:%22Green,%20Duff,%201791-1875%22">Green, Duff</option>
+    <option value="./search/?q=person:%22Hall,%20David%20A.%22">Hall, David A.</option>
+    <option value="./search/?q=person:%22Hay,%20George,%201765-1830%22">Hay, George</option>
+    <option value="./search/?q=person:%22Hellen,%20J.%22">Hellen, J.</option>
+    <option value="./search/?q=person:%22Hiort,%20Henry%22">Hiort, Henry</option>
+    <option value="./search/?q=person:%22Hoban,%20James%22">Hoban, James</option>
+    <option value="./search/?q=person:%22Jones,%20Walter%22">Jones, Walter</option>
+    <option value="./search/?q=person:%22Key,%20Francis%20Scott,%201779-1843%22">Key, Francis Scott</option>
+    <option value="./search/?q=person:%22Law,%20John%22">Law, John</option>
+    <option value="./search/?q=person:%22Lawrence,%20A.%20H.%22">Lawrence, A. H.</option>
+    <option value="./search/?q=person:%22Lear,%20B.L.%22">Lear, B. L.</option>
+    <option value="./search/?q=person:%22Lee,%20Charles,%201758-1815%22">Lee, Charles</option>
+    <option value="./search/?q=person:%22Lee,%20Edmund%20J.%22">Lee, Edmund J.</option>
+    <option value="./search/?q=person:%22Lee,%20L.%20C.%22">Lee, L. C.</option>
+    <option value="./search/?q=person:%22Lenox%22">Lenox</option>
+    <option value="./search/?q=person:%22Linton,%20John%20A.%22">Linton, John A.</option>
+    <option value="./search/?q=person:%22Lowe,%20E.%20M.%22">Lowe, E. M.</option>
+    <option value="./search/?q=person:%22Marbury,%20John%22">Marbury, John</option>
+    <option value="./search/?q=person:%22May,%20H.%22">May, H.</option>
+    <option value="./search/?q=person:%22Morfit,%20H.%20M.%22">Morfit, H. M.</option>
+    <option value="./search/?q=person:%22Morgan%22">Morgan</option>
+    <option value="./search/?q=person:%22Morsell,%20James%20Sewall%22">Morsell, James Sewall</option>
+    <option value="./search/?q=person:%22Norris,%20John%20E.%22">Norris, John E.</option>
+    <option value="./search/?q=person:%22P.%20P.%22">P. P.</option>
+    <option value="./search/?q=person:%22Randall,%20Thomas%22">Randall, Thomas</option>
+    <option value="./search/?q=person:%22Ratcliffe,%20Daniel%22">Ratcliffe, Daniel</option>
+    <option value="./search/?q=person:%22Redin,%20W.%22">Redin, W.</option>
+    <option value="./search/?q=person:%22Scott,%20W.%20W.%22">Scott, W. W.</option>
+    <option value="./search/?q=person:%22Simms,%20Charles%20H.%22">Simms, Charles H.</option>
+    <option value="./search/?q=person:%22Samiders%22">Samiders</option>
+    <option value="./search/?q=person:%22Senn,%20W.%22">Senn, W.</option>
+    <option value="./search/?q=person:%22Sheahan,%20J.%20W.%22">Sheahan, J. W.</option>
+    <option value="./search/?q=person:%22Smith%22">Smith</option>
+    <option value="./search/?q=person:%22Smith%20B.%20P.%22">Smith, B. P.</option>
+    <option value="./search/?q=person:%22Smith%20Fleet%22">Smith, Fleet</option>
+    <option value="./search/?q=person:%22Smith%20I.%20B.%20H.%22">Smith, I. B. H.</option>
+    <option value="./search/?q=person:%22Taney,%20August%22">Taney, August</option>
+    <option value="./search/?q=person:%22Travers,%20George%22">Travers, George</option>
+    <option value="./search/?q=person:%22Turner,%20Thomas%22">Turner, Thomas</option>
+    <option value="./search/?q=person:%22Wallach,%20Charles%20S.%22">Wallach, Charles S.</option>
+    <option value="./search/?q=person:%22Wallach,%20Richard%22">Wallach, Richard</option>
+    <option value="./search/?q=person:%22Warner%22">Warner</option>
+    <option value="./search/?q=person:%22Williams%22">Williams</option>
+    <option value="./search/?q=person:%22Wattenton,%20George%22">Wattenton, George</option>
+    <option value="./search/?q=person:%22Woodward,%20William%20R.%22">Woodward, William R.</option> -->
+  </select>
+</span>
+<script type="text/javascript">
+ var urlmenu = document.getElementById( 'attorney' );
+ urlmenu.onchange = function() {
+  window.open( this.options[ this.selectedIndex ].value,'_self',false );
+};
+</script>
+
+<form action="search/" method="get" enctype="application/x-www-form-urlencoded" style="line-height:130px;">
+
+  <input id="basic-q" type="text" name="q" placeholder="Search texts" class="textField"> <input type="submit" value="Search" class="submit">
+
+</form>
+
+</div>
+
+<hr class="clear-hr">
+
+
+
+</div1>

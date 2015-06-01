@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- TODO put in page class here -->
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml" class="none" hc="a0" hcx="0">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Oh Say Can You See: Early Washington, D.C., Law and Family Project</title>
+  <!-- TODO Favicon -->
+
+  <%# external %>
+  <link href="http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700|PT+Sans:400,700" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> &#160; </script>
+
+  <%# stylesheets %>
+  <%= stylesheet_link_tag 'reset', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'prettyPhoto', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <%# javascript %>
+  <%= javascript_include_tag 'prettyPhoto', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'script', 'data-turbolinks-track' => true %>
+
+  <script type="text/javascript">
+    function unhide(divID) {
+      var item = document.getElementById(divID);
+      if (item) {
+        item.className=(item.className=='hidden')?'unhidden':'hidden';
+      }
+    };
+  </script>
+</head>
+<body>
+<div class="pagewrap">
+  <div id="header" class="header">
+    <center>
+      <a href="http://earlywashingtondc.org/">
+        <%= image_tag "o-say_logo_RGB.png", :class=> "logo" %>
+      </a>
+    </center>
+    <div id="nav" class="nav">
+      <ul>
+      <!-- TODO navigation links to this site -->
+        <li><%= link_to "Browse", root_url %></li>
+        <li><a href="http://earlywashingtondc.org/documents.html">All Documents</a></li>
+        <li><a href="http://earlywashingtondc.org/supplementary.html">Supplementary Documents</a></li>
+        <li><a href="http://earlywashingtondc.org/interest.html">Cases of Interest</a></li>
+        <li><%= link_to "Family Networks", family_url %></li>
+        <li><%= link_to "Virtual Conference", "/ConferenceProgram.pdf" %></li>
+        <li><%= link_to "About", about_url %></li>
+      </ul>
+    </div>
+  </div>
+  <div id="main" class="main">
+    <!-- begin content -->
+    <%= yield %>
+    <!-- end content -->
+  </div>
+  <div id="footer" class="footer">
+    <div class="footerinfo">
+      <%# TODO railsify internal links below #%>
+      <p>By William G. Thomas and distributed by <a href="http://cdrh.unl.edu/" target="new">Center for Digital Research in the Humanities</a> under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="new">Creative Commons License.</a><br>Pierre Charles L'Enfant. <i>Plan of the City of Washington</i>. Philadelphia: Thackara &amp; Vallance, 1794?. From <a href="http://www.loc.gov/item/88694120" target="new">Library of Congress, Map Collections</a>.</p>
+    </div>
+    <div class="icons">
+      <a href="http://www.unl.edu/" target="blank">
+        <%= image_tag "logo_neh_white.gif" %>
+      </a> &nbsp;&nbsp;&nbsp; 
+      <a href="http://mith.umd.edu/" target="blank"> 
+        <%= image_tag "logo_mith_white.png" %>
+      </a> &nbsp;&nbsp;&nbsp; 
+      <a href="http://www.neh.gov/" target="blank">
+        <%= image_tag "logo_unl_white.gif" %>
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
