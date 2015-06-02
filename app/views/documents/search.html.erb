@@ -3,9 +3,9 @@
 <div class="callout">
   <p>
     <b>Sort results by: 
-      <%= link_to "Case", search_url(sort_results("title")), :class => selected?("title") %>
-      <%= link_to "Document Type", search_url(sort_results("subtype")), :class => selected?("subtype") %>
-      <%= link_to "Date", search_url(sort_results("date")), :class => selected?("date") %>
+      <%= link_to "Case", search_path(sort_results("title")), :class => selected?("title") %>
+      <%= link_to "Document Type", search_path(sort_results("subtype")), :class => selected?("subtype") %>
+      <%= link_to "Date", search_path(sort_results("date")), :class => selected?("date") %>
     </b>
   </p>
 </div>

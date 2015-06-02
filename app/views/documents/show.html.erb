@@ -13,25 +13,25 @@
   <p><strong>Date: </strong><%= @doc["dateNormalized"] %></p>
   <p><strong>Term: </strong>
     <span class="subjectLink">
-      <%= link_to @doc["term"], search_url(:qfield => "term", :qtext => @doc["term"]) %>
+      <%= link_to @doc["term"], search_path(:qfield => "term", :qtext => @doc["term"]) %>
     </span>
   </p>
   <p><strong>Plaintiff: </strong>
     <% @doc["plaintiff"].each do |plaintiff| %>
       <span class="subjectLink">
-        <%= link_to plaintiff, search_url(:qfield => "plaintiff", :qtext => plaintiff) %>
+        <%= link_to plaintiff, search_path(:qfield => "plaintiff", :qtext => plaintiff) %>
       </span>
     <% end %>
   </p>
   <p><strong>Defendant: </strong>
     <% @doc["defendant"].each do |defendant| %>
       <span class="subjectLink">
-        <%= link_to defendant, search_url(:qfield => "defendant", :qtext => defendant) %>
+        <%= link_to defendant, search_path(:qfield => "defendant", :qtext => defendant) %>
       </span>
     <% end %>
   </p>
   <p>
-    <%= link_to "View Case File", search_url(:qfield => "caseID", :qtext => @doc["caseID"]) %>
+    <%= link_to "View Case File", search_path(:qfield => "caseID", :qtext => @doc["caseID"]) %>
   </p>
   <span class="morelink">
     <a href="#bottomBibl">More metadata</a>
@@ -45,39 +45,39 @@
 <div class="callout bibliography" id="bottomBibl">
   <p><strong>Category: </strong>
     <span class="subjectLink">
-      <%= link_to @doc["type"], search_url(:qfield => "type", :qtext => @doc["type"]) %>
+      <%= link_to @doc["type"], search_path(:qfield => "type", :qtext => @doc["type"]) %>
     </span>
   </p>
   <p><strong>Subcategory: </strong>
     <span class="subjectLink">
-      <%= link_to @doc["subtype"], search_url(:qfield => "subtype", :qtext => @doc["subtype"]) %>
+      <%= link_to @doc["subtype"], search_path(:qfield => "subtype", :qtext => @doc["subtype"]) %>
     </span>
   </p>
   <p><strong>Attorney for Plaintiff: </strong>
     <% @doc["attorney_p"].each do |attorney_p| %>
       <span class="subjectLink">
-        <%= link_to attorney_p, search_url(:qfield => "attorney_p", :qtext => attorney_p) %>
+        <%= link_to attorney_p, search_path(:qfield => "attorney_p", :qtext => attorney_p) %>
       </span>
     <% end %>
   </p>
   <p><strong>Attorney for Defendant: </strong>
     <% @doc["attorney_d"].each do |attorney_d| %>
       <span class="subjectLink">
-        <%= link_to attorney_d, search_url(:qfield => "attorney_d", :qtext => attorney_d) %>
+        <%= link_to attorney_d, search_path(:qfield => "attorney_d", :qtext => attorney_d) %>
       </span>
     <% end %>
   </p>
   <p><strong>People: </strong>
     <% @doc["person"].each do |person| %>
       <span class="subjectLink">
-        <%= link_to person, search_url(:qfield => "person", :qtext => person) %>
+        <%= link_to person, search_path(:qfield => "person", :qtext => person) %>
       </span>
     <% end %>
   </p>
   <p><strong>Places: </strong>
     <% @doc["place"].each do |place| %>
       <span class="subjectLink">
-        <%= link_to place, search_url(:qfield => "place", :qtext => place) %>
+        <%= link_to place, search_path(:qfield => "place", :qtext => place) %>
       </span>
     <% end %>
   </p>
