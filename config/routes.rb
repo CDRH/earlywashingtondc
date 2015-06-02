@@ -10,5 +10,8 @@ Rails.application.routes.draw do
 
   # documents (browsing / searching)
   get 'documents' => 'documents#index', as: :documents
+  get 'supplementary' => 'documents#supplementary', as: :doc_supplementary
+  get 'doc/:id', to: 'documents#show', as: :doc, :constraints => { :id => /[^\/]+/ }
+  get 'search', to: 'documents#search', as: :search, :constraints => { :id => /[^\/]+/ }
 
 end
