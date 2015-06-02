@@ -2,12 +2,8 @@
   <h2>Displaying All <%= @all_docs[:num_found] %> Documents</h2>
 
   <!-- search form -->
-  <form action="search/" method="get" enctype="application/x-www-form-urlencoded">
-    <p align="left">
-      <input id="basic-q" type="text" name="q" placeholder="Search texts" class="textField">
-      <input type="submit" value="Search" class="submit">
-    </p>
-  </form>
+  <%= render "search_bar" %>
+  
 </a>
 
 <ul>

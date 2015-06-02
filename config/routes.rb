@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   get 'documents' => 'documents#index', as: :documents
   get 'supplementary' => 'documents#supplementary', as: :doc_supplementary
   get 'doc/:id', to: 'documents#show', as: :doc, :constraints => { :id => /[^\/]+/ }
-  get 'search', to: 'documents#search', as: :search, :constraints => { :id => /[^\/]+/ }
+  match 'search', to: 'documents#search', as: :search, :constraints => { :id => /[^\/]+/ }, via: [:get, :post]
 
 end
