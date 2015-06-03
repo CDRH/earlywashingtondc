@@ -1,5 +1,11 @@
 <h3>Your search for: "<%= query_display %>" returned <%= @docs[:num_found] %> results</h3>
 
+Jump to Page 
+<%= form_tag search_path(reset_params) do %>
+  <%= paginator %>
+<% end %>
+of results
+
 <div class="callout">
   <p>
     <b>Sort results by: 

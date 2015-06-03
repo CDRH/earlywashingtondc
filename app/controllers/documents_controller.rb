@@ -25,7 +25,12 @@ class DocumentsController < ApplicationController
     if params.has_key?(:sort) && params[:sort].length > 0
       options[:sort] = "#{params[:sort]} asc"
     end
+    if params.has_key?(:page) && params[:page].to_i > 0
+      options[:page] = params[:page]
+    end
     @docs = @@solr.query(options)
+    # default response is 50 pages, divide and round up for all
+    @total_pages = (@docs[:num_found].to_f/50).ceil
   end
 
   def show

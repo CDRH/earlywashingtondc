@@ -1,17 +1,27 @@
 module DocumentsHelper
 
+  def paginator
+    return select_tag("page", 
+                      options_for_select((1..@total_pages), params[:page]),
+                      :onchange => "this.form.submit();")
+  end
+
+  def reset_params
+    new_params = params.clone
+    new_params.delete("action")
+    new_params.delete("controller")
+    new_params.delete("page")
+    return new_params
+  end
+
   def selected?(field)
     return "selected" if params[:sort] == field
   end
 
   def sort_results(sort_field)
-    new_params = params.clone
-    # remove action and controller
-    new_params.delete("action")
-    new_params.delete("controller")
+    new_params = reset_params
     # add sorting field
     new_params[:sort] = sort_field
-    puts "params #{params}"
     return new_params
   end
 
