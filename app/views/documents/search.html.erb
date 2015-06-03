@@ -1,25 +1,27 @@
 <h3>Your search for: "<%= query_display %>" returned <%= @docs[:num_found] %> results</h3>
 
-Jump to Page 
-<%= form_tag search_path(reset_params) do %>
-  <%= paginator %>
-<% end %>
-of results
-
-<div class="callout">
-  <p>
-    <b>Sort results by: 
-      <%= link_to "Case", search_path(sort_results("title")), :class => selected?("title") %>
-      <%= link_to "Document Type", search_path(sort_results("subtype")), :class => selected?("subtype") %>
-      <%= link_to "Date", search_path(sort_results("date")), :class => selected?("date") %>
-    </b>
-  </p>
-</div>
-
-<ul>
-  <% @docs[:docs].each do |doc| %>
-    <li>
-      <%= link_to "#{doc["title"]} (#{doc["dateNormalized"]})", doc_path(doc["id"]) %>
-    </li>
+<% if @docs[:docs].length > 0 %>
+  Jump to Page 
+  <%= form_tag search_path(reset_params) do %>
+    <%= paginator %>
   <% end %>
-</ul>
+  of results
+
+  <div class="callout">
+    <p>
+      <b>Sort results by: 
+        <%= link_to "Case", search_path(sort_results("title")), :class => selected?("title") %>
+        <%= link_to "Document Type", search_path(sort_results("subtype")), :class => selected?("subtype") %>
+        <%= link_to "Date", search_path(sort_results("date")), :class => selected?("date") %>
+      </b>
+    </p>
+  </div>
+
+  <ul>
+    <% @docs[:docs].each do |doc| %>
+      <li>
+        <%= link_to "#{doc["title"]} (#{doc["dateNormalized"]})", doc_path(doc["id"]) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

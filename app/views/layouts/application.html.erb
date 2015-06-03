@@ -35,10 +35,12 @@
 <body>
 <div class="pagewrap">
   <div id="header" class="header">
-    <center>
-      <a href="http://earlywashingtondc.org/">
+    <center> 
+      <%= link_to home_path do %>
+      <!-- <a href="http://earlywashingtondc.org/"> -->
         <%= image_tag "o-say_logo_RGB.png", :class=> "logo" %>
-      </a>
+      <!-- </a> -->
+      <% end %>
     </center>
     <div id="nav" class="nav">
       <ul>

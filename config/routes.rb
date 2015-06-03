@@ -3,12 +3,14 @@ Rails.application.routes.draw do
   root 'static#index'
 
   # static pages
-  get 'index' => 'static#index', as: :home
+  get '/' => 'static#index', as: :home
   get 'about' => 'static#about', as: :about
   get 'interest' => 'static#interest', as: :interest
   get 'families' => 'static#families', as: :families
-  get 'family/:id' => 'static#family', as: :family, :constraints => { :id => /[^\/]+/ }
   # temporarily putting family stuff in here until such time as it becomes generated?
+  get 'family/:id' => 'static#family', as: :family, :constraints => { :id => /[^\/]+/ }
+  # temporarily putting advanced search here, also
+  get 'advanced_search' => 'static#advanced_search', as: :advanced_search
 
   # documents (browsing / searching)
   post 'browse' => 'documents#dropdown', as: :dropdown

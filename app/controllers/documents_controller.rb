@@ -15,6 +15,7 @@ class DocumentsController < ApplicationController
     # else if attorneys
     end
     @docs = @@solr.query({ :qfield => qfield, :qtext => qtext })
+    @total_pages = (@docs[:num_found].to_f/50).ceil
     params[:qfield] = qfield
     params[:qtext] = qtext
     render :template => "documents/search"
