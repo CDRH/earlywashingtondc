@@ -19,5 +19,4 @@ Rails.application.routes.draw do
   get 'doc/:id', to: 'documents#show', as: :doc, :constraints => { :id => /[^\/]+/ }
   match 'search', to: 'documents#search', as: :search, :constraints => { :id => /[^\/]+/ }, via: [:get, :post]
 
-
 end

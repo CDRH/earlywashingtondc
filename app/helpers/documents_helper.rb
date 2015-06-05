@@ -28,7 +28,9 @@ module DocumentsHelper
   def query_display
     # TODO this will need to be filled out if there are fq queries happening
     # or if anything is using the straight up "q" fields
-    return "#{params[:qfield]} = #{params[:qtext]}"
+    
+    # return "#{params[:qfield]} = #{params[:qtext]}"
+    return "#{params[:qtext]}"
   end
 
 end

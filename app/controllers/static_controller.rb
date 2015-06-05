@@ -1,8 +1,8 @@
 class StaticController < ApplicationController
   def index
-    facet = @@solr.get_facets(nil, ["term", "subtype"])
-    @term_facet = dropdownify_facets(facet['term'])
-    @subtype_facet = dropdownify_facets(facet['subtype'])
+    facet = @@solr.get_facets(nil, ["term_ss", "subCategory"])
+    @term_facet = dropdownify_facets(facet['term_ss'])
+    @subCategory_facet = dropdownify_facets(facet['subCategory'])
     # TODO how to query attorney facets?  Query both, combine, remove duplicates?
   end
 

@@ -11,7 +11,7 @@
     <p>
       <b>Sort results by: 
         <%= link_to "Case", search_path(sort_results("title")), :class => selected?("title") %>
-        <%= link_to "Document Type", search_path(sort_results("subtype")), :class => selected?("subtype") %>
+        <%= link_to "Document Type", search_path(sort_results("subCategory")), :class => selected?("subCategory") %>
         <%= link_to "Date", search_path(sort_results("date")), :class => selected?("date") %>
       </b>
     </p>
@@ -20,7 +20,7 @@
   <ul>
     <% @docs[:docs].each do |doc| %>
       <li>
-        <%= link_to "#{doc["title"]} (#{doc["dateNormalized"]})", doc_path(doc["id"]) %>
+        <%= link_to "#{doc["title"]} (#{doc["dateDisplay"]})", doc_path(doc["id"]) %>
       </li>
     <% end %>
   </ul>

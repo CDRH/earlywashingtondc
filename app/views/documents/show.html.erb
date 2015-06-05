@@ -10,23 +10,25 @@
 <!-- metadata top -->
 <div class="callout bibliography" id="topBibl">
   <p><strong>Document: </strong><%= @doc["title"] %></p>
-  <p><strong>Date: </strong><%= @doc["dateNormalized"] %></p>
+  <p><strong>Date: </strong><%= @doc["dateDisplay"] %></p>
   <p><strong>Term: </strong>
-    <span class="subjectLink">
-      <%= link_to @doc["term"], search_path(:qfield => "term", :qtext => @doc["term"]) %>
-    </span>
+    <% @doc["term_ss"].each do |term| %>
+      <span class="subjectLink">
+        <%= link_to term, search_path(:qfield => "term_ss", :qtext => term) %>
+      </span>
+    <% end %>
   </p>
   <p><strong>Plaintiff: </strong>
-    <% @doc["plaintiff"].each do |plaintiff| %>
+    <% @doc["plaintiff_ss"].each do |plaintiff| %>
       <span class="subjectLink">
-        <%= link_to plaintiff, search_path(:qfield => "plaintiff", :qtext => plaintiff) %>
+        <%= link_to plaintiff, search_path(:qfield => "people", :qtext => plaintiff) %>
       </span>
     <% end %>
   </p>
   <p><strong>Defendant: </strong>
-    <% @doc["defendant"].each do |defendant| %>
+    <% @doc["defendant_ss"].each do |defendant| %>
       <span class="subjectLink">
-        <%= link_to defendant, search_path(:qfield => "defendant", :qtext => defendant) %>
+        <%= link_to defendant, search_path(:qfield => "people", :qtext => defendant) %>
       </span>
     <% end %>
   </p>
@@ -39,51 +41,51 @@
 </div>
 
 <!-- TODO this will be pull via...template? -->
-<%= @doc["text"] %>
+<%# @doc["text"] %>
+<%= @res.html_safe %>
 
 <!-- metadata bottom -->
 <div class="callout bibliography" id="bottomBibl">
   <p><strong>Category: </strong>
     <span class="subjectLink">
-      <%= link_to @doc["type"], search_path(:qfield => "type", :qtext => @doc["type"]) %>
+      <%= link_to @doc["category"], search_path(:qfield => "category", :qtext => @doc["category"]) %>
     </span>
   </p>
   <p><strong>Subcategory: </strong>
     <span class="subjectLink">
-      <%= link_to @doc["subtype"], search_path(:qfield => "subtype", :qtext => @doc["subtype"]) %>
+      <%= link_to @doc["subCategory"], search_path(:qfield => "subCategory", :qtext => @doc["subCategory"]) %>
     </span>
   </p>
   <p><strong>Attorney for Plaintiff: </strong>
-    <% @doc["attorney_p"].each do |attorney_p| %>
+    <% @doc["attorneyP_ss"].each do |attorney| %>
       <span class="subjectLink">
-        <%= link_to attorney_p, search_path(:qfield => "attorney_p", :qtext => attorney_p) %>
+        <%= link_to attorney, search_path(:qfield => "people", :qtext => attorney) %>
       </span>
     <% end %>
   </p>
   <p><strong>Attorney for Defendant: </strong>
-    <% @doc["attorney_d"].each do |attorney_d| %>
+    <% @doc["attorneyD_ss"].each do |attorney| %>
       <span class="subjectLink">
-        <%= link_to attorney_d, search_path(:qfield => "attorney_d", :qtext => attorney_d) %>
+        <%= link_to attorney, search_path(:qfield => "people", :qtext => attorney) %>
       </span>
     <% end %>
   </p>
   <p><strong>People: </strong>
-    <% @doc["person"].each do |person| %>
+    <% @doc["people"].each do |people| %>
       <span class="subjectLink">
-        <%= link_to person, search_path(:qfield => "person", :qtext => person) %>
+        <%= link_to people, search_path(:qfield => "people", :qtext => people) %>
       </span>
     <% end %>
   </p>
   <p><strong>Places: </strong>
-    <% @doc["place"].each do |place| %>
+    <%# @doc["places"].each do |place| %>
       <span class="subjectLink">
-        <%= link_to place, search_path(:qfield => "place", :qtext => place) %>
+        <%# link_to place, search_path(:qfield => "places", :qtext => place) %>
       </span>
-    <% end %>
+    <%# end %>
   </p>
   <p><strong>TEI/XML: </strong>
-  <!-- TODO how to link to xml? -->
-    <a href="oscys.case.0081.003.xml">oscys.case.0081.003.xml</a>
+    <a href="<%= @doc['uriXML'] %>"><%= @doc['uriXML'] %></a>
   </p>
   <span class="morelink">
     <a href="#topBibl">Back to top</a>

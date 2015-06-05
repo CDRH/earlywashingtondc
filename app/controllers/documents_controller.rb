@@ -7,10 +7,10 @@ class DocumentsController < ApplicationController
     qfield = ""
     qtext = ""
     if params.has_key?(:document)
-      qfield = "subtype"
+      qfield = "subCategory"
       qtext = params[:document]
     else params.has_key?(:term)
-      qfield = "term"
+      qfield = "term_ss"
       qtext = params[:term]
     # else if attorneys
     end
@@ -36,10 +36,12 @@ class DocumentsController < ApplicationController
 
   def show
     @doc = @@solr.get_item_by_id(params[:id])
+    url = @doc["uriHTML"]
+    @res = Net::HTTP.get(URI.parse(url))
   end
 
   def supplementary
-    @docs = @@solr.query({ :qfield => "type", :qtext => "Supplementary Documents" })
+    @docs = @@solr.query({ :qfield => "category", :qtext => "Supplementary Documents" })
     # TODO could use index view with some minor tweaking
   end
 end
