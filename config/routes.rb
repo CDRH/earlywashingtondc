@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   # documents (browsing / searching)
   post 'browse' => 'documents#dropdown', as: :dropdown
-  get 'documents' => 'documents#index', as: :documents
+  match 'documents' => 'documents#index', as: :documents, via: [:get, :post]
   get 'supplementary' => 'documents#supplementary', as: :doc_supplementary
   get 'doc/:id', to: 'documents#show', as: :doc, :constraints => { :id => /[^\/]+/ }
   match 'search', to: 'documents#search', as: :search, :constraints => { :id => /[^\/]+/ }, via: [:get, :post]
