@@ -1,0 +1,12 @@
+<h2><%= @case["title"] %></h2>
+
+<div class="case_abstract">
+<p>In the future, it is likely that cases that were pretty cool would have some text here to talk about them.</p>
+<p>Anything else that was in the case information file and turned into solr could be pulled up, as well.</p>
+</div>
+
+<ul>
+  <% @docs[:docs].each do |doc| %>
+    <li><%= link_to doc["title"], doc_path(doc["id"]) %></li>
+  <% end %>
+</ul>

@@ -11,40 +11,28 @@
 <div class="callout bibliography" id="topBibl">
   <p><strong>Document: </strong><%= @doc["title"] %></p>
   <p><strong>Date: </strong><%= @doc["dateDisplay"] %></p>
-  <p><strong>Term: </strong>
-    <% @doc["term_ss"].each do |term| %>
-      <span class="subjectLink">
-        <%= link_to term, search_path(:qfield => "term_ss", :qtext => term) %>
-      </span>
-    <% end %>
-  </p>
-  <p><strong>Plaintiff: </strong>
-    <% @doc["plaintiff_ss"].each do |plaintiff| %>
-      <span class="subjectLink">
-        <%= link_to plaintiff, search_path(:qfield => "people", :qtext => plaintiff) %>
-      </span>
-    <% end %>
-  </p>
-  <p><strong>Defendant: </strong>
-    <% @doc["defendant_ss"].each do |defendant| %>
-      <span class="subjectLink">
-        <%= link_to defendant, search_path(:qfield => "people", :qtext => defendant) %>
-      </span>
-    <% end %>
-  </p>
+
+  <%= metadata_mult("People", @doc["people"], "people") %>
+  <%= metadata_mult("Term", @doc["term_ss"], "term_ss") %>
+  <%= metadata_mult("Plaintiff", @doc["plaintiff_ss"], "plaintiff_ss") %>
+  <%= metadata_mult("Defendant", @doc["defendant_ss"], "defendant_ss") %>
+
   <p>
-    <%= link_to "View Case File", search_path(:qfield => "caseID", :qtext => @doc["caseID"]) %>
+    <%# link_to "View Case File", search_path(:qfield => "caseID", :qtext => @doc["caseID"]) %>
+    <%= link_to "View Case File", case_path(@doc["caseID_ss"]) %>
   </p>
   <span class="morelink">
     <a href="#bottomBibl">More metadata</a>
   </span>
 </div>
 
-<!-- TODO this will be pull via...template? -->
+<!-- TODO this will be pulled via...template? -->
 <%# @doc["text"] %>
 <%= @res.html_safe %>
 
 <!-- metadata bottom -->
+
+
 <div class="callout bibliography" id="bottomBibl">
   <p><strong>Category: </strong>
     <span class="subjectLink">
@@ -56,34 +44,10 @@
       <%= link_to @doc["subCategory"], search_path(:qfield => "subCategory", :qtext => @doc["subCategory"]) %>
     </span>
   </p>
-  <p><strong>Attorney for Plaintiff: </strong>
-    <% @doc["attorneyP_ss"].each do |attorney| %>
-      <span class="subjectLink">
-        <%= link_to attorney, search_path(:qfield => "people", :qtext => attorney) %>
-      </span>
-    <% end %>
-  </p>
-  <p><strong>Attorney for Defendant: </strong>
-    <% @doc["attorneyD_ss"].each do |attorney| %>
-      <span class="subjectLink">
-        <%= link_to attorney, search_path(:qfield => "people", :qtext => attorney) %>
-      </span>
-    <% end %>
-  </p>
-  <p><strong>People: </strong>
-    <% @doc["people"].each do |people| %>
-      <span class="subjectLink">
-        <%= link_to people, search_path(:qfield => "people", :qtext => people) %>
-      </span>
-    <% end %>
-  </p>
-  <p><strong>Places: </strong>
-    <%# @doc["places"].each do |place| %>
-      <span class="subjectLink">
-        <%# link_to place, search_path(:qfield => "places", :qtext => place) %>
-      </span>
-    <%# end %>
-  </p>
+  <%= metadata_mult("Attorney for Plaintiff", @doc["attorneyP_ss"], "attorneyP_ss") %>
+  <%= metadata_mult("Attorney for Defendant", @doc["attorneyD_ss"], "attorneyD_ss") %>
+  <%= metadata_mult("People", @doc["people"], "people") %>
+  <%= metadata_mult("Places", @doc["places"], "places") %>
   <p><strong>TEI/XML: </strong>
     <a href="<%= @doc['uriXML'] %>"><%= @doc['uriXML'] %></a>
   </p>

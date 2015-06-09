@@ -11,6 +11,13 @@ class ApplicationController < ActionController::Base
     raise "No Solr URL found, cannot continue"
   else
     @@solr = RSolrCdrh::Query.new(solr_url, [])
+    # set default to look for just documents
+    @@solr.set_default_query_params({
+      :fq => ['category:(NOT "Case")']
+    })
+    @@solr.set_default_facet_fields({
+      :fq => ['category:(NOT "Case")']
+    })
   end
 
 end

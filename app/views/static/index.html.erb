@@ -30,14 +30,10 @@
 <hr class="clear-browse">
 
 <h3>Browse by Attorney</h3>
+  <%= form_tag dropdown_path do %>
+    <% select_tag :attorney, options_for_select(@attorney_facet), :prompt => "Select Attorney", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
+  <% end %>
 
-  <!-- Browse by Attorney (TODO implement) -->
-<span class="custom-dropdown custom-dropdown">
-  <select class="custom-dropdown__select custom-dropdown__select" id="attorney">
-    <option value="./home.html">Select Attorney</option>
-    <!-- <option value="./search/?q=people:%22Addison,%20J.%20E.%22">Addison, J. E.</option> -->
-  </select>
-</span>
 
 <hr class="clear-browse">
 <!-- search form -->

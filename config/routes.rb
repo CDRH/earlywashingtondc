@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+
   root 'static#index'
 
   # static pages
@@ -9,8 +10,6 @@ Rails.application.routes.draw do
   get 'families' => 'static#families', as: :families
   # temporarily putting family stuff in here until such time as it becomes generated?
   get 'family/:id' => 'static#family', as: :family, :constraints => { :id => /[^\/]+/ }
-  # temporarily putting advanced search here, also
-  get 'advanced_search' => 'static#advanced_search', as: :advanced_search
 
   # documents (browsing / searching)
   post 'browse' => 'documents#dropdown', as: :dropdown
@@ -18,5 +17,10 @@ Rails.application.routes.draw do
   get 'supplementary' => 'documents#supplementary', as: :doc_supplementary
   get 'doc/:id', to: 'documents#show', as: :doc, :constraints => { :id => /[^\/]+/ }
   match 'search', to: 'documents#search', as: :search, :constraints => { :id => /[^\/]+/ }, via: [:get, :post]
+
+  # cases
+  get 'cases' => 'cases#index', as: :cases
+  # in case cases ever have their own page
+  get 'case/:id' => 'cases#show', as: :case, :constraints => { :id => /[^\/]+/ }
 
 end

@@ -9,10 +9,12 @@ class DocumentsController < ApplicationController
     if params.has_key?(:document)
       qfield = "subCategory"
       qtext = params[:document]
-    else params.has_key?(:term)
+    elsif params.has_key?(:term)
       qfield = "term_ss"
       qtext = params[:term]
-    # else if attorneys
+    elsif params.has_key?(:attorney)
+      qfield = "attorney_ss"
+      qtext = params[:attorney]
     end
     @docs = @@solr.query({ :qfield => qfield, :qtext => qtext })
     @total_pages = (@docs[:num_found].to_f/50).ceil
