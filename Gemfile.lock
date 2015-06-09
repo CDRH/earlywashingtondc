@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/jdussault2/Desktop/repos/rsolr_cdrh
+GIT
+  remote: git://github.com/CDRH/rsolr_cdrh.git
+  revision: 204c4e685bcee564307c6bacb02762fd268a94c7
   specs:
     rsolr_cdrh (0.0.1)
       bundler (~> 1.7)
