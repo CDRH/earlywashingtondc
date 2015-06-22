@@ -1,0 +1,12 @@
+<h1>The Name of the Person Will Go Here From Solr</h1>
+
+<h3>Relationships:</h3>
+<ul>
+<%# most of the below is not ideal, will need to clean it up and make it a bit less exception prone %>
+<% @rdfresults["results"]["bindings"].each do |rel| %>
+  <li><%= rel["rel1"]["value"].partition('#').last.titleize %> <%= rel["name1"]["value"] %></li>
+<% end %>
+</ul>
+<p>
+
+<%# @docs %>

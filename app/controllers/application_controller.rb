@@ -1,5 +1,3 @@
-require 'rsolr_cdrh'
-
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -20,4 +18,7 @@ class ApplicationController < ActionController::Base
     })
   end
 
+  # set up the RDF linked data
+  @@rdf = RDF::Repository.load("public/relationships.rdf")
+  @@prefixes = "PREFIX #{CONFIG['prefix_owl']} PREFIX #{CONFIG['prefix_rdf']}"
 end

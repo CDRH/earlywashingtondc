@@ -23,4 +23,7 @@ Rails.application.routes.draw do
   # in case cases ever have their own page
   get 'case/:id' => 'cases#show', as: :case, :constraints => { :id => /[^\/]+/ }
 
+  # people
+  get 'person/:id', to: 'people#show', as: :person, :constraints => { :id => /[^\/]+/ }
+
 end
