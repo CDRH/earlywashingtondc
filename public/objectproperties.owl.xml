@@ -8,13 +8,13 @@
     <!ENTITY daml "http://www.daml.org/2001/03/daml+oil#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY lit "http://spacely.unl.edu/resources/onto/dccourts.owl#" >
+    <!ENTITY lit "http://rosie.unl.edu/jessica/oscys_test.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="http://spacely.unl.edu/resources/onto/dccourts.owl#"
-     xml:base="http://spacely.unl.edu/resources/onto/dccourts.owl"
-     xmlns:lit="http://spacely.unl.edu/resources/onto/dccourts.owl#"
+<rdf:RDF xmlns="http://rosie.unl.edu/jessica/oscys_test.owl#"
+     xml:base="http://rosie.unl.edu/jessica/oscys_test.owl"
+     xmlns:lit="http://rosie.unl.edu/jessica/oscys_test.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -35,14 +35,14 @@
 
 <!-- legal relationships -->
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#legal -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#legal -->    
     <owl:ObjectProperty rdf:about="#legal">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#judgeOf -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#judgeOf -->    
     <owl:ObjectProperty rdf:about="#judgeOf">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -51,7 +51,7 @@
     </owl:ObjectProperty>
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#judgedBy -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#judgedBy -->    
     <owl:ObjectProperty rdf:about="#judgedBy">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -59,7 +59,7 @@
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#defendantAgainst -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#defendantAgainst -->    
     <owl:ObjectProperty rdf:about="#defendantAgainst">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -67,7 +67,7 @@
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#petitionerAgainst -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#petitionerAgainst -->    
     <owl:ObjectProperty rdf:about="#petitionerAgainst">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -75,7 +75,7 @@
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#attorneyFor -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#attorneyFor -->    
     <owl:ObjectProperty rdf:about="#attorneyFor">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -83,14 +83,14 @@
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#clientOf -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#clientOf -->    
     <owl:ObjectProperty rdf:about="#clientOf">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
 <owl:Inverseof rdf:resource="attorneyFor"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#attorneyAgainst -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#attorneyAgainst -->    
     <owl:ObjectProperty rdf:about="#attorneyAgainst">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -98,7 +98,7 @@
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#oppositionAttorney -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#oppositionAttorney -->    
     <owl:ObjectProperty rdf:about="#attorneyedAgainst">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -107,7 +107,7 @@
     </owl:ObjectProperty>
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#opposingAttorneys -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#opposingAttorneys -->    
     <owl:ObjectProperty rdf:about="#opposingAttorneys">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -115,7 +115,7 @@
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#witnessedBy -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#witnessedBy -->    
     <owl:ObjectProperty rdf:about="#witnessedBy">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -123,7 +123,7 @@
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#witnessOf -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#witnessOf -->    
     <owl:ObjectProperty rdf:about="#witnessOf">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -131,7 +131,7 @@
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#clerkOf -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#clerkOf -->    
     <owl:ObjectProperty rdf:about="#clerkOf">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -139,7 +139,7 @@
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#correspondentOf -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#correspondentOf -->    
     <owl:ObjectProperty rdf:about="#correspondentOf">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -147,28 +147,28 @@
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#depondentOf -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#depondentOf -->    
     <owl:ObjectProperty rdf:about="#deponentOf">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#depondentFor -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#depondentFor -->    
     <owl:ObjectProperty rdf:about="#deponentFor">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#depondentAgainst -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#depondentAgainst -->    
     <owl:ObjectProperty rdf:about="#deponentAgainst">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#deposed -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#deposed -->    
     <owl:ObjectProperty rdf:about="#deposed">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -176,7 +176,7 @@
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#deposedBy -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#deposedBy -->    
     <owl:ObjectProperty rdf:about="#deposedBy">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -184,14 +184,14 @@
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#marshalOf -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#marshalOf -->    
     <owl:ObjectProperty rdf:about="#marshalOf">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#attorneyWith-->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#attorneyWith-->
     <owl:ObjectProperty rdf:about="#attorneyWith">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:domain rdf:resource="#Person"/>
@@ -199,63 +199,63 @@
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#notaryFor -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#notaryFor -->    
     <owl:ObjectProperty rdf:about="#notaryFor">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#jurorFor -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#jurorFor -->    
     <owl:ObjectProperty rdf:about="#jurorFor">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#juryPoolFor -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#juryPoolFor -->    
     <owl:ObjectProperty rdf:about="#juryPoolFor">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#recognizanceWith -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#recognizanceWith -->    
     <owl:ObjectProperty rdf:about="#recognizanceWith">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#nextFriendOf -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#nextFriendOf -->    
     <owl:ObjectProperty rdf:about="#nextFriendOf">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#administratorFor -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#administratorFor -->    
     <owl:ObjectProperty rdf:about="#administratorFor">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#executorFor -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#executorFor -->    
     <owl:ObjectProperty rdf:about="#executorFor">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#agentFor -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#agentFor -->    
     <owl:ObjectProperty rdf:about="#agentFor">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#secretaryFor -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#secretaryFor -->    
     <owl:ObjectProperty rdf:about="#secretaryFor">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -263,7 +263,7 @@
     </owl:ObjectProperty>
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#sued -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#sued -->    
     <owl:ObjectProperty rdf:about="#sued">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -271,7 +271,7 @@
  <owl:Inverseof rdf:resource="suedBy"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#suedBy -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#suedBy -->    
     <owl:ObjectProperty rdf:about="#suedBy">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -283,7 +283,7 @@
 
 <!-- family relationships -->
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#familyOf -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#familyOf -->
 
     <owl:ObjectProperty rdf:about="#familyOf">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -291,7 +291,7 @@
         <rdfs:range rdf:resource="#Person"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#parentOf -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#parentOf -->    
     <owl:ObjectProperty rdf:about="#parentOf">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -299,7 +299,7 @@
         <rdfs:subPropertyOf rdf:resource="#familyOf"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#childOf -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#childOf -->    
     <owl:ObjectProperty rdf:about="#childOf">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -307,7 +307,7 @@
         <rdfs:subPropertyOf rdf:resource="#familyOf"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#spouseOf -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#spouseOf -->
 
     <owl:ObjectProperty rdf:about="#spouseOf">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -316,7 +316,7 @@
         <rdfs:subPropertyOf rdf:resource="#familyOf"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#siblingOf -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#siblingOf -->
 
     <owl:ObjectProperty rdf:about="#siblingOf">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -325,7 +325,7 @@
         <rdfs:subPropertyOf rdf:resource="#familyOf"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#guardianOf -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#guardianOf -->
 
     <owl:ObjectProperty rdf:about="#guardianOf">
         <rdfs:range rdf:resource="#Person"/>
@@ -335,7 +335,7 @@
 
 <!-- neighbor and acquantaince relationships -->
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#acquaintanceOf -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#acquaintanceOf -->
 
     <owl:ObjectProperty rdf:about="#acquaintanceOf">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -343,7 +343,7 @@
         <rdfs:range rdf:resource="#Person"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#friendOf -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#friendOf -->
 
     <owl:ObjectProperty rdf:about="#friendOf">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -352,7 +352,7 @@
         <rdfs:subPropertyOf rdf:resource="#acquaintanceOf"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#livesWith -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#livesWith -->
 
     <owl:ObjectProperty rdf:about="#livesWith">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -361,7 +361,7 @@
         <rdfs:subPropertyOf rdf:resource="#acquaintanceOf"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#neighborOf -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#neighborOf -->
 
     <owl:ObjectProperty rdf:about="#neighborOf">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -372,49 +372,49 @@
 
 <!-- work/business relationships -->
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#ownerOf -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#ownerOf -->    
     <owl:ObjectProperty rdf:about="#ownerOf">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
 <owl:Inverseof rdf:resource="enslavedBy"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#enslavedBy -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#enslavedBy -->    
     <owl:ObjectProperty rdf:about="#enslavedBy">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
 <owl:Inverseof rdf:resource="ownerOf"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#indenturedTo -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#indenturedTo -->    
     <owl:ObjectProperty rdf:about="#indenturedTo">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
 <owl:Inverseof rdf:resource="indenturerOf"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#indenturerOf -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#indenturerOf -->    
     <owl:ObjectProperty rdf:about="#indenturerOf">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
 <owl:Inverseof rdf:resource="indenturedTo"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#employerOf -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#employerOf -->    
     <owl:ObjectProperty rdf:about="#employerOf">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
 <owl:Inverseof rdf:resource="employeeOf"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#employeeOf -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#employeeOf -->    
     <owl:ObjectProperty rdf:about="#employeeOf">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
 <owl:Inverseof rdf:resource="employerOf"/>
     </owl:ObjectProperty>
    
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#worksWith -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#worksWith -->
 
     <owl:ObjectProperty rdf:about="#worksWith">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -422,7 +422,7 @@
         <rdfs:range rdf:resource="#Person"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#hiredOutTo -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#hiredOutTo -->
 
     <owl:ObjectProperty rdf:about="#hiredOutTo">
         <rdfs:domain rdf:resource="#Person"/>
@@ -430,7 +430,7 @@
 <owl:Inverseof rdf:resource="hired"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#hired -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#hired -->
 
     <owl:ObjectProperty rdf:about="#hired">
         <rdfs:domain rdf:resource="#Person"/>
@@ -438,7 +438,7 @@
 <owl:Inverseof rdf:resource="hiredOutTo"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#soldSlaveTo -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#soldSlaveTo -->
 
     <owl:ObjectProperty rdf:about="#soldSlaveTo">
         <rdfs:domain rdf:resource="#Person"/>
@@ -446,7 +446,7 @@
 <owl:Inverseof rdf:resource="purchasedSlaveFrom"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#purchasedSlaveFrom -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#purchasedSlaveFrom -->
 
     <owl:ObjectProperty rdf:about="#purchasedSlaveFrom">
         <rdfs:domain rdf:resource="#Person"/>
@@ -454,7 +454,7 @@
 <owl:Inverseof rdf:resource="soldSlaveTo"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#exchangedSlavesWith -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#exchangedSlavesWith -->
 
     <owl:ObjectProperty rdf:about="#exchangedSlavesWith">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -462,7 +462,7 @@
         <rdfs:range rdf:resource="#Person"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#hadContractWith -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#hadContractWith -->
 
     <owl:ObjectProperty rdf:about="#hadContractWith">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -470,7 +470,7 @@
         <rdfs:range rdf:resource="#Person"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#businessRelationshipWith -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#businessRelationshipWith -->
 
     <owl:ObjectProperty rdf:about="#businessRelationshipWith">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -480,7 +480,7 @@
 
 <!-- delete below -->
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#clerkedBy -->    
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#clerkedBy -->    
     <owl:ObjectProperty rdf:about="#clerkedBy">
         <rdfs:domain rdf:resource="#Person"/>
         <rdfs:range rdf:resource="#Person"/>
@@ -488,7 +488,7 @@
         <rdfs:subPropertyOf rdf:resource="#legal"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#immediateFamilyOf -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#immediateFamilyOf -->
 
     <owl:ObjectProperty rdf:about="#immediateFamilyOf">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -497,7 +497,7 @@
         <rdfs:subPropertyOf rdf:resource="#familyOf"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#lifePartnerOf -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#lifePartnerOf -->
 
     <owl:ObjectProperty rdf:about="#lifePartnerOf">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -507,17 +507,17 @@
     </owl:ObjectProperty>
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#memberOf -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#memberOf -->
 
     <owl:ObjectProperty rdf:about="#memberOf"/>
     
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#hasMember -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#hasMember -->
 
     <owl:ObjectProperty rdf:about="#hasMember">
         <owl:inverseOf rdf:resource="#memberOf"/>
     </owl:ObjectProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#professionallyRelatedTo -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#professionallyRelatedTo -->
 
     <owl:ObjectProperty rdf:about="#professionallyRelatedTo">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -527,7 +527,7 @@
     </owl:ObjectProperty>
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#proximityAcquaintanceOf -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#proximityAcquaintanceOf -->
 
     <owl:ObjectProperty rdf:about="#proximityAcquaintanceOf">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -538,7 +538,7 @@
     
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#romanticWith -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#romanticWith -->
 
     <owl:ObjectProperty rdf:about="#romanticWith">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -548,7 +548,7 @@
     </owl:ObjectProperty>
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#socialAcquaintanceOf -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#socialAcquaintanceOf -->
 
     <owl:ObjectProperty rdf:about="#socialAcquaintanceOf">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -558,21 +558,21 @@
     </owl:ObjectProperty>
     
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#provenance -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#provenance -->
 
     <owl:ObjectProperty rdf:about="#provenance"/>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#source -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#source -->
 
     <owl:ObjectProperty rdf:about="#source"/>
    
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#sourceNote -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#sourceNote -->
 
     <owl:ObjectProperty rdf:about="#sourceNote"/>
     
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#sourcePages -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#sourcePages -->
 
     <owl:ObjectProperty rdf:about="#sourcePages"/>
 
@@ -589,55 +589,55 @@
     
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#birth -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#birth -->
 
     <owl:DatatypeProperty rdf:about="#birth"/>
     
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#death -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#death -->
 
     <owl:DatatypeProperty rdf:about="#death"/>
     
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#firstName -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#firstName -->
 
     <owl:DatatypeProperty rdf:about="#firstName"/>
     
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#lastName -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#lastName -->
 
     <owl:DatatypeProperty rdf:about="#lastName"/>
     
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#middleName -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#middleName -->
 
     <owl:DatatypeProperty rdf:about="#middleName"/>
     
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#altName -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#altName -->
 
     <owl:DatatypeProperty rdf:about="#altName"/>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#fullName -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#fullName -->
 
     <owl:DatatypeProperty rdf:about="#fullName"/>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#residence -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#residence -->
 
     <owl:DatatypeProperty rdf:about="#residence"/>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#sex -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#sex -->
 
     <owl:DatatypeProperty rdf:about="#sex"/>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#occupation -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#occupation -->
 
     <owl:DatatypeProperty rdf:about="#occupation"/>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#hasAuthor -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#hasAuthor -->
 
     <owl:DatatypeProperty rdf:about="#hasAuthor">
         <rdfs:subPropertyOf rdf:resource="#hasCreator"/>
@@ -645,24 +645,24 @@
     
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#hasCreator -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#hasCreator -->
 
     <owl:DatatypeProperty rdf:about="#hasCreator"/>
     
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#hasEditor -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#hasEditor -->
 
     <owl:DatatypeProperty rdf:about="#hasEditor">
         <rdfs:subPropertyOf rdf:resource="#hasCreator"/>
     </owl:DatatypeProperty>
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#hasURL -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#hasURL -->
 
     <owl:DatatypeProperty rdf:about="#hasURL"/>
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#pubYear -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#pubYear -->
 
     <owl:DatatypeProperty rdf:about="#pubYear"/>
     
@@ -680,13 +680,13 @@
     
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#Entity -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#Entity -->
 
     <owl:Class rdf:about="#Entity"/>
     
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#Organization -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#Organization -->
 
     <owl:Class rdf:about="#Organization">
         <rdfs:subClassOf rdf:resource="#Entity"/>
@@ -694,7 +694,7 @@
     
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#Person -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#Person -->
 
     <owl:Class rdf:about="#Person">
         <rdfs:subClassOf rdf:resource="#Entity"/>
@@ -703,7 +703,7 @@
     
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#Place -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#Place -->
 
     <owl:Class rdf:about="#Place">
         <rdfs:subClassOf rdf:resource="#Entity"/>
@@ -711,7 +711,7 @@
     
 
 
-    <!-- http://spacely.unl.edu/resources/onto/dccourts.owl#Work -->
+    <!-- http://rosie.unl.edu/jessica/oscys_test.owl#Work -->
 
     <owl:Class rdf:about="#Work">
         <rdfs:subClassOf rdf:resource="#Entity"/>

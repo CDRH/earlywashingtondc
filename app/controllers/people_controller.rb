@@ -1,6 +1,11 @@
 class PeopleController < ApplicationController
   def index
-    # list all people
+    options = {:q => "category:people"}
+    if params.has_key?(:page) && params[:page].to_i > 0
+      options[:page] = params[:page]
+    end
+    @people = @@solr.query(options)
+    @total_people = (@people[:num_found].to_f/50).ceil
   end
 
   def show
@@ -16,6 +21,14 @@ class PeopleController < ApplicationController
     rdf = @@rdf.query(rdfquery)
     @rdfresults = JSON.parse(rdf.to_json)
 
+  end
+
+  def test
+    solr_url = "http://rosie.unl.edu:8080/solr/api_oscys_test_alpha"
+
+    solr = RSolrCdrh::Query.new(solr_url)
+
+    @res = solr.query({:q => "id:fakeid"})
   end
 
 end

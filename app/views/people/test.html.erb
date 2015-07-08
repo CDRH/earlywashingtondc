@@ -1,0 +1,14 @@
+<%= @res[:docs][0]["outcomeID_ss"] %>
+
+<p>Color Parsing</p>
+
+<ul>
+<% @res[:docs][0]["outcomeID_ss"].each do |hash| %>
+  <% hash = JSON.parse(hash) %>
+  <li>
+    <p>type: <%= hash["type"] %></p>
+    <p>date: <%= hash["date"] %></p>
+    <p>source: <%= hash["source"]%></p>
+  </li>
+<% end %>
+</ul>
