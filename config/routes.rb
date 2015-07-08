@@ -41,21 +41,11 @@ Rails.application.routes.draw do
      
    get 'about', to: 'about#index', as: :about
    get 'about/:name', to: 'about#sub', as: :aboutSub, :constraints => { :name => /[^\/]+/ }
-#   
-#   
-#   
-#     # kinship
-#   get 'kinship', to: 'kinship#index', as: :kinship
-#   get 'kinship/:name', to: 'kinship#sub', as: :family, :constraints => { :name => /[^\/]+/ }
-# 
-#   # stories
-#   get 'stories', to: 'stories#index', as: :stories
-#   get 'stories/:name', to: 'stories#sub', as: :story, :constraints => { :name => /[^\/]+/ }
-#   
-#   
+  
 
 end
 
+#Stuff to delete later but keep around for reference for now -KD
 
 # Old kinship
   #get 'kinship' => 'static#kinship', as: :kinship
@@ -71,4 +61,15 @@ end
   # this will have to be removed
   #get 'family/:id' => 'static#family2', as: :family2, :constraints => { :id => /[^\/]+/ }
 
-
+#   
+#   
+#   
+#     # kinship
+#   get 'kinship', to: 'kinship#index', as: :kinship
+#   get 'kinship/:name', to: 'kinship#sub', as: :family, :constraints => { :name => /[^\/]+/ }
+# 
+#   # stories
+#   get 'stories', to: 'stories#index', as: :stories
+#   get 'stories/:name', to: 'stories#sub', as: :story, :constraints => { :name => /[^\/]+/ }
+#   
+# 
