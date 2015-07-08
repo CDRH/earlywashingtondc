@@ -47,6 +47,9 @@ class DocumentsController < ApplicationController
     url = @doc["uriHTML"]
     @res = Net::HTTP.get(URI.parse(url))
   end
+  
+  def advancedsearch
+      end
 
   def supplementary
     @docs = @@solr.query({ :qfield => "category", :qtext => "Supplementary Documents" })

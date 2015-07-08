@@ -12,10 +12,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> &#160; </script>
 
   <%# stylesheets %>
-  <%= stylesheet_link_tag 'reset', media: 'all', 'data-turbolinks-track' => true %>
+  <%# stylesheet_link_tag 'reset', media: 'all', 'data-turbolinks-track' => true %>
   <%# stylesheet_link_tag 'prettyPhoto', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%# stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track' => true %>
+  <%# stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
@@ -38,10 +38,19 @@
 <body>
   <div id="wrapper" class="container">
     <%# image_tag "o-say_logo_RGB.png", :class=> "logo" %>
-    <div id="header" class="header">
-      <h1><%= link_to "Oh Say Can You See", home_path %></h1>
-      <h2><%= link_to "Early Washing, DC Law, and Family Project", home_path %></h2>
-    </div>
+    <div class="header">
+	
+	<div class="row">
+		<div class="col-md-4"><%= image_tag "oscys_logo.png" %></div>
+		<div class="col-md-8">
+			<div class="header_title">
+				<h1><a href="/">O Say Can You See</a></h1>
+				<h2><a href="/">Early Washington, DC Law, and Family Project</a></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
     <div class="navbar">
       <div class="navbar-header">
@@ -59,12 +68,12 @@
         -->
         <p class="navbar-text">Discover by...</p> 
         <ul class="nav navbar-nav">
-          <li ><%= link_to "Kinship and Family", kinship_path %></li>
+          <li ><%= link_to "Kinship & Family", kinship_path %></li>
           <li ><%= link_to "Cases", cases_path %></li>
           <li ><%= link_to "People", people_path %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Search", search_path %></li>
+          <li><%= link_to "Search", advancedsearch_path %></li>
           <li><%= link_to "Stories", stories_path %></li>
           <li><%= link_to "About", about_path %></li>
         </ul>

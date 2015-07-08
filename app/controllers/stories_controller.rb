@@ -5,7 +5,7 @@ class StoriesController < ApplicationController
     # add more links in app/views/stories/index.html.erb
   end
 
-  def story
+  def sub
     # in the URL there will be an ID
     # either a number or a string
     # and that will determine which template to
@@ -18,7 +18,7 @@ class StoriesController < ApplicationController
     #  name file in app/views/stories
     #    _early_dc.html.erb
 
-    @story_name = params[:name]  # this is unnecessary, only for clarity
+    @sub_name = params[:name]  # this is unnecessary, only for clarity
   end
 
 end

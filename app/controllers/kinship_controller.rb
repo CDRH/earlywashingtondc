@@ -1,8 +1,9 @@
-class AboutController < ApplicationController
-
+class KinshipController < ApplicationController
   def index
-  end
   
+  end
+
+
   def sub
     # in the URL there will be an ID
     # either a number or a string
@@ -19,16 +20,5 @@ class AboutController < ApplicationController
     @sub_name = params[:name]  # this is unnecessary, only for clarity
   end
 
-  def credits
-  end
-
-  def data
-  end
-
-  def description
-  end
-
-  def technical
-  end
 
 end
