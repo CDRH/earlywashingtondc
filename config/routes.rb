@@ -22,11 +22,11 @@ Rails.application.routes.draw do
   # cases
   get 'cases' => 'cases#index', as: :cases
   # in case cases ever have their own page
-  get 'case/:id' => 'cases#show', as: :case, :constraints => { :id => /[^\/]+/ }
+  get 'cases/:id' => 'cases#show', as: :case, :constraints => { :id => /[^\/]+/ }
 
   # people
   match 'people', to: 'people#index', as: :people, via: [:get, :post]
-  get 'person/:id', to: 'people#show', as: :person, :constraints => { :id => /[^\/]+/ }
+  get 'people/:id', to: 'people#show', as: :person, :constraints => { :id => /[^\/]+/ }
   get 'test', to: 'people#test'
   
   # kinship

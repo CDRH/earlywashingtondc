@@ -11,10 +11,11 @@ class ApplicationController < ActionController::Base
     @@solr = RSolrCdrh::Query.new(solr_url, [])
     # set default to look for just documents
     @@solr.set_default_query_params({
-      :fq => ['category:(NOT "Case" NOT "People")']
+      # :fq => ['category:(NOT "Case" NOT "People")']
+      :fq => ['recordType_s:document']
     })
     @@solr.set_default_facet_fields({
-      :fq => ['category:(NOT "Case" NOT "People")']
+      :fq => ['recordType_s:document']
     })
   end
 

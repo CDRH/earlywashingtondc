@@ -1,19 +1,20 @@
 class PeopleController < ApplicationController
   def index
-    options = {:q => "category:people"}
+    options = {:fq => "recordType_s:person"}
     if params.has_key?(:page) && params[:page].to_i > 0
       options[:page] = params[:page]
     end
     @people = @@solr.query(options)
-    @total_people = (@people[:num_found].to_f/50).ceil
+    @total_people = @people[:num_found]
   end
 
   def show
     id = params[:id]
-    @person = @@solr.query({:q => "id:#{id}"})[:docs][0]
+    @person = @@solr.query({:q => "id:#{id}", :fq => "recordType_s:person"})[:docs][0]
 
     @docs = @@solr.query({:qfield => "peopleID_ss", :qtext => id})
 
+    puts "PREFIXES #{@@prefixes}"
     rdfquery = SPARQL.parse("#{@@prefixes} SELECT ?rel1 ?per1 ?name1 WHERE 
                             { osrdf:#{id} ?rel1 ?per1 . 
                               ?per1 oscys:fullName ?name1
