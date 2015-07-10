@@ -28,7 +28,8 @@ Rails.application.routes.draw do
   get 'cases/:id' => 'cases#show', as: :case, :constraints => { :id => /[^\/]+/ }
 
   # people
-  match 'people', to: 'people#index', as: :people, via: [:get, :post]
+  get 'people' => 'people#index', as: :people
+  match 'people/all', to: 'people#all', as: :peopleAll, via: [:get, :post]
   get 'people/:id', to: 'people#show', as: :person, :constraints => { :id => /[^\/]+/ }
   get 'test', to: 'people#test'
   
