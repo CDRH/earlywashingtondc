@@ -19,7 +19,8 @@
 
   <p>
     <%# link_to "View Case File", search_path(:qfield => "caseID", :qtext => @doc["caseID"]) %>
-    <%= link_to "View Case File", case_path(@doc["caseID_ss"]) %>
+    <!-- TODO: Fix the link to caseid, Karin broke it :( -->
+    <%# link_to "View Case File", case_path(@doc["caseID_ss"]) %>
   </p>
   <span class="morelink">
     <a href="#bottomBibl">More metadata</a>

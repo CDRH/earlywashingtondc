@@ -16,7 +16,9 @@
   <%# stylesheet_link_tag 'prettyPhoto', media: 'all', 'data-turbolinks-track' => true %>
   <%# stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track' => true %>
   <%# stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'bootstrap', media: 'all' %>
+  <%= stylesheet_link_tag 'style', media: 'all' %>
+  <%= stylesheet_link_tag 'prettyPhoto', media: 'all' %>
   <%= csrf_meta_tags %>
 
   <%# javascript %>
@@ -106,6 +108,8 @@
   
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <%= javascript_include_tag 'bootstrap' %>
+  <%= javascript_include_tag 'prettyPhoto' %>
+  <%= javascript_include_tag 'script' %>
 <!--         <script src="/assets/bootstrap.js"></script> -->
 </body>
 </html>
