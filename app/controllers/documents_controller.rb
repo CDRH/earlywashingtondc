@@ -4,7 +4,7 @@ class DocumentsController < ApplicationController
     if params.has_key?(:page) && params[:page].to_i > 0
       options[:page] = params[:page]
     end
-    @docs = @@solr.query(options)
+    @docs = $solr.query(options)
     # default response is 50 pages, divide and round up for all
     @total_pages = (@docs[:num_found].to_f/50).ceil
   end
@@ -22,7 +22,7 @@ class DocumentsController < ApplicationController
       qfield = "attorney_ss"
       qtext = params[:attorney]
     end
-    @docs = @@solr.query({ :qfield => qfield, :qtext => qtext })
+    @docs = $solr.query({ :qfield => qfield, :qtext => qtext })
     @total_pages = (@docs[:num_found].to_f/50).ceil
     params[:qfield] = qfield
     params[:qtext] = qtext
@@ -37,13 +37,13 @@ class DocumentsController < ApplicationController
     if params.has_key?(:page) && params[:page].to_i > 0
       options[:page] = params[:page]
     end
-    @docs = @@solr.query(options)
+    @docs = $solr.query(options)
     # default response is 50 pages, divide and round up for all
     @total_pages = (@docs[:num_found].to_f/50).ceil
   end
 
   def show
-    @doc = @@solr.get_item_by_id(params[:id])
+    @doc = $solr.get_item_by_id(params[:id])
     url = @doc["uriHTML"]
     @res = Net::HTTP.get(URI.parse(url))
   end
@@ -52,7 +52,7 @@ class DocumentsController < ApplicationController
       end
 
   def supplementary
-    @docs = @@solr.query({ :qfield => "category", :qtext => "Supplementary Documents" })
+    @docs = $solr.query({ :qfield => "category", :qtext => "Supplementary Documents" })
     # TODO could use index view with some minor tweaking
   end
 end

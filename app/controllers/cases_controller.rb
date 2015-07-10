@@ -1,11 +1,11 @@
 class CasesController < ApplicationController
   def index
-    @cases = @@solr.query({:fqfield => "recordType_s", :fqtext => "caseid"})
+    @cases = $solr.query({:fqfield => "recordType_s", :fqtext => "caseid"})
   end
 
   def show
-    @docs = @@solr.query({:qfield => "caseID_ss", :qtext => params[:id]})
-    case_res = @@solr.query({
+    @docs = $solr.query({:qfield => "caseID_ss", :qtext => params[:id]})
+    case_res = $solr.query({
       :qfield => "id", 
       :qtext => params[:id],
       :fqfield => "recordType_s",

@@ -1,6 +1,6 @@
 class StaticController < ApplicationController
   def index
-    # facet = @@solr.get_facets(nil, ["term_ss", "subCategory", "attorney_ss"])
+    # facet = $solr.get_facets(nil, ["term_ss", "subCategory", "attorney_ss"])
     # @term_facet = dropdownify_facets(facet['term_ss'])
     # @subCategory_facet = dropdownify_facets(facet['subCategory'])
     # @attorney_facet = dropdownify_facets(facet['attorney_ss'])

@@ -1,0 +1,37 @@
+<%# @res %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>OSCYS: Visualization</title>
+
+  <!-- CSS Files -->
+  <%= stylesheet_link_tag 'hypertree', media: 'all', 'data-turbolinks-track' => false %>
+
+  <!-- JIT Files -->
+
+  <%= javascript_include_tag 'jit.min', 'data-turbolinks-track' => false %>
+  <script>
+    <%# need non-ruby json and a string to call html safe, apparently %>
+    var json = <%= @res.to_json.to_s.html_safe %>;
+  </script>
+  <%= javascript_include_tag 'hypertree', 'data-turbolinks-track' => false %>
+
+</head>
+
+<body onload="initHypertree();">
+  <div id="container">
+
+    <div id="center-container">
+      <div id="infovis"></div>    
+    </div>
+
+    <div id="right-container">
+      <div id="inner-details"></div>
+    </div>
+
+    <div id="log"></div>
+  </div>
+</body>
+</html>
