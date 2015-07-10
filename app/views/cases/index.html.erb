@@ -1,12 +1,11 @@
-<div1 xmlns="http://www.tei-c.org/ns/1.0" type="html">
-    
-<h1>Browse Cases</h1>
+<h2>Cases</h2>
 
-<p>Explore all cases</p>
+<p><a href="/cases/all">Explore all cases</a></p>
 
-<p>Explore annotated cases</p>
+<p><a href="/cases/annotated">Explore annotated cases</a></p>
 
-<p>Explore all documents</p>
+<p><a href="/cases/documents">Explore all documents</a></p>
+
 
 	  
 	  
@@ -153,23 +152,3 @@
 </span>
 
 
-
-
-<!-- Stuff below will be moved to another page  -->
-
-<h2>By Case File</h2>
-
-<p>Below is an index of the Petition for Freedom cases tried before the Circuit Court for the District of Columbia between 1808 and 1851. At present, it is organized alphabetically by the forename of the petitioner; however, there will be other ways to sort through these records at a later date.</p>
-
-</div1>
-
-<ul>
-  <% @cases[:docs].each do |doc| %>
-    <li>
-      <%# in case cases ever have their own page %>
-      <%= link_to "#{doc["title"]}", case_path(doc["id"]) %>
-      <%# basic search results page %>
-      <%# link_to "#{doc["title"]}", search_path(:qfield => "caseID_ss", :qtext => doc["id"]) %>
-    </li>
-  <% end %>
-</ul>

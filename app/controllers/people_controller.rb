@@ -1,5 +1,10 @@
 class PeopleController < ApplicationController
+	
   def index
+  end
+		
+		
+  def all
     options = {:fq => "recordType_s:person"}
     if params.has_key?(:page) && params[:page].to_i > 0
       options[:page] = params[:page]

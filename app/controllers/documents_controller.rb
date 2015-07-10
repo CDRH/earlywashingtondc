@@ -1,5 +1,7 @@
 class DocumentsController < ApplicationController
   def index
+	  
+	 # Move to Cases/documents
     options = {}
     if params.has_key?(:page) && params[:page].to_i > 0
       options[:page] = params[:page]

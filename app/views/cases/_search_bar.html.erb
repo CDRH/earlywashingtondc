@@ -1,0 +1,5 @@
+<%= form_tag(search_path) do %>
+  <%= hidden_field_tag(:qfield, "text") %>
+  <%= text_field_tag(:qtext, nil, :placeholder => "Search documents") %>
+  <%= submit_tag("Search") %>
+<% end %>

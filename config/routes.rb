@@ -21,6 +21,9 @@ Rails.application.routes.draw do
 
   # cases
   get 'cases' => 'cases#index', as: :cases
+  get 'cases/annotated' => 'cases#annotated', as: :casesAnnotated
+  get 'cases/all' => 'cases#all', as: :casesAll
+  get 'cases/documents' => 'cases#documents', as: :casesDocuments
   # in case cases ever have their own page
   get 'cases/:id' => 'cases#show', as: :case, :constraints => { :id => /[^\/]+/ }
 
