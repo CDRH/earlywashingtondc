@@ -1,12 +1,17 @@
-<!-- I don't think we will need this anymore -->
-
+<h2>All Documents</h2>
 
 <a name="top">
-  <h2>Displaying <%= @docs[:num_found] %> Supplementary Documents</h2>
+  <h2>Displaying All <%= @docs[:num_found] %> Documents</h2>
 
   <!-- search form -->
   <%= render "search_bar" %>
 </a>
+
+Jump to Page 
+<%= form_tag documents_path(reset_params) do %>
+  <%= paginator %>
+<% end %>
+of results
 
 <ul>
   <% @docs[:docs].each do |doc| %>

@@ -1,0 +1,7 @@
+<h1><%= "#{@total_people} people" %></h1>
+
+<ul>
+  <% @people[:docs].each do |person| %>
+    <li><%= person["title"] %></li>
+  <% end %>
+</ul>

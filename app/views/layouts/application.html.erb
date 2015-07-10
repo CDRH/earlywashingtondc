@@ -9,21 +9,23 @@
 
   <%# external %>
   <!-- <link href="http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700|PT+Sans:400,700" rel="stylesheet" type="text/css"> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> &#160; </script>
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> &#160; </script> -->
 
   <%# stylesheets %>
   <%# stylesheet_link_tag 'reset', media: 'all', 'data-turbolinks-track' => true %>
   <%# stylesheet_link_tag 'prettyPhoto', media: 'all', 'data-turbolinks-track' => true %>
   <%# stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track' => true %>
   <%# stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'bootstrap', media: 'all' %>
+  <%= stylesheet_link_tag 'style', media: 'all' %>
+  <%= stylesheet_link_tag 'prettyPhoto', media: 'all' %>
   <%= csrf_meta_tags %>
 
   <%# javascript %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'prettyPhoto', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'script', 'data-turbolinks-track' => true %>
-  <%# TODO ask if this is supposed to be different front "script" since script was in original and scripts is in mockup %>
+  <%# javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%# javascript_include_tag 'prettyPhoto', 'data-turbolinks-track' => true %>
+  <%# javascript_include_tag 'script', 'data-turbolinks-track' => true %>
+  <%# TODO ask if this is supposed to be different front ../../../Gemfile"script" since script was in original and scripts is in mockup %>
   <%# javascript_include_tag 'scripts', 'data-turbolinks-track' => true %>
 
   <script type="text/javascript">
@@ -101,5 +103,13 @@
       </div>
     </div>
   </div>
+  
+ 
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <%= javascript_include_tag 'bootstrap' %>
+  <%= javascript_include_tag 'prettyPhoto' %>
+  <%= javascript_include_tag 'script' %>
+<!--         <script src="/assets/bootstrap.js"></script> -->
 </body>
 </html>

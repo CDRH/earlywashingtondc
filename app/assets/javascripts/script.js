@@ -11,9 +11,9 @@ $(document).ready(function(){
   });
   
   
-$(document).ready(function(){
+/*$(document).ready(function(){
 
-/* $(".handwritten").addClass("switch_box_highlight");  */
+/\* $(".handwritten").addClass("switch_box_highlight");  *\/
 
 $("#switch_box .switch_box--switch").toggle(function() {
   //$(this).children(".showing_status").html('Disable highlighting of handwritten text.');
@@ -25,10 +25,10 @@ $("#switch_box .switch_box--switch").toggle(function() {
   $('.handwritten').removeClass("switch_box_highlight"); 
 });
 
-});
+});*/
   
 
-$(document).ready(function(){
+/*$(document).ready(function(){
     
     var globalTip = "";
   
@@ -58,21 +58,21 @@ $(document).ready(function(){
     }).mousemove(function(e) {
      
         //Keep changing the X and Y axis for the tooltip, thus, the tooltip move along with the mouse
-        /*$('#tooltip').css('top', e.pageY + 10 );
-        $('#tooltip').css('left', e.pageX + 20 );*/
+        /\*$('#tooltip').css('top', e.pageY + 10 );
+        $('#tooltip').css('left', e.pageX + 20 );*\/
          
     //}).mouseleave(function() {
     }).mouseout(function() {
         if( globalTip != "" ) {
             //Put back the title attribute's value
-            /*$(this).attr('title',$('#tooltip').html());*/
+            /\*$(this).attr('title',$('#tooltip').html());*\/
         
             $(this).attr('title',globalTip);
         
-            /*        $(this).attr('title',function() { 
+            /\*        $(this).attr('title',function() { 
                       $('#tooltip').html();
                       });
-                      */     
+                      *\/     
             //Remove the appended tooltip template
             $(this).children('div#tooltip').remove();
 
@@ -80,4 +80,4 @@ $(document).ready(function(){
         }
     });
 
-});
+});*/
