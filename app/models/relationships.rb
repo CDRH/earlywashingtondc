@@ -13,6 +13,16 @@ class Relationships
                  PREFIX rdf: <http://www.w3.org/2000/01/rdf-schema#>}
   @@rdf = RDF::Repository.load("public/relationships.rdf")
 
+  def self.query_one_removed(person)
+    puts "Creating sparql query for single individual's immediate relationships"
+    rdfquery = SPARQL.parse("#{@@prefixes} SELECT ?rel1 ?per1 ?name1 WHERE 
+                            { osrdf:#{person} ?rel1 ?per1 . 
+                              ?per1 oscys:fullName ?name1
+                            }")
+    res = @@rdf.query(rdfquery)
+    return res
+  end
+
   def self.query_two_removed_all(person)
     Timeout::timeout(10) do
       puts "Creating sparql query for ALL two removed relationship for #{person}"

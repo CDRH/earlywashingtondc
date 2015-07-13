@@ -17,14 +17,9 @@ class PeopleController < ApplicationController
     id = params[:id]
     @person = $solr.query({:q => "id:#{id}", :fq => "recordType_s:person"})[:docs][0]
 
-    @docs = $solr.query({:qfield => "peopleID_ss", :qtext => id})
+    @docs = $solr.query({:qfield => "personID_ss", :qtext => id})
 
-    puts "PREFIXES #{@@prefixes}"
-    rdfquery = SPARQL.parse("#{@@prefixes} SELECT ?rel1 ?per1 ?name1 WHERE 
-                            { osrdf:#{id} ?rel1 ?per1 . 
-                              ?per1 oscys:fullName ?name1
-                            }")
-    rdf = @@rdf.query(rdfquery)
+    rdf = Relationships.query_one_removed(id)
     @rdfresults = JSON.parse(rdf.to_json)
 
   end
