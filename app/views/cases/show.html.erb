@@ -17,17 +17,13 @@
   </div>
 
   <a name="documents"></a><h3>Case Documents</h3>
-  <!-- <ul>
-  <%# docs = @case["caseDocumentData_ss"] %>
-  <%# metadata_builder(nil, docs) %>
-  </ul> -->
   <%= format_list(@case["caseDocumentData_ss"], "doc") %>
 
   <h4><%= link_to "View more related documents...", search_path(:qfield => "documentCaseID_ss", :qtext => @case['id']) if @case["caseDocumentData_ss"].length > 50 %></h4>
 
 
   <a name="rel_documents"></a><h3>Related Documents</h3>
-  <p>TODO we need to populate this from solr</p>
+  <%= format_list(@case["caseRelatedDocumentData_ss"], "doc") %>
 
   <a name="cases"></a><h3>Related Cases</h3>
   <%= format_list(@case["relatedCaseData_ss"], "case") %>

@@ -24,7 +24,30 @@ module ApplicationHelper
 #     Item Display    #
 #######################
 
-# pass in solr_res each time rather than use instance variable
+  def format_list(items, route="doc")
+    if !items.nil?
+      res = "<ul>"
+      items.each do |item|
+        begin
+          hash = JSON.parse(item)
+          if route == "case"
+            res += "<li>#{link_to hash['label'], case_path(hash['id'])}</li>"
+          elsif route == "person"
+            res += "<li>#{link_to hash['label'], person_path(hash['id'])}</li>"
+          else
+            res += "<li>#{link_to hash['label'], doc_path(hash['id'])}</li>"
+          end
+        rescue
+          # is invalid JSON just display what is possible
+          res += item
+        end
+      end
+      res += "</ul>"
+      return res.html_safe
+    end
+  end
+
+  # pass in solr_res each time rather than use instance variable
   def metadata_mult(display, solr_res, search_field)
     res = ""
     if !solr_res.nil?

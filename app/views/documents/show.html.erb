@@ -2,59 +2,42 @@
     function unhide(divID) {
     var item = document.getElementById(divID);
     if (item) {
-    item.className=(item.className=='hidden')?'unhidden':'hidden';
-    }
+      item.className=(item.className=='hidden')?'unhidden':'hidden';
+      }
     }
 </script>
 
-<h2><%= @doc["title"] %></h2>
+<% if @doc.nil? %>
+  <h1>Something Is Wrong</h1>
+  <p>We cannot find a document with id <%= params["id"] %>.</p>
+  <p>This document may not exist or we may be experiencing technical issues.</p>
+<% else %>
 
-<!-- metadata top -->
-<div class="callout bibliography" id="topBibl">
-  <p><strong>Document: </strong><%= @doc["title"] %></p>
-  <p><strong>Date: </strong><%= @doc["dateDisplay"] %></p>
+  <h2><%= @doc["title"] %></h2>
 
-  <%= metadata_mult("People", @doc["people"], "people") %>
-  <%= metadata_mult("Term", @doc["term_ss"], "term_ss") %>
-  <%= metadata_mult("Plaintiff", @doc["plaintiff_ss"], "plaintiff_ss") %>
-  <%= metadata_mult("Defendant", @doc["defendant_ss"], "defendant_ss") %>
+  <!-- metadata top -->
+  <div class="callout bibliography" id="topBibl">
+    <p><strong>Case: </strong><%= format_list(@doc["documentCaseData_ss"]) %></p>
+    <p><strong>Document: </strong><%= @doc["title"] %></p>
+    <p><strong>Date: </strong><%= @doc["dateDisplay"] %></p>
+    <p><span onclick="return unhide('moreData');">More metadata <-- click that</a></span></p>
+    <div id="moreData" class="hidden">
+      <%= metadata_mult("Term", @doc["term_ss"], "term_ss") %>
+      <p><strong>People: </strong><%= format_list(@doc["personData_ss"], "person") %>
+      <p><strong>Defendants(s): </strong><%= format_list(@doc["defendantData_ss"], "person") %></p>
+      <p><strong>Plaintiff(s): </strong><%= format_list(@doc["plaintiffData_ss"], "person") %></p>
+      <p><strong>Attorney for Defendant(s): </strong><%= format_list(@doc["attorneyData_ss"], "person") %></p>
+      <p><strong>Attorney for Plaintiff(s): </strong><%= format_list(@doc["attorneyPData_ss"], "person") %></p>
+      <p><strong>All People: </strong><%= format_list(@doc["personData_ss"], "person") %></p>
+      <%= metadata_mult("Places", @doc["places"], "places") %>
+      <p><strong>TEI/XML: </strong><a href="<%= @doc['uriXML'] %>"><%= @doc['uriXML'] %></a></p>
+      <p><strong>Source: </strong><%= @doc["source"] %></p>
+    </div>
+  </div>
 
-  <p>
-    <%# link_to "View Case File", search_path(:qfield => "caseID", :qtext => @doc["caseID"]) %>
-    <!-- TODO: Fix the link to caseid, Karin broke it :( -->
-    <%# link_to "View Case File", case_path(@doc["caseID_ss"]) %>
-  </p>
-  <span class="morelink">
-    <a href="#bottomBibl">More metadata</a>
-  </span>
-</div>
-
-<!-- TODO this will be pulled via...template? -->
-<%# @doc["text"] %>
-<%= @res.html_safe %>
-
-<!-- metadata bottom -->
+  <!-- TODO this will be pulled via...template? -->
+  <%# @doc["text"] %>
+  <%= @res.html_safe %>
 
 
-<div class="callout bibliography" id="bottomBibl">
-  <p><strong>Category: </strong>
-    <span class="subjectLink">
-      <%= link_to @doc["category"], search_path(:qfield => "category", :qtext => @doc["category"]) %>
-    </span>
-  </p>
-  <p><strong>Subcategory: </strong>
-    <span class="subjectLink">
-      <%= link_to @doc["subCategory"], search_path(:qfield => "subCategory", :qtext => @doc["subCategory"]) %>
-    </span>
-  </p>
-  <%= metadata_mult("Attorney for Plaintiff", @doc["attorneyP_ss"], "attorneyP_ss") %>
-  <%= metadata_mult("Attorney for Defendant", @doc["attorneyD_ss"], "attorneyD_ss") %>
-  <%= metadata_mult("People", @doc["people"], "people") %>
-  <%= metadata_mult("Places", @doc["places"], "places") %>
-  <p><strong>TEI/XML: </strong>
-    <a href="<%= @doc['uriXML'] %>"><%= @doc['uriXML'] %></a>
-  </p>
-  <span class="morelink">
-    <a href="#topBibl">Back to top</a>
-  </span>
-</div>
+<% end %>

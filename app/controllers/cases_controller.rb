@@ -8,7 +8,9 @@ class CasesController < ApplicationController
   
   def annotated
     # TODO at some point these need to be flagged as specifically annotated
-    _index_finder({:fqfield => "recordType_s", :fqtext => "caseid"})
+    _index_finder({
+      :fqfield => "recordType_s", :fqtext => "caseid", 
+      :qfield => "caseidHasNarrative_s", :qtext => "true"})
   end
 
   def show
