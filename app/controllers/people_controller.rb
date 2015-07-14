@@ -18,7 +18,7 @@ class PeopleController < ApplicationController
     @person = $solr.query({:q => "id:#{id}", :fq => "recordType_s:person"})[:docs][0]
 
     @docs = $solr.query({:qfield => "personID_ss", :qtext => id})
-
+    @cases = $solr.query({:q => "personID_ss:#{id}", :fq => "recordType_s:caseid"})
     rdf = Relationships.query_one_removed(id)
     @rdfresults = JSON.parse(rdf.to_json)
 
@@ -32,7 +32,7 @@ class PeopleController < ApplicationController
     respond_to do |format|
       # optional to avoid all the header / footer
       format.html { render layout: false }
-      format.json { render :json => tree.json.to_json }
+      format.json { render :json => tree.raw_res.to_json }
       format.xml { render :xml => tree.raw_res.to_xml }
     end
   end

@@ -24,7 +24,7 @@ class Relationships
   end
 
   def self.query_two_removed_all(person)
-    Timeout::timeout(10) do
+    Timeout::timeout(15) do
       puts "Creating sparql query for ALL two removed relationship for #{person}"
       rdfquery = SPARQL.parse(%{#{@@prefixes} SELECT ?name0 ?name1 ?rel01 ?per1 ?name1 ?rel12 ?per2 ?name2
                   WHERE {
@@ -43,7 +43,7 @@ class Relationships
   # this could use the same query as query_two_removed_all but it is slower so
   # in the interests of keeping things faster and also more clear, separating the sparql queries
   def self.query_two_removed_type(person, type)
-    Timeout::timeout(10) do
+    Timeout::timeout(15) do
       # the relationship properties are matched from the OWL file
       puts "Creating sparql query for only #{type} two removed relationship for #{person}"
       # TODO grab the FROMs from a config file instead of hardcoding them
