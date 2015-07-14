@@ -3,26 +3,16 @@ class CasesController < ApplicationController
   end
   
   def all
-    @cases = $solr.query({:fqfield => "recordType_s", :fqtext => "caseid"})
+    _index_finder({:fqfield => "recordType_s", :fqtext => "caseid"})
   end
   
   def annotated
-    @cases = $solr.query({:fqfield => "recordType_s", :fqtext => "caseid"})
-
-  end
-  
-  def documents
-        options = {}
-    if params.has_key?(:page) && params[:page].to_i > 0
-      options[:page] = params[:page]
-    end
-    @docs = $solr.query(options)
-    # default response is 50 pages, divide and round up for all
-    @total_pages = (@docs[:num_found].to_f/50).ceil
+    # TODO at some point these need to be flagged as specifically annotated
+    _index_finder({:fqfield => "recordType_s", :fqtext => "caseid"})
   end
 
   def show
-    @docs = $solr.query({:qfield => "caseID_ss", :qtext => params[:id]})
+    # @docs = $solr.query({:qfield => "caseID_ss", :qtext => params[:id]})
     case_res = $solr.query({
       :qfield => "id", 
       :qtext => params[:id],

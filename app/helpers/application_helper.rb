@@ -1,5 +1,29 @@
 module ApplicationHelper
 
+
+  #######################
+  #    Index Display    #
+  #######################
+
+  def paginator
+    return select_tag("page", 
+                      options_for_select((1..@total_pages), params[:page]),
+                      :onchange => "this.form.submit();")
+  end
+
+  def reset_params
+    new_params = params.clone
+    new_params.delete("action")
+    new_params.delete("controller")
+    new_params.delete("page")
+    return new_params
+  end
+
+
+#######################
+#     Item Display    #
+#######################
+
 # pass in solr_res each time rather than use instance variable
   def metadata_mult(display, solr_res, search_field)
     res = ""
@@ -17,9 +41,10 @@ module ApplicationHelper
 
   # This will only link out to external URLs and documents!
   # So be careful if you are expecting something with case ids
+  # Note:  This function is getting way out of hand - should be refactored
   def metadata_builder(display, data)
     if !data.nil? && data.class == Array
-      res = "<p><strong>#{display}: </strong>"
+      res = display.nil? ? "" : "<p><strong>#{display}: </strong>"
       data.each do |item|
         begin
           hash = JSON.parse(item)

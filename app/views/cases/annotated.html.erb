@@ -1,18 +1,19 @@
 <h2>Annotated Cases</h2>
 
-<p>TODO: Change this to pull only annotated cases. Karin needs to specify in index, first</p>
-
 <p>Below is an index of the Petition for Freedom cases tried before the Circuit Court for the District of Columbia between 1808 and 1851. At present, it is organized alphabetically by the forename of the petitioner; however, there will be other ways to sort through these records at a later date.</p>
 
-</div1>
+Jump to Page 
+<%= form_tag casesAll_path(reset_params) do %>
+  <%= paginator %>
+<% end %>
+of results
+
+<h1><%= "#{@total_found} annotated cases" %></h1>
 
 <ul>
-  <% @cases[:docs].each do |doc| %>
+  <% @docs[:docs].each do |doc| %>
     <li>
-      <%# in case cases ever have their own page %>
       <%= link_to "#{doc["title"]}", case_path(doc["id"]) %>
-      <%# basic search results page %>
-      <%# link_to "#{doc["title"]}", search_path(:qfield => "caseID_ss", :qtext => doc["id"]) %>
     </li>
   <% end %>
 </ul>

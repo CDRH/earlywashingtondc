@@ -19,4 +19,14 @@ class ApplicationController < ActionController::Base
     })
   end
 
+  def _index_finder(options={})
+    if params.has_key?(:page) && params[:page].to_i > 0
+      options[:page] = params[:page]
+    end
+    @docs = $solr.query(options)
+    @total_found = @docs[:num_found]
+    # default response is 50 pages, divide and round up for all
+    @total_pages = (@total_found.to_f/50).ceil
+  end
+
 end

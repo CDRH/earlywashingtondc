@@ -5,12 +5,7 @@ class PeopleController < ApplicationController
 		
 		
   def all
-    options = {:fq => "recordType_s:person"}
-    if params.has_key?(:page) && params[:page].to_i > 0
-      options[:page] = params[:page]
-    end
-    @people = $solr.query(options)
-    @total_people = @people[:num_found]
+    _index_finder({:fq => "recordType_s:person"})
   end
 
   def show

@@ -13,7 +13,6 @@ Rails.application.routes.draw do
 
   # documents (browsing / searching)
   post 'browse' => 'documents#dropdown', as: :dropdown
-  match 'documents' => 'documents#index', as: :documents, via: [:get, :post]
   get 'supplementary' => 'documents#supplementary', as: :doc_supplementary
   get 'doc/:id', to: 'documents#show', as: :doc, :constraints => { :id => with_period }
   
@@ -23,9 +22,9 @@ Rails.application.routes.draw do
 
   # cases
   get 'cases' => 'cases#index', as: :cases
-  get 'cases/annotated' => 'cases#annotated', as: :casesAnnotated
-  get 'cases/all' => 'cases#all', as: :casesAll
-  get 'cases/documents' => 'cases#documents', as: :casesDocuments
+  match 'cases/annotated' => 'cases#annotated', as: :casesAnnotated, via: [:get, :post]
+  match 'cases/all' => 'cases#all', as: :casesAll, via: [:get, :post]
+  match 'cases/documents' => 'documents#index', as: :documents, via: [:get, :post]
   # in case cases ever have their own page
   get 'cases/:id' => 'cases#show', as: :case, :constraints => { :id => with_period }
 
