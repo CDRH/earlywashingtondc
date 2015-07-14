@@ -31,6 +31,10 @@ class DocumentsController < ApplicationController
     if params.has_key?(:page) && params[:page].to_i > 0
       options[:page] = params[:page]
     end
+    if params.has_key?(:fqtext) && params.has_key?(:fqfield)
+      options[:fqfield] = params[:fqfield]
+      options[:fqtext] = params[:fqtext]
+    end
     @docs = $solr.query(options)
     # default response is 50 pages, divide and round up for all
     @total_pages = (@docs[:num_found].to_f/50).ceil
