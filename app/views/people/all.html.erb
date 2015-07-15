@@ -1,4 +1,6 @@
-<h1><%= "#{@total_found} people" %></h1>
+<h1><%= "#{@total_found} people" %><%= " start with letter #{params[:letter]}" if params[:letter] %></h1>
+
+<p><%= make_alphabet_menu(@alphabet) %></p>
 
 Jump to Page 
 <%= form_tag peopleAll_path(reset_params) do %>
@@ -8,6 +10,6 @@ of results
 
 <ul>
   <% @docs[:docs].each do |person| %>
-    <li><%= person["title"] %></li>
+    <li><%= link_to(person["title"], person_path(person["id"])) %></li>
   <% end %>
 </ul>
