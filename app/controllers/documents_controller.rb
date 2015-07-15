@@ -15,6 +15,9 @@ class DocumentsController < ApplicationController
     elsif params.has_key?(:attorney)
       qfield = "attorney_ss"
       qtext = params[:attorney]
+    elsif params.has_key?(:places)
+      qfield = "places"
+      qtext = params[:places]
     end
     @docs = $solr.query({ :qfield => qfield, :qtext => qtext })
     @total_pages = (@docs[:num_found].to_f/50).ceil
@@ -41,13 +44,20 @@ class DocumentsController < ApplicationController
   end
 
   def show
+    # if this is actually a person or a case, redirect
     @doc = $solr.get_item_by_id(params[:id])
-    url = @doc["uriHTML"]
-    @res = Net::HTTP.get(URI.parse(url))
+    if @doc["recordType_s"] == "person"
+      redirect_to person_path(params[:id])
+    elsif @doc["recordType_s"] == "caseid"
+      redirect_to case_path(params[:id])
+    else
+      url = @doc["uriHTML"]
+      @res = Net::HTTP.get(URI.parse(url))
+    end
   end
   
   def advancedsearch
-      end
+  end
 
   def supplementary
     @docs = $solr.query({ :qfield => "category", :qtext => "Supplementary Documents" })

@@ -8,11 +8,9 @@ Rails.application.routes.draw do
   # static pages
   get '/' => 'static#index', as: :home
   get 'interest' => 'static#interest', as: :interest
-  
-
 
   # documents (browsing / searching)
-  post 'browse' => 'documents#dropdown', as: :dropdown
+  post 'browse' => 'documents#dropdown', as: :doc_dropdown
   get 'supplementary' => 'documents#supplementary', as: :doc_supplementary
   get 'doc/:id', to: 'documents#show', as: :doc, :constraints => { :id => with_period }
   
@@ -25,7 +23,6 @@ Rails.application.routes.draw do
   match 'cases/annotated' => 'cases#annotated', as: :casesAnnotated, via: [:get, :post]
   match 'cases/all' => 'cases#all', as: :casesAll, via: [:get, :post]
   match 'cases/documents' => 'documents#index', as: :documents, via: [:get, :post]
-  # in case cases ever have their own page
   get 'cases/:id' => 'cases#show', as: :case, :constraints => { :id => with_period }
 
   # people
@@ -42,14 +39,13 @@ Rails.application.routes.draw do
   get 'kinship', to: 'kinship#index', as: :kinship
   get 'kinship/:name', to: 'kinship#sub', as: :kinshipSub, :constraints => { :name => with_period }
 
-#   # stories
-   get 'stories', to: 'stories#index', as: :stories
-   get 'stories/:name', to: 'stories#sub', as: :storiesSub, :constraints => { :name => with_period }
+  # stories
+  get 'stories', to: 'stories#index', as: :stories
+  get 'stories/:name', to: 'stories#sub', as: :storiesSub, :constraints => { :name => with_period }
    
-#   # about
-     
-   get 'about', to: 'about#index', as: :about
-   get 'about/:name', to: 'about#sub', as: :aboutSub, :constraints => { :name => with_period }
+  # about
+  get 'about', to: 'about#index', as: :about
+  get 'about/:name', to: 'about#sub', as: :aboutSub, :constraints => { :name => with_period }
   
 
 end

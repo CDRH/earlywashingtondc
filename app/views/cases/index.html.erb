@@ -6,149 +6,26 @@
 
 <p><%= link_to "Explore all documents", documents_path %>
 
+    
+<h3>Browse by Term</h3>
 
-	  
-	  
-	  <h3>Browse by Term</h3>
+<!-- Browse by Term -->
+<%= form_tag doc_dropdown_path do %>
+ <% select_tag :term, options_for_select(@term_facet), :prompt => "Select Term", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
+<% end %>
 
-<span class="custom-dropdown custom-dropdown">
-    <select class="custom-dropdown__select custom-dropdown__select" id="term">
-<option value="./home.html">Select Term</option>
-<option value="./search/?q=term:%22December%201808%22&amp;sort=title">1808 December</option>
-<option value="./search/?q=term:%22June%201809%22&amp;sort=title">1809 June</option>
-<option value="./search/?q=term:%22December%201809%22&amp;sort=title">1809 December</option>
-<option value="./search/?q=term:%22June%201810%22&amp;sort=title">1810 June</option>
-<option value="./search/?q=term:%22December%201810%22&amp;sort=title">1810 December</option>
-<option value="./search/?q=term:%22June%201811%22&amp;sort=title">1811 June</option>
-<option value="./search/?q=term:%22December%201811%22&amp;sort=title">1811 December</option>
-<option value="./search/?q=term:%22June%201812%22&amp;sort=title">1812 June</option>
-<option value="./search/?q=term:%22June%201813%22&amp;sort=title">1813 June</option>
-<option value="./search/?q=term:%22June%201814%22&amp;sort=title">1814 June</option>
-<option value="./search/?q=term:%22December%201814%22&amp;sort=title">1814 December</option>
-<option value="./search/?q=term:%22June%201815%22&amp;sort=title">1815 June</option>
-<option value="./search/?q=term:%22December%201815%22&amp;sort=title">1815 December</option>
-<option value="./search/?q=term:%22June%201816%22&amp;sort=title">1816 June</option>
-<option value="./search/?q=term:%22December%201816%22&amp;sort=title">1816 December</option>
-<option value="./search/?q=term:%22June%201817%22&amp;sort=title">1817 June</option>
-<option value="./search/?q=term:%22December%201817%22&amp;sort=title">1817 December</option>
-<option value="./search/?q=term:%22December%201818%22&amp;sort=title">1818 December</option>
-<option value="./search/?q=term:%22December%201819%22&amp;sort=title">1819 December</option>
-<option value="./search/?q=term:%22April%201821%22&amp;sort=title">1821 April</option>
-<option value="./search/?q=term:%22October%201822%22&amp;sort=title">1822 October</option>
-<option value="./search/?q=term:%22April%201823%22&amp;sort=title">1823 April</option>
-<option value="./search/?q=term:%22October%201823%22&amp;sort=title">1823 October</option>
-<option value="./search/?q=term:%22April%201824%22&amp;sort=title">1824 April</option>
-<option value="./search/?q=term:%22December%201824%22&amp;sort=title">1824 December</option>
-<option value="./search/?q=term:%22May%201825%22&amp;sort=title">1825 May</option>
-<option value="./search/?q=term:%22December%201825%22&amp;sort=title">1825 December</option>
-<option value="./search/?q=term:%22May%201826%22&amp;sort=title">1826 May</option>
-<option value="./search/?q=term:%22December%201826%22&amp;sort=title">1826 December</option> 
-<option value="./search/?q=term:%22May%201827%22&amp;sort=title">1827 May</option>
-<option value="./search/?q=term:%22December%201827%22&amp;sort=title">1827 December</option>
-<option value="./search/?q=term:%22May%201828%22&amp;sort=title">1828 May</option>
-<option value="./search/?q=term:%22December%201828%22&amp;sort=title">1828 December</option>
-<option value="./search/?q=term:%22May%201829%22&amp;sort=title">1829 May</option>
-<option value="./search/?q=term:%22December%201829%22&amp;sort=title">1829 December</option>  
+    
+<h3>Browse by Jurisdiction/Courts</h3>
 
-<option value="./search/?q=term:%22May%201831%22&amp;sort=title">1831 May</option> 
-<option value="./search/?q=term:%22December%201831%22&amp;sort=title">1831 December</option>
-<option value="./search/?q=term:%22May%201832%22&amp;sort=title">1832 May</option>  
-<option value="./search/?q=term:%22November%201832%22&amp;sort=title">1832 November</option>      
-<option value="./search/?q=term:%22March%201833%22&amp;sort=title">1833 March</option>
-<option value="./search/?q=term:%22November%201833%22&amp;sort=title">1833 November</option>
-<option value="./search/?q=term:%22March%201834%22&amp;sort=title">1834 March</option>
-<option value="./search/?q=term:%22November%201834%22&amp;sort=title">1834 November</option>
-<option value="./search/?q=term:%22March%201835%22&amp;sort=title">1835 March</option>
-<option value="./search/?q=term:%22November%201835%22&amp;sort=title">1835 November</option>      
-<option value="./search/?q=term:%22March%201836%22&amp;sort=title">1836 March</option>
-<option value="./search/?q=term:%22November%201836%22&amp;sort=title">1836 November</option>
-<option value="./search/?q=term:%22March%201837%22&amp;sort=title">1837 March</option>
-<option value="./search/?q=term:%22November%201835%22&amp;sort=title">1837 November</option>  
-<option value="./search/?q=term:%22March%201838%22&amp;sort=title">1838 March</option>  
-<option value="./search/?q=term:%22November%201838%22&amp;sort=title">1838 November</option>     
-<option value="./search/?q=term:%22March%201839%22&amp;sort=title">1839 March</option>
-<option value="./search/?q=term:%22November%201839%22&amp;sort=title">1839 November</option>                    
-<option value="./search/?q=term:%22March%201840%22&amp;sort=title">1840 March</option> 
-<option value="./search/?q=term:%22November%201840%22&amp;sort=title">1840 November</option>
-<option value="./search/?q=term:%22March%201841%22&amp;sort=title">1841 March</option> 
-<option value="./search/?q=term:%22November%201841%22&amp;sort=title">1841 November</option>  
-<option value="./search/?q=term:%22March%201842%22&amp;sort=title">1842 March</option>      
-<option value="./search/?q=term:%22November%201842%22&amp;sort=title">1842 November</option>
-<option value="./search/?q=term:%22March%201843%22&amp;sort=title">1843 March</option>        
-<option value="./search/?q=term:%22November%201843%22&amp;sort=title">1843 November</option>
-<option value="./search/?q=term:%22March%201844%22&amp;sort=title">1844 March</option> 
-<option value="./search/?q=term:%22November%201844%22&amp;sort=title">1844 November</option>  
-<option value="./search/?q=term:%22March%201845%22&amp;sort=title">1845 March</option> 
-<option value="./search/?q=term:%22October%201845%22&amp;sort=title">1845 October</option>
-<option value="./search/?q=term:%22March%201846%22&amp;sort=title">1846 March</option>
-<option value="./search/?q=term:%22October%201846%22&amp;sort=title">1846 October</option>  
-<option value="./search/?q=term:%22March%201847%22&amp;sort=title">1847 March</option> 
-<option value="./search/?q=term:%22October%201847%22&amp;sort=title">1847 October</option>       
-<option value="./search/?q=term:%22March%201848%22&amp;sort=title">1848 March</option> 
-<option value="./search/?q=term:%22October%201848%22&amp;sort=title">1848 October</option>     
-<option value="./search/?q=term:%22March%201849%22&amp;sort=title">1849 March</option>  
-<option value="./search/?q=term:%22October%201849%22&amp;sort=title">1849 October</option>
-<option value="./search/?q=term:%22March%201850%22&amp;sort=title">1850 March</option>  
-<option value="./search/?q=term:%22October%201850%22&amp;sort=title">1850 October</option>
-<option value="./search/?q=term:%22March%201851%22&amp;sort=title">1851 March</option> 
-<option value="./search/?q=term:%22October%201851%22&amp;sort=title">1851 October</option>                   
-    </select>
-</span>
+<!-- Browse by Jurisdiction -->
+<%= form_tag doc_dropdown_path do %>
+ <% select_tag :places, options_for_select(@places_facet), :prompt => "Select Jurisdiction", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
+<% end %>
+    
+    
+<h3>Browse by Document Type</h3>
 
-	  
-
-	  
-	  
-	  <h3>Browse by Jurisdiction/courts</h3>
-
-<ul>
-	<li><a href="#">United States. Circuit Court (District of Columbia) [1660]</a></li>
-    <li><a href="#">United States. Supreme Court [38]</a></li>
-    <li><a href="#">National Archives and Records Administration [5]</a></li>
-    <li><a href="#">United States. Supreme Court (District of Columbia) [4]</a></li>
-</ul>
-	  
-	  
-	  
-
-	  
-	  
-	  <h3>Browse by Document Type</h3>
-
-<span class="custom-dropdown custom-dropdown">
-    <select class="custom-dropdown__select custom-dropdown__select" id="document">
-<option value="./home.html">Select Document</option>
-<option value="./search/?q=subtype:Affidavit&amp;sort=title">Affidavits</option>
-<option value="./search/?q=subtype:Agreement&amp;sort=title">Agreements</option>
-<option value="./search/?q=subtype:Answer&amp;sort=title">Answers</option>
-<!--<option value="./search/?q=subtype:Argument&amp;sort=title">Argument</option>-->
-<option value="./search/?q=subtype:%22Bill%20of%20Exceptions%22&amp;sort=title">Bills of Exceptions</option>
-<option value="./search/?q=subtype:Bond&amp;sort=title">Bonds</option>
-<option value="./search/?q=subtype:Certificate&amp;sort=title">Certificates</option>
-<option value="./search/?q=subtype:Complaint&amp;sort=title">Complaints</option>
-<option value="./search/?q=subtype:Correspondence&amp;sort=title">Correspondence</option>
-<option value="./search/?q=subtype:%22Court%20Report%22&amp;sort=title">Court Reports</option>
-<!--<option value="./search/?q=subtype:Demurrer&amp;sort=title">Demurrers</option>-->
-<option value="./search/?q=subtype:Deposition&amp;sort=title">Depositions</option>
-<option value="./search/?q=subtype:Disclaimer&amp;sort=title">Disclaimers</option>
-<option value="./search/?q=subtype:Exhibit&amp;sort=title">Exhibits</option>
-<option value="./search/?q=subtype:Injunction&amp;sort=title">Injunctions</option>
-<option value="./search/?q=subtype:Interrogatories&amp;sort=title">Interrogatories</option>
-<option value="./search/?q=subtype:%22Jury%20Instructions%22&amp;sort=title">Jury Instructions</option>
-<option value="./search/?q=subtype:%22Minute%20Book%22&amp;sort=title">Minute Book Entries</option>
-<option value="./search/?q=subtype:Motion&amp;sort=title">Motions</option>
-<option value="./search/?q=subtype:Notes&amp;sort=title">Notes</option>
-<option value="./search/?q=subtype:Order&amp;sort=title">Orders</option>
-<option value="./search/?q=subtype:Petition&amp;sort=title">Petitions</option>
-<option value="./search/?q=subtype:Replication&amp;sort=title">Replications</option>
-<option value="./search/?q=subtype:%22Statement%20of%20Facts%22&amp;sort=title">Statements of Facts</option>
-<option value="./search/?q=subtype:Summons&amp;sort=title">Summonses</option>
-<option value="./search/?q=subtype:Testimony&amp;sort=title">Testimony</option>
-<option value="./search/?q=subtype:Verdict&amp;sort=title">Verdicts</option>
-<option value="./search/?q=subtype:Warrant&amp;sort=title">Warrants</option>
-<!--<option value="./search/?q=subtype:%22Witness%20List%22&amp;sort=title">Witness Lists</option>-->
-<option value="./search/?q=subtype:Writ&amp;sort=title">Writs</option>
-    </select>
-</span>
-
-
+<!-- Browse by Document Type -->
+<%= form_tag doc_dropdown_path do %>
+ <% select_tag :document, options_for_select(@subCategory_facet), :prompt => "Select Document", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
+<% end %>

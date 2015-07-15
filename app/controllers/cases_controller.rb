@@ -1,5 +1,10 @@
 class CasesController < ApplicationController
   def index
+    facet = $solr.get_facets(nil, ["term_ss", "subCategory", "attorney_ss", "places"])
+    @term_facet = dropdownify_facets(facet['term_ss'])
+    @subCategory_facet = dropdownify_facets(facet['subCategory'])
+    @attorney_facet = dropdownify_facets(facet['attorney_ss'])
+    @places_facet = dropdownify_facets(facet['places'])
   end
   
   def all
@@ -23,5 +28,11 @@ class CasesController < ApplicationController
       })
     # @case = get_first_doc(case_res[:docs][0])
     @case = case_res[:docs][0]
+  end
+
+  private
+
+  def dropdownify_facets(facet_term)
+    facet_term.keys.collect { |x| ["#{x} (#{facet_term[x]})", x] }
   end
 end
