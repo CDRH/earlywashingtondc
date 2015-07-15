@@ -12,9 +12,9 @@ class DocumentsController < ApplicationController
     elsif params.has_key?(:term)
       qfield = "term_ss"
       qtext = params[:term]
-    elsif params.has_key?(:attorney)
-      qfield = "attorney_ss"
-      qtext = params[:attorney]
+    elsif params.has_key?(:jurisdiction)
+      qfield = "jurisdiction_ss"
+      qtext = params[:jurisdiction]
     elsif params.has_key?(:places)
       qfield = "places"
       qtext = params[:places]

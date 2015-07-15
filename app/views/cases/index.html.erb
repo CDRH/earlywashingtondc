@@ -19,7 +19,14 @@
 
 <!-- Browse by Jurisdiction -->
 <%= form_tag doc_dropdown_path do %>
- <% select_tag :places, options_for_select(@places_facet), :prompt => "Select Jurisdiction", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
+ <% select_tag :jurisdiction, options_for_select(@jurisdiction_facet), :prompt => "Select Jurisdiction", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
+<% end %>
+
+<h3>Browse by Locations Involved</h3>
+
+<!-- Browse by Places -->
+<%= form_tag doc_dropdown_path do %>
+ <% select_tag :places, options_for_select(@places_facet), :prompt => "Select Location", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
 <% end %>
     
     

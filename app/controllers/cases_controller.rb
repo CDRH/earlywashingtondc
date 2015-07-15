@@ -1,9 +1,9 @@
 class CasesController < ApplicationController
   def index
-    facet = $solr.get_facets(nil, ["term_ss", "subCategory", "attorney_ss", "places"])
+    facet = $solr.get_facets(nil, ["term_ss", "subCategory", "jurisdiction_ss", "places"])
     @term_facet = dropdownify_facets(facet['term_ss'])
     @subCategory_facet = dropdownify_facets(facet['subCategory'])
-    @attorney_facet = dropdownify_facets(facet['attorney_ss'])
+    @jurisdiction_facet = dropdownify_facets(facet['jurisdiction_ss'])
     @places_facet = dropdownify_facets(facet['places'])
   end
   
