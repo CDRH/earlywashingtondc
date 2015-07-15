@@ -19,6 +19,8 @@ class ApplicationController < ActionController::Base
     })
   end
 
+  private
+
   def _index_finder(options={})
     if params.has_key?(:page) && params[:page].to_i > 0
       options[:page] = params[:page]
@@ -27,6 +29,23 @@ class ApplicationController < ActionController::Base
     @total_found = @docs[:num_found]
     # default response is 50 pages, divide and round up for all
     @total_pages = (@total_found.to_f/50).ceil
+  end
+
+  # for the traditional Smith => 10 type results
+  def dropdownify_facets(facet_term)
+    facet_term.keys.collect { |x| ["#{x} (#{facet_term[x]})", x] }
+  end
+
+  # for the less traditional {label: Smith, id: 0001} => 10 type results
+  def dropdownify_data_facets(facet_term)
+    facet_term.collect do |term|
+      begin
+        hash = JSON.parse(term[0])
+        ["#{hash['label']} (#{term[1]})", hash["id"]]
+      rescue
+        [term[0], term[0]]
+      end
+    end
   end
 
 end

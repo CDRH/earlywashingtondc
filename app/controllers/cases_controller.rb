@@ -1,6 +1,7 @@
 class CasesController < ApplicationController
   def index
-    facet = $solr.get_facets(nil, ["term_ss", "subCategory", "jurisdiction_ss", "places"])
+    # TODO the rsolr gem reallllllly shouldn't need facet => true, still not sure why that is happening
+    facet = $solr.get_facets({:q => "recordType_s:document", :facet => "true"}, ["term_ss", "subCategory", "jurisdiction_ss", "places"])
     @term_facet = dropdownify_facets(facet['term_ss'])
     @subCategory_facet = dropdownify_facets(facet['subCategory'])
     @jurisdiction_facet = dropdownify_facets(facet['jurisdiction_ss'])
@@ -30,9 +31,4 @@ class CasesController < ApplicationController
     @case = case_res[:docs][0]
   end
 
-  private
-
-  def dropdownify_facets(facet_term)
-    facet_term.keys.collect { |x| ["#{x} (#{facet_term[x]})", x] }
-  end
 end

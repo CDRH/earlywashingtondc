@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   get 'people/network/:id', to: 'people#network', :constraints => { :id => with_period_ext}
   get 'people/network/:id', to: 'people#network', as: :network_vis, :constraints => { :id => with_period }
   get 'test', to: 'people#test'
+  post 'people/browse', to: 'people#browse', as: :person_browse, :constraints => { :id => with_period }
 
   # kinship
   get 'kinship', to: 'kinship#index', as: :kinship
