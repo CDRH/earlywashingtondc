@@ -35,6 +35,11 @@ module DocumentsHelper
     return new_params
   end
 
+  def search_result_link(doc)
+    label = doc["dateDisplay"] ? "#{doc["title"]} (#{doc["dateDisplay"]})" : doc["title"]
+    return link_to label, doc_path(doc["id"])
+  end
+
   def sort_results(sort_field)
     new_params = reset_params  # should not delete current facet
     # add sorting field
@@ -45,9 +50,9 @@ module DocumentsHelper
   def query_display
     # TODO this will need to be filled out if there are fq queries happening
     # or if anything is using the straight up "q" fields
-    
+    qtext = params[:facet] ? "#{params[:qtext]} (#{params[:facet]})" : params[:qtext]
     # override if anything is specified
-    return params[:display] ? params[:display] : params[:qtext]
+    return params[:display] ? params[:display] : qtext
   end
 
 end

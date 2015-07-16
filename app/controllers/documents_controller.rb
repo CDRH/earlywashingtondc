@@ -27,7 +27,7 @@ class DocumentsController < ApplicationController
   end
 
   def search
-    # reset fq to be all results
+    # reset fq to be all results not just actual documents
     options = { :qfield => params[:qfield], :qtext => params[:qtext], :fq => "*:*"}
     if params.has_key?(:sort) && params[:sort].length > 0
       options[:sort] = "#{params[:sort]} asc"
@@ -47,9 +47,10 @@ class DocumentsController < ApplicationController
       options[:fqtext] = params[:facet]
     end
     @docs = $solr.query(options)
-    # going to want to facet as well
-    # TODO once I figure out why I have to say facet = true fix this
-    facets = $solr.get_facets({:q => "#{params[:qfield]}:#{params[:qtext]}", :facet => "true"}, ["recordType_s"])
+    # TODO there is so much wrong with the following:
+    # shouldn't specify facet = true, should be able to use qfield / qtext in gem
+    facetq = "#{params[:qfield]}:\"#{params[:qtext]}\""
+    facets = $solr.get_facets({:q => facetq, :facet => "true"}, ["recordType_s"])
     @categories = facets["recordType_s"]
     # default response is 50 pages, divide and round up for all
     @total_pages = (@docs[:num_found].to_f/50).ceil
@@ -69,6 +70,11 @@ class DocumentsController < ApplicationController
   end
   
   def advancedsearch
+    # get a list of all the people
+    people_facets = $solr.get_facets({:q => "recordType_s:person", 
+      :facet => "true", "facet.limit" => "-1",
+      "facet.mincount" => "1"}, ["title"])
+    @people = people_facets["title"].keys
   end
 
   def supplementary

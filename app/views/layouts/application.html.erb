@@ -11,25 +11,18 @@
   <!-- <link href="http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700|PT+Sans:400,700" rel="stylesheet" type="text/css"> -->
 <!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> &#160; </script> -->
 
-  <%# stylesheets %>
-  <%# stylesheet_link_tag 'reset', media: 'all', 'data-turbolinks-track' => true %>
-  <%# stylesheet_link_tag 'prettyPhoto', media: 'all', 'data-turbolinks-track' => true %>
-  <%# stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track' => true %>
-  <%# stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
   <%= stylesheet_link_tag 'bootstrap', media: 'all' %>
   <%= stylesheet_link_tag 'style', media: 'all' %>
   <%= stylesheet_link_tag 'prettyPhoto', media: 'all' %>
+  <%= stylesheet_link_tag 'jquery-ui', media: 'all' %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", :async => false %>
+  <%= javascript_include_tag 'jquery-ui.min' %>
+  <%= javascript_include_tag 'bootstrap' %>
+  <%= javascript_include_tag 'prettyPhoto' %>
+  <%= javascript_include_tag 'script' %>
   <%= csrf_meta_tags %>
 
-
-  <script type="text/javascript">
-    // function unhide(divID) {
-    //   var item = document.getElementById(divID);
-    //   if (item) {
-    //     item.className=(item.className=='hidden')?'unhidden':'hidden';
-    //   }
-    // };
-  </script>
 </head>
 <body>
   <div id="wrapper" class="container">
@@ -97,14 +90,5 @@
       </div>
     </div>
   </div>
-  
- 
-  
-  <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
-  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", :async => false %>
-  <%= javascript_include_tag 'bootstrap' %>
-  <%= javascript_include_tag 'prettyPhoto' %>
-  <%= javascript_include_tag 'script' %>
-<!--         <script src="/assets/bootstrap.js"></script> -->
 </body>
 </html>
