@@ -4,10 +4,12 @@
 
 <p><%= link_to "Explore annotated cases", casesAnnotated_path %>
 
-<p><%= link_to "Explore all documents", documents_path %>
+<h3>Explore Case Documents by...</h3>
+
+<p><%= link_to "All Documents", documents_path %></p>
 
     
-<h3>Browse by Term</h3>
+<h4>Term</h4>
 
 <!-- Browse by Term -->
 <%= form_tag doc_dropdown_path do %>
@@ -15,14 +17,14 @@
 <% end %>
 
     
-<h3>Browse by Jurisdiction/Courts</h3>
+<h4>Jurisdiction/Courts</h4>
 
 <!-- Browse by Jurisdiction -->
 <%= form_tag doc_dropdown_path do %>
  <% select_tag :jurisdiction, options_for_select(@jurisdiction_facet), :prompt => "Select Jurisdiction", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
 <% end %>
 
-<h3>Browse by Locations Involved</h3>
+<h4>Locations</h4>
 
 <!-- Browse by Places -->
 <%= form_tag doc_dropdown_path do %>
@@ -30,7 +32,7 @@
 <% end %>
     
     
-<h3>Browse by Document Type</h3>
+<h4>Document Type</h4>
 
 <!-- Browse by Document Type -->
 <%= form_tag doc_dropdown_path do %>

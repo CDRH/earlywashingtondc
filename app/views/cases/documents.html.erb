@@ -1,17 +1,17 @@
 <h2>All Documents</h2>
 
 <a name="top">
-  <h2>Displaying All <%= @docs[:num_found] %> Documents</h2>
+  <h2>Displaying All <%= @docs[:num_found] %> Documentszzz</h2>
 
   <!-- search form -->
   <%= render "search_bar" %>
 </a>
 
-Jump to Page 
+<div class="jump_pagination">Jump to Page 
 <%= form_tag documents_path(reset_params) do %>
   <%= paginator %>
 <% end %>
-of results
+of results</div>
 
 <ul>
   <% @docs[:docs].each do |doc| %>

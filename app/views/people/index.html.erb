@@ -2,22 +2,21 @@
 
 <p><%= link_to "List All People", peopleAll_path %></p>
 
-<p>View people by type (? Not sure what this means, ask Kaci)</p>
+<h3>Browse by...</h3>
 
-<h3>Browse by Attorney</h3>
-
+<h4>Attorney</h4>
 <!-- Browse by Attorney -->
 <%= form_tag person_browse_path do %>
  <% select_tag :id, options_for_select(@attorney_facet), :prompt => "Select Attorney", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
 <% end %>
 
-<h3>Browse by Plaintiff</h3>
+<h4>Plaintiff</h4>
 <!-- Browse by Plaintiff -->
 <%= form_tag person_browse_path do %>
  <% select_tag :id, options_for_select(@plaintiff_facet), :prompt => "Select Plaintiff", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
 <% end %>
 
-<h3>Browse by Defendant</h3>
+<h4>Browse by Defendant</h4>
 <!-- Browse by Defendant -->
 <%= form_tag person_browse_path do %>
  <% select_tag :id, options_for_select(@defendant_facet), :prompt => "Select Defendant", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
