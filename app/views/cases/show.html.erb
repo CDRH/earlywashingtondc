@@ -13,7 +13,7 @@
   <%= metadata_builder(nil, @case["outcomeID_ss"]) %>
 
   <div class="callout">
-    <a href="#documents">Case Documents</a> | <a href="#rel_documents">Related Documents</a> | <a href="#cases">Related Cases</a> | <a href="#narrative">Case Narrative</a> | <a href="#commentary">Commentary</a> | <a href="#people">People</a>
+    <a href="#documents">Case Documents</a> | <a href="#rel_documents">Related Documents</a> | <a href="#cases">Related Cases</a> | <a href="#narrative">Case Narrative & Commentary</a> | <a href="#people">People</a>
   </div>
 
   <a name="documents"></a><h3>Case Documents</h3>
@@ -30,11 +30,11 @@
 
   <a name="narrative"></a>
   <% if @case["caseidHasNarrative_s"] %>
-    <h3>Case Narrative</h3>
+    <h3>Case Narrative</h3><!--TODO Delete this once we are pulling the HTML, it will be in the prepared HTML -->
     <%= @case["text"] %>
   <% end %>
 
-  <a name="commentary"></a><h3>TODO Commentary?</h3>
+  
 
   <a name="people"></a><h3>People</h3>
   <h4>Plantiffs:</h4>

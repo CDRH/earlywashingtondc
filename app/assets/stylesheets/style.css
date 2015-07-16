@@ -528,6 +528,57 @@ background:#ac0000;
 text-decoration:underline;
 }*/
 
+.jump_pagination {
+	/*clear: both;*/
+	border: solid #aaa 1px;
+	display: block;
+	padding: .2em;
+	margin: .2em 0;
+}
+
+.jump_pagination form {
+	display: inline-block;
+	margin: 0 .5em;
+}
+
+
+/*People*/
+
+
+.letter_pagination {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	vertical-align: top;
+	line-height: 1em;
+}
+
+.letter_pagination li {
+	display: inline-block;
+}
+
+.letter_pagination li a {
+	display: inline-block;
+	border: solid #aaa 1px;
+	vertical-align: top;
+	height: 2.5em;
+	padding: .2em .2em .2em .2em;
+	width: 2em;
+	margin-bottom: .2em;
+	text-align: center;
+}
+
+.letter_pagination li a:hover  {
+	background-color: #6b96a5;
+	color: #fff;
+}
+
+.letter_pagination li a span {
+	display: block;
+	font-size: .7em;
+}
+
 
 /* ==|== family tree ======================================================== */
  

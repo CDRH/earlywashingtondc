@@ -1,12 +1,12 @@
 <h1><%= "#{@total_found} people" %><%= " start with letter #{params[:letter]}" if params[:letter] %></h1>
 
-<p><%= make_alphabet_menu(@alphabet) %></p>
+<%= make_alphabet_menu(@alphabet) %>
 
-Jump to Page 
+<div class="jump_pagination">Jump to Page 
 <%= form_tag peopleAll_path(reset_params) do %>
   <%= paginator %>
 <% end %>
-of results
+of results</div>
 
 <ul>
   <% @docs[:docs].each do |person| %>
