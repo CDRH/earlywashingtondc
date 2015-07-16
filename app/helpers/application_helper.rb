@@ -16,6 +16,7 @@ module ApplicationHelper
     new_params.delete("action")
     new_params.delete("controller")
     new_params.delete("page")
+    new_params.delete("sort")
     return new_params
   end
 

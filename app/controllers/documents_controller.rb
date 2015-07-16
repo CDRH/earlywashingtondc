@@ -38,6 +38,12 @@ class DocumentsController < ApplicationController
       options[:fqfield] = params[:fqfield]
       options[:fqtext] = params[:fqtext]
     end
+    # override filter query (fq) with facets
+    # TODO is that a good idea??
+    if params.has_key?(:facet)
+      options[:fqfield] = "recordType_s"
+      options[:fqtext] = params[:facet]
+    end
     @docs = $solr.query(options)
     # default response is 50 pages, divide and round up for all
     @total_pages = (@docs[:num_found].to_f/50).ceil
