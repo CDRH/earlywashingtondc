@@ -1,6 +1,5 @@
 <h3>Your search for: "<%= query_display %>" returned <%= @docs[:num_found] %> results</h3>
 
-<% if @docs[:docs].length > 0 %>
   <div class="jump_pagination">Jump to Page 
   <%= form_tag search_path(reset_params) do %>
     <%= paginator %>
@@ -25,6 +24,7 @@
     </p>
   </div>
 
+<% if @docs[:docs].length > 0 %>
   <ul>
     <% @docs[:docs].each do |doc| %>
       <li>

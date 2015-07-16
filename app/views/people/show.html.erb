@@ -5,7 +5,7 @@
 <% else %>
 
   <h1><strong><%= @person["title"]%></strong> (<%= @person["id"] %>)</h1>
-  <%# TODO add alternate name %>
+  <p><%= "Alternate names: #{@person['personAltName_ss'].join(', ')}" if @person["personAltName_ss"] %>
 
   <div class="callout">
   <a href="#description">Described As</a> | <a href="#cases">Related Cases</a> | <a href="#documents">Related Documents</a> | <a href="#relationships">Relationships</a> | <a href="#visualizations">Visualisations</a>

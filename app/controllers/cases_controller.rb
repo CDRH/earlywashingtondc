@@ -29,6 +29,8 @@ class CasesController < ApplicationController
       })
     # @case = get_first_doc(case_res[:docs][0])
     @case = case_res[:docs][0]
+    url = @case["uriHTML"]
+    @annotated = Net::HTTP.get(URI.parse(url)) if url
   end
 
 end
