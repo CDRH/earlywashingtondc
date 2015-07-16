@@ -10,9 +10,7 @@
   <div class="callout">
     <p>
       <b>Filter Results: 
-        <%= link_to "Case", search_path(facet_results("caseid")), :class => selected_facet?("caseid") %>
-        <%= link_to "Person", search_path(facet_results("person")), :class => selected_facet?("person") %>
-        <%= link_to "Case Document", search_path(facet_results("document")), :class => selected_facet?("document") %>
+        <%= facet_maker(@categories) %>
       </b>
     </p>
   </div>
@@ -23,7 +21,6 @@
         <%= link_to "Alphabetical", search_path(sort_results("title")), :class => selected_sort?("title") %>
         <%= link_to "Date", search_path(sort_results("date")), :class => selected_sort?("date") %>
         <%= link_to "Relevance", search_path(sort_results("score")), :class => selected_sort?("score") %>
-        <%# link_to "Document Type", search_path(sort_results("subCategory")), :class => selected_sort?("subCategory") %>
       </b>
     </p>
   </div>

@@ -27,7 +27,8 @@ class DocumentsController < ApplicationController
   end
 
   def search
-    options = { :qfield => params[:qfield], :qtext => params[:qtext]}
+    # reset fq to be all results
+    options = { :qfield => params[:qfield], :qtext => params[:qtext], :fq => "*:*"}
     if params.has_key?(:sort) && params[:sort].length > 0
       options[:sort] = "#{params[:sort]} asc"
     end
@@ -39,12 +40,17 @@ class DocumentsController < ApplicationController
       options[:fqtext] = params[:fqtext]
     end
     # override filter query (fq) with facets
-    # TODO is that a good idea??
+    # TODO is that a good idea?? q should always be search term
+    # and fq would only be restricting by another criteria so this seems okay for now
     if params.has_key?(:facet)
       options[:fqfield] = "recordType_s"
       options[:fqtext] = params[:facet]
     end
     @docs = $solr.query(options)
+    # going to want to facet as well
+    # TODO once I figure out why I have to say facet = true fix this
+    facets = $solr.get_facets({:q => "#{params[:qfield]}:#{params[:qtext]}", :facet => "true"}, ["recordType_s"])
+    @categories = facets["recordType_s"]
     # default response is 50 pages, divide and round up for all
     @total_pages = (@docs[:num_found].to_f/50).ceil
   end
