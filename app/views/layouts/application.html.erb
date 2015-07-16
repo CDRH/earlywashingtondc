@@ -21,20 +21,14 @@
   <%= stylesheet_link_tag 'prettyPhoto', media: 'all' %>
   <%= csrf_meta_tags %>
 
-  <%# javascript %>
-  <%# javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%# javascript_include_tag 'prettyPhoto', 'data-turbolinks-track' => true %>
-  <%# javascript_include_tag 'script', 'data-turbolinks-track' => true %>
-  <%# TODO ask if this is supposed to be different front ../../../Gemfile"script" since script was in original and scripts is in mockup %>
-  <%# javascript_include_tag 'scripts', 'data-turbolinks-track' => true %>
 
   <script type="text/javascript">
-    function unhide(divID) {
-      var item = document.getElementById(divID);
-      if (item) {
-        item.className=(item.className=='hidden')?'unhidden':'hidden';
-      }
-    };
+    // function unhide(divID) {
+    //   var item = document.getElementById(divID);
+    //   if (item) {
+    //     item.className=(item.className=='hidden')?'unhidden':'hidden';
+    //   }
+    // };
   </script>
 </head>
 <body>
@@ -106,7 +100,8 @@
   
  
   
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", :async => false %>
   <%= javascript_include_tag 'bootstrap' %>
   <%= javascript_include_tag 'prettyPhoto' %>
   <%= javascript_include_tag 'script' %>

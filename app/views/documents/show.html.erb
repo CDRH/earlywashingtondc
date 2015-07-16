@@ -1,11 +1,3 @@
-<script type="text/javascript">
-    function unhide(divID) {
-    var item = document.getElementById(divID);
-    if (item) {
-      item.className=(item.className=='hidden')?'unhidden':'hidden';
-      }
-    }
-</script>
 
 <% if @doc.nil? %>
   <h1>Something Is Wrong</h1>
@@ -20,8 +12,7 @@
     <p><strong>Case: </strong><%= format_list(@doc["documentCaseData_ss"]) %></p>
     <p><strong>Document: </strong><%= @doc["title"] %></p>
     <p><strong>Date: </strong><%= @doc["dateDisplay"] %></p>
-    <p><span onclick="return unhide('moreData');">More metadata <-- click that</a></span></p>
-    <div id="moreData" class="hidden">
+    <div id="more_metadata" style="display:none;">
       <%= metadata_mult("Term", @doc["term_ss"], "term_ss") %>
       <p><strong>People: </strong><%= format_list(@doc["personData_ss"], "person") %>
       <p><strong>Defendants(s): </strong><%= format_list(@doc["defendantData_ss"], "person") %></p>
@@ -33,6 +24,8 @@
       <p><strong>TEI/XML: </strong><a href="<%= @doc['uriXML'] %>"><%= @doc['uriXML'] %></a></p>
       <p><strong>Source: </strong><%= @doc["source"] %></p>
     </div>
+    <p style="background-color:grey;"><span id="metadata_toggle">More metadata <-- click that</a></span></p>
+
   </div>
 
   <!-- TODO this will be pulled via...template? -->
