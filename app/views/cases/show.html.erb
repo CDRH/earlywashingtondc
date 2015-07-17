@@ -13,20 +13,28 @@
   <%= metadata_builder(nil, @case["outcomeID_ss"]) %>
 
   <div class="callout">
-    <a href="#documents">Case Documents</a> | <a href="#rel_documents">Related Documents</a> | <a href="#cases">Related Cases</a> | <a href="#narrative">Case Narrative & Commentary</a> | <a href="#people">People</a>
+    <%= '<a href="#documents">Case Documents</a> | '.html_safe if @case["caseDocumentData_ss"] %>
+    <%= '<a href="#rel_documents">Related Documents</a> | '.html_safe if @case["caseRelatedDocumentData_ss"] %>
+    <%= '<a href="#cases">Related Cases</a> | '.html_safe if @case["relatedCaseData_ss"] %>
+    <%= '<a href="#narrative">Case Narrative & Commentary</a> | '.html_safe if @case["caseidHasNarrative_s"] %> 
+    <%= '<a href="#people">People</a>'.html_safe if @case["personData_ss"] %>
   </div>
 
-  <a name="documents"></a><h3>Case Documents</h3>
-  <%= format_list(@case["caseDocumentData_ss"], "doc") %>
+  <% if @case["caseDocumentData_ss"] %>
+    <a name="documents"></a><h3>Case Documents</h3>
+    <%= format_list(@case["caseDocumentData_ss"], "doc") %>
+    <h4><%= link_to "View more related documents...", search_path(:qfield => "documentCaseID_ss", :qtext => @case['id']) if @case["caseDocumentData_ss"].length > 50 %></h4>
+  <% end %>
 
-  <h4><%= link_to "View more related documents...", search_path(:qfield => "documentCaseID_ss", :qtext => @case['id']) if @case["caseDocumentData_ss"].length > 50 %></h4>
+  <% if @case["caseRelatedDocumentData_ss"] %>
+    <a name="rel_documents"></a><h3>Related Documents</h3>
+    <%= format_list(@case["caseRelatedDocumentData_ss"], "doc") %>
+  <% end %>
 
-
-  <a name="rel_documents"></a><h3>Related Documents</h3>
-  <%= format_list(@case["caseRelatedDocumentData_ss"], "doc") %>
-
-  <a name="cases"></a><h3>Related Cases</h3>
-  <%= format_list(@case["relatedCaseData_ss"], "case") %>
+  <% if @case["relatedCaseData_ss"] %>
+    <a name="cases"></a><h3>Related Cases</h3>
+    <%= format_list(@case["relatedCaseData_ss"], "case") %>
+  <% end %>
 
   <a name="narrative"></a>
   <% if @case["caseidHasNarrative_s"] %>
@@ -34,18 +42,18 @@
     <%= @annotated.html_safe if @annotated%>
   <% end %>
 
-  
-
-  <a name="people"></a><h3>People</h3>
-  <h4>Plaintiffs:</h4>
-  <%= people_list(@case["plaintiffData_ss"]) %>
-  <h4>Defendant(s):</h4>
-  <%= people_list(@case["defendantData_ss"]) %>
-  <h4>Attorney for Plaintiffs:</h4>
-  <%= people_list(@case["attorneyPData_ss"]) %>
-  <h4>Attorney for Defendant(s):</h4>
-  <%= people_list(@case["attorneyData_ss"]) %>
-  <h4>Participants:</h4>
-  <%= people_list(@case["personData_ss"]) %>
+  <% if @case["personData_ss"] %>
+    <a name="people"></a><h3>People</h3>
+    <h4>Plaintiffs:</h4>
+    <%= people_list(@case["plaintiffData_ss"]) %>
+    <h4>Defendant(s):</h4>
+    <%= people_list(@case["defendantData_ss"]) %>
+    <h4>Attorney for Plaintiffs:</h4>
+    <%= people_list(@case["attorneyPData_ss"]) %>
+    <h4>Attorney for Defendant(s):</h4>
+    <%= people_list(@case["attorneyData_ss"]) %>
+    <h4>Participants:</h4>
+    <%= people_list(@case["personData_ss"]) %>
+  <% end %>
 
 <% end %>

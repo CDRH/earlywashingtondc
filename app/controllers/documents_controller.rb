@@ -27,13 +27,19 @@ class DocumentsController < ApplicationController
   end
 
   def search
+    # TODO so at this point, why not just use params instead of options?
     # reset fq to be all results not just actual documents
     options = { :qfield => params[:qfield], :qtext => params[:qtext], :fq => "*:*"}
+    rows = 50 # this is the default
     if params.has_key?(:sort) && params[:sort].length > 0
       options[:sort] = "#{params[:sort]} asc"
     end
     if params.has_key?(:page) && params[:page].to_i > 0
       options[:page] = params[:page]
+    end
+    if params.has_key?(:rows)
+      options[:rows] = params[:rows]
+      rows = options[:rows].to_i
     end
     if params.has_key?(:fqtext) && params.has_key?(:fqfield)
       options[:fqfield] = params[:fqfield]
@@ -53,7 +59,7 @@ class DocumentsController < ApplicationController
     facets = $solr.get_facets({:q => facetq, :facet => "true"}, ["recordType_s"])
     @categories = facets["recordType_s"]
     # default response is 50 pages, divide and round up for all
-    @total_pages = (@docs[:num_found].to_f/50).ceil
+    @total_pages = (@docs[:num_found].to_f/rows).ceil
   end
 
   def show

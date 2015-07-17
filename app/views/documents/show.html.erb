@@ -24,12 +24,10 @@
       <p><strong>TEI/XML: </strong><a href="<%= @doc['uriXML'] %>"><%= @doc['uriXML'] %></a></p>
       <p><strong>Source: </strong><%= @doc["source"] %></p>
     </div>
-    <p style="background-color:grey;"><span id="metadata_toggle">More metadata <-- click that</a></span></p>
+    <p style="background-color:grey;"><span id="metadata_toggle">View more metadata</a></span></p>
 
   </div>
 
-  <!-- TODO this will be pulled via...template? -->
-  <%# @doc["text"] %>
   <%= @res.html_safe %>
 
 
