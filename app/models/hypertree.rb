@@ -29,14 +29,15 @@ class Hypertree < Relationships
     if bindings.nil?
       return nil
     else
+      # File.open("scripts/test_output.json", "w") { |file| file.write(bindings.to_json) }
       bindings.each_with_index do |res, index|
         if index == 0
           # add the original person
-          info = _new_person(@id, res["name0"]["value"], nil, true) 
+          info = _new_person(@id, res["name0"]["value"], nil, true, true)
         end
-        # now add the people in this particular result set
-        per1 = _value(res["per1"])
-        per2 = _value(res["per2"])
+        # now add the people in this particular result set (using b and c so that infovis doesn't overwrite data)
+        per1 = "#{_value(res['per1'])}_b"
+        per2 = "#{_value(res["per2"])}_c"
         per0to1 = _value(res["rel01"])
         per1to2 = _value(res["rel12"])
         # if this is a judge / clerk relationship, omit
@@ -50,6 +51,11 @@ class Hypertree < Relationships
             per1obj = info["children"].last
           else
             per1obj = info["children"][per1index]
+            # this person might have multiple relationships with same individual
+            # for example, Ben petitionerAgainst Scott, Ben enslavedBy Scott
+            if per1obj["data"]["relation"] != per0to1
+              per1obj["data"]["relation"] += " / #{per0to1}"
+            end
           end
 
           # now add person 2
@@ -59,15 +65,18 @@ class Hypertree < Relationships
         end
       end
     end
+    # File.open("scripts/test_output.json", "w") { |file| file.write(info.to_json) }
     return info
   end
 
-  def _new_person(id, name, relation=nil, children_exist=false)
+  def _new_person(id, name, relation=nil, children_exist=false, first=false)
     person = {}
     person["id"] = id
     person["name"] = name
     person["children"] = [] if children_exist
-    person["data"] = { "relation" => relation } if !relation.nil?
+    person["data"] = {}
+    person["data"]["relation"] = relation if !relation.nil?
+    person["data"]["original_element"] = first
     return person
   end
 

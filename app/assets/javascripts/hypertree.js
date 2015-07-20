@@ -25,6 +25,43 @@ var Log = {
   }
 };
 
+var makeLabels = function(node) {
+  var html = node.getParents()[0].name+" "+prettify(node.data.relation);
+  html += "<h4>" + node.name + "</h4>", data = node.data;
+  children = node.getSubnodes();
+  node.getSubnodes().forEach(function(child, indx) {
+    // appears that infovis automatically includes the node itself
+    // but we want to avoid doing that
+    if (indx != 0) {
+      html += "<p>"+prettify(child.data.relation)+" "+child.name+"</p>";
+    }
+  });
+  return html;
+};
+
+var originalLabels = function(node) {
+  var html = "<h4>" + node.name + "</h4>";
+  node.eachAdjacency(function(adj){
+    var child = adj.nodeTo;
+    if (child.data) {
+      var rel = child.data.relation;
+        html += "<p>"+prettify(rel) +" "+ child.name+"</p>";
+      }
+    });
+  return html;
+};
+
+var prettify = function(relation) {
+  if (relation) {
+    // split on the uppercases, downcase, and join with spaces
+    // "attorneyFor" becomes "attorney for"
+    var relArr = relation.split(/(?=[A-Z])/);
+    var relArr = relArr.map(function(item) { return item.toLowerCase(); });
+    return relArr.join(" ");
+  } else {
+    return "unknown of";
+  }
+};
 
 function initHypertree(){
   var infovis = document.getElementById('infovis');
@@ -45,15 +82,32 @@ function initHypertree(){
       },
       Edge: {
         lineWidth: 2,
-        color: "#ADADAD"
+        color: "#ADADAD",
+        overridable: true
       },
       Fx: {
         transition: $jit.Trans.linear
+      },
+      Events: {
+        enable: true,
+        onClick: function(node) {
+          if(!node) return;
+          //Build detailed information about the file/folder
+          //and place it in the right column.
+          var html = ""
+          if (node.data.original_element) {
+            html = originalLabels(node);
+          } else {
+            html = makeLabels(node);
+          }
+          $jit.id('inner-details').innerHTML = html;
+        }
       },
       onBeforeCompute: function(node){
         Log.write("centering");
       },
       onBeforePlotNode: function(node) {
+        // node.Edge.color = "#123123"; // this changes all of them
         if (node._depth < 1) {
           node.Node.color = '#000'
         } else if (node._depth == 1) {
@@ -64,6 +118,11 @@ function initHypertree(){
           node.Node.color = '#D4D4D4'
         }
       },
+      onBeforePlotLine: function(adj) {
+        // if (adj.nodeFrom.id == "per.000824") {
+        //   adj.data.$color = "#111333";
+        // }
+      },
       //Attach event handlers and add text to the
       //labels. This method is only triggered on label
       //creation
@@ -71,9 +130,9 @@ function initHypertree(){
         domElement.innerHTML = node.name;
         $jit.util.addEvent(domElement, 'click', function () {
           ht.onClick(node.id, {
-            onComplete: function() {
-              ht.controller.onComplete();
-            }
+            // onComplete: function() {
+            //   ht.controller.onComplete();
+            // }
           });
         });
       },
@@ -111,17 +170,7 @@ function initHypertree(){
           //This is done by collecting the information (stored in the data property) 
           //for all the nodes adjacent to the centered node.
           var node = ht.graph.getClosestNodeToOrigin("current");
-          var html = "<h4>" + node.name + "</h4><b>Connections:</b>";
-          html += "<ul>";
-          node.eachAdjacency(function(adj){
-            var child = adj.nodeTo;
-            if (child.data) {
-              var rel = child.data.relation;
-                // var rel = (child.name == node.name) ? child.data.relation : node.data.relation;
-                html += "<li>"+rel +" "+ child.name+"</li>";
-              }
-            });
-          html += "</ul>";
+          var html = originalLabels(node);
           $jit.id('inner-details').innerHTML = html;
         }
       });
