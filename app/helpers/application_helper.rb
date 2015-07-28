@@ -72,11 +72,11 @@ module ApplicationHelper
         begin
           hash = JSON.parse(item)
           date = hash['date'] ? "(#{hash['date']}) " : ""
-          # check if this uses a url
           if hash['id'] =~ URI::regexp
-            res += "<p>#{hash['label']} #{date}[<a href=#{hash['id']}>source</a>]</p>"
+            # if this has a real url then use
+            res += "<p><a href=\"#{hash['id']}\">#{hash['label']}</a> #{date}</p>"
           else
-            res += "<p>#{hash['label']} #{date}[#{link_to 'source', doc_path(hash['id'])}]</p>"
+            res += "<p>#{link_to hash['label'], doc_path(hash['id'])} #{date}</p>"
           end
         rescue
           # if it can't be parsed into JSON just display what you can
