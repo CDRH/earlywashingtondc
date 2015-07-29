@@ -50,10 +50,6 @@
  <% select_tag :id, options_for_select(@plaintiff_facet), :prompt => "Select Plaintiff", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
 <% end %>
 
-<<<<<<< HEAD
-<h4>Defendant</h4>
-<!-- Browse by Defendant -->
-=======
   </div>
 </div>
 <br/>
@@ -61,7 +57,6 @@
   <div class="col-md-4">Defendant</div>
   <div class="col-md-8">
 	 <!-- Browse by Defendant -->
->>>>>>> e8cc566d016e4eb48e4e28adfb221436dff2d39f
 <%= form_tag person_browse_path do %>
  <% select_tag :id, options_for_select(@defendant_facet), :prompt => "Select Defendant", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
 <% end %>
