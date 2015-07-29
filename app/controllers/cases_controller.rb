@@ -1,8 +1,8 @@
 class CasesController < ApplicationController
   def index
     # TODO the rsolr gem reallllllly shouldn't need facet => true, still not sure why that is happening
-    facet = $solr.get_facets({:q => "recordType_s:document", :facet => "true"}, ["term_ss", "subCategory", "jurisdiction_ss", "places"])
-    @term_facet = dropdownify_facets(facet['term_ss'])
+    facet = $solr.get_facets({:q => "recordType_s:document", :facet => "true", "facet.sort" => "index"}, ["term_ss", "subCategory", "jurisdiction_ss", "places"])
+    @term_facet = dropdownify_facets(facet['term_ss'], true)
     @subCategory_facet = dropdownify_facets(facet['subCategory'])
     @jurisdiction_facet = dropdownify_facets(facet['jurisdiction_ss'])
     @places_facet = dropdownify_facets(facet['places'])
