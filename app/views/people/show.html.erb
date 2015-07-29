@@ -77,29 +77,31 @@
   <!-- Visualizations -->
   <a name="visualizations"></a>
   <% if @rdfresults["results"]["bindings"].length > 0 %>
-    <h3>Visualizations:</h3>
-    <h5>The visualizations and their raw data may take several seconds to load.</h5>
+    <h3>Visualization:</h3>
+    <h5>The visualizations may take several seconds to load.</h5>
     <ul>
       <li>
-        <%= link_to "All (new page)", network_vis_path(@person["id"]) %>
-        <%= link_to "(json)", network_vis_path(@person["id"], :format => "json") %>
-        <%= link_to "(xml)", network_vis_path(@person["id"], :format => "xml") %>
+        <%= link_to "Two People Removed", network_vis_path(@person["id"]) %>
+        <%# link_to "(json)", network_vis_path(@person["id"], :format => "json") %>
+        <%# link_to "(xml)", network_vis_path(@person["id"], :format => "xml") %>
       </li>
-      <li>
-        <%= link_to "Family and Kinship (new page)", network_vis_path(@person["id"], :type => "familyOf") %>
-        <%= link_to "(json)", network_vis_path(@person["id"], :type=> "familyOf", :format => "json") %>
-        <%= link_to "(xml)", network_vis_path(@person["id"], :type=> "familyOf", :format => "xml") %>
-      </li>
-      <li>
-        <%= link_to "Legal (new page)", network_vis_path(@person["id"], :type => "legal") %>
-        <%= link_to "(json)", network_vis_path(@person["id"], :type => "legal", :format => "json") %>
-        <%= link_to "(xml)", network_vis_path(@person["id"], :type => "legal", :format => "xml") %>
-      </li>
-      <li>
-        <%= link_to "Social (new page)", network_vis_path(@person["id"], :type => "acquaintanceOf") %>
-        <%= link_to "(json)", network_vis_path(@person["id"], :type => "acquaintanceOf", :format => "json") %>
-        <%= link_to "(xml)", network_vis_path(@person["id"], :type => "acquaintanceOf", :format => "xml") %>
-      </li>
+
+      <%# Other types of relationships, hidden for the time being %>
+      <%# <li> %>
+        <%# link_to "Family and Kinship (new page)", network_vis_path(@person["id"], :type => "familyOf") %>
+        <%# link_to "(json)", network_vis_path(@person["id"], :type=> "familyOf", :format => "json") %>
+        <%# link_to "(xml)", network_vis_path(@person["id"], :type=> "familyOf", :format => "xml") %>
+      <%# </li> %>
+      <%# <li> %>
+        <%# link_to "Legal (new page)", network_vis_path(@person["id"], :type => "legal") %>
+        <%# link_to "(json)", network_vis_path(@person["id"], :type => "legal", :format => "json") %>
+        <%# link_to "(xml)", network_vis_path(@person["id"], :type => "legal", :format => "xml") %>
+      <%# </li> %>
+      <%# <li> %>
+        <%# link_to "Social (new page)", network_vis_path(@person["id"], :type => "acquaintanceOf") %>
+        <%# link_to "(json)", network_vis_path(@person["id"], :type => "acquaintanceOf", :format => "json") %>
+        <%# link_to "(xml)", network_vis_path(@person["id"], :type => "acquaintanceOf", :format => "xml") %>
+      <%# </li> %>
     </ul>
   <% end %>
 <% end %>
