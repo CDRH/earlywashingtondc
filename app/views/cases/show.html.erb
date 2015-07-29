@@ -36,24 +36,26 @@
     <%= format_list(@case["relatedCaseData_ss"], "case") %>
   <% end %>
 
-  <a name="narrative"></a>
-  <% if @case["caseidHasNarrative_s"] %>
-    <h3>Case Narrative</h3>
-    <%= @annotated.html_safe if @annotated%>
-  <% end %>
-
   <% if @case["personData_ss"] %>
     <a name="people"></a><h3>People</h3>
-    <h4>Plaintiffs:</h4>
+    <h4>Plaintiff(s):</h4>
     <%= people_list(@case["plaintiffData_ss"]) %>
     <h4>Defendant(s):</h4>
     <%= people_list(@case["defendantData_ss"]) %>
-    <h4>Attorney for Plaintiffs:</h4>
+    <h4>Attorney for Plaintiff(s):</h4>
     <%= people_list(@case["attorneyPData_ss"]) %>
     <h4>Attorney for Defendant(s):</h4>
     <%= people_list(@case["attorneyData_ss"]) %>
     <h4>Participants:</h4>
     <%= people_list(@case["personData_ss"]) %>
+  <% end %>
+
+<hr/>
+
+  <a name="narrative"></a>
+  <% if @case["caseidHasNarrative_s"] %>
+    <!--<h3>Case Narrative</h3>-->
+    <%= @annotated.html_safe if @annotated%>
   <% end %>
 
 <% end %>

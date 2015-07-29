@@ -4,14 +4,14 @@
   <p>This person may not exist or we may be experiencing technical issues.</p>
 <% else %>
 
-  <h2><strong><%= @person["title"]%></strong> (<%= @person["id"] %>)</h2>
+  <h2><strong><%= @person["title"]%></strong> <!--(<%= @person["id"] %>)--></h2>
   <p><%= "Alternate names: #{@person['personAltName_ss'].join(', ')}" if @person["personAltName_ss"] %>
 
   <div class="callout">
   
-  <%= '<a href="#cases">Related Cases</a>'.html_safe if @cases[:docs].length > 0 %>
-  <%= '<a href="#documents">Related Documents</a>'.html_safe if @docs[:docs].length > 0 %> 
-  <%= '<a href="#relationships">Relationships</a>'.html_safe if @rdfresults["results"]["bindings"].length > 0 %>
+  <%= '<a href="#cases">Related Cases</a> | '.html_safe if @cases[:docs].length > 0 %>
+  <%= '<a href="#documents">Related Documents</a> | '.html_safe if @docs[:docs].length > 0 %> 
+  <%= '<a href="#relationships">Relationships</a> | '.html_safe if @rdfresults["results"]["bindings"].length > 0 %>
   <%= '<a href="#visualizations">Visualizations</a>'.html_safe if @rdfresults["results"]["bindings"].length > 0 %>
   </div>
 
@@ -81,7 +81,7 @@
     <h5>The visualizations may take several seconds to load.</h5>
     <ul>
       <li>
-        <%= link_to "Explore the relationships of this person to two degrees of separation", network_vis_path(@person["id"]) %>
+        <%= link_to "Two Degrees of Separation", network_vis_path(@person["id"]) %>
         <%# link_to "(json)", network_vis_path(@person["id"], :format => "json") %>
         <%# link_to "(xml)", network_vis_path(@person["id"], :format => "xml") %>
       </li>
