@@ -12,11 +12,6 @@ class PeopleController < ApplicationController
     @plaintiff_facet = dropdownify_data_facets(facet['plaintiffData_ss'])
     @defendant_facet = dropdownify_data_facets(facet['defendantData_ss'])
     
-     if params[:letter]
-      _index_finder({:fq => "recordType_s:person", :q => "titleLetter_s:#{params[:letter]}"})
-    else
-      _index_finder({:fq => "recordType_s:person"})
-    end
     # TODO this isn't right, the gem shouldn't need "facet = true" so I'm not sure what's going on
     # it already has facet = true as a default in the gem, something here must be overriding it
     facets = $solr.get_facets({:q => "recordType_s:person", "facet.sort" => "asc", :facet => "true"}, ["titleLetter_s"])
