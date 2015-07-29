@@ -16,7 +16,7 @@
  <% select_tag :id, options_for_select(@plaintiff_facet), :prompt => "Select Plaintiff", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
 <% end %>
 
-<h4>Browse by Defendant</h4>
+<h4>Defendant</h4>
 <!-- Browse by Defendant -->
 <%= form_tag person_browse_path do %>
  <% select_tag :id, options_for_select(@defendant_facet), :prompt => "Select Defendant", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
