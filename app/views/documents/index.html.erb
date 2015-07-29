@@ -1,10 +1,8 @@
 <a name="top">
   <h2>Displaying All <%= @docs[:num_found] %> Documents</h2>
-  
-  <!-- TODO: Should this be in the /documents folder or /cases? There seems to be an identical view in cases. -KMD
 
   <!-- search form -->
-  <%= render "search_bar" %>
+  <%= render "partials/search_bar" %>
 </a>
 
 <div class="jump_pagination">Jump to Page 
@@ -13,6 +11,7 @@
 <% end %>
 of results</div>
 
+<%= render "partials/pagination" %>
 <ul>
   <% @docs[:docs].each do |doc| %>
     <li>
@@ -20,3 +19,4 @@ of results</div>
     </li>
   <% end %>
 </ul>
+<%= render "partials/pagination" %>
