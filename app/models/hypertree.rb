@@ -1,24 +1,16 @@
 class Hypertree < Relationships
-  attr_accessor :raw_res, :json, :raw_res
-
+  attr_accessor :json
   # send omit false if you want to see judges and clerks!
   def initialize(person, type, omit=true)
+    super()
     @id = person
     @omit = omit
     @type = type
-    # choose the right query to run
-    # easier just to make a whole new one if involving type
-    @raw_res = nil
-    if type == "legal" || type == "familyOf" || type == "acquaintanceOf"
-      @raw_res = self.class.query_two_removed_type(person, type)
-    else
-      # assume if not one of those types then everything desired
-      @raw_res = self.class.query_two_removed_all(person)
-    end
-    @raw_xml = @raw_res
-    # format the results
-    res_ruby_json = JSON.parse(@raw_res.to_json)
-    @json = format_results(res_ruby_json)
+    raw_res = query_two_removed(person, "json", type)
+    
+    ruby_json = JSON.parse(raw_res)
+    # this made more sense when several formats were being requested by this
+    @json = format_results(ruby_json)
   end
 
   def format_results(raw_json)
@@ -53,7 +45,7 @@ class Hypertree < Relationships
             per1obj = info["children"][per1index]
             # this person might have multiple relationships with same individual
             # for example, Ben petitionerAgainst Scott, Ben enslavedBy Scott
-            if per1obj["data"]["relation"] != per0to1
+            if !per1obj["data"]["relation"].include?(per0to1)
               per1obj["data"]["relation"] += " / #{per0to1}"
             end
           end
