@@ -1,23 +1,74 @@
 <h2>People</h2>
 
-<p><%= link_to "List All People", peopleAll_path %></p>
+<div class="row">
+  <div class="col-md-6">
 
-<h3>Browse by...</h3>
+<!--
+<div class="list-group">
+	
+	<% link_to "List All People", peopleAll_path, class: "list-group-item" %>
 
-<h4>Attorney</h4>
-<!-- Browse by Attorney -->
+	</div>
+--><!-- /list group-->
+	
+	<h3>Browse by letter</h3>
+	
+	
+	
+	<div class="browse_alpha_menu">
+		
+		<%= make_alphabet_menu(@alphabet) %>
+</div>
+	
+	
+</div><!-- /column-->
+
+
+  <div class="col-md-6">
+	  
+	  
+
+<h3>Role</h3>
+
+<div class="row">
+  <div class="col-md-4">Attorney</div>
+  <div class="col-md-8">
+	 <!-- Browse by Attorney -->
 <%= form_tag person_browse_path do %>
  <% select_tag :id, options_for_select(@attorney_facet), :prompt => "Select Attorney", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
 <% end %>
 
-<h4>Plaintiff</h4>
-<!-- Browse by Plaintiff -->
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col-md-4">Plaintiff</div>
+  <div class="col-md-8">
+	 <!-- Browse by Plaintiff -->
 <%= form_tag person_browse_path do %>
  <% select_tag :id, options_for_select(@plaintiff_facet), :prompt => "Select Plaintiff", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
 <% end %>
 
+<<<<<<< HEAD
 <h4>Defendant</h4>
 <!-- Browse by Defendant -->
+=======
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="col-md-4">Defendant</div>
+  <div class="col-md-8">
+	 <!-- Browse by Defendant -->
+>>>>>>> e8cc566d016e4eb48e4e28adfb221436dff2d39f
 <%= form_tag person_browse_path do %>
  <% select_tag :id, options_for_select(@defendant_facet), :prompt => "Select Defendant", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
 <% end %>
+  </div>
+</div>
+
+
+
+  </div><!-- /column-->
+</div><!-- /row-->
