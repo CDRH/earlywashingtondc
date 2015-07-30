@@ -62,7 +62,7 @@ class PeopleController < ApplicationController
       format.html { 
         @res = Hypertree.new(@id, @type, true).json
         # optional to avoid all the header / footer
-        # render layout: false
+        render layout: false
       }
       format.json { render :json => Relationships.new.query_two_removed(@id, "json", @type) }
       format.xml { render :xml => Relationships.new.query_two_removed(@id, "xml", @type) }

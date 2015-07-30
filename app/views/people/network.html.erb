@@ -19,6 +19,8 @@
 </head>
 
 <body onload="initHypertree();">
+  <!-- back button -->
+  <%= link_to "Back to Person View", person_path(@id) %>
   Visualization omits relationships which involve judges and clerks
   <div id="container">
 
