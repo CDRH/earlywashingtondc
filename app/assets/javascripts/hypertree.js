@@ -45,9 +45,9 @@ var originalLabels = function(node) {
     var child = adj.nodeTo;
     if (child.data) {
       var rel = child.data.relation;
-        html += "<p>"+prettify(rel) +" "+ child.name+"</p>";
-      }
-    });
+      html += "<p>"+prettify(rel) +" "+ child.name+"</p>";
+    }
+  });
   return html;
 };
 
@@ -74,12 +74,15 @@ function initHypertree(){
       //canvas width and height
       width: w,
       height: h,
-      //Change node and edge styles such as
-      //color, width and dimensions.
       Node: {
         dim: 9,
         color: "#f00"
       },
+      // NodeStyles: {
+      //   enable: true,
+      //   stylesHover: true,
+      //   type: "HTML"
+      // },
       Edge: {
         lineWidth: 2,
         color: "#ADADAD",
@@ -101,7 +104,7 @@ function initHypertree(){
             html = makeLabels(node);
           }
           $jit.id('inner-details').innerHTML = html;
-        }
+        },
       },
       onBeforeCompute: function(node){
         Log.write("centering");
@@ -117,11 +120,16 @@ function initHypertree(){
         } else {
           node.Node.color = '#D4D4D4'
         }
+        // domElement.onmouseover = function() { alert("Moused over"); }
       },
       onBeforePlotLine: function(adj) {
-        // if (adj.nodeFrom.id == "per.000824") {
-        //   adj.data.$color = "#111333";
-        // }
+        if (adj.nodeTo.data.relationType == "legal") {
+          adj.data.$color = "green";
+        } else if (adj.nodeTo.data.relationType == "familyOf") {
+          adj.data.$color = "orange";
+        }
+        // console.log(adj.nodeFrom.id + " to " + adj.nodeTo.id + " and type " + adj.nodeTo.data.relationType);
+        // console.log("depth " + Object.getOwnPropertyNames(adj));
       },
       //Attach event handlers and add text to the
       //labels. This method is only triggered on label
@@ -144,8 +152,7 @@ function initHypertree(){
         style.cursor = 'pointer';
         if (node._depth < 1) {
           style.fontSize = "0.9em";
-          // style.color = "#000";
-          style.color = "green";
+          style.color = "#000";
         } else if (node._depth == 1) {
           style.fontSize = "0.8em";
           style.color = "#000";
@@ -174,8 +181,12 @@ function initHypertree(){
           $jit.id('inner-details').innerHTML = html;
         }
       });
+
+    // override the default behavior of hypertree so that the graph does not reorient
+    $jit.Hypertree.prototype.onClick = function(id, opt) {};
     //load JSON data.
     ht.loadJSON(json);
+    console.log("JSON " + json);
     //compute positions and plot.
     ht.refresh();
     //end

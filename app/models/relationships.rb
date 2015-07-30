@@ -43,10 +43,12 @@ class Relationships
                   ?per1 ?rel12 ?per2 .
                   osrdf:#{person_id} oscys:fullName ?name0 .
                   ?per1 oscys:fullName ?name1 .
-                  ?per2 oscys:fullName ?name2
+                  ?per2 oscys:fullName ?name2 .
+                  OPTIONAL { ?rel01 rdf:subPropertyOf ?rel01type } .
+                  OPTIONAL { ?rel12 rdf:subPropertyOf ?rel12type } .
                   FILTER ( ?per2 != osrdf:#{person_id} )
                   }}
-      return query(query_string, false, format)
+      return query(query_string, true, format)
     else
       query_string = %{ {
                   ?rel01 rdf:subPropertyOf oscys:#{type} .
@@ -61,6 +63,8 @@ class Relationships
       return query(query_string, true, format)
     end
   end
+
+  private
 
   def _build_url(query_string="{}", include_owl=false, format="json")
     graphs = include_owl ? "FROM <#{@rdf_file}> FROM <#{@owl_file}>" : "FROM <#{@rdf_file}>"
