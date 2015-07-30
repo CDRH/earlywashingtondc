@@ -26,7 +26,7 @@ var Log = {
 };
 
 var makeLabels = function(node) {
-  var html = node.getParents()[0].name+" "+prettify(node.data.relation);
+  var html = "<p>"+node.getParents()[0].name+" "+prettify(node.data.relation)+"</p>";
   html += "<h4>" + node.name + "</h4>", data = node.data;
   children = node.getSubnodes();
   node.getSubnodes().forEach(function(child, indx) {
