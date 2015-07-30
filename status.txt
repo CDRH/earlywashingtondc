@@ -1,5 +1,0 @@
-Status:
-
-- added bootstrap css
-- started reworking routes, unfinished
-- stories and about are ready to go but none of the other functions implemented
