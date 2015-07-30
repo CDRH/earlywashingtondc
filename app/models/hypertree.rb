@@ -69,7 +69,7 @@ class Hypertree < Relationships
         end
       end
     end
-    File.open("scripts/test_output.json", "w") { |file| file.write(info.to_json) }
+    # File.open("scripts/test_output.json", "w") { |file| file.write(info.to_json) }
     return info
   end
 

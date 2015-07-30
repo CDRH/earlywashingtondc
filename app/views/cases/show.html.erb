@@ -9,9 +9,9 @@
   <%# metadata_builder("Jurisdiction", @case["jurisdiction_ss"]) %>
   <%= find_unique_strings(@case["jurisdiction_ss"]) %>
 
-  <% if @case["outcomeID_ss"] %>
+  <% if @case["outcomeData_ss"] %>
     <h3>Outcome</h3>
-    <%= metadata_builder(nil, @case["outcomeID_ss"]) %>
+    <%= metadata_builder(nil, @case["outcomeData_ss"]) %>
   <% end %>
 
   <div class="callout">
