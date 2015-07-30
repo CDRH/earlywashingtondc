@@ -1,10 +1,11 @@
 class KinshipController < ApplicationController
   def index
-  
+    @page_class = "kinship"
   end
 
 
   def sub
+    @page_class = "kinship"
     # in the URL there will be an ID
     # either a number or a string
     # and that will determine which template to

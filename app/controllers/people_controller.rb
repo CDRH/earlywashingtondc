@@ -1,6 +1,8 @@
 class PeopleController < ApplicationController
-	
+
   def index
+	  @page_class = "people"
+
      # TODO the rsolr gem reallllllly shouldn't need facet => true, still not sure why that is happening
     facet = $solr.get_facets({
       :q => "recordType_s:document", :facet => "true", 
@@ -17,10 +19,11 @@ class PeopleController < ApplicationController
     facets = $solr.get_facets({:q => "recordType_s:person", "facet.sort" => "asc", :facet => "true"}, ["titleLetter_s"])
     @alphabet = facets["titleLetter_s"]
     
-    
   end
 		
   def all
+    @page_class = "people"
+
     if params[:letter]
       _index_finder({:fq => "recordType_s:person", :q => "titleLetter_s:#{params[:letter]}"})
     else
@@ -39,8 +42,10 @@ class PeopleController < ApplicationController
   end
 
   def show
+    @page_class = "people"
+
     id = params[:id]
-    @person = $solr.query({:q => "id:#{id}", :fq => "recordType_s:person"})[:docs][0]
+    @person = $solr.get_item_by_id(id)
 
     @docs = $solr.query({:qfield => "personID_ss", :qtext => id})
     @cases = $solr.query({:q => "personID_ss:#{id}", :fq => "recordType_s:caseid"})
@@ -50,6 +55,7 @@ class PeopleController < ApplicationController
   end
 
   def network
+    @page_class = "visualization"
     @id = params[:id]
     @type = params[:type]
     respond_to do |format|
