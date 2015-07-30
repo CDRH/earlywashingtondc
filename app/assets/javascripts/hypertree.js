@@ -74,15 +74,15 @@ function initHypertree(){
       //canvas width and height
       width: w,
       height: h,
+      Navigation: {
+        enable: true,
+        panning: true,
+        zooming: 20
+      },
       Node: {
         dim: 9,
         color: "#f00"
       },
-      // NodeStyles: {
-      //   enable: true,
-      //   stylesHover: true,
-      //   type: "HTML"
-      // },
       Edge: {
         lineWidth: 2,
         color: "#ADADAD",
@@ -120,16 +120,21 @@ function initHypertree(){
         } else {
           node.Node.color = '#D4D4D4'
         }
-        // domElement.onmouseover = function() { alert("Moused over"); }
       },
       onBeforePlotLine: function(adj) {
-        if (adj.nodeTo.data.relationType == "legal") {
-          adj.data.$color = "green";
-        } else if (adj.nodeTo.data.relationType == "familyOf") {
-          adj.data.$color = "orange";
+        var relationType = adj.nodeTo.data.relationType;
+        if (relationType == "legal") {
+          adj.data.$color = "#6D96A7";  // light blue from logo
+        } else if (relationType == "familyOf") {
+          adj.data.$color = "#a51400";
+        } else if (relationType == "employment") {
+          adj.data.$color = "#4A5131";  // army green
+        } else if (relationType == "acquaintanceOf") {
+          adj.data.$color = "orange"
+        } else if (relationType == "") {
+          adj.data.$color = "magenta";  // something is wrong
         }
-        // console.log(adj.nodeFrom.id + " to " + adj.nodeTo.id + " and type " + adj.nodeTo.data.relationType);
-        // console.log("depth " + Object.getOwnPropertyNames(adj));
+        // otherwise just allow the default grey to go through
       },
       //Attach event handlers and add text to the
       //labels. This method is only triggered on label
@@ -184,11 +189,45 @@ function initHypertree(){
 
     // override the default behavior of hypertree so that the graph does not reorient
     $jit.Hypertree.prototype.onClick = function(id, opt) {};
-    //load JSON data.
     ht.loadJSON(json);
-    console.log("JSON " + json);
-    //compute positions and plot.
-    ht.refresh();
-    //end
+    ht.refresh();  //compute positions and plot.
     ht.controller.onComplete();
+
+    // many thanks to SNAC for providing a lovely zooming / panning tool
+    // that could be shamelessly incorporated into our graph
+    // http://socialarchive.iath.virginia.edu/
+
+    // SNAC panZoomControl
+    var scaleFactor = 1.1;
+    var panSize = 25;
+    initialZoom = 1;
+    ht.canvas.scale(initialZoom,initialZoom);
+
+    $('#panUp').click(function(){
+        ht.canvas.translate(0, panSize * 1/ht.canvas.scaleOffsetY);
+    });
+
+    $('#panLeft').click(function(){
+        ht.canvas.translate(panSize * 1/ht.canvas.scaleOffsetX, 0);
+    });
+
+    $('#panRight').click(function(){
+        ht.canvas.translate(-panSize * 1/ht.canvas.scaleOffsetX, 0);
+    });
+
+    $('#panDown').click(function(){
+        ht.canvas.translate(0, -panSize * 1/ht.canvas.scaleOffsetY);
+    });
+
+    $('#zoomIn').click(function(){
+        ht.canvas.scale(scaleFactor,scaleFactor);
+    });
+
+    $('#zoomReset').click(function(){
+        ht.canvas.scale(initialZoom/ht.canvas.scaleOffsetX,initialZoom/ht.canvas.scaleOffsetY);
+    });
+
+    $('#zoomOut').click(function(){
+        ht.canvas.scale(1/scaleFactor,1/scaleFactor);
+    });
   }

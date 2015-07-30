@@ -23,7 +23,44 @@
   <div id="container">
 
     <div id="center-container">
-      <div id="infovis"></div>    
+      <!-- thanks for the panning and zooming, SNAC!
+           http://socialarchive.iath.virginia.edu/ -->
+      <div id="panZoomControl">
+        <div>
+          <button id="panUp">∧</button>
+        </div>
+        <div>
+          <button id="panLeft">&lt;</button>
+          <button id="panRight">&gt;</button>
+        </div>
+        <div>
+          <button id="panDown">∨</button>
+        </div>
+        <hr></hr>
+        <div>
+          <button id="zoomIn">+</button>
+        </div>
+        <div>
+          <button id="zoomReset">•</button>
+        </div>
+        <div>
+          <button id="zoomOut">-</button>
+        </div>
+      </div>
+
+      <div id="key">
+        <strong>Relationship Types</strong>
+        <ul>
+          <li style="color:#6D96A7">Legal</li>
+          <li style="color:#a51400">Kinship</li>
+          <li style="color:#4A5131">Employment</li>
+          <li style="color:orange">AcquaintanceOf</li>
+          <li style="color:#ADADAD">Multiple Relationship Types</li>
+          <li style="color:magenta">Missing Relationship Type</li>
+        </ul>
+      </div>
+
+      <div id="infovis">
     </div>
 
     <div id="right-container">
