@@ -1,5 +1,6 @@
 class DocumentsController < ApplicationController
   def index
+    @page_class = "cases"
 	  _index_finder()
   end
 
@@ -19,14 +20,11 @@ class DocumentsController < ApplicationController
       qfield = "places"
       qtext = params[:places]
     end
-    @docs = $solr.query({ :qfield => qfield, :qtext => qtext })
-    @total_pages = (@docs[:num_found].to_f/50).ceil
-    params[:qfield] = qfield
-    params[:qtext] = qtext
-    render :template => "documents/search"
+    redirect_to search_path({:qfield => qfield, :qtext => qtext})
   end
 
   def search
+    @page_class = "search_results"
     # TODO so at this point, why not just use params instead of options?
     # reset fq to be all results not just actual documents
     options = { :qfield => params[:qfield], :qtext => params[:qtext], :fq => "*:*"}
@@ -63,6 +61,7 @@ class DocumentsController < ApplicationController
   end
 
   def show
+    @page_class = "cases"
     # if this is actually a person or a case, redirect
     @doc = $solr.get_item_by_id(params[:id])
     if @doc["recordType_s"] == "person"
@@ -76,6 +75,7 @@ class DocumentsController < ApplicationController
   end
   
   def advancedsearch
+    @page_class = "search"
     # get a list of all the people
     people_facets = $solr.get_facets({:q => "recordType_s:person", 
       :facet => "true", "facet.limit" => "-1",
@@ -83,8 +83,4 @@ class DocumentsController < ApplicationController
     @people = people_facets["title"].keys
   end
 
-  def supplementary
-    @docs = $solr.query({ :qfield => "category", :qtext => "Supplementary Documents" })
-    # TODO could use index view with some minor tweaking
-  end
 end

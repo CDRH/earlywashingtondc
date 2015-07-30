@@ -4,19 +4,19 @@
   <p>This person may not exist or we may be experiencing technical issues.</p>
 <% else %>
 
-  <h1><strong><%= @person["title"]%></strong> (<%= @person["id"] %>)</h1>
+  <h2><strong><%= @person["title"]%></strong> <!--(<%= @person["id"] %>)--></h2>
   <p><%= "Alternate names: #{@person['personAltName_ss'].join(', ')}" if @person["personAltName_ss"] %>
 
   <div class="callout">
-  <a href="#description">Described As</a> | 
+  
   <%= '<a href="#cases">Related Cases</a> | '.html_safe if @cases[:docs].length > 0 %>
   <%= '<a href="#documents">Related Documents</a> | '.html_safe if @docs[:docs].length > 0 %> 
   <%= '<a href="#relationships">Relationships</a> | '.html_safe if @rdfresults["results"]["bindings"].length > 0 %>
-  <%= '<a href="#visualizations">Visualizations</a> | '.html_safe if @rdfresults["results"]["bindings"].length > 0 %>
+  <%= '<a href="#visualizations">Visualizations</a>'.html_safe if @rdfresults["results"]["bindings"].length > 0 %>
   </div>
 
-  <a name="description"><h2>Described As:</h2></a>
-  <div class="callout bibliography" id="topBibl">
+  <h3 id="description">Described in Case Documents As:</h3>
+    <div class="bibliography" id="topBibl">
     <%= metadata_builder("Sex", @person["personSex_ss"]) %>
     <%= metadata_builder("Color", @person["personColorData_ss"]) %>
     <%= metadata_builder("Affiliation", @person["personAffiliationData_ss"]) %>
@@ -53,7 +53,7 @@
     <h3><%= @docs[:num_found] %> Related Documents: </h3>
     <ul>
     <% @docs[:docs].each do |doc| %>
-      <li><%= link_to doc["title"], doc_path(doc["id"]) %></li>
+      <li><%= link_to "#{doc['title']} #{doc['dateDisplay']}", doc_path(doc["id"]) %></li>
     <% end %>
     <h4><%= link_to "View more related documents...", search_path(:qfield => "personID_ss", :qtext => @person['id']) if @docs[:num_found].to_i > 50 %></h4>
     </ul>
@@ -77,29 +77,31 @@
   <!-- Visualizations -->
   <a name="visualizations"></a>
   <% if @rdfresults["results"]["bindings"].length > 0 %>
-    <h3>Visualizations:</h3>
-    <h5>The visualizations and their raw data may take several seconds to load.</h5>
+    <h3>Visualize Relationships:</h3>
+    <h5>The visualizations may take several seconds to load.</h5>
     <ul>
       <li>
-        <%= link_to "All (new page)", network_vis_path(@person["id"]) %>
-        <%= link_to "(json)", network_vis_path(@person["id"], :format => "json") %>
-        <%= link_to "(xml)", network_vis_path(@person["id"], :format => "xml") %>
+        <%= link_to "Two Degrees of Separation", network_vis_path(@person["id"]) %>
+        <%# link_to "(json)", network_vis_path(@person["id"], :format => "json") %>
+        <%# link_to "(xml)", network_vis_path(@person["id"], :format => "xml") %>
       </li>
-      <li>
-        <%= link_to "Family and Kinship (new page)", network_vis_path(@person["id"], :type => "familyOf") %>
-        <%= link_to "(json)", network_vis_path(@person["id"], :type=> "familyOf", :format => "json") %>
-        <%= link_to "(xml)", network_vis_path(@person["id"], :type=> "familyOf", :format => "xml") %>
-      </li>
-      <li>
-        <%= link_to "Legal (new page)", network_vis_path(@person["id"], :type => "legal") %>
-        <%= link_to "(json)", network_vis_path(@person["id"], :type => "legal", :format => "json") %>
-        <%= link_to "(xml)", network_vis_path(@person["id"], :type => "legal", :format => "xml") %>
-      </li>
-      <li>
-        <%= link_to "Social (new page)", network_vis_path(@person["id"], :type => "acquaintanceOf") %>
-        <%= link_to "(json)", network_vis_path(@person["id"], :type => "acquaintanceOf", :format => "json") %>
-        <%= link_to "(xml)", network_vis_path(@person["id"], :type => "acquaintanceOf", :format => "xml") %>
-      </li>
+
+      <%# Other types of relationships, hidden for the time being %>
+      <%# <li> %>
+        <%# link_to "Family and Kinship (new page)", network_vis_path(@person["id"], :type => "familyOf") %>
+        <%# link_to "(json)", network_vis_path(@person["id"], :type=> "familyOf", :format => "json") %>
+        <%# link_to "(xml)", network_vis_path(@person["id"], :type=> "familyOf", :format => "xml") %>
+      <%# </li> %>
+      <%# <li> %>
+        <%# link_to "Legal (new page)", network_vis_path(@person["id"], :type => "legal") %>
+        <%# link_to "(json)", network_vis_path(@person["id"], :type => "legal", :format => "json") %>
+        <%# link_to "(xml)", network_vis_path(@person["id"], :type => "legal", :format => "xml") %>
+      <%# </li> %>
+      <%# <li> %>
+        <%# link_to "Social (new page)", network_vis_path(@person["id"], :type => "acquaintanceOf") %>
+        <%# link_to "(json)", network_vis_path(@person["id"], :type => "acquaintanceOf", :format => "json") %>
+        <%# link_to "(xml)", network_vis_path(@person["id"], :type => "acquaintanceOf", :format => "xml") %>
+      <%# </li> %>
     </ul>
   <% end %>
 <% end %>
