@@ -1,11 +1,9 @@
 class AboutController < ApplicationController
 
   def index
-    @page_class = "about"
   end
   
   def sub
-    @page_class = "about"
     # in the URL there will be an ID
     # either a number or a string
     # and that will determine which template to
@@ -22,19 +20,15 @@ class AboutController < ApplicationController
   end
 
   def credits
-    @page_class = "about"
   end
 
   def data
-    @page_class = "about"
   end
 
   def description
-    @page_class = "about"
   end
 
   def technical
-    @page_class = "about"
   end
 
 end

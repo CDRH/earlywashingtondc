@@ -1,9 +1,0 @@
-development:
-  solr_url: http://server.unl.edu:8080/solr/api_oscys_test
-  prefix_owl: "oscys: <http://server.unl.edu/jessica/oscys_test.owl#>"
-  prefix_rdf: "osrdf: <http://server.unl.edu/jessica/oscys_test#>"
-  sparqler: "http://server.unl.edu:3030/sparql"
-  rdf_file: "http://server.unl.edu/jessica/oscys_test.rdf"
-  owl_file: "http://server.unl.edu/jessica/oscys_test.owl"
-production:
-test:

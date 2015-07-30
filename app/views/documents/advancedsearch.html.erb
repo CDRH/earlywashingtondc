@@ -11,11 +11,10 @@
 <h1>Search</h1>
 
 <h2>Search by Keyword</h2>
-<p>Enter any name, word, or series of words to search across all case documents.</p>
-<%= render "partials/search_bar" %>
+<%= render "search_bar" %>
 
 <h2>Search for Person</h2>
-<p>A guided search of the people named across all case documents.</p>
+
 <%= form_tag search_path do %>
   <%= hidden_field_tag(:qfield, "text") %>
   <%= text_field_tag(:qtext, nil, :placeholder => "Search by Person", :id => "people") %>

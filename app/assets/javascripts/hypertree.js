@@ -45,9 +45,9 @@ var originalLabels = function(node) {
     var child = adj.nodeTo;
     if (child.data) {
       var rel = child.data.relation;
-      html += "<p>"+prettify(rel) +" "+ child.name+"</p>";
-    }
-  });
+        html += "<p>"+prettify(rel) +" "+ child.name+"</p>";
+      }
+    });
   return html;
 };
 
@@ -74,11 +74,8 @@ function initHypertree(){
       //canvas width and height
       width: w,
       height: h,
-      Navigation: {
-        enable: true,
-        panning: true,
-        zooming: 20
-      },
+      //Change node and edge styles such as
+      //color, width and dimensions.
       Node: {
         dim: 9,
         color: "#f00"
@@ -104,7 +101,7 @@ function initHypertree(){
             html = makeLabels(node);
           }
           $jit.id('inner-details').innerHTML = html;
-        },
+        }
       },
       onBeforeCompute: function(node){
         Log.write("centering");
@@ -122,19 +119,9 @@ function initHypertree(){
         }
       },
       onBeforePlotLine: function(adj) {
-        var relationType = adj.nodeTo.data.relationType;
-        if (relationType == "legal") {
-          adj.data.$color = "#6D96A7";  // light blue from logo
-        } else if (relationType == "familyOf") {
-          adj.data.$color = "#a51400";
-        } else if (relationType == "employment") {
-          adj.data.$color = "#4A5131";  // army green
-        } else if (relationType == "acquaintanceOf") {
-          adj.data.$color = "orange"
-        } else if (relationType == "") {
-          adj.data.$color = "magenta";  // something is wrong
-        }
-        // otherwise just allow the default grey to go through
+        // if (adj.nodeFrom.id == "per.000824") {
+        //   adj.data.$color = "#111333";
+        // }
       },
       //Attach event handlers and add text to the
       //labels. This method is only triggered on label
@@ -157,7 +144,8 @@ function initHypertree(){
         style.cursor = 'pointer';
         if (node._depth < 1) {
           style.fontSize = "0.9em";
-          style.color = "#000";
+          // style.color = "#000";
+          style.color = "green";
         } else if (node._depth == 1) {
           style.fontSize = "0.8em";
           style.color = "#000";
@@ -186,48 +174,10 @@ function initHypertree(){
           $jit.id('inner-details').innerHTML = html;
         }
       });
-
-    // override the default behavior of hypertree so that the graph does not reorient
-    $jit.Hypertree.prototype.onClick = function(id, opt) {};
+    //load JSON data.
     ht.loadJSON(json);
-    ht.refresh();  //compute positions and plot.
+    //compute positions and plot.
+    ht.refresh();
+    //end
     ht.controller.onComplete();
-
-    // many thanks to SNAC for providing a lovely zooming / panning tool
-    // that could be shamelessly incorporated into our graph
-    // http://socialarchive.iath.virginia.edu/
-
-    // SNAC panZoomControl
-    var scaleFactor = 1.1;
-    var panSize = 25;
-    initialZoom = 1;
-    ht.canvas.scale(initialZoom,initialZoom);
-
-    $('#panUp').click(function(){
-        ht.canvas.translate(0, panSize * 1/ht.canvas.scaleOffsetY);
-    });
-
-    $('#panLeft').click(function(){
-        ht.canvas.translate(panSize * 1/ht.canvas.scaleOffsetX, 0);
-    });
-
-    $('#panRight').click(function(){
-        ht.canvas.translate(-panSize * 1/ht.canvas.scaleOffsetX, 0);
-    });
-
-    $('#panDown').click(function(){
-        ht.canvas.translate(0, -panSize * 1/ht.canvas.scaleOffsetY);
-    });
-
-    $('#zoomIn').click(function(){
-        ht.canvas.scale(scaleFactor,scaleFactor);
-    });
-
-    $('#zoomReset').click(function(){
-        ht.canvas.scale(initialZoom/ht.canvas.scaleOffsetX,initialZoom/ht.canvas.scaleOffsetY);
-    });
-
-    $('#zoomOut').click(function(){
-        ht.canvas.scale(1/scaleFactor,1/scaleFactor);
-    });
   }

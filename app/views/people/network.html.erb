@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<%# @res %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>OSCYS: Visualization</title> 
+  <title>OSCYS: Visualization</title>
 
   <!-- CSS Files -->
   <%= stylesheet_link_tag 'hypertree', media: 'all', 'data-turbolinks-track' => false %>
@@ -19,58 +21,10 @@
 </head>
 
 <body onload="initHypertree();">
-  <!-- back button -->
-  
   <div id="container">
-	  
-	  <div class="back_button">
-		  <%= link_to "Back to Person View", person_path(@id) %>
-		  
-		  
-	  </div>
-	  
-<!-- 	  I think we should include this info on the page this is linked from -->
-<!--   Visualization omits relationships which involve judges and clerks -->
 
     <div id="center-container">
-      <!-- thanks for the panning and zooming, SNAC!
-           http://socialarchive.iath.virginia.edu/ -->
-      <div id="panZoomControl">
-        <div>
-          <button id="panUp">∧</button>
-        </div>
-        <div>
-          <button id="panLeft">&lt;</button>
-          <button id="panRight">&gt;</button>
-        </div>
-        <div>
-          <button id="panDown">∨</button>
-        </div>
-        <hr></hr>
-        <div>
-          <button id="zoomIn">+</button>
-        </div>
-        <div>
-          <button id="zoomReset">•</button>
-        </div>
-        <div>
-          <button id="zoomOut">-</button>
-        </div>
-      </div>
-
-      <div id="key">
-        <strong>Relationship Types</strong>
-        <ul>
-          <li style="color:#6D96A7">Legal</li>
-          <li style="color:#a51400">Kinship</li>
-          <li style="color:#4A5131">Employment</li>
-          <li style="color:orange">AcquaintanceOf</li>
-          <li style="color:#ADADAD">Multiple Relationship Types</li>
-          <li style="color:magenta">Missing Relationship Type</li>
-        </ul>
-      </div>
-
-      <div id="infovis">
+      <div id="infovis"></div>    
     </div>
 
     <div id="right-container">
@@ -80,4 +34,4 @@
     <div id="log"></div>
   </div>
 </body>
-<!-- </html> -->
+</html>

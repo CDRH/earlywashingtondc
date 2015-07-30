@@ -544,10 +544,12 @@ text-decoration:underline;
 
 /*People*/
 
+
 .letter_pagination {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	text-align: center;
 	vertical-align: top;
 	line-height: 1em;
 }
@@ -578,23 +580,7 @@ text-decoration:underline;
 }
 
 
-.main_alpha_menu  .letter_pagination {
-	text-align: center;
-
-}
-
-.browse_alpha_menu .letter_pagination li a {
-	width: 3.2em;
-	font-size: 1.1em;
-}
-
-.browse_alpha_menu .letter_pagination {
-	line-height: 1.2em;
-}
-
-
-
-/*/\* ==|== family tree ======================================================== *\/
+/* ==|== family tree ======================================================== */
  
  ul.tree, ul.tree ul {
      list-style-type: none;
@@ -637,11 +623,11 @@ text-decoration:underline;
      background: #fff url(http://spacely.unl.edu/cocoon/dccourts/files/css/lastnode.jpg) no-repeat;
    }
 
-/\*  .gen {
+/*  .gen {
     color: #000;
     font-style:italic;
     font-size: .9em;
-    }*\/ 
+    }*/ 
 
     a.gen, a.gen:visited, a.gen:active {
     color: #000;
@@ -652,14 +638,14 @@ text-decoration:underline;
     }
 
     a.cas, a.cas:visited, a.cas:active {
-/\*    color: #780000;*\/
+/*    color: #780000;*/
     color: #66713e;
     }
 
     .cas {
-    /\*color: #780000;*\/
+    /*color: #780000;*/
     color: #66713e;
-    }*/
+    }
 
 
 
@@ -672,8 +658,3 @@ text-decoration:underline;
 .unhidden { 
 	display: block; 
 	}
-	
-	
-	/* Cases */
-	
-	.cases select {width:100%}

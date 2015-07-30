@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 # Custom CDRH gem
 gem 'rsolr_cdrh', :git => 'git://github.com/CDRH/rsolr_cdrh.git'
+# linked data stuff
+gem 'sparql'
+gem 'linkeddata'  # this will require a c compiler, I believe
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.10'

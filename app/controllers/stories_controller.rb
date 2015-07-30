@@ -1,13 +1,11 @@
 class StoriesController < ApplicationController
 
   def index
-    @page_class = "stories"
     # This is a list of all the stories
     # add more links in app/views/stories/index.html.erb
   end
 
   def sub
-    @page_class = "stories"
     # in the URL there will be an ID
     # either a number or a string
     # and that will determine which template to

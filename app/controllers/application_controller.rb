@@ -31,26 +31,9 @@ class ApplicationController < ActionController::Base
     @total_pages = (@total_found.to_f/50).ceil
   end
 
-  def _format_date(date)
-    year_month = date.split("-")
-    # if there is a better way of doing this I would love to hear it
-    # but ruby's DateTime and Date didn't seem to offer what we need
-    months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    begin
-      selected_month = year_month[1].to_i-1
-      return "#{months[selected_month]} #{year_month[0]}"
-    rescue
-      # when in doubt, just return whatever was in solr
-      return date
-    end
-  end
-
   # for the traditional Smith => 10 type results
-  def dropdownify_facets(facet_term, date=false)
-    facet_term.keys.collect { |x| 
-      display = date ? _format_date(x) : x
-      ["#{display} (#{facet_term[x]})", x] 
-    }
+  def dropdownify_facets(facet_term)
+    facet_term.keys.collect { |x| ["#{x} (#{facet_term[x]})", x] }
   end
 
   # for the less traditional {label: Smith, id: 0001} => 10 type results
