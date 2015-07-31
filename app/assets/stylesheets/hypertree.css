@@ -25,6 +25,7 @@ a {
   a:focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
+    
     outline-offset: -2px; }
 
 #left-container, 
@@ -84,6 +85,7 @@ overflow-x: hidden;
     top:10px;
     font-size:1em;
     color:#000;
+    display: none;
 }
 
 h4 {
@@ -263,7 +265,6 @@ border: 1px #aaa solid;
 @media (max-width: 768px) {
 	#left-container {
 		width: 100%;
-		background: #aaa;
 		height: auto;
 	}
 	
@@ -274,4 +275,41 @@ border: 1px #aaa solid;
 	#right-container {
 		width: 20%;
 	}
+	
+		.back_button {
+	width: 30%;
+	float: left;
+
+}
+
+	#panZoomControl {
+	width: 30%;
+	float: left;
+	clear: left;}
+	
+.visualization_types {
+	width: 30%;
+	float: left;
+	margin-left: 3%;
+	margin-top: -3em;
+	border: none;
+}
+
+#key {
+	
+	width: 30%;
+	float: left;
+	margin-left: 3%;
+	margin-top: -3em;
+	border: none;
+	margin-bottom: 1em;
+	
+}
+	
+
+.inner {
+	overflow: auto;
+}
+
+	
 }
