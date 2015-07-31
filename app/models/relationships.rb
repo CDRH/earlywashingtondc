@@ -40,10 +40,12 @@ class Relationships
     if type.nil?
       query_string = %{ {
                   osrdf:#{person_id} ?rel01 ?per1 .
-                  ?per1 ?rel12 ?per2 .
+                  OPTIONAL { 
+                    ?per1 ?rel12 ?per2 .
+                    ?per2 oscys:fullName ?name2 .
+                  }
                   osrdf:#{person_id} oscys:fullName ?name0 .
                   ?per1 oscys:fullName ?name1 .
-                  ?per2 oscys:fullName ?name2 .
                   OPTIONAL { ?rel01 rdf:subPropertyOf ?rel01type } .
                   OPTIONAL { ?rel12 rdf:subPropertyOf ?rel12type } .
                   FILTER ( ?per2 != osrdf:#{person_id} )
@@ -51,13 +53,17 @@ class Relationships
       return query(query_string, true, format)
     else
       query_string = %{ {
+                  BIND(oscys:#{type} as ?rel01type) .
+                  BIND(oscys:#{type} as ?rel12type) .
                   ?rel01 rdf:subPropertyOf oscys:#{type} .
                   ?rel12 rdf:subPropertyOf oscys:#{type} .
                   osrdf:#{person_id} ?rel01 ?per1 .
-                  ?per1 ?rel12 ?per2 .
+                  OPTIONAL { 
+                    ?per1 ?rel12 ?per2 .
+                    ?per2 oscys:fullName ?name2 .
+                  }
                   osrdf:#{person_id} oscys:fullName ?name0 .
                   ?per1 oscys:fullName ?name1 .
-                  ?per2 oscys:fullName ?name2
                   FILTER ( ?per2 != osrdf:#{person_id} )
                   }}
       return query(query_string, true, format)

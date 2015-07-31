@@ -25,9 +25,56 @@ var Log = {
   }
 };
 
+var edgeColors = {
+  "legal": "#6D96A7",          // light blue from logo
+  "familyOf": "#a51400",       // maroon
+  "acquaintanceOf": "orange",  // orange
+  "employment": "#4A5131",     // army green
+  "": "magenta",               // something is wrong
+  "default": "#ADADAD"         // default grey
+};
+
+var nodeColors = {
+  0: "#000000",
+  1: "#6B696E",
+  2: "#696969",
+  "hover": "#FAC831",
+  "selected": "#FAC831",
+  "default": "#D4D4D4"
+};
+
+var labelColors = {
+  0: "#000000",
+  1: "#000000",
+  2: "#696969",
+  "default": "#000000"
+};
+
+var labelSize = {
+  0: "0.9em",
+  1: "0.8em",
+  2: "0.6em",
+  "default": "0.8em"
+};
+
+var getLabelStyle = function(depth) {
+  style = {};
+  style["color"] = labelColors[depth] ? labelColors[depth] : labelColors["default"];
+  style["size"] = labelSize[depth] ? labelSize[depth] : labelSize["default"];
+  return style;
+};
+
+var formatId = function(id) {
+  // in order to prevent data from being overwritten by jit, first wave of people have _b
+  // and second wave have _c appended to their id.  This is removed here.
+  return id.substring(0,10);
+};
+
 var makeLabels = function(node) {
+  // there should only be ONE parent
   var html = "<p>"+node.getParents()[0].name+" "+prettify(node.data.relation)+"</p>";
-  html += "<h4>" + node.name + "</h4>", data = node.data;
+  var selectedId = formatId(node.id);
+  html += "<h4><a href='" + personUrl + selectedId + "'>" + node.name + "</a></h4>";
   children = node.getSubnodes();
   node.getSubnodes().forEach(function(child, indx) {
     // appears that infovis automatically includes the node itself
@@ -39,8 +86,9 @@ var makeLabels = function(node) {
   return html;
 };
 
+// the originalLabels and makeLabels function, sadly, pull from slightly different information
 var originalLabels = function(node) {
-  var html = "<h4>" + node.name + "</h4>";
+  var html = "<h4><a href='" + personUrl + formatId(node.id) + "'>" + node.name + "</a></h4>";
   node.eachAdjacency(function(adj){
     var child = adj.nodeTo;
     if (child.data) {
@@ -80,17 +128,35 @@ function initHypertree(){
         zooming: 20
       },
       Node: {
-        dim: 9,
-        color: "#f00"
+        overridable: true,
+        dim: 4,
+        width: 100,
+        height: 100,
+        color: nodeColors["default"]
       },
+      // I would like to use these but the duration makes them temporary events
+      // that switch unexpectedly back to the original person.  :(
+      // NodeStyles: {
+      //   enable: true,
+        // stylesHover: {
+        //   dim: 15,
+        //   color: nodeColors["hover"]
+        // },
+        // stylesClick: {
+        //   dim: 15,
+        //   color: nodeColors["selected"]
+        // },
+        // duration: 1500
+      // },
       Edge: {
-        lineWidth: 2,
-        color: "#ADADAD",
+        lineWidth: 1,
+        color: edgeColors["default"],
         overridable: true
       },
-      Fx: {
-        transition: $jit.Trans.linear
-      },
+      // commented out because I'm overwriting prototype.onclick below
+      // Fx: {
+      //   transition: $jit.Trans.linear
+      // },
       Events: {
         enable: true,
         onClick: function(node) {
@@ -110,31 +176,16 @@ function initHypertree(){
         Log.write("centering");
       },
       onBeforePlotNode: function(node) {
+        var nodeDepth = node._depth;
+        var color = nodeColors[nodeDepth];
+        node.Node.color = color ? color : nodeColors["default"];
         // node.Edge.color = "#123123"; // this changes all of them
-        if (node._depth < 1) {
-          node.Node.color = '#000'
-        } else if (node._depth == 1) {
-          node.Node.color = '#6B696E'
-        } else if (node._depth == 2) {
-          node.Node.color = '#696969'
-        } else {
-          node.Node.color = '#D4D4D4'
-        }
       },
       onBeforePlotLine: function(adj) {
         var relationType = adj.nodeTo.data.relationType;
-        if (relationType == "legal") {
-          adj.data.$color = "#6D96A7";  // light blue from logo
-        } else if (relationType == "familyOf") {
-          adj.data.$color = "#a51400";
-        } else if (relationType == "employment") {
-          adj.data.$color = "#4A5131";  // army green
-        } else if (relationType == "acquaintanceOf") {
-          adj.data.$color = "orange"
-        } else if (relationType == "") {
-          adj.data.$color = "magenta";  // something is wrong
-        }
-        // otherwise just allow the default grey to go through
+        console.log('relationType ' + relationType);
+        var color = edgeColors[relationType];
+        if (color) { adj.data.$color = color; }
       },
       //Attach event handlers and add text to the
       //labels. This method is only triggered on label
@@ -155,21 +206,13 @@ function initHypertree(){
         var style = domElement.style;
         style.display = '';
         style.cursor = 'pointer';
-        if (node._depth < 1) {
-          style.fontSize = "0.9em";
-          style.color = "#000";
-        } else if (node._depth == 1) {
-          style.fontSize = "0.8em";
-          style.color = "#000";
-
-        } else if(node._depth == 2){
-          style.fontSize = "0.7em";
-          style.color = "#696969";
-
+        var settings = getLabelStyle(node._depth);
+        if (settings["size"] && settings["color"]) {
+          style.fontSize = settings["size"];
+          style.color = settings["color"];
         } else {
           style.display = 'none';
         }
-
         var left = parseInt(style.left);
         var w = domElement.offsetWidth;
         style.left = (left - w / 2) + 'px';
@@ -177,7 +220,6 @@ function initHypertree(){
       
       onComplete: function(){
         Log.write("done");
-
           //Build the right column relations list.
           //This is done by collecting the information (stored in the data property) 
           //for all the nodes adjacent to the centered node.

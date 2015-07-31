@@ -35,6 +35,7 @@ class Hypertree < Relationships
         rel01type = _value(res["rel01type"])
         rel12type = _value(res["rel12type"])
         # if this is a judge / clerk relationship, omit
+        # TODO make a generic function that can do per01 and per12 and potentially more
         if !_omit_rel?(per0to1)
           per1index = info["children"].find_index { |child| child["id"] == per1 }
           per1obj = {}  # this needs to be available to the person two code below
@@ -48,7 +49,10 @@ class Hypertree < Relationships
             # this person might have multiple relationships with same individual
             # for example, Ben petitionerAgainst Scott, Ben enslavedBy Scott
             per1obj["data"]["relation"] += " / #{per0to1}" if !per1obj["data"]["relation"].include?(per0to1)
-            per1obj["data"]["relationType"] += " / #{rel01type}" if !per1obj["data"]["relationType"].include?(rel01type)
+            if !per1obj["data"]["relationType"].include?(rel01type)
+              addType = per1obj["data"]["relationType"].empty? ? rel01type : " / #{rel01type}"
+              per1obj["data"]["relationType"] += addType
+            end
           end
 
           # person 2 could potentially be showing up more than once if there are multiple relationships
@@ -60,10 +64,11 @@ class Hypertree < Relationships
             else
               per2obj = per1obj["children"][per2index]
               # account for multiple relationships with same individual
-              puts "TESTING for index #{per2index} \n #{per2obj}"
               per2obj["data"]["relation"] += " / #{per1to2}" if !per2obj["data"]["relation"].include?(per1to2)
-              per2obj["data"]["relationType"] += " / #{rel12type}" if !per2obj["data"]["relationType"].include?(rel12type)
-
+              if !per2obj["data"]["relationType"].include?(rel12type)
+                addType = per2obj["data"]["relationType"].empty? ? rel12type : " / #{rel12type}"
+                per2obj["data"]["relationType"] += addType
+              end
             end
           end
         end
