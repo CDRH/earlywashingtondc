@@ -21,21 +21,28 @@
 <body onload="initHypertree();">
   <!-- back button -->
   
+  
   <div id="container">
+	
 	  
-	  <div class="back_button">
-		  <%= link_to "Back to Person View", person_path(@id) %>
-		  
-		  
-	  </div>
+	 
 	  
-<!-- 	  I think we should include this info on the page this is linked from -->
-<!--   Visualization omits relationships which involve judges and clerks -->
 
-    <div id="center-container">
-      <!-- thanks for the panning and zooming, SNAC!
+	  
+	  <div id="left-container">
+		  <div class="inner">
+		  
+		   <div class="back_button">
+		  <%= link_to "Back to Person View", person_path(@id) %>
+		  </div>
+	  
+	  
+	  
+	  
+	  <!-- thanks for the panning and zooming, SNAC!
            http://socialarchive.iath.virginia.edu/ -->
       <div id="panZoomControl">
+	      <div id="panZoomControl_pan">
         <div>
           <button id="panUp">∧</button>
         </div>
@@ -46,7 +53,8 @@
         <div>
           <button id="panDown">∨</button>
         </div>
-        <hr></hr>
+      </div><!-- /panZoomControl_pan -->
+      <div id="panZoomControl_zoom">
         <div>
           <button id="zoomIn">+</button>
         </div>
@@ -56,28 +64,74 @@
         <div>
           <button id="zoomOut">-</button>
         </div>
-      </div>
+        </div><!--/panZoomControl_zoom-->
+      </div> <!-- /panZoomControl -->
+      
+       <div class="visualization_types">
+		  
+		 
+		  
+		  <ul>
+		  
+		  <li>
+<!--         <# link_to "Two Degrees of Separation", network_vis_path(@person["id"]) %> -->
+        <a href="?">All</a>
+        
+      </li>
+      <li>
+<!--         <# link_to "Family and Kinship (new page)", network_vis_path(@person["id"], :type => "familyOf") %> -->
+        <a href="?type=familyOf">Family </a>
+              </li>
+      <li>
+<!--         <# link_to "Legal (new page)", network_vis_path(@person["id"], :type => "legal") %> -->
+        <a href="?type=legal">Legal</a>
+       
+      </li>
+      <li>
+<!--         <# link_to "Social (new page)", network_vis_path(@person["id"], :type => "acquaintanceOf") %> -->
+        <a href="?type=acquaintanceOf">Acquaintance</a>
+              </li>
+      
+		  </ul>
+
+		  
+	  </div> <!-- /visualization_types -->
+      
 
       <div id="key">
         <strong>Relationship Types</strong>
         <ul>
-          <li style="color:#6D96A7">Legal</li>
-          <li style="color:#a51400">Kinship</li>
-          <li style="color:#4A5131">Employment</li>
-          <li style="color:orange">AcquaintanceOf</li>
-          <li style="color:#ADADAD">Multiple Relationship Types</li>
-          <li style="color:magenta">Missing Relationship Type</li>
+          <li class="rtype_legal"><span>Legal</span></li>
+          <li class="rtype_kinship"><span>Kinship</span></li>
+          <li class="rtype_employment"><span>Employment</span></li>
+          <li class="rtype_acquaintance"><span>Acquaintance</span></li>
+          <li class="rtype_multiple"><span>Multiple</span></li>
+          <li class="rtype_missing"><span>Missing</span></li>
         </ul>
-      </div>
+      </div> <!-- /key -->
 
+
+
+      </div><!-- /inner -->
+    </div><!-- /left-container -->
+	 	  
+	 
+	  
+<!-- 	  I think we should include this info on the page this is linked from -->
+<!--   Visualization omits relationships which involve judges and clerks -->
+
+    <div id="center-container">
+      
       <div id="infovis">
     </div>
+    
+    </div><!-- /center-container -->
 
     <div id="right-container">
       <div id="inner-details"></div>
     </div>
 
     <div id="log"></div>
-  </div>
+  </div><!-- /container -->
 </body>
 <!-- </html> -->

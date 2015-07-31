@@ -65,7 +65,7 @@ var prettify = function(relation) {
 
 function initHypertree(){
   var infovis = document.getElementById('infovis');
-  var w = infovis.offsetWidth - 50, h = infovis.offsetHeight - 50;
+  var w = infovis.offsetWidth - 10, h = infovis.offsetHeight - 0;
 
     //init Hypertree
     var ht = new $jit.Hypertree({

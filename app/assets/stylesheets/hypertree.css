@@ -1,132 +1,89 @@
 /* @override http://localhost:3000/assets/hypertree.css?body=1 */
 
-#infovis-canvaswidget {
-  margin:0 0 0 0;
-}
-#infovis {
-  background-color: white;
-}
-canvas {
-  background-color: white;
+/* @override http://localhost:3000/assets/hypertree.css?body=1 */
+
+/* Must set height:100% on everything to use height:100% later. Also reset padding to 0 */
+
+
+
+html, body, #container {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: #fff;
+
 }
 
-html, body {
-    margin:0;
-    padding:0;
-    font-family: "Lucida Grande", Verdana;
-    font-size: 0.9em;
-    text-align: center;
-    background-color:#F2F2F2;
-    height: 100%;
+* {
+	/*margin: 0;
+	padding: 0;*/
 }
 
-input, select {
-    font-size:0.9em;
+/* Set up basic Layout */
+#left-container {
+	float: left;
+	width: 20%;
+	height: 100%;
+	z-index: 1000;
 }
 
-table {
-    margin-top:-10px;
-    margin-left:7px;
-}
-
-h4 {
-    font-size:1.1em;
-    text-decoration:none;
-    font-weight:normal;
-    color:#23A4FF;
-}
-
-a {
-    color:#23A4FF;
-}
-
-#container {
-    width: 100%;
-    height: 100%;
-    margin:0 auto;
-    position:relative;
-    background-color: yellow;
-}
-
-#left-container, 
-#right-container, 
 #center-container {
-    height:100%;
-    position:absolute;
-    top:0;
+	height: 100%;
+	width: 60%;
+	float: left;
+	z-index: 100;
+	overflow: hidden;
 }
 
-/*#left-container, #right-container {
-    width:200px;
-    color:#686c70;
-    text-align: left;
-    overflow: auto;
-    background-color:#fff;
-    background-repeat:no-repeat;
-    border-bottom:1px solid #ddd;
-}*/
-
-/*#left-container {
-    left:0;
-    background-image:url('col2.png');
-    background-position:center right;
-    border-left:1px solid #ddd;
-    
-}*/
+/* Might not need this -KMD */
+#infovis {
+	width: 100%;
+	height: 100%;
+}
 
 #right-container {
-    right:0;
-    /*background-image:url('col1.png');*/
-    background-position:center left;
-    border-right:1px solid #ddd;
-    height: 100%;
-    background-color: RGBA(255,255,255,.8);
+	float: right;
+	width: 20%;
+	height: 100%;
 	overflow: scroll;
+	z-index: 1000;
+	/*background-color: #fbd03e;*/
+	margin: 0;
+	padding: 0;
+	overflow-y: scroll;
+overflow-x: hidden;
 }
 
-/*#right-container h4{
-    text-indent:8px;
-}*/
+#left-container .inner,
+#right-container #inner-details {
+	margin: 10px;
 
-#center-container {
-    width:100%;
-    height: 100%;
-    background-color:#fff;
-    color:#ccc;
+	/*height: 100%;*/
 }
 
-.text {
-    margin: 7px;
-}
 
-#inner-details {
-    font-size:0.8em;
-    list-style:none;
-    margin:7px;
-}
 
-#inner-details p {
-	color: #000;
-	line-height: 1em;
-}
+/* Adding back in old styles */
 
 #log {
     position:absolute;
     top:10px;
-    font-size:1.0em;
-    font-weight:bold;
-    color:#23A4FF;
+    font-size:1em;
+    color:#000;
 }
 
-
-#infovis {
-    position:relative;
-    width:100%;
-    height:100%;
-    margin:auto;
-    overflow:hidden;
-    
+h4 {
+	font-size: 1.2em;
+	margin: .3em 0;
+	font-weight: 900;
 }
+
+#right-container p {
+	margin: 0 0 .4em 0;
+	font-size: .9em;
+	letter-spacing: .01em;
+} 
 
 /*TOOLTIPS*/
 .tip {
@@ -145,37 +102,139 @@ a {
     padding:7px;
 }
 
+/* Pan and Zoom */
+
 #panZoomControl {
-	width: 200px;
-	float: left;
-	position: absolute;
-	z-index: 1000;
-	top: 50px;
+	text-align: center;
+	border-top: solid 1px #aaa;
+	padding: 10px;
 }
 
-#panZoomControl hr {
-	/*display: none;*/
-	}
+#panZoomControl_pan {
+	width: 45%;
+	float: right;
+}
+
+#panZoomControl_zoom {
+	
+}
+
 
 #panZoomControl div {
 
 }
 
+/* Key*/
+
 #key {
-	width: 200px;
-	float: left;
-	clear: left;
-	position: fixed;
-	z-index: 1000;
-	bottom: 0px;
+	
+	overflow: visible;
+	border-top: solid 1px #aaa;
+	
 }
 
+#key ul {
+	list-style-type: none;
+	margin: 10px 0 0 0;
+	padding: 0;
+	font-size: .9em;
+}
+
+#key ul li {
+	border-bottom: solid 3px #000;
+}
+
+#key ul li span {
+	margin-bottom: -.5em;
+	background-color: #fff;
+	display: block;
+	width: 50%;
+	margin-top: 1em;
+	
+}
+
+#key ul li.rtype_legal {
+	border-color: #6D96A7;
+	
+}
+
+#key ul li.rtype_kinship {
+	border-color: #a51400;
+}
+
+#key ul li.rtype_employment {
+	border-color:#4A5131;
+}
+
+#key ul li.rtype_acquaintance {
+	border-color:orange;
+}
+
+#key ul li.rtype_multiple {
+	border-color:#ADADAD;
+}
+
+#key ul li.rtype_missing {
+	border-color:magenta;
+}
+
+/* Back button */
+
 .back_button {
-	position: relative;
-	z-index: 1000;
 	border: 1px #aaa solid;
 	padding: 10px;
 	font-size: 1.4em;
-	width: 180px;
-	background-color: #fff;
+
+}
+
+/* Visualization types */
+
+.visualization_types {
+	border-top: solid 1px #aaa;
+}
+
+.visualization_types ul {
+
+}
+
+.visualization_types li {
+
+}
+
+.visualization_types a {
+
+}
+
+
+
+/* Make borders slightly less wide for widescreens */
+@media (min-width: 1200px) {
+	#left-container {
+		width: 15%;
+	}
+
+	#center-container {
+		width: 70%;
+	}
+
+	#right-container {
+		width: 15%;
+	}
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+	#left-container {
+		width: 100%;
+		background: #aaa;
+		height: auto;
+	}
+	
+	#center-container {
+		width: 80%;
+	}
+	
+	#right-container {
+		width: 20%;
+	}
 }

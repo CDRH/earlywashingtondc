@@ -71,5 +71,9 @@ class PeopleController < ApplicationController
       format.json { render :json => Relationships.new.query_two_removed(@id, "json", @type) }
       format.xml { render :xml => Relationships.new.query_two_removed(@id, "xml", @type) }
     end
+    
+
+
+    
   end
 end
