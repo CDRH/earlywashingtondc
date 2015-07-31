@@ -1,7 +1,3 @@
-/* @override http://localhost:3000/assets/hypertree.css?body=1 */
-
-/* @override http://localhost:3000/assets/hypertree.css?body=1 */
-
 /* Must set height:100% on everything to use height:100% later. Also reset padding to 0 */
 
 
@@ -18,6 +14,23 @@ html, body, #container {
 * {
 	/*margin: 0;
 	padding: 0;*/
+}
+
+a {
+  color: #5A8597;
+  text-decoration: none; }
+  a:hover, a:focus {
+    color: #3d5b67;
+    text-decoration: none; }
+  a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+
+#left-container, 
+#right-container,
+#key ul li span {
+	background-color:  #ECECEC;
 }
 
 /* Set up basic Layout */
@@ -107,7 +120,7 @@ h4 {
 #panZoomControl {
 	text-align: center;
 	border-top: solid 1px #aaa;
-	padding: 10px;
+	padding: 20px 0px;
 }
 
 #panZoomControl_pan {
@@ -146,7 +159,7 @@ h4 {
 
 #key ul li span {
 	margin-bottom: -.5em;
-	background-color: #fff;
+	
 	display: block;
 	width: 50%;
 	margin-top: 1em;
@@ -181,9 +194,20 @@ h4 {
 /* Back button */
 
 .back_button {
+	
+}
+.back_button a {
 	border: 1px #aaa solid;
 	padding: 10px;
-	font-size: 1.4em;
+	font-size: 1.2em;
+	background-color: #fff;
+	display: block;
+	text-align: center;
+
+}
+
+.back_button a:hover {
+	border: 1px #a51400 solid;
 
 }
 
@@ -191,10 +215,13 @@ h4 {
 
 .visualization_types {
 	border-top: solid 1px #aaa;
+	margin: 20px 0;
 }
 
 .visualization_types ul {
-
+list-style: none;
+padding: 0;
+margin: 0;
 }
 
 .visualization_types li {
@@ -202,6 +229,16 @@ h4 {
 }
 
 .visualization_types a {
+border: 1px #aaa solid;
+	padding: 5px;
+	font-size: 1em;
+	background-color: #fff;
+	display: block;
+	text-align: center;
+}
+
+.visualization_types a:hover {
+	border: 1px #a51400 solid;
 
 }
 
