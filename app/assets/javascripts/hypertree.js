@@ -64,6 +64,11 @@ var getLabelStyle = function(depth) {
   return style;
 };
 
+var findIdInJson = function(node) {
+  // uses json from html file
+  // tries at root level then steps in through children recursively
+}
+
 var formatId = function(id) {
   // in order to prevent data from being overwritten by jit, first wave of people have _b
   // and second wave have _c appended to their id.  This is removed here.
@@ -71,8 +76,26 @@ var formatId = function(id) {
 };
 
 var makeLabels = function(node) {
-  // there should only be ONE parent
-  var html = "<p>"+node.getParents()[0].name+" "+prettify(node.data.relation)+"</p>";
+  var html = "";
+  // console.log("original node " + Object.getOwnPropertyNames(node));
+  // to get the correct relationship, for each parent grab all that parents'
+  // children and select the current node from them, then the relationship
+  node.getParents().forEach(function(supNode) {
+    // console.log("in the loop " + Object.getOwnPropertyNames(parent));
+    // console.log("parent's children " + parent.getSubnodes().length);
+    // console.log(parent.getSubnodes(1, 1));
+    // console.log(parent.adjacencies[node.id]);
+    // if (parent.adjacencies.indexOf(node.id) !== -1) { console.log("IT'S WORKING " ); }
+    // html += "<p>"+parent.name+" "+prettify(parent.data.relation)+"</p>";
+    // console.log("json " + json);
+
+    // var test = _.each(json, function(item) {
+    //   console.log("testing " + item);
+    // });
+    var test = _.where(json, { "id": "per.000120" });
+    console.log("testing " + test);
+  });
+  // html += "<p>"+node.getParents()[0].name+" "+prettify(node.data.relation)+"</p>";
   var selectedId = formatId(node.id);
   html += "<h4><a href='" + personUrl + selectedId + "'>" + node.name + "</a></h4>";
   children = node.getSubnodes();
@@ -183,13 +206,12 @@ function initHypertree(){
       },
       onBeforePlotLine: function(adj) {
         var relationType = adj.nodeTo.data.relationType;
-        console.log('relationType ' + relationType);
         var color = edgeColors[relationType];
         if (color) { adj.data.$color = color; }
       },
-      //Attach event handlers and add text to the
-      //labels. This method is only triggered on label
-      //creation
+      // Attach event handlers and add text to the
+      // labels. This method is only triggered on label
+      // creation
       onCreateLabel: function(domElement, node){
         domElement.innerHTML = node.name;
         $jit.util.addEvent(domElement, 'click', function () {
