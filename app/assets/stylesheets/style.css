@@ -681,8 +681,8 @@ text-decoration:underline;
 	
 	/* CaseID */
 	
-	.cases .bibl {
-	display: inline;
+	.book, .case {
+     font-style: italic;
 	
 }
 
