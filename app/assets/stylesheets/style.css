@@ -681,7 +681,7 @@ text-decoration:underline;
 	
 	/* CaseID */
 	
-	.book, .case {
+	.commentary .bibl {
      font-style: italic;
 	
 }
