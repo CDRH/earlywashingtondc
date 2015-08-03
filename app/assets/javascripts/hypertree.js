@@ -77,25 +77,18 @@ var formatId = function(id) {
 
 var makeLabels = function(node) {
   var html = "";
-  // console.log("original node " + Object.getOwnPropertyNames(node));
   // to get the correct relationship, for each parent grab all that parents'
   // children and select the current node from them, then the relationship
+  // should not be any duplicate ids because of _b and _c for 2nd and 3rd levels
   node.getParents().forEach(function(supNode) {
-    // console.log("in the loop " + Object.getOwnPropertyNames(parent));
-    // console.log("parent's children " + parent.getSubnodes().length);
-    // console.log(parent.getSubnodes(1, 1));
-    // console.log(parent.adjacencies[node.id]);
-    // if (parent.adjacencies.indexOf(node.id) !== -1) { console.log("IT'S WORKING " ); }
-    // html += "<p>"+parent.name+" "+prettify(parent.data.relation)+"</p>";
-    // console.log("json " + json);
+    var xpath = "//*[id='"+supNode.id+"']//*[id='"+node.id+"']";
+    var nodeFromParent = JSON.search(json, xpath, true); // true only returns first result
+    if (nodeFromParent && nodeFromParent.length > 0) {
+      var data = nodeFromParent[0]["data"];
+      html += "<p>"+supNode.name+" "+prettify(data["relation"])+"</p>";
+    }
 
-    // var test = _.each(json, function(item) {
-    //   console.log("testing " + item);
-    // });
-    var test = _.where(json, { "id": "per.000120" });
-    console.log("testing " + test);
   });
-  // html += "<p>"+node.getParents()[0].name+" "+prettify(node.data.relation)+"</p>";
   var selectedId = formatId(node.id);
   html += "<h4><a href='" + personUrl + selectedId + "'>" + node.name + "</a></h4>";
   children = node.getSubnodes();
