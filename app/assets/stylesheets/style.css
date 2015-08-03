@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6, nav {
 
 /* Tables */
 
+
 table {
     margin-left:auto; 
     margin-right:auto;
@@ -677,3 +678,14 @@ text-decoration:underline;
 	/* Cases */
 	
 	.cases select {width:100%}
+	
+	/* CaseID */
+	
+	.book, .case {
+     font-style: italic;
+	
+}
+
+p {
+	display: block;
+}
