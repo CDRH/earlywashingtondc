@@ -9,6 +9,7 @@
 
   <!-- JIT Files -->
   <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", :async => false %>
+  <%= javascript_include_tag "defiant.min", "data-turbolinks-track" => false %>
   <%= javascript_include_tag 'jit.min', 'data-turbolinks-track' => false %>
   <script>
     <%# need non-ruby json and a string to call html safe, apparently %>
