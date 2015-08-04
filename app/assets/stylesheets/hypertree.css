@@ -1,3 +1,7 @@
+/* @override http://localhost:3000/assets/hypertree.css?body=1 */
+
+/* @override http://localhost:3000/assets/hypertree.css?body=1 */
+
 /* Must set height:100% on everything to use height:100% later. Also reset padding to 0 */
 
 
@@ -25,6 +29,7 @@ a {
   a:focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
+    
     outline-offset: -2px; }
 
 #left-container, 
@@ -84,6 +89,7 @@ overflow-x: hidden;
     top:10px;
     font-size:1em;
     color:#000;
+    display: none;
 }
 
 h4 {
@@ -121,10 +127,11 @@ h4 {
 	text-align: center;
 	border-top: solid 1px #aaa;
 	padding: 20px 0px;
+	
 }
 
 #panZoomControl_pan {
-	width: 45%;
+	width: 60%;
 	float: right;
 }
 
@@ -134,6 +141,16 @@ h4 {
 
 
 #panZoomControl div {
+
+}
+
+#panZoomControl button {
+	font-size: 1.5em;
+	background-color: #fff;
+	border:  solid 1px #aaa;
+	width: 1.5em;
+	border-radius: 5px;
+	color: #565656;
 
 }
 
@@ -263,7 +280,6 @@ border: 1px #aaa solid;
 @media (max-width: 768px) {
 	#left-container {
 		width: 100%;
-		background: #aaa;
 		height: auto;
 	}
 	
@@ -274,4 +290,42 @@ border: 1px #aaa solid;
 	#right-container {
 		width: 20%;
 	}
+	
+	.back_pan_group {
+	width: 30%;
+	float: left;
+
+}
+			
+.visualization_types {
+	width: 30%;
+	float: left;
+	margin-left: 3%;
+	margin-top: 0;
+	border: none;
+}
+
+#key {
+	
+	width: 30%;
+	float: left;
+	margin-left: 3%;
+	margin-top: 0;
+	border: none;
+	margin-bottom: 1em;
+	
+}
+
+#panZoomControl button {
+	font-size: 1.3em;
+	
+
+}
+	
+
+.inner {
+	overflow: auto;
+}
+
+	
 }

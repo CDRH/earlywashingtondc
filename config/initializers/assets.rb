@@ -20,3 +20,4 @@ Rails.application.config.assets.precompile += %w( hypertree.js )
 
 Rails.application.config.assets.precompile += %w( jquery-ui.min.js )
 Rails.application.config.assets.precompile += %w( jquery-ui.css )
+Rails.application.config.assets.precompile += %w( defiant.min.js )
