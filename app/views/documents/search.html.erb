@@ -1,11 +1,5 @@
 <h3>Your search for: "<%= query_display %>" returned <%= @docs[:num_found] %> results</h3>
 
-  <!-- <div class="jump_pagination">Jump to Page  -->
-  <%# form_tag search_path(reset_params) do %>
-    <%# paginator %>
-  <%# end %>
-  <!-- of results</div> -->
-
   <div class="callout">
     <p>
       <b>Filter Results: 
@@ -36,4 +30,6 @@
   </ul>
 <% end %>
 
-<%= render "partials/pagination" %>
+<% if @total_pages.to_i > 1 %>
+  <%= render "partials/pagination" %>
+<% end %>

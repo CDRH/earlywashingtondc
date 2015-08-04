@@ -64,7 +64,7 @@ class PeopleController < ApplicationController
     @type = params[:type]
 
     # TODO could this cause exceptions in the future?
-    @person_url = request.base_url + person_path.sub(/per\.[0-9]{6}/, "")
+    @person_url = request.base_url + network_vis_path.sub(/per\.[0-9]{6}/, "")
     respond_to do |format|
       format.html { 
         @res = Hypertree.new(@id, @type, true).json

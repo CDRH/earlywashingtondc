@@ -5,12 +5,6 @@ module ApplicationHelper
   #    Index Display    #
   #######################
 
-  def paginator
-    return select_tag("page", 
-                      options_for_select((1..@total_pages), params[:page]),
-                      :onchange => "this.form.submit();")
-  end
-
   def paginator_numbers(total_pages)
     current_page = params[:page] ? params[:page].to_i : 1
     total_pages = total_pages.to_i
