@@ -44,28 +44,6 @@
 <% end %>
 	  
  
- 
- <hr/><br/><hr/>
 
-
-
-
-  <div class="callout">
-    <p>
-      <b>Filter Results: 
-        <%= facet_maker(@categories) %>
-      </b>
-    </p>
-  </div>
-
-  <div class="callout">
-    <p>
-      <b>Sort results by: 
-        <%= link_to "Alphabetical", search_path(sort_results("title")), :class => selected_sort?("title") %>
-        <%= link_to "Date", search_path(sort_results("date")), :class => selected_sort?("date") %>
-        <%= link_to "Relevance", search_path(sort_results("score")), :class => selected_sort?("score") %>
-      </b>
-    </p>
-  </div>
 
   
