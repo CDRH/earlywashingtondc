@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   # people
   match 'people', to: 'people#index', as: :people, via: [:get, :post]
   match 'people/all', to: 'people#all', as: :peopleAll, via: [:get, :post]
+  get 'people/:id', to: 'people#show', :constraints => { :id => with_period_ext}
   get 'people/:id', to: 'people#show', as: :person, :constraints => { :id => with_period }
   # I don't want to talk about this.  Due to sucking at regex, I never figured out a way to
   # capture ONLY the id regardless of whether there was an extension or not, so I just wrote two routes.

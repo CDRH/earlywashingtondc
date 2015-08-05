@@ -42,15 +42,19 @@ class PeopleController < ApplicationController
 
   def show
     @page_class = "people"
-
     id = params[:id]
     @person = $solr.get_item_by_id(id)
 
     @docs = $solr.query({:qfield => "personID_ss", :qtext => id})
     @cases = $solr.query({:q => "personID_ss:#{id}", :fq => "recordType_s:caseid"})
 
-    res = Relationships.new.query_one_removed(id)
-    @rdfresults = JSON.parse(res)
+    respond_to do |format|
+      format.html { 
+        @rdfresults = JSON.parse(Relationships.new.query_one_removed(id)) 
+      }
+      format.json { render :json => Relationships.new.query_one_removed(id) }
+      format.xml { render :xml => Relationships.new.query_one_removed(id, "xml") }
+    end
   end
 
   def network
