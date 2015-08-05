@@ -64,11 +64,6 @@ var getLabelStyle = function(depth) {
   return style;
 };
 
-var findIdInJson = function(node) {
-  // uses json from html file
-  // tries at root level then steps in through children recursively
-}
-
 var formatId = function(id) {
   // in order to prevent data from being overwritten by jit, first wave of people have _b
   // and second wave have _c appended to their id.  This is removed here.
@@ -235,21 +230,27 @@ function initHypertree(){
       
       onComplete: function(){
         Log.write("done");
-          //Build the right column relations list.
-          //This is done by collecting the information (stored in the data property) 
-          //for all the nodes adjacent to the centered node.
-          var node = ht.graph.getClosestNodeToOrigin("current");
-          var html = originalLabels(node);
-          $jit.id('inner-details').innerHTML = html;
-        }
-      });
+        
+//Build the right column relations list.
+        //This is done by collecting the information (stored in the data property) 
+        //for all the nodes adjacent to the centered node.
+        var node = ht.graph.getClosestNodeToOrigin("current");
+        var html = originalLabels(node);
+        $jit.id('inner-details').innerHTML = html;
+      }
+    });
 
     // override the default behavior of hypertree so that the graph does not reorient
     $jit.Hypertree.prototype.onClick = function(id, opt) {};
-    ht.loadJSON(json);
-    ht.refresh();  //compute positions and plot.
-    ht.controller.onComplete();
-
+    if (Object.keys(json).length !== 0) {
+      $("#no-relationship").addClass("hide");
+      ht.loadJSON(json);
+      ht.refresh();  //compute positions and plot.
+      ht.controller.onComplete();
+    } else {
+      console.log("No relationships of this type found.");
+      $("#no-relationship").removeClass("hide");
+    }
     // many thanks to SNAC for providing a lovely zooming / panning tool
     // that could be shamelessly incorporated into our graph
     // http://socialarchive.iath.virginia.edu/
