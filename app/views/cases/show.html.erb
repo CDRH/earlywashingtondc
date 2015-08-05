@@ -60,8 +60,10 @@
     <%= people_list(@case["defendantData_ss"]) %>
     <h4>Attorney for Plaintiff(s):</h4>
     <%= people_list(@case["attorneyPData_ss"]) %>
-    <h4>Attorney for Defendant(s):</h4>
-    <%= people_list(@case["attorneyDData_ss"]) %>
+    <% if @case["attorneyDData_ss"] %>
+      <h4>Attorney for Defendant(s):</h4>
+      <%= people_list(@case["attorneyDData_ss"]) %>
+    <% end %>
     <h4>Participants:</h4>
     <%= people_list(@case["personData_ss"]) %>
   <% end %>
