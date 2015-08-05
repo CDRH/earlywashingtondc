@@ -1,5 +1,55 @@
 <h3>Your search for: "<%= query_display %>" returned <%= @docs[:num_found] %> results</h3>
 
+
+
+<div class="well well-sm">
+	
+	
+		  <div class="jump_menu">
+	  <h4>Sort Results: </h4>
+	  <%= link_to "Alphabetical", search_path(sort_results("title")), :class => selected_sort?("title") %>
+  <%= link_to "Date", search_path(sort_results("date")), :class => selected_sort?("date") %>
+  <%= link_to "Relevance", search_path(sort_results("score")), :class => selected_sort?("score") %>
+	  </div>
+
+<div class="jump_menu">
+
+	<h4>Filter Results: </h4>
+	
+	<%= facet_maker(@categories) %>
+</div>
+</div><!-- /well -->
+
+
+
+
+
+
+
+	  
+	  <%= render "partials/pagination" %>
+
+<% if @docs[:docs].length > 0 %>
+  <ul>
+    <% @docs[:docs].each do |doc| %>
+      <li>
+        <%= search_result_link(doc) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<% if @total_pages.to_i > 1 %>
+  <%= render "partials/pagination" %>
+<% end %>
+	  
+ 
+ 
+ <hr/><br/><hr/>
+
+
+
+
   <div class="callout">
     <p>
       <b>Filter Results: 
@@ -18,18 +68,4 @@
     </p>
   </div>
 
-  <%= render "partials/pagination" %>
-
-<% if @docs[:docs].length > 0 %>
-  <ul>
-    <% @docs[:docs].each do |doc| %>
-      <li>
-        <%= search_result_link(doc) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
-<% if @total_pages.to_i > 1 %>
-  <%= render "partials/pagination" %>
-<% end %>
+  
