@@ -594,8 +594,7 @@ text-decoration:underline;
 }
 
 
-
-/*/\* ==|== family tree ======================================================== *\/
+/* ==|== family tree ======================================================== */
  
  ul.tree, ul.tree ul {
      list-style-type: none;
@@ -614,7 +613,7 @@ text-decoration:underline;
    }
    
     ul.tree a:hover {
-	color: #ac0000;
+    color: #ac0000;
     }
    
    ul.tree ul ul {
@@ -637,30 +636,6 @@ text-decoration:underline;
    ul.tree li:last-child {
      background: #fff url(http://spacely.unl.edu/cocoon/dccourts/files/css/lastnode.jpg) no-repeat;
    }
-
-/\*  .gen {
-    color: #000;
-    font-style:italic;
-    font-size: .9em;
-    }*\/ 
-
-    a.gen, a.gen:visited, a.gen:active {
-    color: #000;
-    }
-
-    .gen {
-    color: #000;
-    }
-
-    a.cas, a.cas:visited, a.cas:active {
-/\*    color: #780000;*\/
-    color: #66713e;
-    }
-
-    .cas {
-    /\*color: #780000;*\/
-    color: #66713e;
-    }*/
 
 
 
