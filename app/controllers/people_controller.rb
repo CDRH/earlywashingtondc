@@ -5,7 +5,7 @@ class PeopleController < ApplicationController
 
      # TODO the rsolr gem reallllllly shouldn't need facet => true, still not sure why that is happening
     facet = $solr.get_facets({
-      :q => "recordType_s:document", :facet => "true", 
+      :q => "recordType_s:caseid", :facet => "true", 
       "facet.sort" => "asc", "facet.limit" => "-1"}, ["attorneyData_ss", "plaintiffData_ss", "defendantData_ss"])
     occupation = $solr.get_facets({:q => "recordType_s:person", :facet => "true",
       "facet.sort" => "asc", "facet.limit" => "-1"}, ["personOccupation_ss"])
@@ -13,9 +13,6 @@ class PeopleController < ApplicationController
     @attorney_facet = dropdownify_data_facets(facet['attorneyData_ss'])
     @plaintiff_facet = dropdownify_data_facets(facet['plaintiffData_ss'])
     @defendant_facet = dropdownify_data_facets(facet['defendantData_ss'])
-    
-
-
     
     # TODO this isn't right, the gem shouldn't need "facet = true" so I'm not sure what's going on
     # it already has facet = true as a default in the gem, something here must be overriding it
