@@ -9,7 +9,7 @@ module DocumentsHelper
       link = "#{link_to(label, search_path(facet_results(key)), :class => selected_facet?(key))}"
       links << link
     end
-    return links.join(" | ").html_safe
+    return links.join(" ").html_safe
   end
 
   def selected_facet?(field=nil)
