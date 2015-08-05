@@ -454,3 +454,35 @@ body {
 	}	
 
 
+
+/* Metadata box */
+
+.meta_label {
+	font-weight: bold;
+}
+
+.meta_data ul {
+	margin: 0 0 .6em 0;
+	padding: 0;
+	list-style: none;
+}
+
+.metadata .meta_data ul li {
+	display: inline-block;
+	margin: .2em .2em 0 0;
+}
+
+.metadata .meta_data ul li a {
+	display: inline-block;
+	/*margin-top: .5em;*/
+	border: 1px solid #ddd;
+	display: inline-block;
+	border-radius: 4px;
+	padding: .1em .3em;
+	background-color:#fff;
+	
+	
+}
+
+
+

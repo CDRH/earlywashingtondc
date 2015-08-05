@@ -107,6 +107,22 @@ module ApplicationHelper
     end
     return res.html_safe
   end
+  
+  def metadata_list(display, solr_res, search_field, date=false)
+    res = ""
+    if !solr_res.nil?
+      res += "<ul>"
+      solr_res.each do |term|
+        display = date ? format_date(term) : term
+        res += "<li>"
+        res += link_to(display, search_path(:qfield => search_field, :qtext => term))
+        res += "</li>"
+      end
+    res += "</ul>"
+    end
+    return res.html_safe
+  end
+
 
   # This will only link out to external URLs and documents!
   # So be careful if you are expecting something with case ids
