@@ -1,13 +1,28 @@
 <h2>About</h2>
 
+<div class="row">
+  <div class="col-md-6">
+	  
+	  <ul class="list-group">
+  <%= link_to "Credits & Staff", {:name => "credits", :action => "sub"}, class: "list-group-item" %>
+  <%= link_to "Description of Materials", {:name => "description", :action => "sub"}, class: "list-group-item" %>
+  
 
-
-<ul class="about_nav">
-  <li><%= link_to "Description of Materials", {:name => "description", :action => "sub"} %></li>
-  <li><%= link_to "Credits & Staff", {:name => "credits", :action => "sub"} %></li>
-  <li><%= link_to "Technical Information", {:name => "technical", :action => "sub"} %></li>
-  <li><%= link_to "Data Download & Query", {:name => "data", :action => "sub"} %></li>
 </ul>
+	  
+  </div><!-- /column -->
+  <div class="col-md-6">
+	  
+	  
+<ul class="list-group">
+
+  <%= link_to "Technical Information", {:name => "technical", :action => "sub"}, class: "list-group-item" %>
+  <%= link_to "Data Download & Query", {:name => "data", :action => "sub"}, class: "list-group-item" %>
+</ul>
+	  
+  </div><!-- /column -->
+</div><!-- /row -->
+
 
 
 
