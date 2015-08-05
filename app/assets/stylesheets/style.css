@@ -3,24 +3,8 @@
    ========================================================================== */
 
 
-/* Basic Font Styling */
-
-/*body {
-	font: 1em 'PT Sans', Verdana, Arial, Helvetica, sans-serif;
-	background-color: #ececec;
-}
-
-h1, h2, h3, h4, h5, h6, nav {
-	font-family:'Old Standard TT', Georgia, Times, serif; /\* Google font *\/
-	font-weight: 700;
-}*/
-
-/*small {
-    font-size:75%;
-}*/
-
-
 /* Tables */
+
 
 
 table {
@@ -35,228 +19,6 @@ table td {
 	padding: 5px 5px;
 	padding-right: 25px;
 }
-
-
-/* Links */
-
-/*a {
-	color: #547480;
-}
-
-a:hover {
-	color: #ac0000;
-}
-
-a:visited {
-	color: #547480;
-}*/
-
-/* Header */
-
-/*.header {
-	margin: -30px -30px 10px -30px; /\* must match padding on .pagewrap *\/
-	background-color: #fff;
-}
-
-.header h1 {
-	text-align: center;
-	line-height: 1;
-	font-size: 3em;
-	text-decoration: none;
-	color: #fff;
-}
-
-.header h1 a {
-	text-decoration: none;
-	color: #fff;
-}
-
-.header h1 {
-	padding: .5em 0 0 0;
-	margin: auto;
-}
-
-.header h2 {
-	text-align: center;
-	line-height: 1;
-	font-size: 2em;
-	text-decoration: none;
-}
-
-.header h2 a {
-	text-decoration: none;
-	color: #fff;
-}
-
-.header h2 {
-	padding: 0 0 1em 0;
-	margin: auto;
-}
-
-.logo {
-    width: 75%;
-    padding: .5em;
-}*/
-
-
-
-/* Header Navigation */
-
-/* Hidden in stylesheet until more content */
-
-/*.nav {
-	margin: 0;
-	padding: 0;
-	background-color: #fff;
-	/\*display: none;*\/
-	font: .8em 'Old Standard TT', Georgia, Times, serif;
-    font-weight: 700;
-
-}
-
-.nav ul{
-	text-align: center;
-	line-height: 1.9em;
-	margin: 10px;
-	padding: 0;
-}
-
-.nav ul li {
-	display: inline;
-	margin: 0 .3em;	
-}
-
-.nav ul li a {
-	padding: .2em .6em .3em .6em;
-	white-space: nowrap;
-	text-decoration:none;
-}
-
-.nav ul li a:hover {
-	background-color: #ac0000;
-	color: #fff !important;
-}
-
-.nav ul li a:visited {
-	
-	color: #396a78;
-}
-
-/\* h1, h2, h3, h4, h5, h6 *\/
-
-
-h1, h2, h3, h4, h5, h6 {
-	margin: .2em 0;
-	padding: 0;
-	color: #ac0000;
-}
-
-h2 {
-	font-size: 1.5em;	
-}
-
-h3 {
-	font-size: 1.2em;
-}
-
-h4 {
-	font-size: 1.0em;
-}
-
-h5 {
-	font-size: 1em;
-}
-
-h6
-{
-	font-size: .8em;
-    padding-top:1em;
-}
-*/
-
-/* Layout */
-
-/*.pagewrap {
-	max-width: 90em;
-	margin: auto;
-	padding: 30px; /\* must match negative margins in .header *\/
-	overflow: auto;
-}
-
-.footer {
-	clear: both;
-	background-color: #484a4a;
-	margin: 10px -30px -30px -30px;/\* must match negative margins in .pagewrap *\/
-	padding: 20px;
-    padding-bottom: 100px;
-	color: #fff;
-	text-align: right;
-}
-
-.footerinfo {
-    font-size: .7em;
-    font-weight: normal;
-    color: #fff;
-}
-
-.footerinfo a {
-    color: #fff;
-}
-
-.footerinfo a:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
-
-body {
-	width: 90%;
-	margin: auto;
-}
-
-.pagewrap {
-	font-size: 1.2em;
-	max-width: 1200px;
-	background-color: #fff;
-	-moz-box-shadow: 0px 0px 20px #888;
-	-webkit-box-shadow: 0px 0px 20px #888;
-	box-shadow: 0px 0px 20px #888;
-}
-
-
-#columns { 
-width: 980px; 
-margin: 0 auto; }
-#column-left { 
-padding: 30px;
-float: left;  }   
-#column-center { 
-padding: 30px;
-float: left;  }   
-#column-right { 
-padding: 30px;
-float: left;  
-} 
-.clear-hr {
-clear:both;
-border:0;
-height: 10px;
-}
-
-.map {
-float:right;
-}
-
-#browse {
-float:left;
-display:block;
-}
-
-.clear-browse {
-border: 0;
-height: 10px;
-}
-*/
 
 
 .hr {
@@ -496,39 +258,7 @@ div#switch_box {
 }
 
 
-/* ==|== browse lists (using dropdowns now) ====================================== */
-
-
-/*#browse{
-list-style:none;
-font-weight:bold;
-margin-bottom:10px;
-margin-left:-30px;
-margin-top:0px;
-float:left; /\* Clear floats *\/
-}
-
-#browse li{
-float:left;
-margin-right:10px;
-position:relative;
-}
-
-#browse a{
-display:block;
-padding:5px;
-margin-bottom:5px;
-color:#fff;
-background:#333;
-text-decoration:none;
-}
-
-#browse a:hover{
-color:#fff;
-background:#ac0000;
-text-decoration:underline;
-}*/
-
+/* Pagination */
 .jump_pagination {
 	/*clear: both;*/
 	border: solid #aaa 1px;
@@ -593,64 +323,6 @@ text-decoration:underline;
 	line-height: 1.2em;
 }
 
-
-/* ==|== family tree ======================================================== */
- 
- ul.tree, ul.tree ul {
-     list-style-type: none;
-     background: url(http://spacely.unl.edu/cocoon/dccourts_test/files/css/vline.jpg) repeat-y;
-     margin: 0;
-     padding: 0;
-   }
-   
-   ul.tree ul {
-     margin-left: 30px;
-   }
-   
-   ul.tree a {
-     color: #396a78;
-     text-decoration:underline;
-   }
-   
-    ul.tree a:hover {
-    color: #ac0000;
-    }
-   
-   ul.tree ul ul {
-     margin-left: 50px;
-   }
-   
-   ul.tree ul ul ul {
-     margin-left: 70px;
-   }
-
-   ul.tree li {
-     margin: 0;
-     padding: 0 12px;
-     line-height: 25px;
-     background: url(http://spacely.unl.edu/cocoon/dccourts/files/css/node.jpg) no-repeat;
-     color: #000;
-     font-weight: normal;
-   }
-
-   ul.tree li:last-child {
-     background: #fff url(http://spacely.unl.edu/cocoon/dccourts/files/css/lastnode.jpg) no-repeat;
-   }
-
-
-
-
-/* ==|== Expand Text ======================================================== */
-.hidden { 
-	display: none;
-	}
-
-.unhidden { 
-	display: block; 
-	}
-	
-	
-	/* Cases */
 	
 	.cases select {width:100%}
 	
@@ -699,4 +371,86 @@ body {
 }
 
 }
+
+
+
+/* ==|== family tree ======================================================== */
+ 
+ ul.tree, ul.tree ul {
+     list-style-type: none;
+     background: url(http://spacely.unl.edu/cocoon/dccourts_test/files/css/vline.jpg) repeat-y;
+     margin: 0;
+     padding: 0;
+   }
+   
+   ul.tree ul {
+     margin-left: 30px;
+   }
+   
+   ul.tree a {
+     color: #396a78;
+     /*text-decoration:underline;*/
+   }
+   
+    ul.tree a:hover {
+	color: #ac0000;
+    }
+   
+   ul.tree ul ul {
+     margin-left: 50px;
+   }
+   
+   ul.tree ul ul ul {
+     margin-left: 70px;
+   }
+
+   ul.tree li {
+     margin: 0;
+     padding: 0 12px;
+     line-height: 25px;
+     background: url(http://spacely.unl.edu/cocoon/dccourts/files/css/node.jpg) no-repeat;
+     color: #000;
+     font-weight: normal;
+   }
+
+   ul.tree li:last-child {
+     background: #fff url(http://spacely.unl.edu/cocoon/dccourts/files/css/lastnode.jpg) no-repeat;
+   }
+
+/*  .gen {
+    color: #000;
+    font-style:italic;
+    font-size: .9em;
+    }*/ 
+
+    a.gen, a.gen:visited, a.gen:active {
+    color: #000;
+    }
+
+    .gen {
+    color: #000;
+    }
+
+    a.cas, a.cas:visited, a.cas:active {
+/*    color: #780000;*/
+    color: #66713e;
+    }
+
+    .cas {
+    /*color: #780000;*/
+    color: #66713e;
+    }
+
+
+
+
+/* ==|== Expand Text ======================================================== */
+.hidden { 
+	display: none;
+	}
+
+.unhidden { 
+	display: block; 
+	}	
+
 
