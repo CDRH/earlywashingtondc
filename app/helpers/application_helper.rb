@@ -93,13 +93,14 @@ module ApplicationHelper
   end
 
   # pass in solr_res each time rather than use instance variable
-  def metadata_mult(display, solr_res, search_field)
+  def metadata_mult(display, solr_res, search_field, date=false)
     res = ""
     if !solr_res.nil?
       res += "<p><strong>#{display}: </strong>"
       solr_res.each do |term|
+        display = date ? format_date(term) : term
         res += "<span class='subjectLink'>"
-        res += link_to(term, search_path(:qfield => search_field, :qtext => term))
+        res += link_to(display, search_path(:qfield => search_field, :qtext => term))
         res += "</span>"
       end
     res += "</p>"

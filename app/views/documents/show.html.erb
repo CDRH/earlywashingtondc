@@ -13,7 +13,7 @@
     <p><strong>Document: </strong><%= @doc["title"] %></p>
     <p><strong>Date: </strong><%= @doc["dateDisplay"] %></p>
     <div id="more_metadata" style="display:none;">
-      <%= metadata_mult("Term", @doc["term_ss"], "term_ss") %>
+      <%= metadata_mult("Term", @doc["term_ss"], "term_ss", true) %>
       <p><strong>Plaintiff(s): </strong><%= format_list(@doc["plaintiffData_ss"], "person") %></p>
       <p><strong>Defendants(s): </strong><%= format_list(@doc["defendantData_ss"], "person") %></p>
       <p><strong>Attorney for Plaintiff(s): </strong><%= format_list(@doc["attorneyPData_ss"], "person") %></p>

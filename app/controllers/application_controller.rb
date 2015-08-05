@@ -31,7 +31,7 @@ class ApplicationController < ActionController::Base
     @total_pages = (@total_found.to_f/50).ceil
   end
 
-  def _format_date(date)
+  def format_date(date)
     year_month = date.split("-")
     # if there is a better way of doing this I would love to hear it
     # but ruby's DateTime and Date didn't seem to offer what we need
@@ -44,11 +44,12 @@ class ApplicationController < ActionController::Base
       return date
     end
   end
+  helper_method :format_date
 
   # for the traditional Smith => 10 type results
   def dropdownify_facets(facet_term, date=false)
     facet_term.keys.collect { |x| 
-      display = date ? _format_date(x) : x
+      display = date ? format_date(x) : x
       ["#{display} (#{facet_term[x]})", x] 
     }
   end
