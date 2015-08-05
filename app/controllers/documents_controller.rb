@@ -86,7 +86,13 @@ class DocumentsController < ApplicationController
     people_facets = $solr.get_facets({:q => "recordType_s:person", 
       :facet => "true", "facet.limit" => "-1",
       "facet.mincount" => "1"}, ["title"])
+    # could combine these facet queries except that this uses documents not people
+    location_facets = $solr.get_facets({:q => "recordType_s:document",
+      :facet => "true", "facet.limit" => "-1",
+      "facet.mincount" => "1"}, ["places"])
+
     @people = people_facets["title"].keys
+    @locations = location_facets["places"].keys
   end
 
 end

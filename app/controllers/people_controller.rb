@@ -7,9 +7,7 @@ class PeopleController < ApplicationController
     facet = $solr.get_facets({
       :q => "recordType_s:caseid", :facet => "true", 
       "facet.sort" => "asc", "facet.limit" => "-1"}, ["attorneyData_ss", "plaintiffData_ss", "defendantData_ss"])
-    occupation = $solr.get_facets({:q => "recordType_s:person", :facet => "true",
-      "facet.sort" => "asc", "facet.limit" => "-1"}, ["personOccupation_ss"])
-    # @attorney_facet = facet['attorneyData_ss']
+
     @attorney_facet = dropdownify_data_facets(facet['attorneyData_ss'])
     @plaintiff_facet = dropdownify_data_facets(facet['plaintiffData_ss'])
     @defendant_facet = dropdownify_data_facets(facet['defendantData_ss'])
