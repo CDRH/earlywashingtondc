@@ -15,7 +15,24 @@
       <%= link_to "Explore annotated cases", casesAnnotated_path, class: "list-group-item"  %>
     </div><!-- /list group-->
     <!-- End cases -->
+    
+     <br/>
+
+   <div class="row">
+    <div class="col-md-4">Jurisdiction</div>
+    <div class="col-md-8">
+     <!-- Browse by Jurisdiction -->
+     <%= form_tag doc_dropdown_path do %>
+     <% select_tag :jurisdiction, options_for_select(@jurisdiction_facet), :prompt => "Select Jurisdiction", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
+     <% end %>
+   </div>
+ </div>
+
+    
+    
   </div><!-- /column-->
+  
+  
 
 
   <div class="col-md-6">
@@ -37,18 +54,7 @@
      </div>
    </div>
 
-   <br/>
-
-   <div class="row">
-    <div class="col-md-4">Jurisdiction</div>
-    <div class="col-md-8">
-     <!-- Browse by Jurisdiction -->
-     <%= form_tag doc_dropdown_path do %>
-     <% select_tag :jurisdiction, options_for_select(@jurisdiction_facet), :prompt => "Select Jurisdiction", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
-     <% end %>
-   </div>
- </div>
-
+  
  <br/>
 
  <div class="row">
