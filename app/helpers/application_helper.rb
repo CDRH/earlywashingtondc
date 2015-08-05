@@ -92,6 +92,7 @@ module ApplicationHelper
     end
   end
 
+# Might not need this anymore, I copied this to create metadata_list -KMD
   # pass in solr_res each time rather than use instance variable
   def metadata_mult(display, solr_res, search_field, date=false)
     res = ""

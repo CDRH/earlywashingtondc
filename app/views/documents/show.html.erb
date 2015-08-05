@@ -12,46 +12,58 @@
   <div class="well well-sm bibliography metadata" id="topBibl">
 <!-- 	  <div class="panel-body"> -->
 
-
+<% if @doc["documentCaseData_ss"] %>
 <div class="row">
   <div class="col-md-2 meta_label">Case:</div><!--/column-->
   <div class="col-md-10 meta_data"><%= format_list(@doc["documentCaseData_ss"]) %></div><!--/column-->
 </div><!--/row-->
+<% end %>
 
+<% if @doc["title"] %>
 <div class="row">
   <div class="col-md-2 meta_label">Document:</div><!--/column-->
   <div class="col-md-10 meta_data"><ul><li><%= @doc["title"] %></li></ul></div><!--/column-->
 </div><!--/row-->
+<% end %>
 
+<% if @doc["dateDisplay"] %>
 <div class="row">
   <div class="col-md-2 meta_label">Date:</div><!--/column-->
   <div class="col-md-10 meta_data"><ul><li><%= @doc["dateDisplay"] %></li></ul></div><!--/column-->
 </div><!--/row-->
+<% end %>
 
 <!-- Hidden below. TODO - move style=display:none to an onload event so it won't be hidden if javascript is off-->
     <div id="more_metadata" style="display:none;">
 	    
 
-
+<% if @doc["term_ss"] %>
 <div class="row">
   <div class="col-md-2 meta_label">Term:</div><!--/column-->
   <div class="col-md-10 meta_data"><%= metadata_list("Term", @doc["term_ss"], "term_ss", true) %></div><!--/column-->
 </div><!--/row-->
+<% end %>
 
+<% if @doc["plaintiffData_ss"] %>
 <div class="row">
   <div class="col-md-2 meta_label">Plaintiff(s):</div><!--/column-->
   <div class="col-md-10 meta_data"><%= format_list(@doc["plaintiffData_ss"], "person") %></div><!--/column-->
 </div><!--/row-->
+<% end %>
 
+<% if @doc["defendantData_ss"] %>
 <div class="row">
   <div class="col-md-2 meta_label">Defendants(s):</div><!--/column-->
   <div class="col-md-10 meta_data"><%= format_list(@doc["defendantData_ss"], "person") %></div><!--/column-->
 </div><!--/row-->
+<% end %>
 
+<% if @doc["attorneyPData_ss"] %>
 <div class="row">
   <div class="col-md-2 meta_label">Attorney for Plaintiff(s):</div><!--/column-->
   <div class="col-md-10 meta_data"><%= format_list(@doc["attorneyPData_ss"], "person") %></div><!--/column-->
 </div><!--/row-->
+<% end %>
 
 <% if @doc["attorneyDData_ss"] %>
 <div class="row">
@@ -60,26 +72,42 @@
 </div><!--/row-->
 <% end %>
 
-
+<% if @doc["personData_ss"] %>
 <div class="row">
   <div class="col-md-2 meta_label">People:</div><!--/column-->
   <div class="col-md-10 meta_data"><%= format_list(@doc["personData_ss"], "person") %></div><!--/column-->
 </div><!--/row-->
+<% end %>
 
+<% if @doc["Places"] %>
 <div class="row">
   <div class="col-md-2 meta_label">Places:</div><!--/column-->
   <div class="col-md-10 meta_data"><%= metadata_list("Places", @doc["places"], "places") %></div><!--/column-->
 </div><!--/row-->
+<% end %>
 
+<!-- TODO - Jessica, please add Document Type back in to the metadata - I'm missing something -->
+<!-- <# if @doc["subCategory"] %> -->
+<!-- <div class="row"> -->
+<!--   <div class="col-md-2 meta_label">Document Type:</div> --><!--/column-->
+<!--   <div class="col-md-10 meta_data"><%# format_list(@doc["subCategory"], "subCategory") %></div> --><!--/column-->
+<!-- </div> --><!--/row-->
+<!-- <# end %> -->
+
+<% if @doc["source"] %>
 <div class="row">
   <div class="col-md-2 meta_label">Source:</div><!--/column-->
   <div class="col-md-10 meta_data"><ul><li><%= @doc["source"] %></li></ul></div><!--/column-->
 </div><!--/row-->
+<% end %>
+
 
 <div class="row">
   <div class="col-md-2 meta_label">TEI/XML:</div><!--/column-->
   <div class="col-md-10 meta_data"><ul><li><a href="<%= @doc['uriXML'] %>"><%= @doc['uriXML'] %></a></li></ul></div><!--/column-->
 </div><!--/row-->
+
+
    <br/>
     </div>
     
