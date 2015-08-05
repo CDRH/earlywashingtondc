@@ -13,13 +13,12 @@
 
  
 
-  <div class="callout">
+  <div class="jump_menu">
     <%= '<a href="#documents">Case Documents</a>'.html_safe if @case["caseDocumentData_ss"] %>
     <%= '<a href="#rel_documents">Related Documents</a>'.html_safe if @case["caseRelatedDocumentData_ss"] %>
     <%= '<a href="#cases">Related Cases</a>'.html_safe if @case["relatedCaseData_ss"] %>
     <%= '<a href="#people">People</a>'.html_safe if @case["personData_ss"] %>
     <%= '<a href="#narrative">Case Narrative & Commentary</a>'.html_safe if @case["caseidHasNarrative_s"] %> 
-    
   </div>
   
      

@@ -8,16 +8,80 @@
   });
   </script>
 
-<h1>Search</h1>
+<h2>Search</h2>
 
-<h2>Search by Keyword</h2>
-<p>Enter any name, word, or series of words to search across all case documents.</p>
-<%= render "partials/search_bar" %>
+<!-- <h3>Search by Text</h3> -->
 
-<h2>Search for Person</h2>
+
+<div class="row">
+  <div class="col-md-6">
+	  <p>Enter any name, word, or series of words to search across all case documents.</p>
+
+	  <%= render "partials/search_bar" %>
+	  
+  </div><!--/column-->
+  <div class="col-md-6">
+	  
+	  <div class="well well-sm">
+		  
+		  <p>Tips: <br/><br/>
+To exclude a word, preceed with "-" (i.e. cody -buffalo)<br/>
+To search for a phrase, include in quotations (i.e. "bringing indians")</p>
+
+<p style="color:red">We need to work on these tips (currently stolen from cody) but not until phrase searching is fixed.  </p>
+		  
+	  </div>
+	  
+	 
+	  
+	 
+	  
+  </div><!--/column-->
+</div><!--/row-->
+
+
+
+<br/><br/>
+
+
+
+
+
+
+<div class="row">
+  <div class="col-md-6">
+	  
+	  <h4>Search for Person</h4>
 <p>A guided search of the people named across all case documents.</p>
-<%= form_tag search_path do %>
+ 
+<%= form_tag search_path, :class => "form-inline" do %>
+<div class="form-group">
   <%= hidden_field_tag(:qfield, "text") %>
-  <%= text_field_tag(:qtext, nil, :placeholder => "Search by Person", :id => "people") %>
-  <%= submit_tag("Search") %>
+  <%= text_field_tag(:qtext, nil, :placeholder => "Search by Person", :id => "people", :class => "form-control") %>
+  <%= submit_tag("Search", :class => "btn btn-info") %>
+</div>
 <% end %>
+
+
+	  
+  </div><!--/column-->
+  <div class="col-md-6">
+	  
+	  <h4>Search for Place</h4>
+<p>A guided search of the places named across all case documents.</p>
+<%= form_tag search_path, :class => "form-inline" do %>
+<div class="form-group">
+  <%= hidden_field_tag(:qfield, "text") %>
+  <%= text_field_tag(:qtext, nil, :placeholder => "Search by Place", :id => "people", :class => "form-control") %>
+  <%= submit_tag("Search", :class => "btn btn-info") %>
+</div>
+<% end %>
+
+<p style="color:red"> This has not been implemented yet, but is in the spec. </p>
+
+  </div><!--/column-->
+</div><!--/row-->
+
+
+
+

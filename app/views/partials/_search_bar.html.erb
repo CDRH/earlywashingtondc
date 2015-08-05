@@ -1,5 +1,7 @@
-<%= form_tag(search_path) do %>
+<%= form_tag(search_path, :class => "form-inline") do %>
+<div class="form-group">
   <%= hidden_field_tag(:qfield, "text") %>
-  <%= text_field_tag(:qtext, nil, :placeholder => "Search documents") %>
-  <%= submit_tag("Search") %>
+  <%= text_field_tag(:qtext, nil, :placeholder => "Search documents", :class => "form-control") %>
+  <%= submit_tag("Search", :class => "btn btn-info") %>
+</div>
 <% end %>
