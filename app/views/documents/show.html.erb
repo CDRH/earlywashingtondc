@@ -86,13 +86,13 @@
 </div><!--/row-->
 <% end %>
 
-<!-- TODO - Jessica, please add Document Type back in to the metadata - I'm missing something -->
-<!-- <# if @doc["subCategory"] %> -->
-<!-- <div class="row"> -->
-<!--   <div class="col-md-2 meta_label">Document Type:</div> --><!--/column-->
-<!--   <div class="col-md-10 meta_data"><%# format_list(@doc["subCategory"], "subCategory") %></div> --><!--/column-->
-<!-- </div> --><!--/row-->
-<!-- <# end %> -->
+<% if @doc["subCategory"] %>
+  <div class="row">
+     <div class="col-md-2 meta_label">Document Type:</div>
+     <div class="col-md-10 meta_data"><%= @doc["subCategory"] %>
+     </div>
+  </div>
+<% end %>
 
 <% if @doc["source"] %>
 <div class="row">
