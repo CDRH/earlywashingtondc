@@ -17,7 +17,7 @@
       <p><strong>Plaintiff(s): </strong><%= format_list(@doc["plaintiffData_ss"], "person") %></p>
       <p><strong>Defendants(s): </strong><%= format_list(@doc["defendantData_ss"], "person") %></p>
       <p><strong>Attorney for Plaintiff(s): </strong><%= format_list(@doc["attorneyPData_ss"], "person") %></p>
-      <p><strong>Attorney for Defendant(s): </strong><%= format_list(@doc["attorneyData_ss"], "person") %></p>
+      <p><strong>Attorney for Defendant(s): </strong><%= format_list(@doc["attorneyDData_ss"], "person") %></p>
       <p><strong>People: </strong><%= format_list(@doc["personData_ss"], "person") %>
       <%= metadata_mult("Places", @doc["places"], "places") %>
       <p><strong>Source: </strong><%= @doc["source"] %></p>
