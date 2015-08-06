@@ -519,6 +519,31 @@ a.selected {
 }
 
 
+.visualize_link {
+	padding: 8em 0 0em 0;
+	display: block;
+	
+	background: url(visualization_illustration.png) no-repeat center center;
+	background-size: 80%;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.visualize_link .btn-default {
+	background-color: RGBA(255,255,255,.7);
+	color: #000;
+	border: 0;
+}
+
+.visualize_link .btn-default:hover {
+	border: none;
+	color: #911002;
+
+}
+
+
+
+
 
 
 
