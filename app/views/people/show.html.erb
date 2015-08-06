@@ -22,7 +22,7 @@
 	  
 	  
 
-  
+ 
   
   
   
@@ -125,15 +125,15 @@
 
 <% if @person["personResidenceData_ss"] %>
 <div class="row">
-  <div class="col-md-2 meta_label">Residence:</div><!--/column-->
-  <div class="col-md-10 meta_data"><%= metadata_people_list(@person["personResidenceData_ss"]) %></div><!--/column-->
+  <div class="col-md-4 meta_label">Residence:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personResidenceData_ss"]) %></div><!--/column-->
 </div><!--/row-->
 <% end %>
 
 <% if @person["personSocecStatusData_ss"] %>
 <div class="row">
-  <div class="col-md-2 meta_label">Social Status:</div><!--/column-->
-  <div class="col-md-10 meta_data"><%= metadata_people_list(@person["personSocecStatusData_ss"]) %></div><!--/column-->
+  <div class="col-md-4 meta_label">Social Status:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personSocecStatusData_ss"]) %></div><!--/column-->
 </div><!--/row-->
 <% end %>
 
@@ -190,40 +190,18 @@
   <div class="col-md-6">
 	  
 	  
-	
-  
+<% if @rdfresults["results"]["bindings"].length > 0 %>
+  <div class="visualize_link" id="visualizations">
+	  <%= link_to "Visualize Relationships", network_vis_path(@person["id"]), class: "btn btn-default btn-lg btn-block", role: "button"  %>
 
-  <!-- Visualizations -->
-  <a name="visualizations"></a>
-  <% if @rdfresults["results"]["bindings"].length > 0 %>
-    <h3>Visualize Relationships:</h3>
-    <h5>The visualizations may take several seconds to load.</h5>
-    <ul>
-      <li>
-        <%= link_to "Two Degrees of Separation", network_vis_path(@person["id"]) %>
-        <%# link_to "(json)", network_vis_path(@person["id"], :format => "json") %>
-        <%# link_to "(xml)", network_vis_path(@person["id"], :format => "xml") %>
-      </li>
+  </div>
+ <% end %>	  
+	  
+	  
 
-      <%# Other types of relationships, hidden for the time being %>
-      <%# <li> %>
-        <%# link_to "Family and Kinship (new page)", network_vis_path(@person["id"], :type => "familyOf") %>
-        <%# link_to "(json)", network_vis_path(@person["id"], :type=> "familyOf", :format => "json") %>
-        <%# link_to "(xml)", network_vis_path(@person["id"], :type=> "familyOf", :format => "xml") %>
-      <%# </li> %>
-      <%# <li> %>
-        <%# link_to "Legal (new page)", network_vis_path(@person["id"], :type => "legal") %>
-        <%# link_to "(json)", network_vis_path(@person["id"], :type => "legal", :format => "json") %>
-        <%# link_to "(xml)", network_vis_path(@person["id"], :type => "legal", :format => "xml") %>
-      <%# </li> %>
-      <%# <li> %>
-        <%# link_to "Social (new page)", network_vis_path(@person["id"], :type => "acquaintanceOf") %>
-        <%# link_to "(json)", network_vis_path(@person["id"], :type => "acquaintanceOf", :format => "json") %>
-        <%# link_to "(xml)", network_vis_path(@person["id"], :type => "acquaintanceOf", :format => "xml") %>
-      <%# </li> %>
-    </ul>
-  <% end %>
-<% end %>
+ 
+      
+
 
 
 
@@ -246,3 +224,6 @@
   
   </div><!--/column-->
 </div><!--/row-->
+
+
+<% end %>
