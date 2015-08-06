@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # static pages
   get '/' => 'static#index', as: :home
   get 'interest' => 'static#interest', as: :interest
+  get 'relationships.ttl' => redirect("http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.relationships.ttl"), :as => :rdf
+  get 'ontology.owl' => redirect("http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl"), :as => :owl
 
   # documents (browsing / searching)
   post 'browse' => 'documents#dropdown', as: :doc_dropdown
@@ -25,10 +27,10 @@ Rails.application.routes.draw do
   get 'cases/:id' => 'cases#show', as: :case, :constraints => { :id => with_period }
 
   # people
+  # I don't want to talk about this.  Due to sucking at regex, I never figured out a way to
+  # capture ONLY the id regardless of whether there was an extension (.json, etc) or not, so I wrote two routes.
   match 'people', to: 'people#index', as: :people, via: [:get, :post]
   match 'people/all', to: 'people#all', as: :peopleAll, via: [:get, :post]
-  # I don't want to talk about this.  Due to sucking at regex, I never figured out a way to
-  # capture ONLY the id regardless of whether there was an extension or not, so I just wrote two routes.
   get 'people/:id', to: 'people#show', :constraints => { :id => with_period_ext}
   get 'people/:id', to: 'people#show', as: :person, :constraints => { :id => with_period }
   get 'people/network/:id', to: 'people#network', :constraints => { :id => with_period_ext}
