@@ -31,12 +31,15 @@ class DocumentsController < ApplicationController
 
   def search
     @page_class = "search_results"
-    # TODO so at this point, why not just use params instead of options?
+    # TODO possibly refactor to just use params, only trouble is the "sort" parameter being selected correctly on view
     # reset fq to be all results not just actual documents
     options = { :qfield => params[:qfield], :qtext => params[:qtext], :fq => "*:*"}
     rows = 50 # this is the default
     if params.has_key?(:sort) && params[:sort].length > 0
-      options[:sort] = "#{params[:sort]} asc"
+      options[:sort] = params[:sort] == "score" ? "#{params[:sort]} desc" : "#{params[:sort]} asc"
+    else
+      options[:sort] = "title asc"
+      params[:sort] = "title"
     end
     if params.has_key?(:page) && params[:page].to_i > 0
       options[:page] = params[:page]
