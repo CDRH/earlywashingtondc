@@ -150,4 +150,34 @@ module ApplicationHelper
       return res.html_safe
     end
   end
+  
+  # Oh god I am butchering Jessica's code so much I am so sorry -KMD
+
+  # This will only link out to external URLs and documents!
+  # So be careful if you are expecting something with case ids
+  # Note:  This function is getting way out of hand - should be refactored
+  def metadata_people_list(data)
+    if !data.nil? && data.class == Array
+      res = "<ul>"
+      data.each do |item|
+        begin
+          hash = JSON.parse(item)
+          date = hash['date'] ? "(#{hash['date']}) " : ""
+          if hash['id'] =~ URI::regexp
+            # if this has a real url then use
+            res += "<li>" + hash['label'] + " <span class='source_note'>[" + "<a href=\"#{hash['id']}\">source</a>" + "]</span></li>"
+          else
+            res += "<li>" + hash['label'] + " <span class='source_date'>#{date}</span> " +  "<span class='source_note'>[" + "#{link_to 'source', doc_path(hash['id'])}" + "]</span></li>"
+          end
+        rescue
+          # if it can't be parsed into JSON just display what you can
+          res += item
+        end
+      end
+      res += "</ul>"
+      return res.html_safe
+    end
+  end
+  
+  
 end

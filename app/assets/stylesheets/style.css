@@ -7,6 +7,7 @@
 
 
 
+
 table {
     margin-left:auto; 
     margin-right:auto;
@@ -289,13 +290,18 @@ div#switch_box {
 
 .letter_pagination li a {
 	display: inline-block;
-	border: solid #aaa 1px;
 	vertical-align: top;
 	height: 2.5em;
 	padding: .2em .2em .2em .2em;
-	width: 2em;
+	width: 2.05em;
 	margin-bottom: .2em;
 	text-align: center;
+	border: 1px solid #ddd;
+	display: inline-block;
+	border-radius: 2px;
+
+
+	
 }
 
 .letter_pagination li a:hover  {
@@ -332,6 +338,27 @@ div#switch_box {
      font-style: italic;
 	
 }
+
+
+.source_date, .source_note {
+	margin-left: .1em;
+	font-size: .8em;
+	color: #888;
+
+}
+
+.source_date {
+	
+}
+
+.source_note a {
+	border: none;
+}
+
+
+
+
+
 
 .p {
 	display: block;

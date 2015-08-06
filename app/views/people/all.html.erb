@@ -6,6 +6,9 @@
 
 <%= render "partials/pagination" %>
 
+
+
+
 <ul>
   <% @docs[:docs].each do |person| %>
     <li><%= link_to(person["title"], person_path(person["id"])) %></li>
