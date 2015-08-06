@@ -27,10 +27,10 @@ Rails.application.routes.draw do
   # people
   match 'people', to: 'people#index', as: :people, via: [:get, :post]
   match 'people/all', to: 'people#all', as: :peopleAll, via: [:get, :post]
-  get 'people/:id', to: 'people#show', :constraints => { :id => with_period_ext}
-  get 'people/:id', to: 'people#show', as: :person, :constraints => { :id => with_period }
   # I don't want to talk about this.  Due to sucking at regex, I never figured out a way to
   # capture ONLY the id regardless of whether there was an extension or not, so I just wrote two routes.
+  get 'people/:id', to: 'people#show', :constraints => { :id => with_period_ext}
+  get 'people/:id', to: 'people#show', as: :person, :constraints => { :id => with_period }
   get 'people/network/:id', to: 'people#network', :constraints => { :id => with_period_ext}
   get 'people/network/:id', to: 'people#network', as: :network_vis, :constraints => { :id => with_period }
   post 'people/browse', to: 'people#browse', as: :person_browse, :constraints => { :id => with_period }
@@ -47,34 +47,8 @@ Rails.application.routes.draw do
   get 'about', to: 'about#index', as: :about
   get 'about/:name', to: 'about#sub', as: :aboutSub, :constraints => { :name => with_period }
   
+  # error handling
+  match '/404', to: 'errors#not_found', via: :all
+  match '/500', to: 'errors#server_error', via: :all
 
 end
-
-#Stuff to delete later but keep around for reference for now -KD
-
-# Old kinship
-  #get 'kinship' => 'static#kinship', as: :kinship
-  # temporarily putting family stuff in here until such time as it becomes generated?
-  #get 'kinship/family/:id' => 'static#family', as: :family, :constraints => { :id => /[^\/]+/ }
-  
-  
-#    get 'about/credits' => 'about#credits', as: :ab_credits
-#   get 'about/data' => 'about#data', as: :ab_data
-#   get 'about/description' => 'about#description', as: :ab_desc
-#   get 'about/technical' => 'about#technical', as: :ab_tech
-
-  # this will have to be removed
-  #get 'family/:id' => 'static#family2', as: :family2, :constraints => { :id => /[^\/]+/ }
-
-#   
-#   
-#   
-#     # kinship
-#   get 'kinship', to: 'kinship#index', as: :kinship
-#   get 'kinship/:name', to: 'kinship#sub', as: :family, :constraints => { :name => /[^\/]+/ }
-# 
-#   # stories
-#   get 'stories', to: 'stories#index', as: :stories
-#   get 'stories/:name', to: 'stories#sub', as: :story, :constraints => { :name => /[^\/]+/ }
-#   
-# 
