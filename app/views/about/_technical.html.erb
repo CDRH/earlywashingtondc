@@ -32,7 +32,7 @@
 
 <p>Each document was encoded from the photographs, including in depth encoding of people, places, outcomes, relations, and more.</p>
 
-<p>Seperately, a CSV file was created that marks the relationships which can be inferred from documents. This process is not automated because of the complexity of relationships and the way they are recorded.</p>
+<p>Separately, a CSV file was created that marks the relationships which can be inferred from documents. This process is not automated because of the complexity of relationships and the way they are recorded.</p>
 
 <p>To index the data into Solr, a script goes through each TEI file and creates a static HTML view. A seperate script creates xml suitible for ingest into Solr, and a Ruby script posts these to the solr database. Much of the linking between documents happens during this process. For instance, a case document marks the related case, so we add the people mentioned in the case document to the case file.</p>
 

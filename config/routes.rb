@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'interest' => 'static#interest', as: :interest
   get 'relationships.ttl' => redirect("http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.relationships.ttl"), :as => :rdf
   get 'ontology.owl' => redirect("http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl"), :as => :owl
+  get 'relationships.csv' => redirect("http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.relationships.csv"), :as => :csv
 
   # documents (browsing / searching)
   post 'browse' => 'documents#dropdown', as: :doc_dropdown
