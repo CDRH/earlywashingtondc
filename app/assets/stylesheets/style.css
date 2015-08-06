@@ -7,6 +7,7 @@
 
 
 
+
 table {
     margin-left:auto; 
     margin-right:auto;
@@ -289,13 +290,18 @@ div#switch_box {
 
 .letter_pagination li a {
 	display: inline-block;
-	border: solid #aaa 1px;
 	vertical-align: top;
 	height: 2.5em;
 	padding: .2em .2em .2em .2em;
-	width: 2em;
+	width: 2.05em;
 	margin-bottom: .2em;
 	text-align: center;
+	border: 1px solid #ddd;
+	display: inline-block;
+	border-radius: 2px;
+
+
+	
 }
 
 .letter_pagination li a:hover  {
@@ -332,6 +338,27 @@ div#switch_box {
      font-style: italic;
 	
 }
+
+
+.source_date, .source_note {
+	margin-left: .1em;
+	font-size: .8em;
+	color: #888;
+
+}
+
+.source_date {
+	
+}
+
+.source_note a {
+	border: none;
+}
+
+
+
+
+
 
 .p {
 	display: block;
@@ -408,13 +435,13 @@ body {
      margin: 0;
      padding: 0 12px;
      line-height: 25px;
-     background: url(http://spacely.unl.edu/cocoon/dccourts/files/css/node.jpg) no-repeat;
+     background: url(http://spacely.unl.edu/cocoon/dccourts_test/files/css/node.jpg) no-repeat;
      color: #000;
      font-weight: normal;
    }
 
    ul.tree li:last-child {
-     background: #fff url(http://spacely.unl.edu/cocoon/dccourts/files/css/lastnode.jpg) no-repeat;
+     background: #fff url(http://spacely.unl.edu/cocoon/dccourts_test/files/css/lastnode.jpg) no-repeat;
    }
 
 /*  .gen {
