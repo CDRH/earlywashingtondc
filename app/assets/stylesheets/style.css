@@ -485,4 +485,13 @@ body {
 }
 
 
+a.selected {
+	background-color: #6b96a5;
+	color: #fff;
+	
+}
+
+
+
+
 
