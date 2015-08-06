@@ -59,8 +59,9 @@ class DocumentsController < ApplicationController
     @docs = $solr.query(options)
     # TODO there is so much wrong with the following:
     # shouldn't specify facet = true, should be able to use qfield / qtext in gem
-    facetq = "#{params[:qfield]}:\"#{params[:qtext]}\""
-    facets = $solr.get_facets({:q => facetq, :facet => "true"}, ["recordType_s"])
+    facetq = "#{params[:qfield]}:#{params[:qtext]}"
+    facets = $solr.get_facets({:qfield => params[:qfield], 
+      :qtext => params[:qtext], :facet => "true"}, ["recordType_s"])
     @categories = facets["recordType_s"]
     # default response is 50 pages, divide and round up for all
     @total_pages = (@docs[:num_found].to_f/rows).ceil

@@ -15,7 +15,9 @@ class ApplicationController < ActionController::Base
       :fq => ['recordType_s:document']
     })
     $solr.set_default_facet_fields({
-      :fq => ['recordType_s:document']
+      :fq => ['recordType_s:document'],
+      :facet => true,
+      :rows => 0
     })
   end
 

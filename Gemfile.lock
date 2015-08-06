@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/CDRH/rsolr_cdrh.git
-  revision: 204c4e685bcee564307c6bacb02762fd268a94c7
+  revision: ef45b89aed6284b13c43c0cb41a4458e6e44d384
   specs:
     rsolr_cdrh (0.0.1)
       bundler (~> 1.7)
