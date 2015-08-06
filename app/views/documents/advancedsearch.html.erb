@@ -46,9 +46,10 @@
     <h4>Search for Person</h4>
     <p>A guided search of the people named across all case documents.</p>
 
-    <%= form_tag search_path, :class => "form-inline" do %>
+    <%= form_tag search_path, :method => "get", :class => "form-inline" do %>
       <div class="form-group">
         <%= hidden_field_tag(:qfield, "text") %>
+        <%= hidden_field_tag(:sort, "score") %>
         <%= text_field_tag(:qtext, nil, :placeholder => "Search by Person", :id => "people", :class => "form-control") %>
         <%= submit_tag("Search", :class => "btn btn-info") %>
       </div>
@@ -59,7 +60,7 @@
 
     <h4>Search for Place</h4>
     <p>A guided search of the places named across all case documents.</p>
-    <%= form_tag search_path, :class => "form-inline" do %>
+    <%= form_tag search_path, :method => "get", :class => "form-inline" do %>
       <div class="form-group">
         <%= hidden_field_tag(:qfield, "text") %>
         <%= text_field_tag(:qtext, nil, :placeholder => "Search by Place", :id => "location", :class => "form-control") %>

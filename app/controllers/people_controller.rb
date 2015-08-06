@@ -1,7 +1,7 @@
 class PeopleController < ApplicationController
 
   def index
-	  @page_class = "people"
+    @page_class = "people"
 
      # TODO the rsolr gem reallllllly shouldn't need facet => true, still not sure why that is happening
     facet = $solr.get_facets({
@@ -16,10 +16,8 @@ class PeopleController < ApplicationController
     # it already has facet = true as a default in the gem, something here must be overriding it
     facets = $solr.get_facets({:q => "recordType_s:person", "facet.sort" => "asc", :facet => "true"}, ["titleLetter_s"])
     @alphabet = facets["titleLetter_s"]
-
-    
   end
-		
+    
   def all
     @page_class = "people"
 
@@ -73,9 +71,6 @@ class PeopleController < ApplicationController
       format.json { render :json => Relationships.new.query_two_removed(@id, "json", @type) }
       format.xml { render :xml => Relationships.new.query_two_removed(@id, "xml", @type) }
     end
-    
-
-
     
   end
 end

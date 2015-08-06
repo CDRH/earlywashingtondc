@@ -31,12 +31,15 @@ class DocumentsController < ApplicationController
 
   def search
     @page_class = "search_results"
-    # TODO so at this point, why not just use params instead of options?
+    # TODO possibly refactor to just use params, only trouble is the "sort" parameter being selected correctly on view
     # reset fq to be all results not just actual documents
     options = { :qfield => params[:qfield], :qtext => params[:qtext], :fq => "*:*"}
     rows = 50 # this is the default
     if params.has_key?(:sort) && params[:sort].length > 0
-      options[:sort] = "#{params[:sort]} asc"
+      options[:sort] = params[:sort] == "score" ? "#{params[:sort]} desc" : "#{params[:sort]} asc"
+    else
+      options[:sort] = "title asc"
+      params[:sort] = "title"
     end
     if params.has_key?(:page) && params[:page].to_i > 0
       options[:page] = params[:page]
@@ -59,8 +62,9 @@ class DocumentsController < ApplicationController
     @docs = $solr.query(options)
     # TODO there is so much wrong with the following:
     # shouldn't specify facet = true, should be able to use qfield / qtext in gem
-    facetq = "#{params[:qfield]}:\"#{params[:qtext]}\""
-    facets = $solr.get_facets({:q => facetq, :facet => "true"}, ["recordType_s"])
+    facetq = "#{params[:qfield]}:#{params[:qtext]}"
+    facets = $solr.get_facets({:qfield => params[:qfield], 
+      :qtext => params[:qtext], :facet => "true"}, ["recordType_s"])
     @categories = facets["recordType_s"]
     # default response is 50 pages, divide and round up for all
     @total_pages = (@docs[:num_found].to_f/rows).ceil
