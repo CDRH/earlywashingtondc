@@ -408,13 +408,13 @@ body {
      margin: 0;
      padding: 0 12px;
      line-height: 25px;
-     background: url(http://spacely.unl.edu/cocoon/dccourts/files/css/node.jpg) no-repeat;
+     background: url(http://spacely.unl.edu/cocoon/dccourts_test/files/css/node.jpg) no-repeat;
      color: #000;
      font-weight: normal;
    }
 
    ul.tree li:last-child {
-     background: #fff url(http://spacely.unl.edu/cocoon/dccourts/files/css/lastnode.jpg) no-repeat;
+     background: #fff url(http://spacely.unl.edu/cocoon/dccourts_test/files/css/lastnode.jpg) no-repeat;
    }
 
 /*  .gen {
