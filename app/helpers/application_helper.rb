@@ -18,7 +18,7 @@ module ApplicationHelper
       html += "<li>"
       html += link_to "1", to_page("1") 
       html += "</li>"
-      html += "<li class='disabled'><a href='#'>...</a></li>" if prior_three.min != 2 && current_page != 2
+      html += "<li class='disabled'><span>...</span></li>" if prior_three.min != 2 && current_page != 2
     end
 
     # prior three, current page, and next three
@@ -30,7 +30,7 @@ module ApplicationHelper
 
     # add the last page if you're not on it and add dots if it is far from the other pages
     if current_page != total_pages
-      html += "<li class='disabled'><a href='#'>...</a></li>" if next_three.max != total_pages-1 && current_page != total_pages-1
+      html += "<li class='disabled'><span>...</span></li>" if next_three.max != total_pages-1 && current_page != total_pages-1
       html += "<li>"
       html += link_to total_pages.to_s, to_page(total_pages)
       html += "</li>"
