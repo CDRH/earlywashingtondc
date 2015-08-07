@@ -9,7 +9,10 @@
   
   
   	   <%# metadata_builder("Jurisdiction", @case["jurisdiction_ss"]) %>
+  	   <% # Added an if statement to resolve error which was showing if there was no jurisdiction -KMD %>
+  	   <% if @case["jurisdiction_ss"] %>
   <%= find_unique_strings(@case["jurisdiction_ss"]) %>
+  <% end %>
 
  
 
@@ -53,10 +56,14 @@
 
   <% if @case["personData_ss"] %>
     <a name="people"></a><h3>People</h3>
-    <h4>Plaintiff(s):</h4>
-    <%= people_list(@case["plaintiffData_ss"]) %>
-    <h4>Defendant(s):</h4>
-    <%= people_list(@case["defendantData_ss"]) %>
+    <% if @case["plaintiffData_ss"] %>
+      <h4>Plaintiff(s):</h4>
+      <%= people_list(@case["plaintiffData_ss"]) %>
+    <% end %>
+    <% if @case["defendantData_ss"] %>
+      <h4>Defendant(s):</h4>
+      <%= people_list(@case["defendantData_ss"]) %>
+    <% end %>
     <% if @case["attorneyPData_ss"] %>
       <h4>Attorney for Plaintiff(s):</h4>
       <%= people_list(@case["attorneyPData_ss"]) %>
@@ -65,8 +72,10 @@
       <h4>Attorney for Defendant(s):</h4>
       <%= people_list(@case["attorneyDData_ss"]) %>
     <% end %>
-    <h4>Participants:</h4>
-    <%= people_list(@case["personData_ss"]) %>
+    <% if @case["personData_ss"] %>
+      <h4>Participants:</h4>
+      <%= people_list(@case["personData_ss"]) %>
+    <% end %>
   <% end %>
 	  
 	  <!-- Only put in grid if there is a narrative -->
