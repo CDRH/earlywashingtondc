@@ -41,7 +41,6 @@ module DocumentsHelper
   end
 
   def sort_results(sort_field)
-    new_params = reset_params  # should not delete current facet
     # add sorting field
     new_params[:sort] = sort_field
     return new_params

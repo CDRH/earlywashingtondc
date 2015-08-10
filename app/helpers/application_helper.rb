@@ -51,19 +51,9 @@ module ApplicationHelper
 
   # paginator method
   def to_page(page)
-    params = reset_params
     merged = params.merge({:page => page.to_s})
     return merged
   end
-
-  def reset_params
-    new_params = params.clone
-    new_params.delete("action")
-    new_params.delete("controller")
-    new_params.delete("page")
-    return new_params
-  end
-
 
 #######################
 #     Item Display    #
@@ -84,7 +74,7 @@ module ApplicationHelper
           end
         rescue
           # is invalid JSON just display what is possible
-          res += item
+          res += "<li>#{item}</li>"
         end
       end
       res += "</ul>"
@@ -92,23 +82,6 @@ module ApplicationHelper
     end
   end
 
-# Might not need this anymore, I copied this to create metadata_list -KMD
-  # pass in solr_res each time rather than use instance variable
-  def metadata_mult(display, solr_res, search_field, date=false)
-    res = ""
-    if !solr_res.nil?
-      res += "<p><strong>#{display}: </strong>"
-      solr_res.each do |term|
-        display = date ? format_date(term) : term
-        res += "<span class='subjectLink'>"
-        res += link_to(display, search_path(:qfield => search_field, :qtext => term))
-        res += "</span>"
-      end
-    res += "</p>"
-    end
-    return res.html_safe
-  end
-  
   def metadata_list(display, solr_res, search_field, date=false)
     res = ""
     if !solr_res.nil?
