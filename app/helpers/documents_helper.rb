@@ -25,14 +25,13 @@ module DocumentsHelper
   end
 
   def facet_results(facet_field=nil)
-    new_params = reset_params  # will delete page and sort
     # add facet field if there should be one
     if facet_field.nil?
-      new_params.delete("facet")
+      params.delete("facet")
     else
-      new_params[:facet] = facet_field
+      params[:facet] = facet_field
     end
-    return new_params
+    return params
   end
 
   def search_result_link(doc)
@@ -41,13 +40,12 @@ module DocumentsHelper
   end
 
   def sort_results(sort_field)
-    # add sorting field
-    new_params[:sort] = sort_field
-    return new_params
+    params[:sort] = sort_field
+    return params
   end
 
   def query_display
-    # TODO this will need to be filled out if there are fq queries happening
+    # this will need to be filled out if there are fq queries happening
     # or if anything is using the straight up "q" fields
     qtext = params[:facet] ? "#{params[:qtext]} (#{params[:facet]})" : params[:qtext]
     # override if anything is specified

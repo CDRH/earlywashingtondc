@@ -15,8 +15,6 @@ Rails.application.routes.draw do
   # documents (browsing / searching)
   post 'browse' => 'documents#dropdown', as: :doc_dropdown
   get 'doc/:id', to: 'documents#show', as: :doc, :constraints => { :id => with_period }
-  
-  # search
   get 'advancedsearch' => 'documents#advancedsearch', as: :advancedsearch
   match 'search', to: 'documents#search', as: :search, :constraints => { :id => with_period }, via: [:get, :post]
 
