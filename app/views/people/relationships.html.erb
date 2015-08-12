@@ -20,8 +20,8 @@ Find connections up to four removed for attorneys in the OSCYS data.
 
 <%= form_tag relationships_path, :method => "get", :class => "form-inline" do %>
   <div class="form-group">
-    <%= select_tag :per1id, options_for_select(@people), :prompt => "Select First Person", :class => "custom-dropdown__select" %>
-    <%= select_tag :per2id, options_for_select(@people), :prompt => "Select Second Person", :class => "custom-dropdown__select" %>
+    <%= select_tag :per1id, options_for_select(@people, params["per1id"]), :prompt => "Select First Person", :class => "custom-dropdown__select" %>
+    <%= select_tag :per2id, options_for_select(@people, params["per2id"]), :prompt => "Select Second Person", :class => "custom-dropdown__select" %>
     <%= submit_tag("Find Relationships", :class => "btn btn-info") %>
   </div>
 <% end %>
