@@ -30,11 +30,12 @@ Rails.application.routes.draw do
   # capture ONLY the id regardless of whether there was an extension (.json, etc) or not, so I wrote two routes.
   match 'people', to: 'people#index', as: :people, via: [:get, :post]
   match 'people/all', to: 'people#all', as: :peopleAll, via: [:get, :post]
-  get 'people/:id', to: 'people#show', :constraints => { :id => with_period_ext}
-  get 'people/:id', to: 'people#show', as: :person, :constraints => { :id => with_period }
   get 'people/network/:id', to: 'people#network', :constraints => { :id => with_period_ext}
   get 'people/network/:id', to: 'people#network', as: :network_vis, :constraints => { :id => with_period }
   post 'people/browse', to: 'people#browse', as: :person_browse, :constraints => { :id => with_period }
+  get 'people/relationships', to: 'people#relationships', as: :relationships
+  get 'people/:id', to: 'people#show', :constraints => { :id => with_period_ext}
+  get 'people/:id', to: 'people#show', as: :person, :constraints => { :id => with_period }
 
   # kinship
   get 'kinship', to: 'kinship#index', as: :kinship

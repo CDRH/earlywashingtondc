@@ -14,4 +14,16 @@ module PeopleHelper
     return res.html_safe
   end
 
+  def rdf_res?(item)
+    return item && !item.empty?
+  end
+
+  def rdfval(rdf_item)
+    if rdf_item && rdf_item["value"]
+      return rdf_item["value"].sub(/.*#/, '')
+    else
+      return ""
+    end
+  end
+
 end

@@ -57,11 +57,12 @@ class ApplicationController < ActionController::Base
   end
 
   # for the less traditional {label: Smith, id: 0001} => 10 type results
-  def dropdownify_data_facets(facet_term)
+  def dropdownify_data_facets(facet_term, number=true)
     facet_term.collect do |term|
       begin
         hash = JSON.parse(term[0])
-        ["#{hash['label']} (#{term[1]})", hash["id"]]
+        display = number ? "#{hash['label']} (#{term[1]})" : hash['label']
+        [display, hash["id"]]
       rescue
         [term[0], term[0]]
       end

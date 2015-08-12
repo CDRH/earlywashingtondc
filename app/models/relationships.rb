@@ -30,6 +30,69 @@ class Relationships
     end
   end
 
+  def query_first_relation(person_id1, person_id2)
+    query_string = %{ {
+       osrdf:#{person_id1} ?rel osrdf:#{person_id2} .
+       osrdf:#{person_id1} oscys:fullName ?name1 .
+       osrdf:#{person_id2} oscys:fullName ?name2 
+     }
+    }
+    return query(query_string)
+  end
+
+  def query_second_relation(person_id1, person_id2)
+    query_string = %{ {
+       BIND(osrdf:#{person_id1} AS ?per1) .
+       BIND(osrdf:#{person_id2} AS ?goal) .
+       ?per1 ?rel12 ?per2 .
+       ?per2 ?rel2g ?goal .
+       ?per1 oscys:fullName ?name1 .
+       ?per2 oscys:fullName ?name2 .
+       ?goal oscys:fullName ?nameg
+     }
+    }
+    return query(query_string)
+  end
+
+  def query_third_relation(person_id1, person_id2)
+    query_string = %{ {
+       BIND(osrdf:#{person_id1} AS ?per1) .
+       BIND(osrdf:#{person_id2} AS ?goal) .
+       ?per1 ?rel12 ?per2 .
+       ?per2 ?rel23 ?per3 .
+       ?per3 ?rel3g ?goal .
+       ?per1 oscys:fullName ?name1 .
+       ?per2 oscys:fullName ?name2 .
+       ?per3 oscys:fullName ?name3 .
+       ?goal oscys:fullName ?nameg .
+       FILTER ( ?per3 != ?per1 ) .
+       FILTER (?per2 != ?goal )
+     }
+    }
+    return query(query_string)
+  end
+
+  def query_fourth_relation(person_id1, person_id2)
+    query_string = %{ {
+       BIND(osrdf:#{person_id1} AS ?per1) .
+       BIND(osrdf:#{person_id2} AS ?goal) .
+       ?per1 ?rel12 ?per2 .
+       ?per2 ?rel23 ?per3 .
+       ?per3 ?rel34 ?per4 .
+       ?per4 ?rel4g ?goal .
+       ?per1 oscys:fullName ?name1 .
+       ?per2 oscys:fullName ?name2 .
+       ?per3 oscys:fullName ?name3 .
+       ?per4 oscys:fullName ?name4 .
+       ?goal oscys:fullName ?nameg .
+       FILTER ( ?per3 != ?per1 ) .
+       FILTER (?per2 != ?per4 )
+       FILTER (?per3 != ?goal )
+     }
+    }
+    return query(query_string)
+  end
+
   def query_one_removed(person_id, format="json")
     query_string = %{ { osrdf:#{person_id} ?rel1 ?per1 . 
                       ?per1 oscys:fullName ?name1 } }

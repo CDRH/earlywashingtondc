@@ -71,6 +71,41 @@ class PeopleController < ApplicationController
       format.json { render :json => Relationships.new.query_two_removed(@id, "json", @type) }
       format.xml { render :xml => Relationships.new.query_two_removed(@id, "xml", @type) }
     end
-    
+  end
+
+  def relationships
+    # solr request to populate dropdown
+    # currently only using attorneys pulled from document information
+    @page_class = "people"
+    facets = $solr.get_facets(
+      {:q => "recordType_s:document", 
+      "facet.sort" => "asc", 
+      "facet.limit" => "-1", 
+      :facet => "true",
+      "facet.mincount" => "1"}, ["attorneyData_ss"])
+    rdf = Relationships.new
+    @people = dropdownify_data_facets(facets["attorneyData_ss"], false)
+
+    if params["per1id"] && params["per2id"]
+      # rdf queries to get the relationships
+      rdf = Relationships.new
+      @relationOne = _get_rdf_good_stuff(rdf.query_first_relation(params["per1id"], params["per2id"]))
+      @relationTwo = _get_rdf_good_stuff(rdf.query_second_relation(params["per1id"], params["per2id"]))
+      @relationThree = _get_rdf_good_stuff(rdf.query_third_relation(params["per1id"], params["per2id"]))
+      @relationFour = _get_rdf_good_stuff(rdf.query_fourth_relation(params["per1id"], params["per2id"]))
+    end
+  end
+
+  private
+
+  def _get_rdf_good_stuff(raw)
+    begin
+      json = JSON.parse(raw)
+      if json.has_key?("results") && json["results"].has_key?("bindings")
+        return json["results"]["bindings"]
+      end
+    rescue => e
+      return nil
+    end
   end
 end
