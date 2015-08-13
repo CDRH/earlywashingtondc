@@ -14,6 +14,12 @@ module PeopleHelper
     return res.html_safe
   end
 
+  def prettify(relationship)
+    relArray = relationship.split(/(?=[A-Z])/)
+    rejoined = relArray.join(" ")
+    return rejoined.downcase
+  end
+
   def rdf_res?(item)
     return item && !item.empty?
   end

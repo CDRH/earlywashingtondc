@@ -95,16 +95,15 @@
       </div><!-- /inner -->
     </div><!-- /left-container -->
 
-    <!--    I think we should include this info on the page this is linked from -->
-    <!--   Visualization omits relationships which involve judges and clerks -->
-
-    <div id="center-container">
-      <div id="infovis"/>
-    </div>
-
-    <div id="no-relationship" class="hide">
-      No relationships of this type found.
-    </div>
+    <% if @res && @res["children"] && @res["children"].length > 0 %>
+      <div id="center-container">
+        <div id="infovis"/>
+      </div>
+    <% else %>
+      <div id="no-relationship">
+        <h4>No relationships of this type found.</h4>
+      </div>
+    <% end %> 
 
   </div><!-- /center-container -->
 

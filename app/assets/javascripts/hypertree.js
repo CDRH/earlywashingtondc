@@ -66,7 +66,7 @@ var getLabelStyle = function(depth) {
 
 var formatId = function(id) {
   // in order to prevent data from being overwritten by jit, first wave of people have _b
-  // and second wave have _c appended to their id.  This is removed here.
+  // and second wave have _c appended to their id in the json.  This is removed here.
   return id.substring(0,10);
 };
 
@@ -164,10 +164,6 @@ function initHypertree(){
         color: edgeColors["default"],
         overridable: true
       },
-      // commented out because I'm overwriting prototype.onclick below
-      // Fx: {
-      //   transition: $jit.Trans.linear
-      // },
       Events: {
         enable: true,
         onClick: function(node) {
@@ -190,7 +186,6 @@ function initHypertree(){
         var nodeDepth = node._depth;
         var color = nodeColors[nodeDepth];
         node.Node.color = color ? color : nodeColors["default"];
-        // node.Edge.color = "#123123"; // this changes all of them
       },
       onBeforePlotLine: function(adj) {
         var relationType = adj.nodeTo.data.relationType;
@@ -203,11 +198,7 @@ function initHypertree(){
       onCreateLabel: function(domElement, node){
         domElement.innerHTML = node.name;
         $jit.util.addEvent(domElement, 'click', function () {
-          ht.onClick(node.id, {
-            // onComplete: function() {
-            //   ht.controller.onComplete();
-            // }
-          });
+          ht.onClick(node.id, {});
         });
       },
       //Change node styles when labels are placed
@@ -231,7 +222,7 @@ function initHypertree(){
       onComplete: function(){
         Log.write("done");
         
-//Build the right column relations list.
+        //Build the right column relations list.
         //This is done by collecting the information (stored in the data property) 
         //for all the nodes adjacent to the centered node.
         var node = ht.graph.getClosestNodeToOrigin("current");
@@ -243,13 +234,9 @@ function initHypertree(){
     // override the default behavior of hypertree so that the graph does not reorient
     $jit.Hypertree.prototype.onClick = function(id, opt) {};
     if (Object.keys(json).length !== 0) {
-      $("#no-relationship").addClass("hide");
       ht.loadJSON(json);
       ht.refresh();  //compute positions and plot.
       ht.controller.onComplete();
-    } else {
-      console.log("No relationships of this type found.");
-      $("#no-relationship").removeClass("hide");
     }
     // many thanks to SNAC for providing a lovely zooming / panning tool
     // that could be shamelessly incorporated into our graph

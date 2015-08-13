@@ -51,7 +51,7 @@ Find connections up to four removed for attorneys in the OSCYS data.
         <% @relationOne.each do |link| %>
           <tr>
             <td><%= link_to rdfval(link["name1"]), person_path(params["per1id"]) %></td>
-            <td><%= rdfval(link["rel"]) %></td>
+            <td><%= prettify(rdfval(link["rel"])) %></td>
             <td><%= link_to rdfval(link["name2"]), person_path(params["per2id"]) %></td>
           </tr>
         <% end %>
@@ -71,9 +71,9 @@ Find connections up to four removed for attorneys in the OSCYS data.
         <% @relationTwo.each do |link| %>
           <tr>
             <td><%= link_to rdfval(link["name1"]), person_path(params["per1id"]) %></td>
-            <td><%= rdfval(link["rel12"]) %></td>
+            <td><%= prettify(rdfval(link["rel12"])) %></td>
             <td><%= link_to rdfval(link["name2"]), person_path(rdfval(link["per2"])) %></td>
-            <td><%= rdfval(link["rel2g"]) %></td>
+            <td><%= prettify(rdfval(link["rel2g"])) %></td>
             <td><%= link_to rdfval(link["nameg"]), person_path(params["per2id"]) %></td>
           </tr>
         <% end %>
@@ -94,11 +94,11 @@ Find connections up to four removed for attorneys in the OSCYS data.
       <% @relationThree.each do |link| %>
         <tr>
           <td><%= link_to rdfval(link["name1"]), person_path(params["per1id"]) %></td>
-          <td><%= rdfval(link["rel12"]) %></td>
+          <td><%= prettify(rdfval(link["rel12"])) %></td>
           <td><%= link_to rdfval(link["name2"]), person_path(rdfval(link["per2"])) %></td>
-          <td><%= rdfval(link["rel23"]) %></td>
+          <td><%= prettify(rdfval(link["rel23"])) %></td>
           <td><%= link_to rdfval(link["name3"]), person_path(rdfval(link["per3"])) %></td>
-          <td><%= rdfval(link["rel3g"]) %></td>
+          <td><%= prettify(rdfval(link["rel3g"])) %></td>
           <td><%= link_to rdfval(link["nameg"]), person_path(params["per2id"]) %></td>
         </tr>
       <% end %>
@@ -119,13 +119,13 @@ Find connections up to four removed for attorneys in the OSCYS data.
       <% @relationFour.each do |link| %>
         <tr>
           <td><%= link_to rdfval(link["name1"]), person_path(params["per1id"]) %></td>
-          <td><%= rdfval(link["rel12"]) %></td>
+          <td><%= prettify(rdfval(link["rel12"])) %></td>
           <td><%= link_to rdfval(link["name2"]), person_path(rdfval(link["per2"])) %></td>
-          <td><%= rdfval(link["rel23"]) %></td>
+          <td><%= prettify(rdfval(link["rel23"])) %></td>
           <td><%= link_to rdfval(link["name3"]), person_path(rdfval(link["per3"])) %></td>
-          <td><%= rdfval(link["rel34"]) %></td>
+          <td><%= prettify(rdfval(link["rel34"])) %></td>
           <td><%= link_to rdfval(link["name4"]), person_path(rdfval(link["per4"])) %></td>
-          <td><%= rdfval(link["rel4g"]) %></td>
+          <td><%= prettify(rdfval(link["rel4g"])) %></td>
           <td><%= link_to rdfval(link["nameg"]), person_path(params["per2id"]) %></td>
         </tr>
       <% end %>
