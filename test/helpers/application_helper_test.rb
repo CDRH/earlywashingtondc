@@ -48,11 +48,4 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal metadata_people_list(solr_json), "<ul><li>Oakley, Eliza <span class='source_date'></span> <span class='source_note'>[<a href=\"/doc/per.000046\">source</a>]</span></li><li>Hiort, Henry <span class='source_date'></span> <span class='source_note'>[<a href=\"/doc/per.000011\">source</a>]</span></li></ul>"
   end
 
-  ##########################
-  # Application Controller #
-  ##########################
-
-  test "format_date" do
-    assert_equal format_date("2015-09"), "September 2015"
-  end
 end
