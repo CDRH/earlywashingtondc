@@ -1,57 +1,125 @@
-<script type="text/javascript">
-    function unhide(divID) {
-    var item = document.getElementById(divID);
-    if (item) {
-    item.className=(item.className=='hidden')?'unhidden':'hidden';
-    }
-    }
-</script>
 
-<!-- metadata top -->
-<div class="callout bibliography" id="topBibl">
-  <p><strong>Document: </strong><%= @doc["title"] %></p>
-  <p><strong>Date: </strong><%= @doc["dateDisplay"] %></p>
+<% if @doc.nil? %>
+  <h1>Something Is Wrong</h1>
+  <p>We cannot find a document with id <%= params["id"] %>.</p>
+  <p>This document may not exist or we may be experiencing technical issues.</p>
+<% else %>
 
-  <%= metadata_mult("People", @doc["people"], "people") %>
-  <%= metadata_mult("Term", @doc["term_ss"], "term_ss") %>
-  <%= metadata_mult("Plaintiff", @doc["plaintiff_ss"], "plaintiff_ss") %>
-  <%= metadata_mult("Defendant", @doc["defendant_ss"], "defendant_ss") %>
+  <h2><%= @doc["title"] %></h2>
+  
 
-  <p>
-    <%# link_to "View Case File", search_path(:qfield => "caseID", :qtext => @doc["caseID"]) %>
-    <%= link_to "View Case File", case_path(@doc["caseID_ss"]) %>
-  </p>
-  <span class="morelink">
-    <a href="#bottomBibl">More metadata</a>
-  </span>
-</div>
+  
+  <div class="well well-sm bibliography metadata" id="topBibl">
+<!-- 	  <div class="panel-body"> -->
 
-<!-- TODO this will be pulled via...template? -->
-<%# @doc["text"] %>
-<%= @res.html_safe %>
+<% if @doc["documentCaseData_ss"] %>
+<div class="row">
+  <div class="col-md-2 meta_label">Case:</div><!--/column-->
+  <div class="col-md-10 meta_data"><%= format_list(@doc["documentCaseData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
 
-<!-- metadata bottom -->
+<% if @doc["title"] %>
+<div class="row">
+  <div class="col-md-2 meta_label">Document:</div><!--/column-->
+  <div class="col-md-10 meta_data"><ul><li><%= @doc["title"] %></li></ul></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @doc["dateDisplay"] %>
+<div class="row">
+  <div class="col-md-2 meta_label">Date:</div><!--/column-->
+  <div class="col-md-10 meta_data"><ul><li><%= @doc["dateDisplay"] %></li></ul></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<!-- Hidden below. TODO - move style=display:none to an onload event so it won't be hidden if javascript is off-->
+    <div id="more_metadata" style="display:none;">
+	    
+
+<% if @doc["term_ss"] %>
+<div class="row">
+  <div class="col-md-2 meta_label">Term:</div><!--/column-->
+  <div class="col-md-10 meta_data"><%= metadata_list("Term", @doc["term_ss"], "term_ss", true) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @doc["plaintiffData_ss"] %>
+<div class="row">
+  <div class="col-md-2 meta_label">Plaintiff(s):</div><!--/column-->
+  <div class="col-md-10 meta_data"><%= format_list(@doc["plaintiffData_ss"], "person") %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @doc["defendantData_ss"] %>
+<div class="row">
+  <div class="col-md-2 meta_label">Defendants(s):</div><!--/column-->
+  <div class="col-md-10 meta_data"><%= format_list(@doc["defendantData_ss"], "person") %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @doc["attorneyPData_ss"] %>
+<div class="row">
+  <div class="col-md-2 meta_label">Attorney for Plaintiff(s):</div><!--/column-->
+  <div class="col-md-10 meta_data"><%= format_list(@doc["attorneyPData_ss"], "person") %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @doc["attorneyDData_ss"] %>
+<div class="row">
+  <div class="col-md-2 meta_label">Attorney for Defendant(s):</div><!--/column-->
+  <div class="col-md-10 meta_data"><%= format_list(@doc["attorneyDData_ss"], "person") %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @doc["personData_ss"] %>
+<div class="row">
+  <div class="col-md-2 meta_label">People:</div><!--/column-->
+  <div class="col-md-10 meta_data"><%= format_list(@doc["personData_ss"], "person") %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @doc["Places"] %>
+<div class="row">
+  <div class="col-md-2 meta_label">Places:</div><!--/column-->
+  <div class="col-md-10 meta_data"><%= metadata_list("Places", @doc["places"], "places") %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @doc["subCategory"] %>
+  <div class="row">
+     <div class="col-md-2 meta_label">Document Type:</div>
+     <div class="col-md-10 meta_data"><ul><li><%= link_to @doc["subCategory"], search_path({:qfield => "subCategory", :qtext => @doc["subCategory"]}) %></li></ul>
+     </div>
+  </div>
+<% end %>
+
+<% if @doc["source"] %>
+<div class="row">
+  <div class="col-md-2 meta_label">Source:</div><!--/column-->
+  <div class="col-md-10 meta_data"><ul><li><%= @doc["source"] %></li></ul></div><!--/column-->
+</div><!--/row-->
+<% end %>
 
 
-<div class="callout bibliography" id="bottomBibl">
-  <p><strong>Category: </strong>
-    <span class="subjectLink">
-      <%= link_to @doc["category"], search_path(:qfield => "category", :qtext => @doc["category"]) %>
-    </span>
-  </p>
-  <p><strong>Subcategory: </strong>
-    <span class="subjectLink">
-      <%= link_to @doc["subCategory"], search_path(:qfield => "subCategory", :qtext => @doc["subCategory"]) %>
-    </span>
-  </p>
-  <%= metadata_mult("Attorney for Plaintiff", @doc["attorneyP_ss"], "attorneyP_ss") %>
-  <%= metadata_mult("Attorney for Defendant", @doc["attorneyD_ss"], "attorneyD_ss") %>
-  <%= metadata_mult("People", @doc["people"], "people") %>
-  <%= metadata_mult("Places", @doc["places"], "places") %>
-  <p><strong>TEI/XML: </strong>
-    <a href="<%= @doc['uriXML'] %>"><%= @doc['uriXML'] %></a>
-  </p>
-  <span class="morelink">
-    <a href="#topBibl">Back to top</a>
-  </span>
-</div>
+<div class="row">
+  <div class="col-md-2 meta_label">TEI/XML:</div><!--/column-->
+  <div class="col-md-10 meta_data"><ul><li><a href="<%= @doc['uriXML'] %>"><%= @doc['uriXML'] %></a></li></ul></div><!--/column-->
+</div><!--/row-->
+
+
+   <br/>
+    </div>
+    
+    <a id="metadata_toggle" class="btn btn-info btn-sm btn-block">View more metadata</a>
+<!-- </div> -->
+  </div>
+
+  
+    
+  
+
+  <%= @res.html_safe %>
+
+
+<% end %>

@@ -1,27 +1,229 @@
-<h1><%= @person["title"]%></h1>
+<% if @person.nil? %>
+  <h1>Something Is Wrong</h1>
+  <p>We cannot find a person with id <%= params["id"] %>.</p>
+  <p>This person may not exist or we may be experiencing technical issues.</p>
+<% else %>
 
-<div class="callout bibliography" id="topBibl">
-  <p><strong>Date of Birth:</strong> <%= @person["personBirth_ss"] %></p>
-  <p><strong>Date of Death:</strong> <%= @person["personDeath_ss"] %></p>
-  <p><strong>Occupation:</strong> <%= @person["personOccupation_ss"] %></p>
-  <p><strong>Sex:</strong> <%= @person["personSex_ss"] %></p>
-  <p><strong>Color:</strong> <%= @person["personColor_ss"] %></p>
-  <p><strong>VIAF:</strong> <%= @person["personIdnoVIAF_ss"] %> </p>
-</div>
+  <h2><strong><%= @person["title"]%></strong> <!--(<%= @person["id"] %>)--></h2>
+  <p><%= "Alternate names: #{@person['personAltName_ss'].join(', ')}" if @person["personAltName_ss"] %>
 
-<h3>Relationships:</h3>
-<ul>
-<%# TODO clean this huge mess up %>
-<% @rdfresults["results"]["bindings"].each do |rel| %>
-  <% label = rel["rel1"]["value"].partition('#').last.titleize + " " +rel["name1"]["value"] %>
-  <li><%= link_to label, person_path(rel["per1"]["value"].partition('#').last) %></li>
+  <div class="jump_menu">
+  
+  <%= '<a href="#cases">Related Cases</a>'.html_safe if @cases[:docs].length > 0 %>
+  <%= '<a href="#documents">Related Documents</a>'.html_safe if @docs[:docs].length > 0 %> 
+   <%= '<a href="#visualizations">Visualization</a>'.html_safe if @rdfresults["results"]["bindings"].length > 0 %>
+  <%= '<a href="#relationships">Relationships</a>'.html_safe if @rdfresults["results"]["bindings"].length > 0 %>
+ 
+  </div>
+  
+  
+<div class="row">
+  <div class="col-md-6">
+	  
+	  
+
+ 
+  
+  
+  
+
+  <h3 id="description">Described in Case Documents As:</h3>
+    <div class="bibliography" id="topBibl">
+	    
+	
+<% if @person["personSex_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Sex:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personSex_ss"]) %></div><!--/column-->
+</div><!--/row-->
 <% end %>
-</ul>
-<p>
 
-<h3><%= @docs[:num_found] %> Documents: </h3>
-<ul>
-<% @docs[:docs].each do |doc| %>
-  <li><%= link_to doc["title"], doc_path(doc["id"]) %></li>
+<% if @person["personColorData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Color:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personColorData_ss"]) %></div><!--/column-->
+</div><!--/row-->
 <% end %>
-</ul>
+
+<% if @person["personAffiliationData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Affiliation:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personAffiliationData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @person["personAgeData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Age:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personAgeData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @person["personBiblData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Bibl:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personBiblData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @person["personBirthData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Date of Birth:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personBirthData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @person["personDeathData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Date of Death:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personDeathData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @person["personEventData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Event:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personEventData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @person["personIdnoVIAF_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">VIAF:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personIdnoVIAF_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @person["personNationalityData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Nationality:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personNationalityData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @person["personNoteData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Notes:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personNoteData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @person["personOccupationData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Occupation:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personOccupationData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<!-- I don't think we need name data, will always be the same as name -->
+<!-- <# if @person["personNameData_ss"] %> -->
+<!-- <div class="row"> -->
+<!--   <div class="col-md-2 meta_label">Name Data:</div> --><!--/column-->
+<!--   <div class="col-md-10 meta_data"><#= metadata_people_list(@person["personNameData_ss"]) %></div> --><!--/column-->
+<!-- </div> --><!--/row-->
+<!-- <# end %> -->
+
+<% if @person["personResidenceData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Residence:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personResidenceData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @person["personSocecStatusData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Social Status:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personSocecStatusData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+
+
+
+<!-- Jessica's old code commented out till everything is checked over -KMD TODO delete 
+    <#= metadata_builder("Sex", @person["personSex_ss"]) %>
+    <#= metadata_builder("Color", @person["personColorData_ss"]) %>
+    <#= metadata_builder("Affiliation", @person["personAffiliationData_ss"]) %>
+    <#= metadata_builder("Age", @person["personAge_ss"]) %>
+    <#= metadata_builder("Bibl", @person["personBiblData_ss"]) %>
+    <#= metadata_builder("Date of Birth", @person["personBirthData_ss"]) %>
+    <#= metadata_builder("Date of Death", @person["personDeathData_ss"]) %>
+    <#= metadata_builder("Event", @person["personEventData_ss"]) %>
+    <#= metadata_builder("VIAF", @person["personIdnoVIAF_ss"]) %>
+    <#= metadata_builder("Nationality", @person["personNationalityData_ss"]) %>
+    <#= metadata_builder("Notes", @person["personNoteData_ss"]) %>
+    <#= metadata_builder("Occupation", @person["personOccupationData_ss"]) %>
+    <#= metadata_builder("Name Data", @person["personNameData_ss"]) %>
+    <#= metadata_builder("Residence", @person["personResidenceData_ss"]) %>
+    <#= metadata_builder("Social Status", @person["personSocecStatusData_ss"]) %>-->
+
+  </div>
+
+  <!-- Cases -->
+  <a name="cases"></a>
+  <% if @cases[:docs].length > 0 %>
+    <h3><%= @cases[:num_found] %> Related Cases:</h3>
+    <ul>
+    <% @cases[:docs].each do |doc| %>
+      <li><%= link_to doc["title"], case_path(doc["id"]) %></li>
+    <% end %>
+    <h4><%= link_to "View more related cases...", search_path(:qfield => "personID_ss", :qtext => @person['id'], :fqfield => "recordType_s", :fqtext => "caseid") if @cases[:num_found].to_i > 50 %></h4>
+    </ul>
+  <% end %>
+
+  <!-- Documents -->
+  <a name="documents"></a>
+  <% if @docs[:docs].length > 0 %>
+    <h3><%= @docs[:num_found] %> Related Documents: </h3>
+    <ul>
+    <% @docs[:docs].each do |doc| %>
+      <% date = doc['dateDisplay'] ? "(#{doc['dateDisplay']})" : "" %>
+      <li><%= link_to "#{doc['title']} #{date}", doc_path(doc["id"]) %></li>
+    <% end %>
+    <h4><%= link_to "View more related documents...", search_path(:qfield => "personID_ss", :qtext => @person['id']) if @docs[:num_found].to_i > 50 %></h4>
+    </ul>
+  <% end %>
+  
+  
+  	  
+  </div><!--/column-->
+  <div class="col-md-6">
+	  
+	  
+<% if @rdfresults["results"]["bindings"].length > 0 %>
+  <div class="visualize_link" id="visualizations">
+	  <%= link_to "Visualize Relationships", network_vis_path(@person["id"]), class: "btn btn-default btn-lg btn-block", role: "button"  %>
+
+  </div>
+ <% end %>	  
+	  
+	  
+
+ 
+      
+
+
+
+
+  <!-- Relationships -->
+  <a name="relationships"></a>
+  <% if @rdfresults["results"]["bindings"].length > 0 %>
+    <h3>Relationships:</h3>
+    <% if @rdfresults && @rdfresults["results"] && @rdfresults["results"]["bindings"] %>
+      <ul>
+      <%# TODO clean this huge mess up %>
+      <% @rdfresults["results"]["bindings"].each do |rel| %>
+        <% label = rel["rel1"]["value"].sub(/.*#/, "").titleize + " " +rel["name1"]["value"] %>
+        <li><%= link_to label, person_path(rel["per1"]["value"].sub(/.*#/, "")) %></li>
+      <% end %>
+      </ul>
+    <% end %>
+  <% end %>
+
+
+  
+  </div><!--/column-->
+</div><!--/row-->
+
+
+<% end %>

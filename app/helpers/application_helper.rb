@@ -1,2 +1,156 @@
 module ApplicationHelper
+
+
+  #######################
+  #    Index Display    #
+  #######################
+
+  def paginator_numbers(total_pages)
+    current_page = params[:page] ? params[:page].to_i : 1
+    total_pages = total_pages.to_i
+    html = ""
+    # weed out the first and last page, they'll be handled separately
+    prior_three = (current_page-3..current_page-1).reject { |x| x <= 1 }
+    next_three = (current_page+1..current_page+3).reject { |x| x >= total_pages }
+
+    # add the first page if you're not on it and add dots if it is far from the other pages
+    if current_page != 1
+      html += "<li>"
+      html += link_to "1", to_page("1") 
+      html += "</li>"
+      html += "<li class='disabled'><span>...</span></li>" if prior_three.min != 2 && current_page != 2
+    end
+
+    # prior three, current page, and next three
+    html += _add_paginator_options(prior_three)
+    html += "<li class='active'>"
+    html += link_to current_page.to_s, to_page(current_page)
+    html += "</li>"
+    html += _add_paginator_options(next_three)
+
+    # add the last page if you're not on it and add dots if it is far from the other pages
+    if current_page != total_pages
+      html += "<li class='disabled'><span>...</span></li>" if next_three.max != total_pages-1 && current_page != total_pages-1
+      html += "<li>"
+      html += link_to total_pages.to_s, to_page(total_pages)
+      html += "</li>"
+    end
+
+    return html.html_safe
+  end
+
+  def _add_paginator_options(range)
+    html = ""
+    range.each do |page|
+      html += "<li>"
+      html += link_to page.to_s, to_page(page)
+      html += "</li>"
+    end
+    return html
+  end
+
+  # paginator method
+  def to_page(page)
+    merged = params.merge({:page => page.to_s})
+    return merged
+  end
+
+#######################
+#     Item Display    #
+#######################
+
+  def format_list(items, route="doc")
+    if !items.nil?
+      res = "<ul>"
+      items.each do |item|
+        begin
+          hash = JSON.parse(item)
+          if route == "case"
+            res += "<li>#{link_to hash['label'], case_path(hash['id'])}</li>"
+          elsif route == "person"
+            res += "<li>#{link_to hash['label'], person_path(hash['id'])}</li>"
+          else
+            res += "<li>#{link_to hash['label'], doc_path(hash['id'])}</li>"
+          end
+        rescue
+          # is invalid JSON just display what is possible
+          res += "<li>#{item}</li>"
+        end
+      end
+      res += "</ul>"
+      return res.html_safe
+    end
+  end
+
+  def metadata_list(display, solr_res, search_field, date=false)
+    res = ""
+    if !solr_res.nil?
+      res += "<ul>"
+      solr_res.each do |term|
+        display = date ? format_date(term) : term
+        res += "<li>"
+        res += link_to(display, search_path(:qfield => search_field, :qtext => term))
+        res += "</li>"
+      end
+    res += "</ul>"
+    end
+    return res.html_safe
+  end
+
+
+  # This will only link out to external URLs and documents!
+  # So be careful if you are expecting something with case ids
+  # Note:  This function is getting way out of hand - should be refactored
+  def metadata_builder(display, data)
+    if !data.nil? && data.class == Array
+      res = display.nil? ? "" : "<p><strong>#{display}: </strong>"
+      data.each do |item|
+        begin
+          hash = JSON.parse(item)
+          date = hash['date'] ? "(#{hash['date']}) " : ""
+          if hash['id'] =~ URI::regexp
+            # if this has a real url then use
+            res += "<p><a href=\"#{hash['id']}\">#{hash['label']}</a> #{date}</p>"
+          else
+            res += "<p>#{link_to hash['label'], doc_path(hash['id'])} #{date}</p>"
+          end
+        rescue
+          # if it can't be parsed into JSON just display what you can
+          res += item
+        end
+      end
+      res += "</p>"
+      return res.html_safe
+    end
+  end
+  
+  # Oh god I am butchering Jessica's code so much I am so sorry -KMD
+
+  # This will only link out to external URLs and documents!
+  # So be careful if you are expecting something with case ids
+  # Note:  This function is getting way out of hand - should be refactored
+  def metadata_people_list(data)
+    if !data.nil? && data.class == Array
+      res = "<ul>"
+      data.each do |item|
+        begin
+          hash = JSON.parse(item)
+          date = hash['date'] ? "(#{hash['date']}) " : ""
+          if hash['id'] =~ URI::regexp
+            # if this has a real url then use
+            res += "<li>" + hash['label'] + " <span class='source_note'>[" + "<a href=\"#{hash['id']}\">source</a>" + "]</span></li>"
+          else
+            res += "<li>" + hash['label'] + " <span class='source_date'>#{date}</span> " +  "<span class='source_note'>[" + "#{link_to 'source', doc_path(hash['id'])}" + "]</span></li>"
+          end
+        rescue
+          # if it can't be parsed into JSON just display what you can
+          res += item
+        end
+      end
+      res += "</ul>"
+      return res.html_safe
+    end
+  end
+  
+  
 end

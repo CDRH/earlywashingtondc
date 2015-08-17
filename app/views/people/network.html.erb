@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>OSCYS: Visualization</title> 
+
+  <!-- CSS Files -->
+  <%= stylesheet_link_tag 'hypertree', media: 'all', 'data-turbolinks-track' => false %>
+
+  <!-- JIT Files -->
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", :async => false %>
+  <%= javascript_include_tag "defiant.min", "data-turbolinks-track" => false %>
+  <%= javascript_include_tag 'jit.min', 'data-turbolinks-track' => false %>
+  <script>
+    <%# need non-ruby json and a string to call html safe, apparently %>
+    var json = <%= @res.to_json.to_s.html_safe %>;
+    var personUrl = "<%= @person_url %>";
+  </script>
+  <%= javascript_include_tag 'hypertree', 'data-turbolinks-track' => false %>
+
+</head>
+
+<body onload="initHypertree();">
+  <!-- back button -->
+
+  <div id="container">
+
+    <div id="left-container">
+      <div class="inner">
+	  	<div class="back_pan_group">
+        <div class="back_button">
+          <%= link_to "Back to Person View", person_path(@id) %>
+        </div>
+
+        <!-- thanks for the panning and zooming, SNAC!
+        http://socialarchive.iath.virginia.edu/ -->
+        <div id="panZoomControl">
+          <div id="panZoomControl_pan">
+            <div>
+              <button id="panUp">∧</button>
+            </div>
+            <div>
+              <button id="panLeft">&lt;</button>
+              <button id="panRight">&gt;</button>
+            </div>
+            <div>
+              <button id="panDown">∨</button>
+            </div>
+          </div><!-- /panZoomControl_pan -->
+          <div id="panZoomControl_zoom">
+            <div>
+              <button id="zoomIn">+</button>
+            </div>
+            <div>
+              <button id="zoomReset">•</button>
+            </div>
+            <div>
+              <button id="zoomOut">-</button>
+            </div>
+          </div><!--/panZoomControl_zoom-->
+        </div> <!-- /panZoomControl -->
+	  	</div> <!-- /back_pan_group -->
+
+        <div class="visualization_types">
+          <h4>Limit relationship by:</h4>
+          <ul>
+            <li>
+              <%= link_to "All", network_vis_path(@id) %>
+            </li>
+            <li>
+              <%= link_to "Family", network_vis_path(@id, :type => "familyOf") %>
+            </li>
+            <li>
+              <%= link_to "Legal", network_vis_path(@id, :type => "legal") %>
+            </li>
+            <li>
+              <%= link_to "Social", network_vis_path(@id, :type => "acquaintanceOf") %>
+            </li>
+          </ul>
+        </div> <!-- /visualization_types -->
+
+        <div id="key">
+          <h4>Relationship Types</h4>
+          <ul>
+            <li class="rtype_legal"><span>Legal</span></li>
+            <li class="rtype_kinship"><span>Kinship</span></li>
+            <li class="rtype_employment"><span>Employment</span></li>
+            <li class="rtype_acquaintance"><span>Acquaintance</span></li>
+            <li class="rtype_multiple"><span>Multiple</span></li>
+            <li class="rtype_missing"><span>Missing</span></li>
+          </ul>
+          
+          <p>Visualizations show relationships to two degrees out, and do not contain judge and clerk relationships.</p>
+        </div> <!-- /key -->
+      </div><!-- /inner -->
+    </div><!-- /left-container -->
+
+    <% if @res && @res["children"] && @res["children"].length > 0 %>
+      <div id="center-container">
+        <div id="infovis"/>
+      </div>
+    <% else %>
+      <div id="no-relationship">
+        <h4>No relationships of this type found.</h4>
+      </div>
+    <% end %> 
+
+  </div><!-- /center-container -->
+
+  <div id="right-container">
+    <div id="inner-details"></div>
+  </div>
+
+  <div id="log"></div>
+  </div><!-- /container -->
+</body>
+<!-- </html> -->

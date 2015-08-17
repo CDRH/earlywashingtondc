@@ -1,0 +1,134 @@
+<style>
+ul {
+  list-style-type: none;
+}
+li {
+  display:inline;
+}
+table {
+  border:1;
+}
+</style>
+
+<!-- search dropdown bar -->
+
+<h2>Search Attorney Relationships</h2>
+
+<p>
+Find connections up to four removed for attorneys in the OSCYS data.
+</p>
+
+<%= form_tag relationships_path, :method => "get", :class => "form-inline" do %>
+  <div class="form-group">
+    <%= select_tag :per1id, options_for_select(@people, params["per1id"]), :prompt => "Select First Person", :class => "custom-dropdown__select" %>
+    <%= select_tag :per2id, options_for_select(@people, params["per2id"]), :prompt => "Select Second Person", :class => "custom-dropdown__select" %>
+    <%= submit_tag("Find Relationships", :class => "btn btn-info") %>
+  </div>
+<% end %>
+
+<% if params["per1id"] && params["per2id"] %>
+
+<!-- Navigate relationships -->
+  <div class="jump_menu">
+    <%= '<a href="#one">Direct Relationships</a>'.html_safe if rdf_res?(@relationOne) %>
+    <%= '<a href="#two">Two Connections Removed</a>'.html_safe if rdf_res?(@relationTwo) %>
+    <%= '<a href="#three">Three Connections Removed</a>'.html_safe if rdf_res?(@relationThree) %>
+    <%= '<a href="#four">Four Connections Removed</a>'.html_safe if rdf_res?(@relationFour) %>
+  </div>
+
+  <% if !rdf_res?(@relationOne) && !rdf_res?(@relationTwo) && !rdf_res?(@relationThree) && !rdf_res?(@relationFour) %>
+    <h3>No close connections found.</h3>
+  <% end %>
+
+  <!-- DIRECT RELATIONSHIP -->
+  <% if rdf_res?(@relationOne) %>
+    <a name="one"></a><h3>Direct Relationships</h3>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <tr>
+          <th>Starting Person</th><th>Relationship</th><th>Final Person</th>
+        </tr>
+        <% @relationOne.each do |link| %>
+          <tr>
+            <td><%= link_to rdfval(link["name1"]), person_path(params["per1id"]) %></td>
+            <td><%= prettify(rdfval(link["rel"])) %></td>
+            <td><%= link_to rdfval(link["name2"]), person_path(params["per2id"]) %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  <% end %>
+
+  <!-- TWO PEOPLE -->
+  <% if rdf_res?(@relationTwo) %>
+    <a name="two"></a><h3>Relationships Two Apart</h3>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <tr>
+          <th>Starting Person</th><th>Relationship</th><th>Person</th>
+          <th>Relationship</th><th>Final Person</th>
+        </tr>
+        <% @relationTwo.each do |link| %>
+          <tr>
+            <td><%= link_to rdfval(link["name1"]), person_path(params["per1id"]) %></td>
+            <td><%= prettify(rdfval(link["rel12"])) %></td>
+            <td><%= link_to rdfval(link["name2"]), person_path(rdfval(link["per2"])) %></td>
+            <td><%= prettify(rdfval(link["rel2g"])) %></td>
+            <td><%= link_to rdfval(link["nameg"]), person_path(params["per2id"]) %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  <% end %>
+
+  <!-- THREE PEOPLE -->
+  <% if rdf_res?(@relationThree) %>
+    <a name="three"></a><h3>Relationships Three Apart</h3>
+    <div class="table-reponsive">
+      <table class="table table-striped">
+        <tr>
+          <th>Starting Person</th><th>Relationships</th><th>Person</th>
+          <th>Relationship</th><th>Person</th><th>Relationship</th>
+          <th>Final Person</th>
+        </tr>
+      <% @relationThree.each do |link| %>
+        <tr>
+          <td><%= link_to rdfval(link["name1"]), person_path(params["per1id"]) %></td>
+          <td><%= prettify(rdfval(link["rel12"])) %></td>
+          <td><%= link_to rdfval(link["name2"]), person_path(rdfval(link["per2"])) %></td>
+          <td><%= prettify(rdfval(link["rel23"])) %></td>
+          <td><%= link_to rdfval(link["name3"]), person_path(rdfval(link["per3"])) %></td>
+          <td><%= prettify(rdfval(link["rel3g"])) %></td>
+          <td><%= link_to rdfval(link["nameg"]), person_path(params["per2id"]) %></td>
+        </tr>
+      <% end %>
+    </table>
+  <% end %>
+
+
+  <!-- FOUR PEOPLE -->
+  <% if rdf_res?(@relationFour) %>
+    <a name="four"></a><h3>Relationships Four Apart</h3>
+    <div class="table-reponsive">
+      <table class="table table-striped">
+        <tr>
+          <th>Starting Person</th><th>Relationships</th><th>Person</th>
+          <th>Relationship</th><th>Person</th><th>Relationship</th>
+          <th>Person</th><th>Relationship</th><th>Final Person</th>
+        </tr>
+      <% @relationFour.each do |link| %>
+        <tr>
+          <td><%= link_to rdfval(link["name1"]), person_path(params["per1id"]) %></td>
+          <td><%= prettify(rdfval(link["rel12"])) %></td>
+          <td><%= link_to rdfval(link["name2"]), person_path(rdfval(link["per2"])) %></td>
+          <td><%= prettify(rdfval(link["rel23"])) %></td>
+          <td><%= link_to rdfval(link["name3"]), person_path(rdfval(link["per3"])) %></td>
+          <td><%= prettify(rdfval(link["rel34"])) %></td>
+          <td><%= link_to rdfval(link["name4"]), person_path(rdfval(link["per4"])) %></td>
+          <td><%= prettify(rdfval(link["rel4g"])) %></td>
+          <td><%= link_to rdfval(link["nameg"]), person_path(params["per2id"]) %></td>
+        </tr>
+      <% end %>
+    </table>
+  <% end %>
+<% end %>  <%# end checking if any RDF results should be displayed %>

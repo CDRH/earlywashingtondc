@@ -1,0 +1,49 @@
+<style>
+ .code_block {
+    background:#CFCFCF;
+    font-family:monospace;
+ }
+</style>
+
+<h2>Data Download / Query</h2>
+
+<div class="list-group">
+  <%= link_to "Relationship description file (.ttl)", rdf_path, class: "list-group-item" %>
+  <%= link_to "Relationship ontology file (.owl)", owl_path, class: "list-group-item" %>
+  <%= link_to "Raw relationships data with case sources (.csv)", csv_path, class: "list-group-item" %>
+  <%= link_to "Browse TEI files with person, case, and document information", tei_path, class: "list-group-item" %>
+</div>
+
+<h3>View the Site Code</h3>
+<div class="list-group">
+  <%= link_to "Hosted on Github", repo_path, class: "list-group-item" %>
+</div>
+
+<h2>Relationship Querying</h2>
+
+<p>
+  The relationships between individuals involved with the cases in the OSCYS project have been described with RDF (Resource Description Framework).  The relationships themselves are available in the <%= link_to "relationships.ttl", rdf_path %> file, above, and the definitions of the types of relationships are in <%= link_to "ontology.owl", owl_path %> file.  The RDF was generated from a <%= link_to "CSV", csv_path %> file, which contains citations for the cases from which the relationships were defined.
+</p>
+
+<h3>Simple Relationship API</h3>
+
+<p>
+  All of the /people/id and /people/network/id pages use RDF queries to obtain relationships between individuals.  Adding a ".xml" or ".json" extension makes the raw response from the SPARQL query available.  Here are some examples:
+</p>
+<div class="list-group">
+  <%= link_to "Example of JSON results for Francis Scott Key immediate relationships", 
+      { :controller => "people", :action => "show", :id => "per.000001", :format => :json }, class: "list-group-item" %>
+  <%= link_to "Example of XML results for Francis Scott Key immediate relationships", { :controller => "people", :action => "show", :id => "per.000001", :format => :xml }, class: "list-group-item" %>
+  <%= link_to "Example of JSON results for Francis Scott Key relationships (two degrees separation)", 
+      { :controller => "people", :action => "network", :id => "per.000001", :format => :json }, class: "list-group-item" %>
+</div>
+
+<h3>Getting Started with RDF</h3>
+
+<p>
+  Not sure where to begin?  Check out these tutorials from UNL's <a href="http://cdrh.unl.edu">Center for Digital Research in the Humanities</a>:
+  <ul>
+    <li><a href="http://cdrh.github.io/oscys/rdf/2015/06/22/rdf-part-1.html">RDF Part I: Triples</a></li>
+    <li><a href="http://cdrh.github.io/oscys/rdf/sparql/2015/07/06/rdf-part-2.html">RDF Part II: Getting Set Up</a></li>
+  </ul>
+</p>

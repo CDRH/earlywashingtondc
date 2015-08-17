@@ -1,0 +1,75 @@
+<script>
+  $(function() {
+    // is expecting an array of names
+    var peopleList = <%= @people.to_s.html_safe %>;
+    $( "#people" ).autocomplete({
+      source: peopleList
+    });
+
+    var placesList = <%= @locations.to_s.html_safe %>;
+    $( "#location" ).autocomplete({
+      source: placesList
+    });
+  });
+</script>
+
+<h2>Search</h2>
+
+<!-- <h3>Search by Text</h3> -->
+
+
+<div class="row">
+  <div class="col-md-6">
+   <p>Enter any name, word, or series of words to search across all case documents.</p>
+
+   <%= render "partials/search_bar" %>
+
+  </div><!--/column-->
+
+  <div class="col-md-6">
+
+    <div class="well well-sm">
+
+      <p>Tips: <br/><br/>
+        To exclude a word, preceed with "-": case -petition<br/>
+        To search for a phrase, include in quotations: "Hereof fail not, at your peril"<br/>
+        You can also combine these techniques: "to be held for the county" -summons </p>
+
+    </div>
+  </div>
+<br/><br/>
+</div>
+<div class="row">
+  <div class="col-md-6">
+
+    <h4>Search for Person</h4>
+    <p>A guided search of the people named across all case documents.</p>
+
+    <%= form_tag search_path, :method => "get", :class => "form-inline" do %>
+      <div class="form-group">
+        <%= hidden_field_tag(:qfield, "text") %>
+        <%= hidden_field_tag(:sort, "score") %>
+        <%= text_field_tag(:qtext, nil, :placeholder => "Search by Person", :id => "people", :class => "form-control") %>
+        <%= submit_tag("Search", :class => "btn btn-info") %>
+      </div>
+    <% end %>
+  </div><!--/column-->
+
+  <div class="col-md-6">
+
+    <h4>Search for Place</h4>
+    <p>A guided search of the places named across all case documents.</p>
+    <%= form_tag search_path, :method => "get", :class => "form-inline" do %>
+      <div class="form-group">
+        <%= hidden_field_tag(:qfield, "text") %>
+        <%= text_field_tag(:qtext, nil, :placeholder => "Search by Place", :id => "location", :class => "form-control") %>
+        <%= submit_tag("Search", :class => "btn btn-info") %>
+      </div>
+    <% end %>
+
+  </div><!--/column-->
+</div><!--/row-->
+
+
+
+

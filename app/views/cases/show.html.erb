@@ -1,12 +1,110 @@
-<h2><%= @case["title"] %></h2>
+<% if @case.nil? %>
+  <h1>Something Is Wrong</h1>
+  <p>We cannot find a case with id <%= params["id"] %>.</p>
+  <p>This case may not exist or we may be experiencing technical issues.</p>
+<% else %>
 
-<div class="case_abstract">
-<p>In the future, it is likely that cases that were pretty cool would have some text here to talk about them.</p>
-<p>Anything else that was in the case information file and turned into solr could be pulled up, as well.</p>
-</div>
-
-<ul>
-  <% @docs[:docs].each do |doc| %>
-    <li><%= link_to doc["title"], doc_path(doc["id"]) %></li>
+  <h2><%= @case["title"] %></h2>
+  
+  
+  
+  	   <%# metadata_builder("Jurisdiction", @case["jurisdiction_ss"]) %>
+  	   <% # Added an if statement to resolve error which was showing if there was no jurisdiction -KMD %>
+  	   <% if @case["jurisdiction_ss"] %>
+  <%= find_unique_strings(@case["jurisdiction_ss"]) %>
   <% end %>
-</ul>
+
+ 
+
+  <div class="jump_menu">
+    <%= '<a href="#documents">Case Documents</a>'.html_safe if @case["caseDocumentData_ss"] %>
+    <%= '<a href="#rel_documents">Related Documents</a>'.html_safe if @case["caseRelatedDocumentData_ss"] %>
+    <%= '<a href="#cases">Related Cases</a>'.html_safe if @case["relatedCaseData_ss"] %>
+    <%= '<a href="#people">People</a>'.html_safe if @case["personData_ss"] %>
+    <%= '<a href="#narrative">Case Narrative & Commentary</a>'.html_safe if @case["caseidHasNarrative_s"] %> 
+  </div>
+  
+     
+  <!-- Only put in grid if there is a narrative -->
+  <% if @case["caseidHasNarrative_s"] %>
+  <div class="row">
+  <div class="col-md-7">
+  <% end %>
+	  
+	  <% if @case["outcomeData_ss"] %>
+    <h3>Outcome</h3>
+    <%= metadata_builder(nil, @case["outcomeData_ss"]) %>
+  <% end %>
+
+
+
+  <% if @case["caseDocumentData_ss"] %>
+    <a name="documents"></a><h3>Case Documents</h3>
+    <%= format_list(@case["caseDocumentData_ss"], "doc") %>
+    <h4><%= link_to "View more related documents...", search_path(:qfield => "documentCaseID_ss", :qtext => @case['id']) if @case["caseDocumentData_ss"].length > 50 %></h4>
+  <% end %>
+
+  <% if @case["caseRelatedDocumentData_ss"] %>
+    <a name="rel_documents"></a><h3>Related Documents</h3>
+    <%= format_list(@case["caseRelatedDocumentData_ss"], "doc") %>
+  <% end %>
+
+  <% if @case["relatedCaseData_ss"] %>
+    <a name="cases"></a><h3>Related Cases</h3>
+    <%= format_list(@case["relatedCaseData_ss"], "case") %>
+  <% end %>
+
+  <% if @case["personData_ss"] %>
+    <a name="people"></a><h3>People</h3>
+    <% if @case["plaintiffData_ss"] %>
+      <h4>Plaintiff(s):</h4>
+      <%= people_list(@case["plaintiffData_ss"]) %>
+    <% end %>
+    <% if @case["defendantData_ss"] %>
+      <h4>Defendant(s):</h4>
+      <%= people_list(@case["defendantData_ss"]) %>
+    <% end %>
+    <% if @case["attorneyPData_ss"] %>
+      <h4>Attorney for Plaintiff(s):</h4>
+      <%= people_list(@case["attorneyPData_ss"]) %>
+    <% end %>
+    <% if @case["attorneyDData_ss"] %>
+      <h4>Attorney for Defendant(s):</h4>
+      <%= people_list(@case["attorneyDData_ss"]) %>
+    <% end %>
+    <% if @case["personData_ss"] %>
+      <h4>Participants:</h4>
+      <%= people_list(@case["personData_ss"]) %>
+    <% end %>
+  <% end %>
+	  
+	  <!-- Only put in grid if there is a narrative -->
+	 <% if @case["caseidHasNarrative_s"] %> 
+  </div>
+  <div class="col-md-5">
+	  <% end %>
+	  
+	  
+	   <a name="narrative"></a>
+  <% if @case["caseidHasNarrative_s"] %>
+    <!--<h3>Case Narrative</h3>-->
+    <%= @annotated.html_safe if @annotated%>
+  <% end %>
+
+	  
+	  
+	 <!-- Only put in grid if there is a narrative -->
+  <% if @case["caseidHasNarrative_s"] %> 
+  </div><!-- end column -->
+</div> <!-- End Row -->
+<% end %>
+  
+  
+  
+
+ 
+
+<hr/>
+
+ 
+<% end %>

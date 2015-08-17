@@ -2,15 +2,10 @@
   <h2>Displaying All <%= @docs[:num_found] %> Documents</h2>
 
   <!-- search form -->
-  <%= render "search_bar" %>
+  <%= render "partials/search_bar" %>
 </a>
 
-Jump to Page 
-<%= form_tag documents_path(reset_params) do %>
-  <%= paginator %>
-<% end %>
-of results
-
+<%= render "partials/pagination" %>
 <ul>
   <% @docs[:docs].each do |doc| %>
     <li>
@@ -18,3 +13,4 @@ of results
     </li>
   <% end %>
 </ul>
+<%= render "partials/pagination" %>

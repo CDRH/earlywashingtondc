@@ -1,0 +1,34 @@
+<% current_page = params[:page] ? params[:page].to_i : 1 %>
+<% if @total_pages && @total_pages.to_i > 1 %>
+  <nav>
+    <ul class="pagination">
+      <% active_prev = current_page == 1 ? "disabled" : "" %>
+      <li class="<%= active_prev %>">
+      <%  #Use a span rather than an a tag if no link %>
+      <% if current_page != 1 %>
+        <%= link_to to_page(current_page-1) do %>
+          <span aria-hidden="true">&laquo;</span>
+        <% end %>
+      <% else %>
+        <span><span aria-hidden="true">&laquo;</span></span>
+      <% end %>
+      </li>
+
+      <%= paginator_numbers(@total_pages) %>
+
+      <% active_next = current_page == @total_pages.to_i ? "disabled" : "" %>
+      <li class="<%= active_next %>">
+      <%  # Use a span rather than an a tag if no link %>
+      <% if current_page != @total_pages.to_i %>
+        <%= link_to to_page(current_page+1) do %>
+          <span aria-hidden="true">&raquo;</span>
+        <% end %>
+        <% else %>
+          <span><span aria-hidden="true">&raquo;</span></span>
+      <% end %>
+      </li>
+    </ul>
+  </nav>
+<% else %>
+  <br />  <%# Can put a message here in the future if desired  %>
+<% end %>
