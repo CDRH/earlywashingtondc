@@ -11,9 +11,15 @@
   <%= link_to "Relationship description file (.ttl)", rdf_path, class: "list-group-item" %>
   <%= link_to "Relationship ontology file (.owl)", owl_path, class: "list-group-item" %>
   <%= link_to "Raw relationships data with case sources (.csv)", csv_path, class: "list-group-item" %>
+  <%= link_to "Browse TEI files with person, case, and document information", tei_path, class: "list-group-item" %>
 </div>
 
-<h3>Relationship Querying</h3>
+<h3>View the Site Code</h3>
+<div class="list-group">
+  <%= link_to "Hosted on Github", repo_path, class: "list-group-item" %>
+</div>
+
+<h2>Relationship Querying</h2>
 
 <p>
   The relationships between individuals involved with the cases in the OSCYS project have been described with RDF (Resource Description Framework).  The relationships themselves are available in the <%= link_to "relationships.ttl", rdf_path %> file, above, and the definitions of the types of relationships are in <%= link_to "ontology.owl", owl_path %> file.  The RDF was generated from a <%= link_to "CSV", csv_path %> file, which contains citations for the cases from which the relationships were defined.

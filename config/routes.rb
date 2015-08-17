@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   get 'relationships.ttl' => redirect("http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.relationships.ttl"), :as => :rdf
   get 'ontology.owl' => redirect("http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl"), :as => :owl
   get 'relationships.csv' => redirect("http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.relationships.csv"), :as => :csv
+    # change the TEI to point at github once the repository is public
+  get 'tei.xml' => redirect("http://cdrhsites.unl.edu/data/projects/oscys/tei"), :as => :tei
+  get 'github' => redirect("https://github.com/CDRH/earlywashingtondc"), :as => :repo
 
   # documents (browsing / searching)
   post 'browse' => 'documents#dropdown', as: :doc_dropdown
