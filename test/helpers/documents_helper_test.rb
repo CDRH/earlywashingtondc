@@ -16,7 +16,7 @@ class DocumentsHelperTest < ActionView::TestCase
           "id" => "book.000001" }
 
   test "facet_maker" do
-    assert_equal facet_maker({"caseid" => 11, "documents" => 98}), "<a href=\"/search?facet=caseid&amp;qfield=id&amp;qtext=case.000001&amp;sort=title\">All Results</a> <a class=\"selected\" href=\"/search?facet=caseid&amp;qfield=id&amp;qtext=case.000001&amp;sort=title\">Case (11)</a> <a href=\"/search?facet=caseid&amp;qfield=id&amp;qtext=case.000001&amp;sort=title\">Documents (98)</a>"
+    assert_equal facet_maker({"caseid" => 11, "documents" => 98}), "<a href=\"/search?facet=caseid&amp;qfield=id&amp;qtext=case.000001&amp;sort=title\">All Results</a> <a class=\"selected\" href=\"/search?facet=caseid&amp;qfield=id&amp;qtext=case.000001&amp;sort=title\">Case <span class='badge'>11</span></a> <a class=\"\" href=\"/search?facet=caseid&amp;qfield=id&amp;qtext=case.000001&amp;sort=title\">Documents <span class='badge'>98</span></a>"
   end
 
   test "facet_maker with empty facets" do
@@ -24,19 +24,19 @@ class DocumentsHelperTest < ActionView::TestCase
   end
 
   test "selected_facet?" do
-    assert_equal selected_facet?("caseid"), "selected"
+    assert_equal selected_facet?("caseid", "caseid"), "selected"
   end
 
   test "selected_facet? not selected" do
-    assert_equal selected_facet?("title"), nil
+    assert_equal selected_facet?("title", "caseid"), nil
   end
 
   test "selected_sort?" do
-    assert_equal selected_sort?("title"), "selected"
+    assert_equal selected_sort?("title", "title"), "selected"
   end
 
   test "selected_sort? not selected" do
-    assert_equal selected_sort?("date"), nil
+    assert_equal selected_sort?("date", "title"), nil
   end
 
   # Until I figure out a better way to fake the params hash

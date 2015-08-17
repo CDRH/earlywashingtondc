@@ -1,27 +1,39 @@
 module DocumentsHelper
 
   def facet_maker(facets)
+    perm_facet = params[:facet] # don't want the link_tos to change the scope
     links = []
-    links << link_to("All Results", search_path(facet_results), :class => selected_facet?())
+    links << link_to("All Results", search_path(facet_results), :class => selected_facet?(nil, perm_facet))
     facets.each do |key, value|
       labelkey = key == "caseid" ? "case" : key
-      label = "#{labelkey.titleize} (#{value})"
-      link = "#{link_to(label, search_path(facet_results(key)), :class => selected_facet?(key))}"
+      # have to make the label html_safe before putting it inside a link or else &lg;you'll regret it&gt;
+      label = "#{labelkey.titleize} <span class='badge'>#{value}</span>".html_safe
+      link = "#{link_to(label, search_path(facet_results(key)), :class => facet_classes(key, value, perm_facet))}"
       links << link
+      puts "this is what the link is #{link.html_safe}"
     end
     return links.join(" ").html_safe
   end
 
-  def selected_facet?(field=nil)
+  def facet_classes(key, value, perm_facet)
+    # if the key matches the selected parameter then attach "selected"
+    # if the value == 0 then attach "no-facet-results"
+    css = (value && value.to_i == 0) ? "no-facet-results " : ""
+    selected = selected_facet?(perm_facet, key)
+    css += selected if !selected.nil?
+    return css
+  end
+
+  def selected_facet?(request_facet=nil, field=nil)
     if field.nil?
-      return "selected" if params[:facet].nil?
+      return "selected" if request_facet.nil?
     else
-      return "selected" if params[:facet] == field
+      return "selected" if request_facet == field
     end
   end
 
-  def selected_sort?(field)
-    return "selected" if params[:sort] == field
+  def selected_sort?(field, sort_param)
+    return "selected" if sort_param == field
   end
 
   def facet_results(facet_field=nil)
