@@ -1,6 +1,5 @@
 module CasesHelper
 
-
   def find_unique_strings(solr_array)
     unique = find_unique(solr_array)
     return unique.join(", ")
@@ -17,7 +16,8 @@ module CasesHelper
   def people_list(items)
     # look for the unique elements and send those to format_list
     unique = find_unique(items)
-    return format_list(unique, "person")
+    sorted = unique.sort
+    return format_list(sorted, "person")
   end
-  
+
 end
