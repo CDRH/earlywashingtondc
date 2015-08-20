@@ -152,5 +152,70 @@ module ApplicationHelper
     end
   end
   
-  
+  #######################
+  #   Search Dropdown   #
+  #######################
+
+  def get_relationship_types
+    return [
+        ["Acquaintance Of", "acquaintanceOf"],
+        ["Administrator For", "administratorFor"],
+        ["Agent For", "agentFor"],
+        ["Attorney Against", "attorneyAgainst"],
+        ["Attorney For", "attorneyFor"],
+        ["Attorney With", "attorneyWith"],
+        ["Attorneyed Against", "attorneyedAgainst"],
+        ["Business Relationship With", "businessRelationshipWith"],
+        ["Child Of", "childOf"],
+        ["Clerk Of", "clerkOf"],
+        ["Client Of", "clientOf"],
+        # ["Correspondent Of", "correspondentOf"],  # no examples
+        ["Defendant Against", "defendantAgainst"],
+        ["Deponent Against", "deponentAgainst"],
+        ["Deponent For", "deponentFor"],
+        # ["Deponent Of", "deponentOf"],  # no examples
+        ["Deposed", "deposed"],
+        ["Deposed By", "deposedBy"],
+        ["Employee Of", "employeeOf"],
+        ["Employer Of", "employerOf"],
+        ["Enslaved By", "enslavedBy"],
+        ["Exchanged Slaves With", "exchangedSlavesWith"],
+        ["Executor For", "executorFor"],
+        ["Friend Of", "friendOf"],
+        ["Guardian Of", "guardianOf"],
+        ["Had Contract With", "hadContractWith"],
+        ["Hired", "hired"],
+        ["Hired Out To", "hiredOutTo"],
+        ["Indentured To", "indenturedTo"],
+        ["Indenturer Of", "indenturerOf"],
+        ["Judge Of", "judgeOf"],
+        ["Judged By", "judgedBy"],
+        ["Juror For", "jurorFor"],
+        # ["Jury Pool For", "juryPoolFor"],  # no examples
+        ["Lives With", "livesWith"],
+        ["Marshal Of", "marshalOf"],
+        ["Neighbor Of", "neighborOf"],
+        ["Next Friend Of", "nextFriendOf"],
+        ["Notary For", "notaryFor"],
+        ["Opposing Attorneys", "opposingAttorneys"],
+        ["Owner Of", "ownerOf"],
+        ["Parent Of", "parentOf"],
+        ["Petitioner Against", "petitionerAgainst"],
+        # ["Provenance", "provenance"],  # no examples
+        ["Purchased Slave From", "purchasedSlaveFrom"],
+        ["Recognizance With", "recognizanceWith"],
+        ["Secretary For", "secretaryFor"],
+        ["Sibling Of", "siblingOf"],
+        ["Sold Slave To", "soldSlaveTo"],
+        ["Spouse Of", "spouseOf"],
+        ["Sued", "sued"],
+        ["Sued By", "suedBy"],
+        ["Witness Against", "witnessAgainst"],
+        ["Witness For", "witnessFor"],
+        ["Witness Of", "witnessOf"],
+        # ["Works With", "worksWith"],  # currently no examples of this
+      ]
+  end
+
+
 end
