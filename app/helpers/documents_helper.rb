@@ -48,7 +48,11 @@ module DocumentsHelper
 
   def search_result_link(doc)
     label = doc["dateDisplay"] ? "#{doc["title"]} (#{doc["dateDisplay"]})" : doc["title"]
-    return link_to label, doc_path(doc["id"])
+    if linkable_id?(doc["id"])
+      return link_to label, doc_path(doc["id"])
+    else
+      return label
+    end
   end
 
   def sort_results(sort_field)

@@ -1,5 +1,11 @@
 module ApplicationHelper
 
+  #######################
+  #      All Pages      #
+  #######################
+
+  def linkable_id?(id)
+    return !(id == "per.000000") && !(id == "")  end
 
   #######################
   #    Index Display    #
@@ -65,12 +71,16 @@ module ApplicationHelper
       items.each do |item|
         begin
           hash = JSON.parse(item)
-          if route == "case"
-            res += "<li>#{link_to hash['label'], case_path(hash['id'])}</li>"
-          elsif route == "person"
-            res += "<li>#{link_to hash['label'], person_path(hash['id'])}</li>"
+          if linkable_id?(hash['id'])
+            if route == "case"
+              res += "<li>#{link_to hash['label'], case_path(hash['id'])}</li>"
+            elsif route == "person"
+              res += "<li>#{link_to hash['label'], person_path(hash['id'])}</li>"
+            else
+              res += "<li>#{link_to hash['label'], doc_path(hash['id'])}</li>"
+            end
           else
-            res += "<li>#{link_to hash['label'], doc_path(hash['id'])}</li>"
+            res += "<li class='a'>#{hash['label']}</li>"
           end
         rescue
           # is invalid JSON just display what is possible

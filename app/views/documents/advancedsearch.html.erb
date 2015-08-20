@@ -49,6 +49,7 @@
       <div class="form-group">
         <%= hidden_field_tag(:qfield, "text") %>
         <%= hidden_field_tag(:sort, "score") %>
+        <%= hidden_field_tag(:facet, "person") %>
         <%= text_field_tag(:qtext, nil, :placeholder => "Search by Person", :id => "people", :class => "form-control") %>
         <%= submit_tag("Search", :class => "btn btn-info") %>
       </div>
