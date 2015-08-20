@@ -14,13 +14,18 @@ class DocumentsController < ApplicationController
       qfield = "term_ss"
       qtext = params[:term]
     elsif params.has_key?(:jurisdiction)
-      qfield = "jurisdiction_ss"
-      qtext = params[:jurisdiction]
       redirect_to search_path({
         :qfield => "jurisdiction_ss", 
         :qtext => params[:jurisdiction],
         :facet => "caseid"
       })
+      return true
+    elsif params.has_key?(:outcome)
+      redirect_to search_path({
+        :qfield => "outcome_ss",
+        :qtext => params[:outcome],
+        :facet => "caseid"
+        })
       return true
     elsif params.has_key?(:places)
       qfield = "places"

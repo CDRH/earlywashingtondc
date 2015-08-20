@@ -5,37 +5,38 @@
   <div class="row">
     <div class="col-md-6">
 
-     <!-- Start cases -->
-     <h3>Case Files</h3>
+      <!-- Start cases -->
+      <h3>Case Files</h3>
 
+      <div class="list-group">
+        <%= link_to "Explore all cases", casesAll_path, class: "list-group-item" %>
+        <%= link_to "Explore annotated cases", casesAnnotated_path, class: "list-group-item"  %>
+      </div><!-- /list group-->
+      <!-- End cases -->
 
-     <div class="list-group">
+      <div class="row">
+        <div class="col-md-4">Jurisdiction</div>
+        <div class="col-md-8">
+         <!-- Browse by Jurisdiction -->
+         <%= form_tag doc_dropdown_path do %>
+         <% select_tag :jurisdiction, options_for_select(@jurisdiction_facet), :prompt => "Select Jurisdiction", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
+         <% end %>
+        </div>
+      </div>
 
-      <%= link_to "Explore all cases", casesAll_path, class: "list-group-item" %>
-      <%= link_to "Explore annotated cases", casesAnnotated_path, class: "list-group-item"  %>
-    </div><!-- /list group-->
-    <!-- End cases -->
-    
-    
+      <div class="row">
+        <div class="col-md-4">Outcomes</div>
+        <div class="col-md-8">
+          <!-- Browse by Outcome -->
+          <%= form_tag doc_dropdown_path do %>
+          <% select_tag :outcome, options_for_select(@outcome_facet), :prompt => "Select Outcome", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
+          <% end %>
+        </div>
+      </div>
 
-   <div class="row">
-    <div class="col-md-4">Jurisdiction</div>
-    <div class="col-md-8">
-     <!-- Browse by Jurisdiction -->
-     <%= form_tag doc_dropdown_path do %>
-     <% select_tag :jurisdiction, options_for_select(@jurisdiction_facet), :prompt => "Select Jurisdiction", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
-     <% end %>
-   </div>
- </div>
+   </div><!-- /column-->
 
-    
-    
-  </div><!-- /column-->
-  
-  
-
-
-  <div class="col-md-6">
+   <div class="col-md-6">
 
     <!-- Start documents -->
 
@@ -54,34 +55,33 @@
      </div>
    </div>
 
-  
- <br/>
+   <br/>
 
- <div class="row">
-  <div class="col-md-4">Locations</div>
-  <div class="col-md-8">
-    <!-- Browse by Places -->
-    <%= form_tag doc_dropdown_path do %>
-    <% select_tag :places, options_for_select(@places_facet), :prompt => "Select Location", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
-    <% end %>
+   <div class="row">
+    <div class="col-md-4">Locations</div>
+    <div class="col-md-8">
+      <!-- Browse by Places -->
+      <%= form_tag doc_dropdown_path do %>
+      <% select_tag :places, options_for_select(@places_facet), :prompt => "Select Location", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
+      <% end %>
 
+    </div>
   </div>
-</div>
 
-<br/>
+  <br/>
 
-<div class="row">
-  <div class="col-md-4">Document Type</div>
-  <div class="col-md-8">
-    <!-- Browse by Document Type -->
-    <%= form_tag doc_dropdown_path do %>
-    <% select_tag :document, options_for_select(@subCategory_facet), :prompt => "Select Document", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
-    <% end %>
+  <div class="row">
+    <div class="col-md-4">Document Type</div>
+    <div class="col-md-8">
+      <!-- Browse by Document Type -->
+      <%= form_tag doc_dropdown_path do %>
+      <% select_tag :document, options_for_select(@subCategory_facet), :prompt => "Select Document", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
+      <% end %>
 
-    <!-- End documents -->
+      <!-- End documents -->
 
+    </div>
   </div>
-</div>
 
 
 </div><!-- /column-->
