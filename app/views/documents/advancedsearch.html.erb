@@ -70,6 +70,38 @@
   </div><!--/column-->
 </div><!--/row-->
 
+<br/><br/>
+
+<div class="row">
+  <div class="col-md-6">
+    <h4>Explore By Connection Type <span class="label label-danger">Experimental</span></h4>
+    <p>View people by the type of their relationships (enslaved by, spouse of, neighbor of, etc)</p>
+
+    <% type_options = get_relationship_types %>
+
+    <%= form_tag connection_type_path, :method => "get", :class => "form-inline" do %>
+      <div class="form-group">
+        <%= select_tag :type, options_for_select(type_options, params[:type]), :prompt => "Select Relationship", :class => "custom-dropdown__select" %>
+        <%= submit_tag("Go!", :class => "btn btn-info") %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+
+    <h4>Browse Attorney Relationships <span class="label label-danger">Experimental</span></h4>
+    <p>A feature that allows you to explore connections between attorneys.</p>
+
+    <%= form_tag relationships_path, :method => "get", :class => "form-inline" do %>
+      <div class="form-group">
+        <%= select_tag :per1id, options_for_select(@attorneys, params["per1id"]), :prompt => "Select First Attorney", :class => "custom-dropdown__select" %>
+        <%= select_tag :per2id, options_for_select(@attorneys, params["per2id"]), :prompt => "Select Second Attorney", :class => "custom-dropdown__select" %>
+        <%= submit_tag("Find Relationships", :class => "btn btn-info") %>
+      </div>
+    <% end %>
+  </div>
+</div><!--/row-->
+
 
 
 

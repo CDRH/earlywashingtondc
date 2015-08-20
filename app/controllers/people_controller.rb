@@ -96,6 +96,16 @@ class PeopleController < ApplicationController
     end
   end
 
+  def connection_type
+    @page_class = "people"
+    rdf = Relationships.new
+    respond_to do |format|
+      format.html { @res = _get_rdf_good_stuff(rdf.query_by_connection(params[:type])) }
+      format.json { render :json => rdf.query_by_connection(params[:type]) }
+      format.xml { render :xml => rdf.query_by_connection(params[:type], "xml") }
+    end
+  end
+
   private
 
   def _get_rdf_good_stuff(raw)

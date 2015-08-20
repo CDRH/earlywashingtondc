@@ -37,6 +37,8 @@ Rails.application.routes.draw do
   get 'people/network/:id', to: 'people#network', as: :network_vis, :constraints => { :id => with_period }
   post 'people/browse', to: 'people#browse', as: :person_browse, :constraints => { :id => with_period }
   get 'people/relationships', to: 'people#relationships', as: :relationships
+  get 'people/connection_type', to: "people#connection_type", as: :connection_type # doesn't need two paths because no id w/periods
+  # putting these paths at the end or else they suck through all the other people paths (because of the period constraint override)
   get 'people/:id', to: 'people#show', :constraints => { :id => with_period_ext}
   get 'people/:id', to: 'people#show', as: :person, :constraints => { :id => with_period }
 

@@ -38,10 +38,18 @@
       { :controller => "people", :action => "network", :id => "per.000001", :format => :json }, class: "list-group-item" %>
 </div>
 
+<p>
+Additionally, on the "search by relationship type" page at /people/connection_type, the xml and json results are available.
+</p>
+<div class="list-group">
+  <%= link_to "Example of JSON results for 'witness of' relationship", connection_type_path({:type => 'witnessOf', :format => :json}), class: "list-group-item" %>
+  <%= link_to "Example of XML results for 'witness of' relationship", connection_type_path({:type => 'witnessOf', :format => :xml}), class: "list-group-item" %>
+</div>
+
 <h3>Getting Started with RDF</h3>
 
 <p>
-  Not sure where to begin?  Check out these tutorials from UNL's <a href="http://cdrh.unl.edu">Center for Digital Research in the Humanities</a>:
+  Not sure where to begin?  An intro to RDF and some of the queries used to power the OSCYS site are available online.  Check out these tutorials from UNL's <a href="http://cdrh.unl.edu">Center for Digital Research in the Humanities</a>:
   <ul>
     <li><a href="http://cdrh.github.io/oscys/rdf/2015/06/22/rdf-part-1.html">RDF Part I: Triples</a></li>
     <li><a href="http://cdrh.github.io/oscys/rdf/sparql/2015/07/06/rdf-part-2.html">RDF Part II: Getting Set Up</a></li>

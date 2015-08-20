@@ -30,6 +30,16 @@ class Relationships
     end
   end
 
+  def query_by_connection(type, format="json")
+    query_string = %{
+      { ?per1 oscys:#{type} ?per2 .
+        ?per1 oscys:fullName ?per1name .
+        ?per2 oscys:fullName ?per2name .
+      }
+    }
+    return query(query_string, false, format)
+  end
+
   def query_first_relation(person_id1, person_id2)
     query_string = %{ {
        osrdf:#{person_id1} ?rel osrdf:#{person_id2} .

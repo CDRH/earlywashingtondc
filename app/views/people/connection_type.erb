@@ -1,0 +1,34 @@
+<h2>Search By Relationship Type</h2>
+
+<p>
+Find people related by a specific type of connection in the OSCYS data.
+</p>
+
+<% type_options = get_relationship_types %>
+
+<%= form_tag connection_type_path, :method => "get", :class => "form-inline" do %>
+  <div class="form-group">
+    <%= select_tag :type, options_for_select(type_options, params[:type]), :prompt => "Select Relationship", :class => "custom-dropdown__select" %>
+    <%= submit_tag("Go!", :class => "btn btn-info") %>
+  </div>
+<% end %>
+
+<% if @res && @res.length > 0 %>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <tr>
+        <th>Individual</th><th><%= prettify(params[:type]) %></th>
+      </tr>
+      <% @res.each do |result| %>
+        <tr>
+          <td><%= link_to rdfval(result["per1name"]), person_path(rdfval(result["per1"])) %>
+          </td>
+          <td><%= link_to rdfval(result["per2name"]), person_path(rdfval(result["per2"])) %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+<% else %>
+  <h4>No results found</h4>
+<% end %>
