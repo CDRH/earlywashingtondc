@@ -405,7 +405,7 @@ body {
  
  ul.tree, ul.tree ul {
      list-style-type: none;
-     background: url(/assets/vline.jpg) repeat-y;
+     background: url(vline.jpg) repeat-y;
      margin: 0;
      padding: 0;
    }
@@ -435,13 +435,13 @@ body {
      margin: 0;
      padding: 0 12px;
      line-height: 25px;
-     background: url(/assets/node.jpg) no-repeat;
+     background: url(node.jpg) no-repeat;
      color: #000;
      font-weight: normal;
    }
 
    ul.tree li:last-child {
-     background: #fff url(/assets/lastnode.jpg) no-repeat;
+     background: #fff url(lastnode.jpg) no-repeat;
    }
 
 /*  .gen {
