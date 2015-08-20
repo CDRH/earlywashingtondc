@@ -17,6 +17,7 @@
  
 
   <div class="jump_menu">
+    <%= '<a href="#outcome">Outcome</a>'.html_safe if @case["outcomeData_ss"] %>
     <%= '<a href="#documents">Case Documents</a>'.html_safe if @case["caseDocumentData_ss"] %>
     <%= '<a href="#rel_documents">Related Documents</a>'.html_safe if @case["caseRelatedDocumentData_ss"] %>
     <%= '<a href="#cases">Related Cases</a>'.html_safe if @case["relatedCaseData_ss"] %>
