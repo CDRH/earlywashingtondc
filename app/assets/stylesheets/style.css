@@ -6,8 +6,6 @@
 /* Tables */
 
 
-
-
 table {
     margin-left:auto; 
     margin-right:auto;
@@ -15,6 +13,7 @@ table {
 }
 
 table td {
+  border:1;
 	/*border-top: solid 1px #aaa;*/
 	/*border-bottom: solid 1px #aaa;*/
 	padding: 5px 5px;
@@ -547,10 +546,15 @@ a.selected {
 	overflow: auto;
 }
 
+/* Search Results Facet Styling */
 
+.no-facet-results {
+  display: none !important;
+}
 
+/* Fake code boxes for _data.html.erb */
 
-
-
-
-
+.code_block {
+  background:#CFCFCF;
+  font-family:monospace;
+}
