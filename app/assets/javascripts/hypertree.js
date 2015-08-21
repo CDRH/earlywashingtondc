@@ -31,7 +31,7 @@ var edgeColors = {
   "acquaintanceOf": "orange",  // orange
   "work": "#4A5131",           // army green
   "": "magenta",               // something is wrong
-  "default": "#ADADAD"         // default grey
+  "default": "rgba(0,0,0,.2)"         // default grey
 };
 
 var nodeColors = {
@@ -192,15 +192,26 @@ function initHypertree(){
         // colors and runs a -> b as well as b -> a so unfortunately this has to get complicated
         // if running a -> b use b's relationship
         // if running b -> a also use b's relationship
+        // if there is a type requested then only highlight those
         var fromLevel = adj.nodeFrom.data.level;
         var toLevel = adj.nodeTo.data.level;
         var relation;
+        var color;
         if (fromLevel+1 == toLevel) {
           var relation = adj.nodeTo.data.relationType;
         } else if (fromLevel-1 == toLevel) {
           var relation = adj.nodeFrom.data.relationType;
         }
-        var color = edgeColors[relation];
+        if (graphType) {
+          // everything default color except that relationship
+          if (relation == graphType) {
+            color = edgeColors[relation];
+            adj.data.$lineWidth = 2;
+          }
+        } else {
+          // if no type specified then color everything possible
+          var color = edgeColors[relation];
+        }
         if (color) { adj.data.$color = color; }
       },
       // Attach event handlers and add text to the

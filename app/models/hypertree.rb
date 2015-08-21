@@ -6,7 +6,10 @@ class Hypertree < Relationships
     @id = person
     @omit = omit
     @type = type
-    raw_res = query_two_removed(person, "json", type)
+    # we are taking the "types" out of the hypertree
+    # but we could add it back in the future
+    # raw_res = query_two_removed(person, "json", type)
+    raw_res = query_two_removed(person, "json")
     
     ruby_json = JSON.parse(raw_res)
     # this made more sense when several formats were being requested by this

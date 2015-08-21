@@ -14,6 +14,7 @@
   <script>
     <%# need non-ruby json and a string to call html safe, apparently %>
     var json = <%= @res.to_json.to_s.html_safe %>;
+    var graphType = "<%= @type %>";
     var personUrl = "<%= @person_url %>";
   </script>
   <%= javascript_include_tag 'hypertree', 'data-turbolinks-track' => false %>
