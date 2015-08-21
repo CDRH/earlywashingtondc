@@ -16,7 +16,7 @@ class Relationships
     # the prefixes will not be returned in json format but can be used for forming the queries
     @prefixes = %{PREFIX #{CONFIG['prefix_owl']} 
                  PREFIX #{CONFIG['prefix_rdf']}
-                 PREFIX rdf: <http://www.w3.org/2000/01/rdf-schema#>}
+                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>}
   end
 
   def query(query_string, include_owl=false, format="json")
@@ -119,8 +119,8 @@ class Relationships
                   }
                   osrdf:#{person_id} oscys:fullName ?name0 .
                   ?per1 oscys:fullName ?name1 .
-                  OPTIONAL { ?rel01 rdf:subPropertyOf ?rel01type } .
-                  OPTIONAL { ?rel12 rdf:subPropertyOf ?rel12type } .
+                  OPTIONAL { ?rel01 rdfs:subPropertyOf ?rel01type } .
+                  OPTIONAL { ?rel12 rdfs:subPropertyOf ?rel12type } .
                   FILTER ( ?per2 != osrdf:#{person_id} )
                   }}
       return query(query_string, true, format)
@@ -128,8 +128,8 @@ class Relationships
       query_string = %{ {
                   BIND(oscys:#{type} as ?rel01type) .
                   BIND(oscys:#{type} as ?rel12type) .
-                  ?rel01 rdf:subPropertyOf oscys:#{type} .
-                  ?rel12 rdf:subPropertyOf oscys:#{type} .
+                  ?rel01 rdfs:subPropertyOf oscys:#{type} .
+                  ?rel12 rdfs:subPropertyOf oscys:#{type} .
                   osrdf:#{person_id} ?rel01 ?per1 .
                   OPTIONAL { 
                     ?per1 ?rel12 ?per2 .
