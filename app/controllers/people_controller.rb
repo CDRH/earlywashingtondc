@@ -58,7 +58,6 @@ class PeopleController < ApplicationController
   def network
     @page_class = "visualization"
     @id = params[:id]
-    @type = params[:type]
 
     # TODO could this cause exceptions in the future?
     @person_url = request.base_url + network_vis_path.sub(/per\.[0-9]{6}/, "")

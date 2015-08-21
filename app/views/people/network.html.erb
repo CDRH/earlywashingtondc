@@ -14,7 +14,7 @@
   <script>
     <%# need non-ruby json and a string to call html safe, apparently %>
     var json = <%= @res.to_json.to_s.html_safe %>;
-    var graphType = "<%= @type %>";
+    var graphType;
     var personUrl = "<%= @person_url %>";
   </script>
   <%= javascript_include_tag 'hypertree', 'data-turbolinks-track' => false %>
@@ -65,20 +65,20 @@
         <div class="visualization_types">
           <h4>Limit relationship by:</h4>
           <ul>
-            <li>
-              <%= link_to "All", network_vis_path(@id) %>
+            <li class="limiter">
+              <a href="#">All</a>
             </li>
-            <li>
-              <%= link_to "Family", network_vis_path(@id, :type => "familyOf") %>
+            <li class="limiter" type="familyOf">
+              <a href="#">Family</a>
             </li>
-            <li>
-              <%= link_to "Legal", network_vis_path(@id, :type => "legal") %>
+            <li class="limiter" type="legal">
+              <a href="#">Legal</a>
             </li>
-            <li>
-              <%= link_to "Social", network_vis_path(@id, :type => "acquaintanceOf") %>
+            <li class="limiter" type="acquaintanceOf">
+              <a href="#">Social</a>
             </li>
-            <li>
-              <%= link_to "Employment", network_vis_path(@id, :type => "work") %>
+            <li class="limiter" type="work">
+              <a href="#">Work</a>
             </li>
           </ul>
         </div> <!-- /visualization_types -->
@@ -86,12 +86,12 @@
         <div id="key">
           <h4>Relationship Types</h4>
           <ul>
-            <li class="rtype_legal"><span>Legal</span></li>
             <li class="rtype_kinship"><span>Kinship</span></li>
-            <li class="rtype_employment"><span>Employment</span></li>
-            <li class="rtype_acquaintance"><span>Acquaintance</span></li>
+            <li class="rtype_legal"><span>Legal</span></li>
+            <li class="rtype_acquaintance"><span>Social</span></li>
+            <li class="rtype_employment"><span>Work</span></li>
             <li class="rtype_multiple"><span>Multiple</span></li>
-            <li class="rtype_missing"><span>Missing</span></li>
+            <li class="rtype_missing"><span>Unknown</span></li>
           </ul>
           
           <p>Visualizations show relationships to two degrees out, and do not contain judge and clerk relationships.</p>

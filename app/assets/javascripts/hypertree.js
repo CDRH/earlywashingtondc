@@ -122,7 +122,7 @@ var prettify = function(relation) {
   }
 };
 
-function initHypertree(){
+var initHypertree = function() {
   var infovis = document.getElementById('infovis');
   var w = infovis.offsetWidth - 10, h = infovis.offsetHeight - 0;
 
@@ -197,6 +197,7 @@ function initHypertree(){
         var toLevel = adj.nodeTo.data.level;
         var relation;
         var color;
+        var lineWidth = 1;
         if (fromLevel+1 == toLevel) {
           var relation = adj.nodeTo.data.relationType;
         } else if (fromLevel-1 == toLevel) {
@@ -206,13 +207,16 @@ function initHypertree(){
           // everything default color except that relationship
           if (relation == graphType) {
             color = edgeColors[relation];
-            adj.data.$lineWidth = 2;
+            lineWidth = 2;
+          } else {
+            color = edgeColors["default"];
           }
         } else {
           // if no type specified then color everything possible
-          var color = edgeColors[relation];
+          color = edgeColors[relation];
         }
         if (color) { adj.data.$color = color; }
+        adj.data.$lineWidth = lineWidth;
       },
       // Attach event handlers and add text to the
       // labels. This method is only triggered on label
@@ -296,5 +300,12 @@ function initHypertree(){
 
     $('#zoomOut').click(function(){
         ht.canvas.scale(1/scaleFactor,1/scaleFactor);
+    });
+
+    $('.limiter').click(function() {
+      var type = $(this).attr("type");
+      graphType = type ? type : null;
+      ht.refresh();
+      // initHypertree();
     });
   }
