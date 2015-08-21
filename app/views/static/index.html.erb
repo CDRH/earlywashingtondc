@@ -10,15 +10,6 @@
     <p>This project explores multigenerational black and white family networks in early Washington, D.C., by collecting, digitizing, making accessible, and analyzing case files from the Circuit Court for the District of Columbia between 1808 to 1862.</p>
 
 
-    <%= link_to kinship_path do %>
-    <div class="home_kinship">
-      <div class="row">
-        <div class="col-md-4"><h2>Kinship & Family</h2></div>
-        <div class="col-md-8">Explore kinship and family networks of multigenerational black and white families of early Washington, D.C. These networks have been created using information derived from documentation in the court records, as well as genealogical research. Each tree is labeled as either being case derived, genealogy derived, or both. When a tree is made up of data from both court documents and genealogical research, the information is color-coded to reflect the origin of the material. </div>
-      </div>
-    </div>
-    <% end %>
-
     <%= link_to cases_path do %>
     <div class="home_cases">
       <div class="row">
@@ -33,6 +24,15 @@
       <div class="row">
         <div class="col-md-4"><h2>People</h2></div>
         <div class="col-md-8">Explore the web of litigants, jurists, attorneys, and community members. Browse people by plaintiff, defendant, and attorney, or view all people. Each person has a life history containing information derived from the court documents, including birth and death dates, sex, color, socioeconomic status, residence, and occupation, if known. Life histories have been enriched with genealogical research for selected individuals.   </div>
+      </div>
+    </div>
+    <% end %>
+
+    <%= link_to kinship_path do %>
+    <div class="home_kinship">
+      <div class="row">
+        <div class="col-md-4"><h2>Families</h2></div>
+        <div class="col-md-8">Explore kinship and family networks of multigenerational black and white families of early Washington, D.C. These networks have been created using information derived from documentation in the court records, as well as genealogical research. Each tree is labeled as either being case derived, genealogy derived, or both. When a tree is made up of data from both court documents and genealogical research, the information is color-coded to reflect the origin of the material. </div>
       </div>
     </div>
     <% end %>
