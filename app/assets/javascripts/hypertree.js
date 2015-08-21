@@ -305,7 +305,8 @@ var initHypertree = function() {
     $('.limiter').click(function() {
       var type = $(this).attr("type");
       graphType = type ? type : null;
+      $('.limiter').removeClass("selected");
+      $(this).toggleClass("selected");
       ht.refresh();
-      // initHypertree();
     });
   }
