@@ -30,10 +30,9 @@
 
     <div class="well well-sm">
 
-      <p>Tips: <br/><br/>
-        To exclude a word, preceed with "-": case -petition<br/>
-        To search for a phrase, include in quotations: "Hereof fail not, at your peril"<br/>
-        You can also combine these techniques: "to be held for the county" -summons </p>
+      <p>To exclude a word, precede with "-": <em>slavery -petition</em><br/>
+         To search for a phrase, use quotations: <em>"unjustly held in bondage"</em><br/>
+         You can combine these techniques: <em>"entitled to freedom" -report</em></p>
 
     </div>
   </div>
@@ -76,7 +75,7 @@
 <div class="row">
   <div class="col-md-6">
     <h4>Explore By Connection Type <span class="label label-danger">Experimental</span></h4>
-    <p>View people by the type of their relationships (enslaved by, spouse of, neighbor of, etc)</p>
+    <p>View people by the type of their relationships (enslaved by, spouse of, neighbor of, etc.)</p>
 
     <% type_options = get_relationship_types %>
 
@@ -91,7 +90,7 @@
   <div class="col-md-6">
 
     <h4>Browse Attorney Relationships <span class="label label-danger">Experimental</span></h4>
-    <p>A feature that allows you to explore connections between attorneys.</p>
+    <p>Explore connections between attorneys.</p>
 
     <%= form_tag relationships_path, :method => "get", :class => "form-inline" do %>
       <div class="form-group">
