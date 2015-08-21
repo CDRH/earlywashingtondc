@@ -25,7 +25,7 @@ class Hypertree < Relationships
       bindings.each_with_index do |res, index|
         if index == 0
           # add the original person
-          info = _new_person(@id, res["name0"]["value"], nil, nil, true, true)
+          info = _new_person(@id, res["name0"]["value"], 0, nil, nil, true, true)
         end
         # now add the people in this particular result set (using b and c so that infovis doesn't overwrite data)
         per1 = "#{_value(res['per1'])}_b"
@@ -42,7 +42,7 @@ class Hypertree < Relationships
           # if person 1 has not been added, add to the original person's children
           # otherwise, just grab person 1 out of the info hash
           if per1index.nil?
-            info["children"] << _new_person(per1, _value(res["name1"]), per0to1, rel01type, true)
+            info["children"] << _new_person(per1, _value(res["name1"]), 1, per0to1, rel01type, true)
             per1obj = info["children"].last
           else
             per1obj = info["children"][per1index]
@@ -60,7 +60,7 @@ class Hypertree < Relationships
             per2index = per1obj["children"].find_index { |child| child["id"] == per2 }
             # if person 2 has not been added, just shove it in, otherwise, add to existing
             if per2index.nil?
-              per1obj["children"] << _new_person(per2, _value(res["name2"]), per1to2, rel12type)
+              per1obj["children"] << _new_person(per2, _value(res["name2"]), 2, per1to2, rel12type)
             else
               per2obj = per1obj["children"][per2index]
               # account for multiple relationships with same individual
@@ -78,12 +78,13 @@ class Hypertree < Relationships
     return info
   end
 
-  def _new_person(id, name, relation=nil, relationType=nil, children_exist=false, first=false)
+  def _new_person(id, name, level, relation=nil, relationType=nil, children_exist=false, first=false)
     person = {}
     person["id"] = id
     person["name"] = name
     person["children"] = [] if children_exist
     person["data"] = {}
+    person["data"]["level"] = level
     person["data"]["relation"] = relation if !relation.nil?
     person["data"]["relationType"] = relationType if !relationType.nil?
     person["data"]["original_element"] = first

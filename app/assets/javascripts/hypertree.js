@@ -29,7 +29,7 @@ var edgeColors = {
   "legal": "#6D96A7",          // light blue from logo
   "familyOf": "#a51400",       // maroon
   "acquaintanceOf": "orange",  // orange
-  "employment": "#4A5131",     // army green
+  "work": "#4A5131",           // army green
   "": "magenta",               // something is wrong
   "default": "#ADADAD"         // default grey
 };
@@ -188,8 +188,19 @@ function initHypertree(){
         node.Node.color = color ? color : nodeColors["default"];
       },
       onBeforePlotLine: function(adj) {
-        var relationType = adj.nodeTo.data.relationType;
-        var color = edgeColors[relationType];
+        // this should be simple but onBeforePlotLine overwrites with the wrong relationship
+        // colors and runs a -> b as well as b -> a so unfortunately this has to get complicated
+        // if running a -> b use b's relationship
+        // if running b -> a also use b's relationship
+        var fromLevel = adj.nodeFrom.data.level;
+        var toLevel = adj.nodeTo.data.level;
+        var relation;
+        if (fromLevel+1 == toLevel) {
+          var relation = adj.nodeTo.data.relationType;
+        } else if (fromLevel-1 == toLevel) {
+          var relation = adj.nodeFrom.data.relationType;
+        }
+        var color = edgeColors[relation];
         if (color) { adj.data.$color = color; }
       },
       // Attach event handlers and add text to the
