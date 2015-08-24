@@ -2,6 +2,7 @@ require 'test_helper'
 
 class DocumentsHelperTest < ActionView::TestCase
   include DocumentsHelper
+  include ApplicationHelper
 
   def params
     { :controller => "documents", 

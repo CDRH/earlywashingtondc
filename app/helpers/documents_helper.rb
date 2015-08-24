@@ -47,7 +47,7 @@ module DocumentsHelper
   end
 
   def search_result_link(doc)
-    label = doc["dateDisplay"] ? "#{doc["title"]} (#{doc["dateDisplay"]})" : doc["title"]
+    label = (doc["dateDisplay"] && (doc["dateDisplay"] != "n.d.")) ? "#{doc["title"]} (#{doc["dateDisplay"]})" : doc["title"]
     if linkable_id?(doc["id"])
       return link_to label, doc_path(doc["id"])
     else

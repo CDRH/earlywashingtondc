@@ -5,6 +5,7 @@ class CasesHelperTest < ActionView::TestCase
   include ApplicationHelper
 
   array = ["a", "a", "b", "c", "d"]
+  fake_people = [{"label" => "Dussault", "id" => "per.001721"}, {"label" => "ADussault", "id" => "per.138210"}]
 
   test "find_unique_strings" do
     assert_equal "a, b, c, d", find_unique_strings(array)
@@ -15,7 +16,7 @@ class CasesHelperTest < ActionView::TestCase
   end
 
   test "people_list" do
-    assert_equal people_list(array), "<ul><li>a</li><li>b</li><li>c</li><li>d</li></ul>"
+    assert_equal people_list(fake_people), "<ul><li><a href=\"/people/per.138210\">ADussault</a></li><li><a href=\"/people/per.001721\">Dussault</a></li></ul>"
   end
 
 end

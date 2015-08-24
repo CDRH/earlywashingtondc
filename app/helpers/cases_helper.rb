@@ -16,7 +16,9 @@ module CasesHelper
   def people_list(items)
     # look for the unique elements and send those to format_list
     unique = find_unique(items)
-    sorted = unique.sort
+    sorted = unique.sort_by do |item|
+      item["label"]
+    end
     return format_list(sorted, "person")
   end
 
