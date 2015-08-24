@@ -80,7 +80,7 @@ module ApplicationHelper
               res += "<li>#{link_to hash['label'], doc_path(hash['id'])}</li>"
             end
           else
-            res += "<li class='a'>#{hash['label']}</li>"
+            res += "<li><span class='a'>#{hash['label']}</span></li>"
           end
         rescue
           # is invalid JSON just display what is possible

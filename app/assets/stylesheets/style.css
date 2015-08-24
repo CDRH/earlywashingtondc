@@ -1,9 +1,12 @@
+/* @override http://localhost:3000/assets/style.css?body=1 */
+
 /* ==|== primary styles =====================================================
    Author: Karin Dalziel, Kaci Nash
    ========================================================================== */
 
 
 /* Tables */
+
 
 
 table {
@@ -146,19 +149,20 @@ img.display {
 	float: left;
 }
 
-del {
+/* Called later */
+/*del {
     color: #49502F;     
 }
 
 gap {
     color: #60693e;
-    /*font-style:italic;*/
+    /\*font-style:italic;*\/
 }
 
 
 unclear {
-	/*color: #49502F;*/
-}
+	/\*color: #49502F;*\/
+}*/
 
 .callout {
 	border: 1px solid #b2b0b7;
@@ -498,7 +502,8 @@ body {
 	margin: .2em .2em 0 0;
 }
 
-.metadata .meta_data ul li a {
+.metadata .meta_data ul li a,
+.metadata .meta_data ul li .a {
 	display: inline-block;
 	/*margin-top: .5em;*/
 	border: 1px solid #ddd;
@@ -557,4 +562,27 @@ a.selected {
 .code_block {
   background:#CFCFCF;
   font-family:monospace;
+}
+
+.syllabus {
+    font-size: 75%;
+}
+
+del {
+color: #49502F;
+color: #aaa;
+}
+
+.gap {
+color: #60693e;
+color: #aaa;
+}
+
+.unclear {
+color: #49502F;
+color: #aaa;
+}
+
+.gap.sampling {
+    display:none;
 }
