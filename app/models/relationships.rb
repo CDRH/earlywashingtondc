@@ -19,8 +19,8 @@ class Relationships
                  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>}
   end
 
-  def query(query_string, include_owl=false, format="json")
-    url = _build_url(query_string, include_owl, format)
+  def query(query_string, include_owl=false, format="json", order_by=nil)
+    url = _build_url(query_string, order_by, include_owl, format)
     puts "Querying rdf with #{url}"
     begin
       return Net::HTTP.get(URI.parse(url))
@@ -106,7 +106,8 @@ class Relationships
   def query_one_removed(person_id, format="json")
     query_string = %{ { osrdf:#{person_id} ?rel1 ?per1 . 
                       ?per1 oscys:fullName ?name1 } }
-    return query(query_string, false, format)
+    order_by = "?rel1 ?name1"
+    return query(query_string, false, format, order_by)
   end
 
   def query_two_removed(person_id, format="json", type=nil)
@@ -145,9 +146,10 @@ class Relationships
 
   private
 
-  def _build_url(query_string="{}", include_owl=false, format="json")
+  def _build_url(query_string="{}", order_by=nil, include_owl=false, format="json")
     graphs = include_owl ? "FROM <#{@rdf_file}> FROM <#{@owl_file}>" : "FROM <#{@rdf_file}>"
-    query = %{#{@prefixes} SELECT * #{graphs} WHERE #{query_string}}.squeeze(" ")
+    order = order_by.nil? ? "" :  " ORDER BY #{order_by}"
+    query = %{#{@prefixes} SELECT * #{graphs} WHERE #{query_string} #{order}}.squeeze(" ")
     query_url = URI.escape(query)
     url = "#{@sparqler}?query=#{query_url}&format=#{format}"
   end

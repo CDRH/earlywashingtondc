@@ -34,25 +34,25 @@
 	  
 	  <% if @case["outcomeData_ss"] %>
     <h3>Outcome</h3>
-    <%= metadata_builder(nil, @case["outcomeData_ss"]) %>
+    <%= metadata_builder(nil, @case["outcomeData_ss"], true) %>
   <% end %>
 
 
 
   <% if @case["caseDocumentData_ss"] %>
     <a name="documents"></a><h3>Case Documents</h3>
-    <%= format_list(@case["caseDocumentData_ss"], "doc") %>
+    <%= format_list(@case["caseDocumentData_ss"], "doc", "date") %>
     <h4><%= link_to "View more related documents...", search_path(:qfield => "documentCaseID_ss", :qtext => @case['id']) if @case["caseDocumentData_ss"].length > 50 %></h4>
   <% end %>
 
   <% if @case["caseRelatedDocumentData_ss"] %>
     <a name="rel_documents"></a><h3>Related Documents</h3>
-    <%= format_list(@case["caseRelatedDocumentData_ss"], "doc") %>
+    <%= format_list(@case["caseRelatedDocumentData_ss"], "doc", "date") %>
   <% end %>
 
   <% if @case["relatedCaseData_ss"] %>
     <a name="cases"></a><h3>Related Cases</h3>
-    <%= format_list(@case["relatedCaseData_ss"], "case") %>
+    <%= format_list(@case["relatedCaseData_ss"], "case", "label") %>
   <% end %>
 
   <% if @case["personData_ss"] %>
