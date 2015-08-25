@@ -26,10 +26,10 @@ var Log = {
 };
 
 var edgeColors = {
-  "legal": "#6D96A7",          // light blue from logo
-  "familyOf": "#a51400",       // maroon
-  "acquaintanceOf": "orange",  // orange
-  "work": "#4A5131",           // army green
+  "legalRelationship": "#6D96A7",          // light blue from logo
+  "familyRelationship": "#a51400",       // maroon
+  "socialRelationship": "orange",  // orange
+  "workRelationship": "#4A5131",           // army green
   "": "magenta",               // something is wrong
   "default": "rgba(0,0,0,.2)"         // default grey
 };
