@@ -71,6 +71,7 @@ module ApplicationHelper
       items = sort_by_field(items, sort_on_field) if sort_on_field
       res = "<ul>"
       items.each do |item|
+	      
         if item.class != String
           if linkable_id?(item['id'])
             if route == "case"
@@ -81,7 +82,9 @@ module ApplicationHelper
               res += "<li>#{link_to item['label'], doc_path(item['id'])}</li>"
             end
           else
-            res += "<li class='a'>#{item['label']}</li>"
+		  	
+            res += "<li><span class='a'>#{item['label']}</span></li>"
+
           end
         else
           # if it's not a hash then send it through as it was
