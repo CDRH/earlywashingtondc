@@ -1,47 +1,93 @@
 </div>
 </div>
-<!-- TODO Karin, are these necessary? -->
+<!-- TODO Karin, are these necessary? 
+	Yes, they end the container div above, so that we can have graphic elements that span the whole page.
+-->
+
+<div class="home_description">
+	<div class="container">
+		
+		<div class="home_callout">
+			<div class="home_info">
+			<p>This project explores multigenerational black and white family networks in early Washington, D.C., by collecting, digitizing, making accessible, and analyzing case files from the Circuit Court for the District of Columbia between 1808 to 1862.</p>
+			</div>
+		</div>
+		
+</div></div><!-- /home_description and callout -->
+	
+	
+<div class="home_section_one">
+	<div class="container">
+		
+		<div class="home_sections">
+		
+		
+		
+		<%= link_to people_path do %>
+		<div class="home_people home_section">
+			<div class="home_info">
+			<h2>People</h2>
+			<p>Explore the web of litigants, jurists, attorneys, and community members. Browse people by plaintiff, defendant, and attorney, or view all people. Each person has a life history containing information derived from the court documents, including birth and death dates, sex, color, socioeconomic status, residence, and occupation, if known. Life histories have been enriched with genealogical research for selected individuals. </p>
+			</div>
+		</div><!-- /home_cases -->
+		<% end %>
+		
+		<%= link_to kinship_path do %>
+		<div class="home_families home_section">
+			<div class="home_info">
+			<h2>Families</h2>
+			<p>Explore kinship and family networks of multigenerational black and white families of early Washington, D.C. These networks have been created using information derived from documentation in the court records, as well as genealogical research. Each tree is labeled as either being case derived, genealogy derived, or both. When a tree is made up of data from both court documents and genealogical research, the information is color-coded to reflect the origin of the material. </p>
+			</div>
+		</div><!-- /home_cases -->
+		<% end %>
+		
+		</div><!-- /home_sections -->
+		
+		</div></div><!-- /home_section_one and callout -->
+		
+<div class="home_visualizations">
+	<div class="container">
+		
+		<div class="home_callout">
+			<div class="home_info">
+			<p>This project explores multigenerational black and white family networks in early Washington, D.C., by collecting, digitizing, making accessible, and analyzing case files from the Circuit Court for the District of Columbia between 1808 to 1862.</p>
+			</div>
+		</div>
+		
+	</div></div><!-- /home_visualization and callout -->
+	
+	
+<div class="home_section_two">
+	<div class="container">
+		
+		<div class="home_sections">
+		
+		<%= link_to cases_path do %>
+		<div class="home_cases home_section">
+			<div class="home_info">
+			<h2>Cases</h2>
+			<p>Explore thousands of case files from the Circuit Court for the District of Columbia, records of Maryland courts, and related documents. Browse all documents or browse by term, jurisdiction, or document type. View cases and documents of interest, cases appealed to the Supreme Court, and family freedom petitions. All documents are richly marked up with metadata, including people, places, and dates. </p>
+			</div>
+		</div><!-- /home_cases -->
+		<% end %>
+		
+		
+		<%= link_to stories_path do %>
+		<div class="home_stories home_section">
+			<div class="home_info">
+			<h2>Stories</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mauris metus, egestas eget turpis sit amet, volutpat ultrices lorem. Quisque at sapien quis odio facilisis bibendum sed nec ex. In hac habitasse platea dictumst. Phasellus eget libero molestie, porta mauris a, elementum urna. </p>
+			</div>
+		</div><!-- /home_cases -->
+		<% end %>
+		
+		</div><!-- /home_sections -->
 
 
-<div class="home_menu">
+ </div></div><!-- /home_section_two and callout -->
 
-  <div class="container" id="home_page">
-
-    <p>This project explores multigenerational black and white family networks in early Washington, D.C., by collecting, digitizing, making accessible, and analyzing case files from the Circuit Court for the District of Columbia between 1808 to 1862.</p>
-
-
-    <%= link_to cases_path do %>
-    <div class="home_cases">
-      <div class="row">
-        <div class="col-md-4"><h2>Cases</h2></div>
-        <div class="col-md-8">Explore thousands of case files from the Circuit Court for the District of Columbia, records of Maryland courts, and related documents. Browse all documents or browse by term, jurisdiction, or document type. View cases and documents of interest, cases appealed to the Supreme Court, and family freedom petitions. All documents are richly marked up with metadata, including people, places, and dates.    </div>
-      </div>
-    </div>
-    <% end %>
-
-    <%= link_to people_path do %>
-    <div class="home_people">
-      <div class="row">
-        <div class="col-md-4"><h2>People</h2></div>
-        <div class="col-md-8">Explore the web of litigants, jurists, attorneys, and community members. Browse people by plaintiff, defendant, and attorney, or view all people. Each person has a life history containing information derived from the court documents, including birth and death dates, sex, color, socioeconomic status, residence, and occupation, if known. Life histories have been enriched with genealogical research for selected individuals.   </div>
-      </div>
-    </div>
-    <% end %>
-
-    <%= link_to kinship_path do %>
-    <div class="home_kinship">
-      <div class="row">
-        <div class="col-md-4"><h2>Families</h2></div>
-        <div class="col-md-8">Explore kinship and family networks of multigenerational black and white families of early Washington, D.C. These networks have been created using information derived from documentation in the court records, as well as genealogical research. Each tree is labeled as either being case derived, genealogy derived, or both. When a tree is made up of data from both court documents and genealogical research, the information is color-coded to reflect the origin of the material. </div>
-      </div>
-    </div>
-    <% end %>
-
-  </div><!--/Container -->
-
-</div><!--/home_menu -->
 
 
 <div class="container">
-  <div class="container">
+  <div><!-- Not sure why I need this div here but leaving it because it works -KMD -->
 

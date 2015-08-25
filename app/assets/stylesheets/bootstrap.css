@@ -5755,40 +5755,6 @@ button.close {
 .main_content a:hover {
   border-bottom: solid 1px #a51400; }
 
-/* Home */
-#home_page a:hover {
-  background-color: #fff; }
-
-.home_menu {
-  background-image: url(./dc_800.jpg);
-  background-size: cover; }
-
-.home_menu .container {
-  background-color: RGBA(255, 255, 255, 0.6);
-  padding-bottom: 3em; }
-
-.home_menu p {
-  margin: 1em;
-  font-size: 1.3em;
-  background-color: RGBA(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 1em 1em 1em 1em;
-  font-family: "Oranienbaum"; }
-
-.home_discover {
-  display: none; }
-
-.home_discover, .home_kinship, .home_cases, .home_people {
-  margin: .5em;
-  padding: .5em;
-  background-color: RGBA(255, 255, 255, 0.8); }
-
-.home_kinship, .home_cases, .home_people {
-  border: solid #aaa 1px;
-  background-color: RGBA(255, 255, 255, 0.8); }
-
-.home_kinship:hover, .home_cases:hover, .home_people:hover {
-  background-color: #fff; }
 
 /* Footer */
 .footer {

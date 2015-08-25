@@ -1,32 +1,30 @@
-/* @override http://localhost:3000/assets/style.css?body=1 */
-
 /* ==|== primary styles =====================================================
    Author: Karin Dalziel, Kaci Nash
    ========================================================================== */
 
-
 /* Tables */
 
-
-
 table {
-    margin-left:auto; 
-    margin-right:auto;
-    width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 }
 
 table td {
-  border:1;
-	/*border-top: solid 1px #aaa;*/
-	/*border-bottom: solid 1px #aaa;*/
+	border: 1;
+	
+
+/*border-top: solid 1px #aaa;*/
+	
+
+/*border-bottom: solid 1px #aaa;*/
 	padding: 5px 5px;
 	padding-right: 25px;
 }
 
-
 .hr {
 	border: none;
-    border-top: solid 1px #aaa;
+	border-top: solid 1px #aaa;
 	display: block;
 	height: 1px;
 	margin: 10px 0;
@@ -45,17 +43,24 @@ table td {
 	clear: right;
 	margin: -4px 0px 10px 10px;
 	text-align: left;
-	/*width: 125px;*/
-	/*background: #aaa;*/
+	
+
+/*width: 125px;*/
+	
+
+/*background: #aaa;*/
 	border: 3px solid #ccc;
 }
 
 .pageimage img {
 	border: 1px solid #ccc;
+
+
 /* This doesn't do anything... */
 }
 
 /* Not using figures right now */
+
 /*.figure {
 	float: left;
 	clear: left;
@@ -74,16 +79,18 @@ table td {
 .fw h6 {
 	float: left;
 	clear: left;
-	margin:  0 10px 10px -135px;
+	margin: 0 10px 10px -135px;
 	z-index: 20;
 	width: 125px;
 	text-align: right;
 }
 
 .figure a {
-	text-decoration: none; /* Remove underlines from figure links */
-}
+	text-decoration: none;
 
+
+/* Remove underlines from figure links */
+}
 
 img.display {
 	border: 1px solid #aaa;
@@ -122,16 +129,15 @@ img.display {
 	font-size: .8em;
 }
 
-
 /* Petition display */
 
-.dateline, .closer, .editorial {	
+.dateline, .closer, .editorial {
+	
 }
 
-.ab {	
-   margin: 25px 0;
+.ab {
+	margin: 25px 0;
 }
-
 
 .bibliography {
 	line-height: 1.2em;
@@ -150,6 +156,7 @@ img.display {
 }
 
 /* Called later */
+
 /*del {
     color: #49502F;     
 }
@@ -175,16 +182,15 @@ unclear {
 .callout .selected {
 	border: 1px solid #d9d8db;
 	background-color: #ffffff;
-	text-decoration:none;
+	text-decoration: none;
 }
 
-
 .morelink a {
-font-size: .8em;
+	font-size: .8em;
 }
 
 .simple-list {
-padding: 0;    
+	padding: 0;
 }
 
 /* Tooltips and switch boxes */
@@ -232,6 +238,7 @@ div#regularized_text_switch_box a {
 }
 
 .persName {
+	
 }
 
 .subjectLink {
@@ -242,6 +249,7 @@ div#regularized_text_switch_box a {
 }
 
 .singlespace {
+	
 }
 
 a.sic, a.orig {
@@ -250,21 +258,27 @@ a.sic, a.orig {
 }
 
 div#switch_box {
-	font-style:italic;
-	/* color: #b33f2d; */
+	font-style: italic;
+
+
+/* color: #b33f2d; */
 	border: 1px #aaa solid;
 	padding: 10px;
-	/* margin: 5px -11px 5px -11px; */
+
+
+/* margin: 5px -11px 5px -11px; */
 	margin: 0 0 10px 0;
 	background-color: #ececec;
 	display: block;
-	text-decoration:none;
+	text-decoration: none;
 }
 
-
 /* Pagination */
+
 .jump_pagination {
-	/*clear: both;*/
+	
+
+/*clear: both;*/
 	border: solid #aaa 1px;
 	display: block;
 	padding: .2em;
@@ -275,7 +289,6 @@ div#switch_box {
 	display: inline-block;
 	margin: 0 .5em;
 }
-
 
 /*People*/
 
@@ -302,12 +315,9 @@ div#switch_box {
 	border: 1px solid #ddd;
 	display: inline-block;
 	border-radius: 2px;
-
-
-	
 }
 
-.letter_pagination li a:hover  {
+.letter_pagination li a:hover {
 	background-color: #6b96a5;
 	color: #fff;
 }
@@ -317,10 +327,8 @@ div#switch_box {
 	font-size: .7em;
 }
 
-
 .main_alpha_menu  .letter_pagination {
 	text-align: center;
-
 }
 
 .browse_alpha_menu .letter_pagination li a {
@@ -332,22 +340,20 @@ div#switch_box {
 	line-height: 1.2em;
 }
 
-	
-	.cases select {width:100%}
-	
-	/* CaseID */
-	
-	.commentary .bibl {
-     font-style: italic;
-	
+.cases select {
+	width: 100%
 }
 
+/* CaseID */
+
+.commentary .bibl {
+	font-style: italic;
+}
 
 .source_date, .source_note {
 	margin-left: .1em;
 	font-size: .8em;
 	color: #888;
-
 }
 
 .source_date {
@@ -358,21 +364,15 @@ div#switch_box {
 	border: none;
 }
 
-
-
-
-
-
 .p {
 	display: block;
 }
 
-
 /* Jump Menu */
 
 .jump_menu {
-	/*padding-top: .5em;*/
 	
+
 }
 
 .cases .jump_menu {
@@ -385,11 +385,11 @@ div#switch_box {
 	display: inline-block;
 	border-radius: 4px;
 	padding: .1em .3em;
-	background-color:#fff;
+	background-color: #fff;
 }
 
 .jump_menu h4 {
-    display:inline;
+	display: inline;
 }
 
 /* Added padding to the bottom to make anchors work better, nut not on small screens */
@@ -397,93 +397,93 @@ div#switch_box {
 @media (min-width: 768px) {
 
 body {
-	padding:  0 0 400px 0;
+	padding: 0 0 400px 0;
 }
 
 }
-
-
 
 /* ==|== family tree ======================================================== */
- 
- ul.tree, ul.tree ul {
-     list-style-type: none;
-     background: url(vline.jpg) repeat-y;
-     margin: 0;
-     padding: 0;
-   }
-   
-   ul.tree ul {
-     margin-left: 30px;
-   }
-   
-   ul.tree a {
-     color: #396a78;
-     /*text-decoration:underline;*/
-   }
-   
-    ul.tree a:hover {
+
+ul.tree, ul.tree ul {
+	list-style-type: none;
+	background: url(vline.jpg) repeat-y;
+	margin: 0;
+	padding: 0;
+}
+
+ul.tree ul {
+	margin-left: 30px;
+}
+
+ul.tree a {
+	color: #396a78;
+/*text-de
+
+coration:underline;*/
+}
+
+ul.tree a:hover {
 	color: #ac0000;
-    }
-   
-   ul.tree ul ul {
-     margin-left: 50px;
-   }
-   
-   ul.tree ul ul ul {
-     margin-left: 70px;
-   }
+}
 
-   ul.tree li {
-     margin: 0;
-     padding: 0 12px;
-     line-height: 25px;
-     background: url(node.jpg) no-repeat;
-     color: #000;
-     font-weight: normal;
-   }
+ul.tree ul ul {
+	margin-left: 50px;
+}
 
-   ul.tree li:last-child {
-     background: #fff url(lastnode.jpg) no-repeat;
-   }
+ul.tree ul ul ul {
+	margin-left: 70px;
+}
+
+ul.tree li {
+	margin: 0;
+	padding: 0 12px;
+	line-height: 25px;
+	background: url(node.jpg) no-repeat;
+	color: #000;
+	font-weight: normal;
+}
+
+ul.tree li:last-child {
+	background: #fff url(lastnode.jpg) no-repeat;
+}
 
 /*  .gen {
     color: #000;
     font-style:italic;
     font-size: .9em;
-    }*/ 
+    }*/
 
-    a.gen, a.gen:visited, a.gen:active {
-    color: #000;
-    }
+a.gen, a.gen:visited, a.gen:active {
+	color: #000;
+}
 
-    .gen {
-    color: #000;
-    }
+.gen {
+	color: #000;
+}
 
-    a.cas, a.cas:visited, a.cas:active {
+a.cas, a.cas:visited, a.cas:active {
+
+
 /*    color: #780000;*/
     color: #66713e;
-    }
+}
 
-    .cas {
-    /*color: #780000;*/
+.cas {
+	/*c
+
+olor: #780000;*/
     color: #66713e;
-    }
-
-
-
+}
 
 /* ==|== Expand Text ======================================================== */
-.hidden { 
+
+.hidden {
 	display: none;
-	}
+}
 
-.unhidden { 
-	display: block; 
-	}	
-
-
+.unhidden {
+	display: block;
+}
 
 /* Metadata box */
 
@@ -505,28 +505,24 @@ body {
 .metadata .meta_data ul li a,
 .metadata .meta_data ul li .a {
 	display: inline-block;
-	/*margin-top: .5em;*/
+	
+
+/*margin-top: .5em;*/
 	border: 1px solid #ddd;
 	display: inline-block;
 	border-radius: 4px;
 	padding: .1em .3em;
-	background-color:#fff;
-	
-	
+	background-color: #fff;
 }
-
 
 a.selected {
 	background-color: #6b96a5;
 	color: #fff;
-	
 }
-
 
 .visualize_link {
 	padding: 8em 0 0em 0;
 	display: block;
-	
 	background: url(visualization_illustration.png) no-repeat center center;
 	background-size: 80%;
 	border: 1px solid #ddd;
@@ -542,10 +538,7 @@ a.selected {
 .visualize_link .btn-default:hover {
 	border: none;
 	color: #911002;
-
 }
-
-
 
 .case {
 	overflow: auto;
@@ -554,35 +547,179 @@ a.selected {
 /* Search Results Facet Styling */
 
 .no-facet-results {
-  display: none !important;
+	display: none !important;
 }
 
 /* Fake code boxes for _data.html.erb */
 
 .code_block {
-  background:#CFCFCF;
-  font-family:monospace;
+	background: #CFCFCF;
+	font-family: monospace;
 }
 
 .syllabus {
-    font-size: 75%;
+	font-size: 75%;
 }
 
 del {
-color: #49502F;
-color: #aaa;
+	color: #49502F;
+	color: #aaa;
 }
 
 .gap {
-color: #60693e;
-color: #aaa;
+	color: #60693e;
+	color: #aaa;
 }
 
 .unclear {
-color: #49502F;
-color: #aaa;
+	color: #49502F;
+	color: #aaa;
 }
 
 .gap.sampling {
-    display:none;
+	display: none;
 }
+
+/* Possibly Temporary */
+
+.container {
+	box-shadow: 0 0 0
+}
+
+/* =================================
+Home 
+===============================*/
+
+
+/* Rules for all callouts */
+
+.home_callout {
+	padding: 1em;
+	color: #000;
+	margin: 0px 0px 0px -15px;
+	font-family: "Oranienbaum";
+	text-align: center;
+}
+
+.home_callout p {
+	margin-top: 1em;
+	font-weight: bold;
+	text-shadow: 1px 1px 6px #fff;
+}
+
+/* Top Callout */
+
+.home_description {
+	background: #eee0c4 url(./bg_paper_lighter.jpg) repeat fixed right center;
+	border: solid 1px #aaa;
+	border-right: none;
+	border-left: none;
+}
+
+.home_description .container {
+	background: url(./map_big_png8.png) no-repeat right center;
+	height: 100%;
+	background-size: 100% auto;
+}
+
+.home_description .home_callout {
+	background-color: RGBA(255,255,255,.5);
+	margin-right: -15px;
+}
+
+/* Bottom Callout */
+
+.home_visualizations {
+	background-color: RGBA(0,0,0,.1);
+	border: solid 1px #aaa;
+	border-right: none;
+	border-left: none;
+}
+
+.home_visualizations .container {
+	background: url(./network_rollover_2.png) 0 bottom;
+}
+
+.home_visualizations:hover .container {
+	background-color: transparent;
+	background: url(./network_rollover_1.png) 0 bottom;
+}
+
+.home_visualizations  .home_callout p {
+	background-color: RGBA(255,255,255,.8);
+	font-size: 1.1em;
+	line-height: 1.3em;
+	padding: .5em;
+	margin: 0 -15px 0 0;
+}
+
+/* Other Page Content */
+
+.home_sections .home_info p {
+	font-size: .9em;
+}
+
+a .home_section {
+	color: #000;
+}
+
+@media (min-width: 992px) {
+
+/* Rules for all callouts */
+
+.home_callout {
+	line-height: 2em;
+}
+
+/* Top Callout */
+
+.home_description {
+	height: 440px;
+}
+
+.home_description .container {
+	background-size: auto 100%;
+}
+
+.home_description .home_callout {
+	float: left;
+	width: 45%;
+	font-size: 1.2em;
+	background-color: transparent;
+}
+
+/* Bottom Callout */
+
+.home_visualizations .container {
+	height: 200px;
+}
+
+.home_visualizations  .home_callout {
+	float: right;
+	width: 55%;
+}
+
+/* Other Page Content */
+
+.home_section {
+	width: 50%;
+	float: left;
+	margin-bottom: 1em;
+}
+
+.home_sections .home_info {
+	background-color: RGBA(255,255,255,.8);
+	padding: .01em .6em .6em .6em;
+	margin: .5em;
+}
+
+}
+
+ @media (min-width: 1200px) {
+	.home_description .home_callout {
+	float: left;
+	width: 45%;
+	font-size: 1.4em;
+	background-color: transparent;
+}
+	}
