@@ -1,11 +1,11 @@
-class KinshipController < ApplicationController
+class FamilyController < ApplicationController
   def index
-    @page_class = "kinship"
+    @page_class = "family"
   end
 
 
   def sub
-    @page_class = "kinship"
+    @page_class = "family"
     # in the URL there will be an ID
     # either a number or a string
     # and that will determine which template to
