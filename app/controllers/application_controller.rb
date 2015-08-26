@@ -16,8 +16,10 @@ class ApplicationController < ActionController::Base
     })
     $solr.set_default_facet_fields({
       :fq => ['recordType_s:document'],
-      :facet => true,
-      :rows => 0
+      :facet => "true",
+      :rows => 0,
+      "facet.mincount" => "1",
+      "facet.limit" => "-1"
     })
   end
 

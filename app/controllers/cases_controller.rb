@@ -2,9 +2,21 @@ class CasesController < ApplicationController
   def index
     @page_class = "cases"
 
-    # TODO the rsolr gem reallllllly shouldn't need facet => true, still not sure why that is happening
-    doc_facets = $solr.get_facets({:q => "recordType_s:document", :facet => "true", "facet.sort" => "index"}, ["term_ss", "subCategory", "places"])
-    case_facets = $solr.get_facets({:q => "recordType_s:caseid", :facet => "true", "facet.sort" => "index"}, ["jurisdiction_ss", "outcome_ss"])
+    # TODO facet.mincount and facet.limit shouldn't need to be set because they are
+    # in the defaults so there must be something wrong with my gem
+    doc_facets = $solr.get_facets({
+      :q => "recordType_s:document", 
+      # :facet => "true", 
+      "facet.sort" => "index",
+      "facet.mincount" => "1",
+      "facet.limit" => "-1"
+      }, ["term_ss", "subCategory", "places"])
+    case_facets = $solr.get_facets({
+      :q => "recordType_s:caseid", 
+      # :facet => "true", 
+      "facet.sort" => "index",
+      "facet.mincount" => "1",
+      "facet.limit" => "-1"}, ["jurisdiction_ss", "outcome_ss"])
     @term_facet = dropdownify_facets(doc_facets['term_ss'], true)
     @subCategory_facet = dropdownify_facets(doc_facets['subCategory'])
     @jurisdiction_facet = dropdownify_facets(case_facets['jurisdiction_ss'])
