@@ -1,8 +1,8 @@
 ## Create a Story or Family Page
 
-Let's add a new story.  The procedure should be very similar for kinship and about pages.
+Let's add a new story.  The procedure should be very similar for family and about pages.
 
-The stories are located in `app/views/stories`.  In `app/views` there are other directories like about and kinship.  If you wish to add a page to something like `app/views/static` you will need to ask a programmer / sysadmin, as those pieces were not set up in such a way to allow easy adding of new pages.
+The stories are located in `app/views/stories`.  In `app/views` there are other directories like about and family.  If you wish to add a page to something like `app/views/static` you will need to ask a programmer / sysadmin, as those pieces were not set up in such a way to allow easy adding of new pages.
 
 `app/views/stories` should look something like this:
 

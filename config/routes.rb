@@ -42,9 +42,9 @@ Rails.application.routes.draw do
   get 'people/:id', to: 'people#show', :constraints => { :id => with_period_ext}
   get 'people/:id', to: 'people#show', as: :person, :constraints => { :id => with_period }
 
-  # kinship
-  get 'kinship', to: 'kinship#index', as: :kinship
-  get 'kinship/:name', to: 'kinship#sub', as: :kinshipSub, :constraints => { :name => with_period }
+  # family
+  get 'family', to: 'family#index', as: :family
+  get 'family/:name', to: 'family#sub', as: :familySub, :constraints => { :name => with_period }
 
   # stories
   get 'stories', to: 'stories#index', as: :stories
