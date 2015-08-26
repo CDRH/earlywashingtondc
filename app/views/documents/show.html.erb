@@ -7,8 +7,6 @@
 
   <h2><%= @doc["title"] %></h2>
   
-
-  
   <div class="well well-sm bibliography metadata" id="topBibl">
 <!-- 	  <div class="panel-body"> -->
 
@@ -79,7 +77,8 @@
 </div><!--/row-->
 <% end %>
 
-<% if @doc["Places"] %>
+Places start
+<% if @doc["places"] %>
 <div class="row">
   <div class="col-md-2 meta_label">Places:</div><!--/column-->
   <div class="col-md-10 meta_data"><%= metadata_list("Places", @doc["places"], "places") %></div><!--/column-->
