@@ -150,17 +150,19 @@ div#switch_box {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	vertical-align: middle;
+	vertical-align: top;
 	line-height: 1em;
 }
 
 .letter_pagination li {
 	display: inline-block;
+
 }
 
 .letter_pagination li a {
 	display: inline-block;
-	vertical-align: top;
+	/*vertical-align: top;*/
+	float:left;
 	height: 2.5em;
 	padding: .2em .2em .2em .2em;
 	width: 2.05em;
