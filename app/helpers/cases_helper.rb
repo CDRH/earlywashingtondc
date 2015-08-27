@@ -2,7 +2,7 @@ module CasesHelper
 
   def find_unique_strings(solr_array)
     unique = find_unique(solr_array)
-    return unique.join(", ")
+    return unique.join("<br/>").html_safe
   end
 
   def find_unique(array)
