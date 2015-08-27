@@ -28,10 +28,7 @@ Sitewide/basic HTML
 	border-bottom: solid 1px #a51400;
 }
 
-a.selected {
-	background-color: #6b96a5;
-	color: #fff;
-}
+
 
 /* Tables */
 
@@ -153,7 +150,7 @@ div#switch_box {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	vertical-align: top;
+	vertical-align: middle;
 	line-height: 1em;
 }
 
@@ -389,6 +386,8 @@ Header, Navbar, Footer
 
 }
 
+
+
 @media (min-width: 1200px) {
 
 .oscys_mast {
@@ -541,6 +540,8 @@ Specific Pages
 
 /* Jump Menu */
 
+
+
 .cases .jump_menu {
 	margin-top: .5em;
 }
@@ -558,7 +559,10 @@ Specific Pages
 	display: inline;
 }
 
-
+.jump_menu a.selected {
+	background-color: #6b96a5;
+	color: #fff;
+}
 
 /* Stories */
 
