@@ -469,7 +469,9 @@ Specific Pages
 /* Metadata box */
 
 .meta_label {
-	font-weight: bold;
+	/*font-weight: bold;*/
+	font-size:.9em;
+	line-height:1.1em;
 }
 
 .meta_data ul {
