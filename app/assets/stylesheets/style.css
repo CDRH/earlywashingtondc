@@ -603,6 +603,11 @@ figcaption {
 	max-width: 400px;
 }
 
+.byline {
+	font-family: "Oranienbaum", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.3em;
+}
+
 @media (min-width: 992px) { 
 	.figure_center figcaption {
 	width: 75%;
