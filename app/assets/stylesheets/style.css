@@ -511,6 +511,7 @@ Specific Pages
 
 .hr {
 	border: 3px solid #ebebeb;
+	clear: both;
 }
 
 /* Cases */
