@@ -1,165 +1,32 @@
-/* ==|== primary styles =====================================================
-   Author: Karin Dalziel, Kaci Nash
-   ========================================================================== */
-/* CSS that used to be int he bootstrap file */
+/* CSS By Karin Dalziel and Kaci Nash */
 
-.header {
-  margin-bottom: 0.5em; }
+/* ==================================
+Sitewide/basic HTML
+=====================================*/
 
-.header .col-md-4 {
-  text-align: right; }
-
-.header .col-md-8 {
-  /*text-align: left;*/ }
-
-.header img {
-  height: 200px; }
-
-.header .header_title {
-  margin-top: 1em;
-  overflow: auto; }
-
-/* Override link colors for header */
-.header h1 a,
-.header h2 a {
-  color: #424242; }
-
-.header h1 a:hover,
-.header h1 a:hover {
-  color: #6c97a8;
-  text-decoration: none !important; }
-
-.header h2 a:hover,
-.header h2 a:hover {
-  text-decoration: none !important; }
-
-/* Headers */
-/* Recreation of image graphic in CSS */
-.header h1 {
-  text-transform: uppercase;
-  font-size: 5em;
-  margin-top: .2em; }
-
-.header h2 {
-  text-transform: uppercase;
-  font-family: "Dosis";
-  font-weight: 200;
-  font-size: 1.15em;
-  margin-left: .3em;
-  letter-spacing: .29em;
-  margin-top: -.8em;
-  padding-bottom: .9em; }
-
-@media (max-width: 1200px) {
-  .header {
-    font-size: .9em; } }
-@media (max-width: 992px) {
-  .header .col-md-4, .header .col-md-8 {
-    text-align: center; } }
-.header h2 {
-  margin-left: 0em; }
-
-@media (max-width: 700px) {
-  .header img {
-    height: 150px; }
-
-  .header {
-    font-size: .5em; }
-
-  .header h2 {
-    font-size: 2em; } }
-/* Navbar */
-.navbar {
-  margin-top: -1px;
-  margin-bottom: -1px;
-  font-family: "Oranienbaum", Georgia, "Times New Roman", Times, serif;
-  font-size: 1.2em; }
-
-.navbar-text {
-  margin-top: 4px;
-  margin-bottom: 7.5px; }
-
-.navbar a {
-  color: #3e6979; }
-
-.navbar a:hover {
-  color: #fff;
-  background-color: #a51400 !important; }
-
-/* Page Rules */
 #wrapper {
-  padding-top: .3em; }
+	padding-top: .3em;
+}
 
-.header .container,
 .container {
-  background-color: #fff;
-  border: solid 0px #aaa;
-  border-top: none;
-  border-bottom: none;
-  -moz-box-shadow: 0px 0px 10px #888;
-  -webkit-box-shadow: 0px 0px 10px #888;
-  box-shadow: 0px 0px 10px #888; }
+	background-color: #fff;
+	/*box-shadow: 0 9px 0px 0px #fff, 
+  	0 -9px 0px 0px #fff, 
+  	0px 0 15px -4px #888, 
+  	-0px 0 15px -4px #888;*/
+  	
+	/* This box shadow is an attempt to have a shadow and work with multiple containers http://stackoverflow.com/questions/11997032/how-to-get-box-shadow-on-left-right-sides-only */
+}
 
-.main_content {
-  margin-top: 1.5em;
-  margin-bottom: 2em; }
+/* Links */
 
 .main_content a {
-  border-bottom: solid 1px #5A8597; }
+	border-bottom: solid 1px #5A8597;
+}
 
 .main_content a:hover {
-  border-bottom: solid 1px #a51400; }
-
-
-/* Footer */
-.footer {
-  background-color: #484949;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  padding: 1.5em 15px;
-  color: #fff;
-  margin: 0em -15px 0 -15px;
-  text-align: right; }
-
-.footer a {
-  color: #fff;
-  text-decoration: underline; }
-
-.footerinfo {
-  font-size: .7em;
-  font-weight: normal;
-  color: #fff; }
-
-.footerinfo a {
-  color: #fff; }
-
-.footerinfo a:hover {
-  color: #fff;
-  text-decoration: none; }
-
-/* About */
-.about_nav {
-  margin: 1em;
-  padding: 0; }
-
-.about_nav li {
-  list-style: none;
-  display: inline; }
-
-.about_nav li a {
-  display: inline-block;
-  padding: 1em 1.5em;
-  background-color: #f4f4f4;
-  margin: .4em;
-  width: 48%;
-  text-align: center;
-  border: solid 1px; }
-
-.about_nav li a:hover {
-  background-color: #f7f7f7;
-  border: solid 1px; }
-
-
+	border-bottom: solid 1px #a51400;
+}
 
 
 
@@ -173,15 +40,11 @@ table {
 
 table td {
 	border: 1;
-	
-
-/*border-top: solid 1px #aaa;*/
-	
-
-/*border-bottom: solid 1px #aaa;*/
 	padding: 5px 5px;
 	padding-right: 25px;
 }
+
+/* Other HTML */
 
 .hr {
 	border: none;
@@ -191,167 +54,39 @@ table td {
 	margin: 10px 0;
 }
 
-.right {
-	float: right;
-	margin: 0 0 10px 10px;
-	clear: right;
+.hidden {
+	display: none;
 }
 
-/* Page images and figures */
-
-.pageimage {
-	float: right;
-	clear: right;
-	margin: -4px 0px 10px 10px;
-	text-align: left;
-	
-
-/*width: 125px;*/
-	
-
-/*background: #aaa;*/
-	border: 3px solid #ccc;
-}
-
-.pageimage img {
-	border: 1px solid #ccc;
-
-
-/* This doesn't do anything... */
-}
-
-/* Not using figures right now */
-
-/*.figure {
-	float: left;
-	clear: left;
-	margin:  0 10px 10px -135px;
-	z-index: 20;
-	width: 125px;
-	text-align: right;
-}*/
-
-.page_hr {
-	clear: right;
-	margin: 0 -10px 0 0;
-	padding: 0;
-}
-
-.fw h6 {
-	float: left;
-	clear: left;
-	margin: 0 10px 10px -135px;
-	z-index: 20;
-	width: 125px;
-	text-align: right;
-}
-
-.figure a {
-	text-decoration: none;
-
-
-/* Remove underlines from figure links */
-}
-
-img.display {
-	border: 1px solid #aaa;
-}
-
-.figure_holder {
-	display: block;
-	float: none;
-	background: #f2f4e6;
-	padding: 5px;
-	margin-bottom: 10px;
-	overflow: auto;
-}
-
-.figure {
-	display: block;
-	float: left;
-	overflow: auto;
-	font-size: .9em;
-	padding: 5px;
-	width: 160px;
-}
-
-.figure img.display, .figure_description {
-	float: left;
+.unhidden {
 	display: block;
 }
 
-.figure_description {
-	width: 125px;
-	display: block;
-	font-size: .9em;
+/* Search Results Facet Styling */
+
+.no-facet-results {
+	display: none !important;
 }
 
-.pageimage a {
+/* Added padding to the bottom to make anchors work better, nut not on small screens */
+
+@media (min-width: 768px) {
+	body {
+		padding: 0 0 400px 0;
+	}
+}
+
+/* Footnotes */
+
+.foot {
 	font-size: .8em;
+	vertical-align: super;
+	line-height: 1em;
 }
 
-/* Petition display */
-
-.dateline, .closer, .editorial {
-	
-}
-
-.ab {
-	margin: 25px 0;
-}
-
-.bibliography {
-	line-height: 1.2em;
-}
-
-.bibliography p {
-	clear: both;
-	padding: 0;
-	margin: 5px;
-}
-
-.bibliography p.metadatakeywords strong {
-	padding: 3px 0px;
-	margin: 2px 0;
-	float: left;
-}
-
-/* Called later */
-
-/*del {
-    color: #49502F;     
-}
-
-gap {
-    color: #60693e;
-    /\*font-style:italic;*\/
-}
-
-
-unclear {
-	/\*color: #49502F;*\/
-}*/
-
-.callout {
-	border: 1px solid #b2b0b7;
-	background-color: #ececec;
-	margin: .5em 0 .5em 0;
-	padding: 5px 15px;
-	clear: both;
-}
-
-.callout .selected {
-	border: 1px solid #d9d8db;
-	background-color: #ffffff;
+.foot a {
 	text-decoration: none;
-}
-
-.morelink a {
-	font-size: .8em;
-}
-
-.simple-list {
-	padding: 0;
+	border: none;
 }
 
 /* Tooltips and switch boxes */
@@ -398,60 +133,18 @@ div#regularized_text_switch_box a {
 	text-decoration: none;
 }
 
-.persName {
-	
-}
-
-.subjectLink {
-	border: 0px solid #b2b0b7;
-	padding: 2px;
-	margin: 2px;
-	background-color: #f2f2f2;
-}
-
-.singlespace {
-	
-}
-
-a.sic, a.orig {
-	text-decoration: none !important;
-	border-bottom: 1px dotted #939393;
-}
-
 div#switch_box {
 	font-style: italic;
-
-
-/* color: #b33f2d; */
 	border: 1px #aaa solid;
 	padding: 10px;
-
-
-/* margin: 5px -11px 5px -11px; */
 	margin: 0 0 10px 0;
 	background-color: #ececec;
 	display: block;
 	text-decoration: none;
 }
 
-/* Pagination */
 
-.jump_pagination {
-	
-
-/*clear: both;*/
-	border: solid #aaa 1px;
-	display: block;
-	padding: .2em;
-	margin: .2em 0;
-}
-
-.jump_pagination form {
-	display: inline-block;
-	margin: 0 .5em;
-}
-
-/*People*/
+/* Letter Pagination */
 
 .letter_pagination {
 	margin: 0;
@@ -463,11 +156,13 @@ div#switch_box {
 
 .letter_pagination li {
 	display: inline-block;
+
 }
 
 .letter_pagination li a {
 	display: inline-block;
-	vertical-align: top;
+	/*vertical-align: top;*/
+	float:left;
 	height: 2.5em;
 	padding: .2em .2em .2em .2em;
 	width: 2.05em;
@@ -501,11 +196,58 @@ div#switch_box {
 	line-height: 1.2em;
 }
 
-.cases select {
-	width: 100%
+
+/* ==================================
+TEI styles
+=====================================*/
+
+.dateline, .closer, .editorial {
+	
 }
 
-/* CaseID */
+.ab {
+	margin: 25px 0;
+}
+
+.bibliography {
+	line-height: 1.2em;
+}
+
+.bibliography p {
+	clear: both;
+	padding: 0;
+	margin: 5px;
+}
+
+.bibliography p.metadatakeywords strong {
+	padding: 3px 0px;
+	margin: 2px 0;
+	float: left;
+}
+
+.simple-list {
+	padding: 0;
+}
+
+.persName {
+	
+}
+
+.subjectLink {
+	border: 0px solid #b2b0b7;
+	padding: 2px;
+	margin: 2px;
+	background-color: #f2f2f2;
+}
+
+.singlespace {
+	
+}
+
+a.sic, a.orig {
+	text-decoration: none !important;
+	border-bottom: 1px dotted #939393;
+}
 
 .commentary .bibl {
 	font-style: italic;
@@ -529,12 +271,278 @@ div#switch_box {
 	display: block;
 }
 
-/* Jump Menu */
+.syllabus {
+	font-size: 75%;
+}
 
-.jump_menu {
+del {
+	color: #49502F;
+	color: #aaa;
+}
+
+.gap {
+	color: #60693e;
+	color: #aaa;
+}
+
+.unclear {
+	color: #49502F;
+	color: #aaa;
+}
+
+.gap.sampling {
+	display: none;
+}
+
+
+
+
+/* ==================================
+Header, Navbar, Footer 
+================================== */
+
+/* Header */
+
+.oscys_mast {
+	text-align: center;
+	overflow: auto;
+}
+
+.oscys_logo {
+}
+
+.oscys_logo img {
+	height: 200px;
+	width: 200px;
+}
+
+.oscys_title {
+	
+}
+
+.oscys_title h1 {
+	text-transform: uppercase;
+	font-size: 3em;
+	margin-top: .2em;
+}
+
+.oscys_title h2 {
+	text-transform: uppercase;
+	font-family: "Dosis";
+	font-weight: 200;
+	font-size: 1.15em;
+	margin-left: .3em;
+	letter-spacing: .29em;
+	margin-top: -.4em;
+	padding-bottom: .9em;
+}
+
+.oscys_title h1 a,
+.oscys_title h2 a {
+	text-decoration: none;
+	color: #424242;
+}
+
+.navbar {
+	margin-top: .5em;
+}
+
+@media (min-width: 700px) {
+
+.oscys_mast {
 	
 
 }
+
+}
+
+@media (min-width: 992px
+
+) {
+
+.oscys_mast {
+	text-align: left;
+	width: 80%;
+	display: block;
+	margin: auto;
+}
+
+.oscys_logo {
+	float: left;
+	margin-right: 15px;
+}
+
+.oscys_title {
+	margin-left: 215px;
+}
+
+.oscys_title h1 {
+	font-size: 3.85em;
+	margin-top: .8em;
+}
+
+.oscys_title h2 {
+	font-size: .91em;
+	margin-top: -.9em;
+}
+
+}
+
+
+
+@media (min-width: 1200px) {
+
+.oscys_mast {
+	width: 77%;
+}
+
+.oscys_logo {
+	float: left;
+	margin-right: 15px;
+	
+}
+
+.oscys_logo img {
+	height: 200px;
+	width: 200px;
+}
+
+.oscys_title h1 {
+	font-size: 4.7em;
+	margin-top: .4em;
+}
+
+.oscys_title h2 {
+	font-size: 1.1em;
+	padding-left: .3em;
+	display: block;
+	margin-top: -.9em;
+}
+
+}
+
+/* Navbar */
+
+.navbar {
+
+	font-family: "Oranienbaum", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.2em;
+}
+
+/* Footer */
+
+.footer {
+	background-color: #484949;
+	padding: 1.5em 15px;
+	margin: 2em -15px 0 -15px;
+	text-align: right;
+	color: #fff;
+}
+
+.footer a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.footerinfo {
+	font-size: .7em;
+	font-weight: normal;
+	color: #fff;
+}
+
+.footerinfo a {
+	color: #fff;
+}
+
+.footerinfo a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* ==================================
+Specific Pages 
+================================== */
+
+
+
+/* Documents */
+
+/* Metadata box */
+
+.meta_label {
+	/*font-weight: bold;*/
+	font-size:.9em;
+	line-height:1.1em;
+}
+
+.meta_data ul {
+	margin: 0 0 .6em 0;
+	padding: 0;
+	list-style: none;
+}
+
+.metadata .meta_data ul li {
+	display: inline-block;
+	margin: .2em .2em 0 0;
+}
+
+.metadata .meta_data ul li a,
+.metadata .meta_data ul li .a {
+	display: inline-block;
+	
+
+/*margin-top: .5em;*/
+	border: 1px solid #ddd;
+	display: inline-block;
+	border-radius: 4px;
+	padding: .1em .3em;
+	background-color: #fff;
+}
+
+
+/* Page images and figures */
+
+.pageimage {
+	float: right;
+	clear: right;
+	margin: -16px 0px 10px 10px;
+	text-align: left;
+	border: 5px solid #ebebeb;
+}
+
+.hr {
+	border: 3px solid #ebebeb;
+	clear: both;
+}
+
+/* Cases */
+
+.case {
+	overflow: auto;
+}
+
+/* Cases and People Jump Menus */
+
+.cases select,
+.people select {
+	width: 100%
+}
+
+.jump_pagination {
+	border: solid #aaa 1px;
+	display: block;
+	padding: .2em;
+	margin: .2em 0;
+}
+
+.jump_pagination form {
+	display: inline-block;
+	margin: 0 .5em;
+}
+
+/* Jump Menu */
+
+
 
 .cases .jump_menu {
 	margin-top: .5em;
@@ -553,17 +561,75 @@ div#switch_box {
 	display: inline;
 }
 
-/* Added padding to the bottom to make anchors work better, nut not on small screens */
-
-@media (min-width: 768px) {
-
-body {
-	padding: 0 0 400px 0;
+.jump_menu a.selected {
+	background-color: #6b96a5;
+	color: #fff;
 }
 
+/* Stories */
+
+figure {
+	background-color: #f5f5f5;
+	text-align: center;
+	padding: 8px;
 }
 
-/* ==|== family tree ======================================================== */
+figure img {
+	max-width: 100%;
+}
+
+.figure_right {
+	float: right;
+	margin: 0 0 15px 15px;
+}
+
+.figure_left {
+	float: left;
+	margin: 0 15px 15px 0;
+}
+
+figcaption {
+	margin: auto;
+	font-size: .8em;
+	margin-top: .5em;
+}
+
+.figure_small figcaption {
+	max-width: 200px;
+	
+}
+
+.figure_medium figcaption {
+	max-width: 400px;
+}
+
+.byline {
+	font-family: "Oranienbaum", Georgia, "Times New Roman", Times, serif;
+	font-size: 1.3em;
+}
+
+@media (min-width: 992px) { 
+	.figure_center figcaption {
+	width: 75%;
+}
+}
+
+.figure_center {
+	margin: .5em 0em;
+}
+
+.pullquote {
+	font-size: 1.4em;
+	font-family: "Oranienbaum", Georgia, "Times New Roman", Times, serif;
+	line-height: 1.3em;
+	border: 5px solid #eaeaea;
+	border-right: none;
+	border-left:none;
+	padding: .5em 0;
+	margin: .6em 1em;
+}
+
+/* family tree for stories */
 
 ul.tree, ul.tree ul {
 	list-style-type: none;
@@ -578,9 +644,6 @@ ul.tree ul {
 
 ul.tree a {
 	color: #396a78;
-/*text-de
-
-coration:underline;*/
 }
 
 ul.tree a:hover {
@@ -608,12 +671,6 @@ ul.tree li:last-child {
 	background: #fff url(lastnode.jpg) no-repeat;
 }
 
-/*  .gen {
-    color: #000;
-    font-style:italic;
-    font-size: .9em;
-    }*/
-
 a.gen, a.gen:visited, a.gen:active {
 	color: #000;
 }
@@ -623,63 +680,17 @@ a.gen, a.gen:visited, a.gen:active {
 }
 
 a.cas, a.cas:visited, a.cas:active {
-
-
-/*    color: #780000;*/
-    color: #66713e;
+	color: #66713e;
 }
 
 .cas {
-	/*c
-
-olor: #780000;*/
-    color: #66713e;
+	color: #66713e;
 }
 
-/* ==|== Expand Text ======================================================== */
 
-.hidden {
-	display: none;
-}
 
-.unhidden {
-	display: block;
-}
+/* People */
 
-/* Metadata box */
-
-.meta_label {
-	font-weight: bold;
-}
-
-.meta_data ul {
-	margin: 0 0 .6em 0;
-	padding: 0;
-	list-style: none;
-}
-
-.metadata .meta_data ul li {
-	display: inline-block;
-	margin: .2em .2em 0 0;
-}
-
-.metadata .meta_data ul li a,
-.metadata .meta_data ul li .a {
-	display: inline-block;
-	
-
-/*margin-top: .5em;*/
-	border: 1px solid #ddd;
-	display: inline-block;
-	border-radius: 4px;
-	padding: .1em .3em;
-	background-color: #fff;
-}
-
-a.selected {
-	background-color: #6b96a5;
-	color: #fff;
-}
 
 .visualize_link {
 	padding: 8em 0 0em 0;
@@ -701,15 +712,7 @@ a.selected {
 	color: #911002;
 }
 
-.case {
-	overflow: auto;
-}
-
-/* Search Results Facet Styling */
-
-.no-facet-results {
-	display: none !important;
-}
+/* About */
 
 /* Fake code boxes for _data.html.erb */
 
@@ -718,34 +721,7 @@ a.selected {
 	font-family: monospace;
 }
 
-.syllabus {
-	font-size: 75%;
-}
 
-del {
-	color: #49502F;
-	color: #aaa;
-}
-
-.gap {
-	color: #60693e;
-	color: #aaa;
-}
-
-.unclear {
-	color: #49502F;
-	color: #aaa;
-}
-
-.gap.sampling {
-	display: none;
-}
-
-/* Possibly Temporary */
-
-.container {
-	box-shadow: 0 0 0
-}
 
 /* =================================
 Home 
@@ -884,3 +860,4 @@ a .home_section {
 	background-color: transparent;
 }
 	}
+

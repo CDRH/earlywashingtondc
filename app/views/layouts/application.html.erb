@@ -27,20 +27,21 @@
   <div id="wrapper" class="container">
     <%# image_tag "o-say_logo_RGB.png", :class=> "logo" %>
     <div class="header">
-	
-	<div class="row">
-		<div class="col-md-4"><%= image_tag "oscys_logo.png" %></div>
-		<div class="col-md-8">
-			<div class="header_title">
+	    
+	    <div class="oscys_mast">
+			<div class="oscys_logo">
+				<%= image_tag "oscys_logo.png" %>  
+			</div>
+			<div class="oscys_title">
 				<h1><%= link_to "O Say Can You See", home_path %></h1>
 				<h2><%= link_to "Early Washington, D.C., Law & Family Project", home_path %></h2>
-				</div>
 			</div>
-		</div>
-	</div>
+		</div><!-- /oscys_mast -->
+	
+	
+    </div>
 
-
-    <div class="navbar">
+    <div class="navbar navbar-default">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="icon-bar"></span>
@@ -77,9 +78,9 @@
         <p>By William G. Thomas and distributed by <a href="http://cdrh.unl.edu/" target="new">Center for Digital Research in the Humanities</a> under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="new">Creative Commons License.</a><br>Pierre Charles L'Enfant. <i>Plan of the City of Washington</i>. Philadelphia: Thackara &amp; Vallance, 1794?. From <a href="http://www.loc.gov/item/88694120" target="new">Library of Congress, Map Collections</a>.</p>
       </div>
       <div class="icons">
-        <a href="http://www.unl.edu/" target="blank"><%= image_tag "logo_neh_white.gif" %></a> &nbsp;&nbsp;&nbsp; 
+        <a href="http://www.neh.gov/" target="blank"><%= image_tag "logo_neh_white.gif" %></a> &nbsp;&nbsp;&nbsp; 
         <a href="http://mith.umd.edu/" target="blank"><%= image_tag "logo_mith_white.png" %></a> &nbsp;&nbsp;&nbsp; 
-        <a href="http://www.neh.gov/" target="blank"><%= image_tag "logo_unl_white.gif" %></a>
+        <a href="http://www.unl.edu/" target="blank"><%= image_tag "logo_unl_white.gif" %></a>
       </div>
     </div>
   </div>
