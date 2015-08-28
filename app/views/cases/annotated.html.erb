@@ -2,14 +2,23 @@
 
 <p>Below is an index of the Petition for Freedom cases that have been annotated by project scholars, discussing details such as the individuals involved, the significance of the case, and important legal issues.</p>
 
+<div class="jump_menu">
+  <h4>Sort Results: </h4>
+  <% sort = params[:sort] ? params[:sort] : "title" %>
+  <%= link_to "Alphabetical", casesAnnotated_path(sort_results("title")), :class => selected_sort?("title", sort) %>
+  <%= link_to "Date", casesAnnotated_path(sort_results("date")), :class => selected_sort?("date", sort) %>
+</div>
+
 <%= render "partials/pagination" %>
 
 <h1><%= "#{@total_found} annotated cases" %></h1>
 
 <ul>
   <% @docs[:docs].each do |doc| %>
+    <% date = doc["dateDisplay"] ? "(#{doc['dateDisplay']})" : "" %>
+    <% label = "#{doc['title']} #{date}" %>
     <li>
-      <%= link_to "#{doc["title"]}", case_path(doc["id"]) %>
+      <%= link_to label, case_path(doc["id"]) %>
     </li>
   <% end %>
 </ul>

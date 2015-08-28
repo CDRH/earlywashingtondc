@@ -55,6 +55,15 @@ module ApplicationHelper
     return html
   end
 
+  def selected_sort?(field, sort_param)
+    return "selected" if sort_param == field
+  end
+
+  def sort_results(sort_field)
+    params[:sort] = sort_field
+    return params
+  end
+
   # paginator method
   def to_page(page)
     merged = params.merge({:page => page.to_s})
