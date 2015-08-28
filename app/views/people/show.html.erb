@@ -184,10 +184,10 @@
 	  
 	  
 <% if @rdfresults["results"]["bindings"].length > 0 %>
-  <div class="visualize_link" id="visualizations">
-	  <%= link_to "Visualize Relationships", network_vis_path(@person["id"]), class: "btn btn-default btn-lg btn-block", role: "button"  %>
+  
+	  <%= link_to "<div class='btn btn-default btn-lg btn-block' id='visualizations'>Visualize Relationships</div>".html_safe, network_vis_path(@person["id"]), class: "visualize_link", role: "button"  %>
 
-  </div>
+  
  <% end %>	  
 	  
 	  

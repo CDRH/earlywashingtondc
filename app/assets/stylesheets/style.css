@@ -382,7 +382,7 @@ Header, Navbar, Footer
 }
 
 .oscys_title h2 {
-	font-size: .91em;
+	font-size: 1.13em;
 	margin-top: -.9em;
 }
 
@@ -413,7 +413,7 @@ Header, Navbar, Footer
 }
 
 .oscys_title h2 {
-	font-size: 1.1em;
+	font-size: 1.36em;
 	padding-left: .3em;
 	display: block;
 	margin-top: -.9em;
@@ -776,22 +776,27 @@ Home
 /* Bottom Callout */
 
 .home_visualizations {
-	background-color: RGBA(0,0,0,.1);
-	border: solid 1px #aaa;
+	/*background-color: RGBA(0,0,0,.1);*/
+	
 	border-right: none;
 	border-left: none;
 }
 
 .home_visualizations .container {
+	background: url(./network_rollover_1.png) 0 bottom;
+
+	
+}
+
+/* Removed rollover on home page */
+/* .home_visualizations:hover .container {
+	background-color: transparent;
 	background: url(./network_rollover_2.png) 0 bottom;
 }
-
-.home_visualizations:hover .container {
-	background-color: transparent;
-	background: url(./network_rollover_1.png) 0 bottom;
-}
+*/
 
 .home_visualizations  .home_callout p {
+	
 	background-color: RGBA(255,255,255,.8);
 	font-size: 1.1em;
 	line-height: 1.3em;
@@ -857,6 +862,10 @@ a .home_section {
 	background-color: RGBA(255,255,255,.8);
 	padding: .01em .6em .6em .6em;
 	margin: .5em;
+}
+
+.home_section_two {
+	margin-top: -2em;
 }
 
 }
