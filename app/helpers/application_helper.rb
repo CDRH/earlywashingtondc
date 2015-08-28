@@ -207,7 +207,6 @@ module ApplicationHelper
         ["Attorney Against", "attorneyAgainst"],
         ["Attorney For", "attorneyFor"],
         ["Attorney With", "attorneyWith"],
-        ["Attorneyed Against", "attorneyedAgainst"],
         ["Business Relationship With", "businessRelationshipWith"],
         ["Child Of", "childOf"],
         ["Clerk Of", "clerkOf"],
@@ -241,7 +240,8 @@ module ApplicationHelper
         ["Next Friend Of", "nextFriendOf"],
         ["Notary For", "notaryFor"],
         ["Opposing Attorneys", "opposingAttorneys"],
-        ["Owner Of", "ownerOf"],
+        ["Oppositions Attorney", "oppositionsAttorney"],
+        ["Slaveholder Of", "slaveholderOf"],
         ["Parent Of", "parentOf"],
         ["Petitioner Against", "petitionerAgainst"],
         # ["Provenance", "provenance"],  # no examples
