@@ -55,6 +55,15 @@ module ApplicationHelper
     return html
   end
 
+  def selected_sort?(field, sort_param)
+    return "selected" if sort_param == field
+  end
+
+  def sort_results(sort_field)
+    params[:sort] = sort_field
+    return params
+  end
+
   # paginator method
   def to_page(page)
     merged = params.merge({:page => page.to_s})
@@ -198,7 +207,6 @@ module ApplicationHelper
         ["Attorney Against", "attorneyAgainst"],
         ["Attorney For", "attorneyFor"],
         ["Attorney With", "attorneyWith"],
-        ["Attorneyed Against", "attorneyedAgainst"],
         ["Business Relationship With", "businessRelationshipWith"],
         ["Child Of", "childOf"],
         ["Clerk Of", "clerkOf"],
@@ -232,7 +240,8 @@ module ApplicationHelper
         ["Next Friend Of", "nextFriendOf"],
         ["Notary For", "notaryFor"],
         ["Opposing Attorneys", "opposingAttorneys"],
-        ["Owner Of", "ownerOf"],
+        ["Oppositions Attorney", "oppositionsAttorney"],
+        ["Slaveholder Of", "slaveholderOf"],
         ["Parent Of", "parentOf"],
         ["Petitioner Against", "petitionerAgainst"],
         # ["Provenance", "provenance"],  # no examples

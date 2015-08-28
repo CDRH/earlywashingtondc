@@ -1,7 +1,8 @@
 class DocumentsController < ApplicationController
   def index
     @page_class = "cases"
-	  _index_finder()
+    options = params[:sort] ? { :sort => "#{params[:sort]} asc" } : {}
+	  _index_finder(options)
   end
 
   def dropdown

@@ -32,10 +32,6 @@ module DocumentsHelper
     end
   end
 
-  def selected_sort?(field, sort_param)
-    return "selected" if sort_param == field
-  end
-
   def facet_results(facet_field=nil)
     # add facet field if there should be one
     if facet_field.nil?
@@ -53,11 +49,6 @@ module DocumentsHelper
     else
       return label
     end
-  end
-
-  def sort_results(sort_field)
-    params[:sort] = sort_field
-    return params
   end
 
   def query_display

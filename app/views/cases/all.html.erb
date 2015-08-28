@@ -2,14 +2,26 @@
 
 <p>Below is an index of the Petition for Freedom cases tried before the Circuit Court for the District of Columbia between 1808 and 1859. At present, it is organized alphabetically by the forename of the petitioner; however, there will be other ways to sort through these records at a later date.</p>
 
+<%#  Taking out the sorting and dates below until cases actually have them
+<div class="jump_menu">
+  <h4>Sort Results: </h4>
+  <% sort = params[:sort] ? params[:sort] : "title" %>
+  <%# link_to "Alphabetical", casesAll_path(sort_results("title")), :class => selected_sort?("title", sort) %>
+  <%# link_to "Date", casesAll_path(sort_results("date")), :class => selected_sort?("date", sort) %>
+<%# </div> %>
+
 <%= render "partials/pagination" %>
 
 <h1><%= "#{@total_found} cases" %></h1>
 
+
 <ul>
   <% @docs[:docs].each do |doc| %>
+    <%# date = doc["dateDisplay"] ? "(#{doc['dateDisplay']})" : "" %>
+    <%# label = "#{doc['title']} #{date}" %>
+    <% label = "#{doc['title']}" %>
     <li>
-      <%= link_to "#{doc["title"]}", case_path(doc["id"]) %>
+      <%= link_to label, case_path(doc["id"]) %>
     </li>
   <% end %>
 </ul>

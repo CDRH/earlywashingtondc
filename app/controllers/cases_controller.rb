@@ -26,14 +26,18 @@ class CasesController < ApplicationController
   
   def all
     @page_class = "search_results"
-    _index_finder({:fqfield => "recordType_s", :fqtext => "caseid"})
+    sort = params[:sort] ? "#{params[:sort]} asc" : "title asc"
+    _index_finder({:fqfield => "recordType_s", :fqtext => "caseid", :sort => sort})
   end
   
   def annotated
     @page_class = "search_results"
+    sort = params[:sort] ? "#{params[:sort]} asc" : "title asc"
     _index_finder({
       :fqfield => "recordType_s", :fqtext => "caseid", 
-      :qfield => "caseidHasNarrative_s", :qtext => "true"})
+      :qfield => "caseidHasNarrative_s", :qtext => "true",
+      :sort => sort
+    })
   end
 
   def show

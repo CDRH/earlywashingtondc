@@ -5,6 +5,13 @@
   <%= render "partials/search_bar" %>
 </a>
 
+<div class="jump_menu">
+  <h4>Sort Results: </h4>
+  <% sort = params[:sort] ? params[:sort] : "title" %>
+  <%= link_to "Alphabetical", documents_path(sort_results("title")), :class => selected_sort?("title", sort) %>
+  <%= link_to "Date", documents_path(sort_results("date")), :class => selected_sort?("date", sort) %>
+</div>
+
 <%= render "partials/pagination" %>
 <ul>
   <% @docs[:docs].each do |doc| %>
