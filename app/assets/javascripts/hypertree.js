@@ -87,13 +87,20 @@ var makeLabels = function(node) {
   var selectedId = formatId(node.id);
   html += "<h4><a href='" + personUrl + selectedId + "'>" + node.name + "</a></h4>";
   children = node.getSubnodes();
-  node.getSubnodes().forEach(function(child, indx) {
-    // appears that infovis automatically includes the node itself
-    // but we want to avoid doing that
-    if (indx != 0) {
+  // jit gets the subnodes but if they appear as more than one person's children then it may pick wrong one
+  // example: Henry Hiort is attorney of Shorter, Kitty, and Shorter, Ann is parent of Shorter, Kitty
+  // but originally jit was displaying Ann Shorter as the attorney of Kitty Shorter  :(
+  // therefore grab the parent id and find the child with the json rather than with jit methods
+  var parent_result = JSON.search(json, "//*[id='"+node.id+"']", true); // only return first result
+  var parent = parent_result[0];
+
+  if (parent && parent.children && parent.children.length > 0) {
+    parent.children.forEach(function(child) {
       html += "<p>"+prettify(child.data.relation)+" "+child.name+"</p>";
-    }
-  });
+    });
+  }
+
+
   return html;
 };
 
@@ -199,12 +206,19 @@ var initHypertree = function() {
         var color;
         var lineWidth = 1;
         if (fromLevel+1 == toLevel) {
-          var relation = adj.nodeTo.data.relationType;
+          relation = adj.nodeTo.data.relationType;
         } else if (fromLevel-1 == toLevel) {
-          var relation = adj.nodeFrom.data.relationType;
+          // this is selecting the first instance of the id it finds in the json
+          // and so we have to spell out the relationship more exactly
+          // it's a huge pain
+          var xpath = "//*[id='"+adj.nodeTo.id+"']//*[id='"+adj.nodeFrom.id+"']";
+          var parent = JSON.search(json, xpath, true); // return only first result
+          if (parent && parent[0] && parent[0]["data"]) {
+            relation = parent[0]["data"]["relationType"];
+          }
         }
         if (graphType) {
-          // everything default color except that relationship
+          // everything default color except selected relationship
           if (relation == graphType) {
             color = edgeColors[relation];
             lineWidth = 2;
