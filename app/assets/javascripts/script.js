@@ -6,7 +6,8 @@ $(document).ready(function(){
     theme: 'pp_default',
     show_title: true,
     deeplinking: false,
-    overlay_gallery: false
+    overlay_gallery: false,
+    slideshow: false
     });
   });
   

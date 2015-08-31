@@ -10,7 +10,6 @@ module DocumentsHelper
       label = "#{labelkey.titleize} <span class='badge'>#{value}</span>".html_safe
       link = "#{link_to(label, search_path(facet_results(key)), :class => facet_classes(key, value, perm_facet))}"
       links << link
-      puts "this is what the link is #{link.html_safe}"
     end
     return links.join(" ").html_safe
   end
