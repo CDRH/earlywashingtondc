@@ -1,52 +1,103 @@
 
-
-
 <h2>Davis Family Network</h2>
 
-<p>Two generations of the Davis family petitioned the Court for their freedom from various masters, arguing that as descendants of a free woman, they should be entitled to their liberty.</p> 
+<p>Multiple generations of the Davis family petitioned the Court for their freedom from various masters, arguing that as descendants of a free, English woman, they should be entitled to their liberty. Whether or not they were successful or not depended upon if their case was decided before the 1810 decision in <em><%= link_to "Queen v. Hepburn", case_path("oscys.caseid.0011") %></em> which disallowed hearsay evidence.</p> 
 
 <p>
 <ul class="tree">
-<li><%= link_to "Mary Davis", person_path("per.000028") %> - a free white woman</li>
-<ul>
-    <li><%= link_to "Rosamond Bentley", person_path("per.000159") %> - freed by petition</li>
-    <li><%= link_to "Eleanor Bentley", person_path("per.000000") %> - likely freed by petition</li>
-    <li><%= link_to "Mary Bentley", person_path("per.000169") %> - likely freed by petition</li>
-    <li><%= link_to "Elizabeth Bentley", person_path("per.000034") %> - freed by petition; could also be the daughter of Rosamond or her sisters</li>
-        <ul>
-        <li><%= link_to "Daniel Bentley", person_path("per.000032") %></li>
-        <li><%= link_to "William Bentley", person_path("per.000042") %></li>
-        <li><%= link_to "Susanna Bentley", person_path("per.000041") %></li>
-        <li><%= link_to "Dennis Bentley", person_path("per.000033") %></li>
-        <li><%= link_to "Johnson Bentley", person_path("per.000036") %></li>
-        <li><%= link_to "Lee Bentley", person_path("per.000037") %></li>
-        <li><%= link_to "Nelson Bentley", person_path("per.000039") %></li>
-        <li><%= link_to "Nancy Bentley", person_path("per.000038") %></li>
-        <li><%= link_to "Rebecca Bentley", person_path("per.000040") %></li>
-        <li><%= link_to "Anne Bentley", person_path("per.000031") %></li>
-        <li><%= link_to "Eleanor Bentley", person_path("per.000034") %></li>
-        </ul>
-    <li>Unknown Mother</li>
-        <ul>
-        <li><%= link_to "Letitia Davis", person_path("per.000150") %> - did not win freedom petition</li>
-            <ul>
-            <li><%= link_to "Rachel Davis", person_path("per.000151") %></li>
-                <ul>
-                <li><%= link_to "Henry Davis", person_path("per.0000152") %></li>
-                </ul>
-            </ul>
-        <li><%= link_to "Ann Davis", person_path("per.000161") %> - petition outcome unknown</li>
-            <ul>
+<li><%= link_to "Mary Davis", person_path("per.000028") %> - b. in England; immigrated with Lord Baltimore; free white woman<span class="foot"><a href="#footn1" id="bodyn1">1</a></span></li>
+    <ul><!-- Mary children -->
+        <li>Rose Davis</li>
+            <ul><!-- Rose children -->
+               <li>Unknown Mother</li>
+                    <ul><!-- UKN children -->
+                        <li><%= link_to "Rosamond Bentley", person_path("per.000159") %> - freed by petition; was a witness for the petitions of Susan, Ann, & Letitia Davis <em>[see below]</em></li>
+                        <li><%= link_to "Eleanor Bentley", person_path("per.001181") %> - likely freed by petition<span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
+                        <li><%= link_to "Mary Bentley", person_path("per.000169") %> - likely freed by petition</li>
+                    </ul><!-- end UKN -->
+            </ul><!-- end Rose -->
+        <li>Unknown Mother, possibly Rose Davis</li>
+            <ul><!-- UKN children 1-->
+                <li>Unknown Mother</li>
+                    <ul><!-- UKN children 2-->  
+                        <li>Unknown Mother</li>
+                            <ul><!-- UKN children 3-->
+                                <li><%= link_to "Elizabeth Bentley", person_path("per.000035") %> - b. in Md.; freed by petition along with her children<span class="foot"><a href="#footn3" id="bodyn3">3</a></span></li>
+                                    <ul><!-- Elizabeth children 3-->
+                                        <li><%= link_to "Daniel Bentley", person_path("per.000032") %></li>
+                                        <li><%= link_to "William Bentley", person_path("per.000042") %></li>
+                                        <li><%= link_to "Susanna Bentley", person_path("per.000041") %></li>
+                                        <li><%= link_to "Dennis Bentley", person_path("per.000033") %></li>
+                                        <li><%= link_to "Johnson Bentley", person_path("per.000036") %></li>
+                                        <li><%= link_to "Lee Bentley", person_path("per.000037") %></li>
+                                        <li><%= link_to "Nelson Bentley", person_path("per.000039") %></li>
+                                        <li><%= link_to "Nancy Bentley", person_path("per.000038") %></li>
+                                        <li><%= link_to "Rebecca Bentley", person_path("per.000040") %></li>
+                                        <li><%= link_to "Anne Bentley", person_path("per.000031") %></li>
+                                        <li><%= link_to "Eleanor Bentley", person_path("per.000034") %></li>
+                                    </ul><!-- end Elizabeth -->
+                            </ul><!-- end UKN 3 -->
+                    </ul><!-- end UKN 2-->
+            </ul><!-- end UKN 1-->
+    </ul><!-- end Mary -->
+</ul><!-- end tree -->
+</p>
+
+<hr/>
+
+<h4>Davis Siblings</h4>
+
+<p>These sisters and their children are descendants of Mary Davis, but it is not specified in the court documents how.</p> 
+
+<p>
+<ul class="tree">
+    <li><%= link_to "Susan Davis", person_path("per.000160") %> - freed by <%= link_to "petition", case_path("oscys.caseid.0249") %>; was a witness for the petitions of her sisters, Ann & Letitia</li>
+        <ul><!-- Susan children -->
+            <li>Airy Davis - freed by <%= link_to "petition", case_path("oscys.caseid.0249") %></li>
+            <li>John Davis - did not win <%= link_to "freedom petition", case_path("oscys.caseid.0251") %></li>
+            <li>Teresa "Tracy" Davis - did not win <%= link_to "freedom petition", case_path("oscys.caseid.0251") %></li>
+            <li>Mary Ann Davis - did not win <%= link_to "freedom petition", case_path("oscys.caseid.0251") %></li>
+        </ul><!-- end Susan -->
+    <li><%= link_to "Ann Davis", person_path("per.000161") %> - outcome of <%= link_to "petition", case_path("oscys.caseid.0018") %> unknown</li>
+        <ul><!-- Ann children -->
             <li><%= link_to "David Davis", person_path("per.000162") %></li>
             <li><%= link_to "Sarah Davis", person_path("per.000165") %></li>
             <li><%= link_to "Frederick Davis", person_path("per.000163") %></li>
             <li><%= link_to "Hanson Davis", person_path("per.000164") %></li>
-            </ul>
-        <li><%= link_to "Susan Davis", person_path("per.000160") %> - born free</li>
-        <li><%= link_to "George Davis", person_path("per.000000") %> - petition outcome unknown</li>
-        </ul>
-</ul>
+        </ul><!-- end Ann -->
+    <li><%= link_to "Letitia 'Letty' Davis", person_path("per.000150") %> - outcome of <%= link_to "petition", case_path("oscys.caseid.0017") %> unknown</li>
+        <ul><!-- Letty children -->
+            <li><%= link_to "Rachel Davis", person_path("per.000151") %></li>
+                <ul><!-- Rachel children -->
+                    <li><%= link_to "Henry Davis", person_path("per.000152") %></li>
+                </ul><!-- end Rachel -->
+        </ul><!-- end Letty -->
+</ul><!-- end tree -->
+</p>
+
+<hr/>
+
+<h4>George Davis</h4>
+
+<p>George is a descendant of Mary Davis, but it is not specified in the court documents how. One of the summonses in his case was also filed in Letitia Davis' case. It is possible they are siblings.</p> 
+
+<p>
+<ul class="tree">
+<li><%= link_to "George Davis", person_path("per.001182") %> - outcome of <%= link_to "petition", case_path("oscys.caseid.0019") %> unknown</li>
 </ul>
 </p>
+
+<hr/>
+
+<h3>Footnotes</h3>
+<div class="footnotes">
+
+<p><span class="notenumber" id="footn1">1.</span> The ancestry of Rosamond Bentley was argued in her petition for freedom filed in Prince George's County against Anthony Addison. Her petition was successful and she recovered her freedom on August 28, 1781. <em>Rosamond Bentley v. Anthony Addison</em>, Prince George's County Court (Judgment Record 1777-82, 713-5), Maryland State Archives. <a href="#bodyn1">[back]</a></p>
+
+<p><span class="notenumber" id="footn2">2.</span> It is stated that Eleanor and Mary are the "full sister[s]" of Rosamond in a <%= link_to "bill of exceptions", doc_path("oscys.case.0018.003") %> filed in <em>Davis v. Minifee</em> and <em>Davis v. Forrest</em>. <a href="#bodyn2">[back]</a></p>
+
+<p><span class="notenumber" id="footn3">3.</span> Elizabeth's <%= link_to "petition for freedom", doc_path("oscys.case.0008.001") %> states that she is the great-great-grandaughter of Mary Davis. <a href="#bodyn3">[back]</a></p>
+
+</div>
 
 
