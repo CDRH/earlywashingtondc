@@ -9,14 +9,23 @@
         <ul class="tree">
           <li><%= link_to "Joanna/Joan Lee", person_path("per.000615") %> - <%= link_to "freed", doc_path("oscys.case.0076.003") %> October 8, 1809 <br/>+ <i><%= link_to "Peter Lee", person_path("per.000626") %></i></li>
           <ul>
-            <li><%= link_to "John Baptist Lee", person_path("per.000630") %> - born c. 1800; to be freed May 1830</li>
-            <li>Peter Lee - born c. 1801</li>
-            <li><%= link_to "Lizette Lee", person_path("per.000616") %> - born c. 1802; to be freed Christmas 1827</li>
+            <li><%= link_to "John Baptist Lee", person_path("per.000630") %> - born c. 1800; <%= link_to "to be freed", doc_path("oscys.report.0019.001") %> May 1830</li>
+            <li>Peter Lee - born c. 1801<span class="foot"><a href="#footn1" id="bodyn1">1</a></span></li>
+            <li><%= link_to "Lizette Lee", person_path("per.000616") %> - born c. 1802; <%= link_to "to be freed", doc_path("oscys.report.0019.001") %> Christmas 1827</li>
             <ul>
-              <li><%= link_to "Nancy Lee", person_path("per.000623") %> - born c. 1825</li>
+              <li><%= link_to "Nancy Lee", person_path("per.000623") %> - born c. 1825; freedom status unknown</li>
             </ul>
-            <li>Lewis Lee - born c. 1803</li>
-            <li><%= link_to "Janette/Jeane Lee", person_path("per.000619") %> - born c. 1809; to be freed May 19, 1834</li>
+            <li>Lewis Lee - born c. 1803<span class="foot"><a href="#footn1" id="bodyn1">1</a></span></li>
+            <li><%= link_to "Janette/Jeane Lee", person_path("per.000619") %> - born c. 1809; <%= link_to "to be freed", doc_path("oscys.report.0019.001") %> May 19, 1834</li>
           </ul>
         </ul>
         </p>
+
+<hr/>
+
+<h4>Footnotes</h4>
+<div class="footnotes">
+
+<p><span class="notenumber" id="footn1">1.</span> Peter and his brother Lewis petitioned for freedom against D. T. Cureton and Augustus Preuss&#8212;the latter being the defendant in the other Lee cases&#8212;in the Circuit Court for the District of Columbia sitting in Alexandria. The outcome of their petition is unknown. <a href="#bodyn1">[back]</a></p>
+
+</div>

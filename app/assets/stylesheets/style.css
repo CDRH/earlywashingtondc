@@ -79,14 +79,19 @@ table td {
 /* Footnotes */
 
 .foot {
-	font-size: .8em;
+	font-size: .7em;
 	vertical-align: super;
 	line-height: 1em;
+    margin-left: 2px;
 }
 
 .foot a {
 	text-decoration: none;
 	border: none;
+}
+
+.footnotes {
+	font-size: .9em;
 }
 
 /* Tooltips and switch boxes */
