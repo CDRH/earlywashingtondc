@@ -758,6 +758,8 @@ Home
 	text-shadow: 1px 1px 6px #fff;
 }
 
+
+
 /* Top Callout */
 
 .home_description {
@@ -819,6 +821,10 @@ a .home_section {
 	color: #000;
 }
 
+.home_section_one, .home_section_two {
+    clear:both;
+}
+
 @media (min-width: 992px) {
 
 /* Rules for all callouts */
@@ -843,6 +849,8 @@ a .home_section {
 	font-size: 1.2em;
 	background-color: transparent;
 }
+
+
 
 /* Bottom Callout */
 
