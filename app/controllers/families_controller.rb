@@ -1,4 +1,4 @@
-class FamilyController < ApplicationController
+class FamiliesController < ApplicationController
   def index
     @page_class = "family"
   end
