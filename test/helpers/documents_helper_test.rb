@@ -17,7 +17,7 @@ class DocumentsHelperTest < ActionView::TestCase
           "id" => "book.000001" }
 
   test "facet_maker" do
-    assert_equal facet_maker({"caseid" => 11, "documents" => 98}), "<a href=\"/search?facet=caseid&amp;qfield=id&amp;qtext=case.000001&amp;sort=title\">All Results</a> <a class=\"selected\" href=\"/search?facet=caseid&amp;qfield=id&amp;qtext=case.000001&amp;sort=title\">Case <span class='badge'>11</span></a> <a class=\"\" href=\"/search?facet=caseid&amp;qfield=id&amp;qtext=case.000001&amp;sort=title\">Documents <span class='badge'>98</span></a>"
+    assert_equal facet_maker({"caseid" => 11, "documents" => 98}), "<a href=\"/search?facet=caseid&amp;qfield=id&amp;qtext=case.000001&amp;sort=title\">All Results</a> <a class=\"selected\" href=\"/search?facet=caseid&amp;qfield=id&amp;qtext=case.000001&amp;sort=title\">Case <span class='badge'>11</span></a> <a class=\"\" href=\"/search?facet=documents&amp;qfield=id&amp;qtext=case.000001&amp;sort=title\">Documents <span class='badge'>98</span></a>"
   end
 
   test "facet_maker with empty facets" do

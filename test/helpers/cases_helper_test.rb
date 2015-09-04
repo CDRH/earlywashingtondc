@@ -8,7 +8,7 @@ class CasesHelperTest < ActionView::TestCase
   fake_people = [{"label" => "Dussault", "id" => "per.001721"}, {"label" => "ADussault", "id" => "per.138210"}]
 
   test "find_unique_strings" do
-    assert_equal "a, b, c, d", find_unique_strings(array)
+    assert_equal "a<br/>b<br/>c<br/>d", find_unique_strings(array)
   end
 
   test "find_unique" do
