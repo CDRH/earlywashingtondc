@@ -32,13 +32,14 @@ module DocumentsHelper
   end
 
   def facet_results(facet_field=nil)
+    new_params = params.clone
     # add facet field if there should be one
     if facet_field.nil?
-      params.delete("facet")
+      new_params.delete("facet")
     else
-      params[:facet] = facet_field
+      new_params[:facet] = facet_field
     end
-    return params
+    return new_params
   end
 
   def search_result_link(doc)
