@@ -439,7 +439,7 @@ Header, Navbar, Footer
 .footer {
 	background-color: #484949;
 	padding: 1.5em 15px;
-	margin: 2em -15px 0 -15px;
+	margin: 4.5em -15px 0 -15px;
 	text-align: right;
 	color: #fff;
 }
@@ -523,7 +523,8 @@ Specific Pages
 /* Cases */
 
 .case {
-	overflow: auto;
+	/*overflow: auto;*/
+
 }
 
 /* Cases and People Jump Menus */
