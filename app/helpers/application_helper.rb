@@ -1,13 +1,6 @@
 module ApplicationHelper
 
   #######################
-  #      All Pages      #
-  #######################
-
-  def linkable_id?(id)
-    return !(id == "per.000000") && !(id == "")  end
-
-  #######################
   #    Index Display    #
   #######################
 

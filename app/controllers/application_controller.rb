@@ -60,15 +60,26 @@ class ApplicationController < ActionController::Base
 
   # for the less traditional {label: Smith, id: 0001} => 10 type results
   def dropdownify_data_facets(facet_term, number=true)
-    facet_term.collect do |term|
+    facets = facet_term.collect do |term|
       begin
         hash = JSON.parse(term[0])
         display = number ? "#{hash['label']} (#{term[1]})" : hash['label']
-        [display, hash["id"]]
+        if linkable_id?(hash["id"])
+          [display, hash["id"]]
+        else
+          nil
+        end
       rescue
-        [term[0], term[0]]
+        puts "Not parsable!!! #{term}"
+        nil
       end
     end
+    return facets.compact   #  remove all the nils
   end
+
+  def linkable_id?(id)
+    return !(id == "per.000000") && !(id == "")  
+  end
+  helper_method :linkable_id?
 
 end

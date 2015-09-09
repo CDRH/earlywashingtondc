@@ -93,7 +93,7 @@ class DocumentsController < ApplicationController
   def advancedsearch
     @page_class = "search"
     # get a list of all the people
-    people_facets = $solr.get_facets({:q => "recordType_s:person", 
+    people_facets = $solr.get_facets({:q => "(recordType_s:person NOT id:per.000000)", 
       :facet => "true", "facet.limit" => "-1",
       "facet.mincount" => "1"}, ["title"])
     # could combine these facet queries except that this uses documents not people
