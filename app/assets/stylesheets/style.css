@@ -439,9 +439,10 @@ Header, Navbar, Footer
 .footer {
 	background-color: #484949;
 	padding: 1.5em 15px;
-	margin: 4.5em -15px 0 -15px;
+	margin: 2.5em -15px 0 -15px;
 	text-align: right;
 	color: #fff;
+	clear: both;
 }
 
 .footer a {
