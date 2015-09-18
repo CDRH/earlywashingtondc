@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Restricted Access"
-AuthUserFile /var/www/rails/apache_passwords/passwords
-Require user oscys
