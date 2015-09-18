@@ -82,7 +82,7 @@ table td {
 	font-size: .7em;
 	vertical-align: super;
 	line-height: 1em;
-    margin-left: 2px;
+    /*margin-left: 2px;*/
 }
 
 .foot a {
@@ -612,7 +612,6 @@ figcaption {
 
 .figure_small figcaption {
 	max-width: 200px;
-	
 }
 
 .figure_medium figcaption {
@@ -623,6 +622,15 @@ figcaption {
 	font-family: "Oranienbaum", Georgia, "Times New Roman", Times, serif;
 	font-size: 1.3em;
 }
+
+blockquote {
+    padding: 12.5px 30px;
+    margin: 0 0 10px;
+    font-size: 90%;
+    border-left: 5px solid #eeeeee;
+    border-right: 5px solid #eeeeee;
+}
+
 
 @media (min-width: 992px) { 
 	.figure_center figcaption {
