@@ -37,3 +37,6 @@ bower.json
 # Ignore some configuration files
 config/config.yml
 config/database.yml
+
+# Ignore the htaccess file
+public/.htaccess
