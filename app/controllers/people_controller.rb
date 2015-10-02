@@ -8,10 +8,17 @@ class PeopleController < ApplicationController
       :q => "recordType_s:caseid", :facet => "true", 
       "facet.sort" => "asc", "facet.limit" => "-1"}, ["attorneyData_ss", "plaintiffData_ss", "defendantData_ss"])
 
-    @attorney_facet = dropdownify_data_facets(facet['attorneyData_ss'])
+    # @attorney_facet = dropdownify_data_facets(facet['attorneyData_ss'])
     @plaintiff_facet = dropdownify_data_facets(facet['plaintiffData_ss'])
     @defendant_facet = dropdownify_data_facets(facet['defendantData_ss'])
-    
+    attorney_facets = $solr.get_facets(
+      {:q => "recordType_s:document", 
+      "facet.sort" => "asc", 
+      "facet.limit" => "-1", 
+      :facet => "true",
+      "facet.mincount" => "1"}, ["attorneyData_ss"])
+
+    @attorneys = dropdownify_data_facets(attorney_facets["attorneyData_ss"], false)
     # TODO this isn't right, the gem shouldn't need "facet = true" so I'm not sure what's going on
     # it already has facet = true as a default in the gem, something here must be overriding it
     facets = $solr.get_facets({:q => "recordType_s:person", "facet.sort" => "asc", :facet => "true"}, ["titleLetter_s"])
