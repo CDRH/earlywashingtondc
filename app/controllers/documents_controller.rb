@@ -100,14 +100,7 @@ class DocumentsController < ApplicationController
     location_facets = $solr.get_facets({:q => "recordType_s:document",
       :facet => "true", "facet.limit" => "-1",
       "facet.mincount" => "1"}, ["places"])
-    attorney_facets = $solr.get_facets(
-      {:q => "recordType_s:document", 
-      "facet.sort" => "asc", 
-      "facet.limit" => "-1", 
-      :facet => "true",
-      "facet.mincount" => "1"}, ["attorneyData_ss"])
-
-    @attorneys = dropdownify_data_facets(attorney_facets["attorneyData_ss"], false)
+    
     @people = people_facets["title"].keys
     @locations = location_facets["places"].keys
   end

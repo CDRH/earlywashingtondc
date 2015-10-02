@@ -1,8 +1,9 @@
 GIT
   remote: git://github.com/CDRH/rsolr_cdrh.git
-  revision: ef45b89aed6284b13c43c0cb41a4458e6e44d384
+  revision: c9e2bdeba67644cad98b1b58fd5cca25fcbedfe3
+  tag: 0.1.0
   specs:
-    rsolr_cdrh (0.0.1)
+    rsolr_cdrh (0.1.0)
       bundler (~> 1.7)
       rake (~> 10.0)
       rsolr (~> 1.0)
