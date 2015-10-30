@@ -44,3 +44,7 @@ RAILS_ENV=production bundle exec rake assets:precompile
 ```
 
 You can also serve them from rails if you start altering things in the production.rb file to look more like development.rb.  Google for more information.
+
+### Troubleshooting
+
+There are several aspects to the OSCYS project hosted by UNL.  There is the Rails portion running with Phusion Passenger and Apache.  rvm is handling the gems.  There is a solr index (currently in tomcat) and there is a fuseki server running the RDF.  If there are problems out of the blue, check that both solr and fuseki's services are running.  If there are problems after a new commit, `touch tmp/restart.txt` in the rails project and wait a few seconds to see if Phusion Passenger just needs to restart to see the changes in production.  You may also want to make sure your assets are precompiled and that `bundle install` has been run for any new gems.
