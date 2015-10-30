@@ -21,3 +21,23 @@
 <p>Display an image: <%= image_tag("logo_unl_white.gif") %></p>
 
 <p>Display an image that is also a link to a case: <%= link_to image_tag("logo_unl_white.gif"), case_path("oscys.caseid.0081") %>
+
+<p>Examples of Figures.</p>
+
+<figure class="figure_right figure_medium"><%= image_tag("000.jpg") %>
+<figcaption>Medium Sized Image, Aligned Right</figcaption>
+</figure>
+
+<figure class="figure_center"><%= image_tag("000.jpg") %>
+<figcaption>Large image, Centered</figcaption>
+</figure>
+
+<p class="pullquote">Pullquotes</p>
+
+<p>Footnote Example: <span class="foot"><a href="#footn1" id="bodyn1">1</a></span></p>
+
+<hr/>
+
+<h4>Footnotes</h4>
+<div class="footnotes">
+<p><span class="notenumber" id="footn1">1.</span> Note text. <a href="#bodyn1">[back]</a></p>

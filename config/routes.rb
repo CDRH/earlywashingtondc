@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'tei.xml' => redirect("http://cdrhsites.unl.edu/data/projects/oscys/tei"), :as => :tei
   get 'github' => redirect("https://github.com/CDRH/earlywashingtondc"), :as => :repo
   get 'contribute' => 'static#contribute', as: :contribute
+  get 'changelog' => 'static#changelog', as: :changelog
 
   # documents (browsing / searching)
   post 'browse' => 'documents#dropdown', as: :doc_dropdown
