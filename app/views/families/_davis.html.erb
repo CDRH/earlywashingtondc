@@ -1,28 +1,65 @@
 
 <h2>Davis Family Network</h2>
 
-<p>Multiple generations of the Davis family petitioned the Court for their freedom from various masters, arguing that as descendants of a free, English woman, they should be entitled to their liberty. Whether or not they were successful depended upon if their case was decided before the 1810 decision in <em><%= link_to "Queen v. Hepburn", case_path("oscys.caseid.0011") %></em> which disallowed hearsay evidence.</p> 
+<p>Multiple generations of the Davis family petitioned in multiple jurisdictions for their freedom from various masters, arguing that as descendants of a free, English woman, they should be entitled to their liberty. Whether or not they were successful depended upon if their case was decided before the 1810 decision in <em><%= link_to "Queen v. Hepburn", case_path("oscys.caseid.0011") %></em> which disallowed hearsay evidence.</p>
+
+<p>The matriarch of the family, Mary Davis, was a white Englishwoman. According to a 1664 act of the Maryland General Assembly, her marriage to an enslaved black man meant that she was to be in servitude for the duration of his life, and any children they may have would be enslaved for life.</p> 
 
 <p>
 <ul class="tree">
-<li><%= link_to "Mary Davis", person_path("per.000028") %> - b. in England; immigrated with Lord Baltimore; free white woman<span class="foot"><a href="#footn1" id="bodyn1">1</a></span></li>
+<li><%= link_to "Mary Davis", person_path("per.000028") %> - b. in London, England; immigrated to Maryland before 1677 as an indentured servant<span class="foot"><a href="#footn1" id="bodyn1">1</a></span><br/>
+<em>+ Domingo</em> - enslaved by Joseph Tilley of Calvert County, Md.</li>
     <ul><!-- Mary children -->
-        <li>Rose Davis</li>
+        <li>Thomas Davis - b. March 14, 1677 on plantation of Charles Calvert, Third Lord Baltimore, Calvert County, Md.</li>
+        <li>Rose Davis - b. August 11, 1684 in St. Mary's County, Md. - did not win freedom petition in Anne Arundel County, Md.</li>
             <ul><!-- Rose children -->
-               <li>Unknown Mother</li>
-                    <ul><!-- UKN children -->
-                        <li><%= link_to "Rosamond Bentley", person_path("per.000159") %> - freed by petition; was a witness for the petitions of Susan, Ann, & Letitia Davis <em>[see below]</em></li>
-                        <li><%= link_to "Eleanor Bentley", person_path("per.001181") %> - likely freed by petition<span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
-                        <li><%= link_to "Mary Bentley", person_path("per.000169") %> - likely freed by petition</li>
-                    </ul><!-- end UKN -->
+               <li>Elizabeth Bentley (a.k.a. Indian Polly) ?</li>
+                    <ul><!-- Elizabeth children -->
+                        <li><%= link_to "Rosamond Bentley", person_path("per.000159") %> - freed by petition in Prince George's County, Md.; was a witness for the petitions of Susan, Ann, & Letitia Davis in Washington, D.C. <em>[see below]</em><span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
+<!--                            <ul><!-\-Rosamond children-\->
+                                <li>Nancy Barton - manumitted</li>
+                                    <ul><!-\-Nancy children-\->
+                                        <li>Elizabeth Barton</li>
+                                        <li>James Barton</li>
+                                        <li>William Barton</li>
+                                        <li>Charlotte Barton</li>
+                                        <li>Ann Barton</li>
+                                        <li>Thomas Barton</li>
+                                    </ul><!-\-end Nancy-\->
+                                <li>Eleanor Cooper - manumitted</li>
+                            </ul><!-\-end Rosamond-\->-->
+                        <li><%= link_to "Mary Bentley", person_path("per.000169") %> - did not win freedom petition in Prince George's County, Md.<span class="foot"><a href="#footn3" id="bodyn3">3</a></span></li>
+<!--                            <ul><!-\-Mary children-\->
+                                <li>Lucy Bentley</li>
+                                <li>Sophia Bentley</li>
+                                <li>William Bentley</li>
+                                <li>Mary Bentley</li>
+                                <li>Sarah Bentley</li>
+                                <li>Isaac Bentley</li>
+                                <li>John Bentley</li>
+                                <li>Mary Bentley</li>
+                                <li>Rose Bentley</li>
+                                <li>Eleanor Bentley</li>
+                            </ul><!-\-end Mary-\->-->
+                        <li><%= link_to "Eleanor 'Nell' Bentley", person_path("per.001181") %> - did not win freedom petition in Prince George's County, Md.<span class="foot"><a href="#footn3" id="bodyn3">3</a></span></li>
+<!--                            <ul><!-\-Nell children-\->
+                                <li>Polly Bentley</li>
+                                <li>William Bentley</li>
+                                <li>Sophia Bentley</li>
+                                <li>John Bentley</li>
+                                <li>Bell Bentley</li>
+                            </ul><!-\-end Nell-\->-->
+                        <li>Margaret Bentley</li>                        
+                        <li>William Bentley</li>
+                    </ul><!-- end Elizabeth -->
             </ul><!-- end Rose -->
         <li>Unknown Mother, possibly Rose Davis</li>
             <ul><!-- UKN children 1-->
-                <li>Unknown Mother</li>
+                <li>Unknown Mother, possibly Elizabeth Bentley</li>
                     <ul><!-- UKN children 2-->  
                         <li>Unknown Mother</li>
                             <ul><!-- UKN children 3-->
-                                <li><%= link_to "Elizabeth Bentley", person_path("per.000035") %> - b. in Md.; freed by petition along with her children<span class="foot"><a href="#footn3" id="bodyn3">3</a></span></li>
+                                <li><%= link_to "Elizabeth Bentley", person_path("per.000035") %> - b. in Md.; freed by <%= link_to "petition", case_path("oscys.caseid.0008") %> along with her children<span class="foot"><a href="#footn4" id="bodyn4">4</a></span></li>
                                     <ul><!-- Elizabeth children 3-->
                                         <li><%= link_to "Daniel Bentley", person_path("per.000032") %></li>
                                         <li><%= link_to "William Bentley", person_path("per.000042") %></li>
@@ -92,11 +129,13 @@
 <h4>Footnotes</h4>
 <div class="footnotes">
 
-<p><span class="notenumber" id="footn1">1.</span> The ancestry of Rosamond Bentley was argued in her petition for freedom filed in Prince George's County against Anthony Addison. Her petition was successful and she recovered her freedom on August 28, 1781. <em>Rosamond Bentley v. Anthony Addison</em>, Prince George's County Court (Judgment Record 1777-82, 713-5), Maryland State Archives. <a href="#bodyn1">[back]</a></p>
+<p><span class="notenumber" id="footn1">1.</span> Information on the children of Mary Davis and her Bentley descendants&#8212;save for Elizabeth Bentley&#8212;can be found throughout Courtney C. Hobson, "A Mother's Inheritance: Women, Interracial Identity, and Emancipation in Maryland, 1664-1820" (Master’s thesis, University of Maryland Baltimore County, 2014). The heritage of Elizabeth Bentley and her children is stated in her <%= link_to "petition for freedom", case_path("oscys.caseid.0008") %> in the Circuit Court for D.C. <a href="#bodyn1">[back]</a></p>
 
-<p><span class="notenumber" id="footn2">2.</span> It is stated that Eleanor and Mary are the "full sister[s]" of Rosamond in a <%= link_to "bill of exceptions", doc_path("oscys.case.0018.003") %> filed in <em>Davis v. Minifee</em> and <em>Davis v. Forrest</em>. <a href="#bodyn2">[back]</a></p>
+<p><span class="notenumber" id="footn2">2.</span> The ancestry of Rosamond Bentley was argued in her petition for freedom filed in Prince George's County against Anthony Addison. Her petition was successful and she recovered her freedom on August 28, 1781. <em>Rosamond Bentley v. Anthony Addison</em>, Prince George's County Court (Judgment Record 1777-82, 713-5), Maryland State Archives. <a href="#bodyn2">[back]</a></p>
 
-<p><span class="notenumber" id="footn3">3.</span> Elizabeth's <%= link_to "petition for freedom", doc_path("oscys.case.0008.001") %> states that she is the great-great-grandaughter of Mary Davis. <a href="#bodyn3">[back]</a></p>
+<p><span class="notenumber" id="footn3">3.</span> It is stated that Eleanor and Mary are the "full sister[s]" of Rosamond in a <%= link_to "bill of exceptions", doc_path("oscys.case.0018.003") %> filed in <em>Davis v. Minifee</em> and <em>Davis v. Forrest</em>. <a href="#bodyn3">[back]</a></p>
+
+<p><span class="notenumber" id="footn4">4.</span> Elizabeth's <%= link_to "petition for freedom", doc_path("oscys.case.0008.001") %> states that she is the great-great-grandaughter of Mary Davis. <a href="#bodyn4">[back]</a></p>
 
 </div>
 
