@@ -21,41 +21,12 @@
   <div class="col-md-6">
 	  
   <h3 id="description">Described in Case Documents As:</h3>
-    <div class="bibliography" id="topBibl">
-	    
+    <div class="bibliography" id="topBibl">    
 	
 <% if @person["personSex_ss"] %>
 <div class="row">
   <div class="col-md-4 meta_label">Sex:</div><!--/column-->
   <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personSex_ss"]) %></div><!--/column-->
-</div><!--/row-->
-<% end %>
-
-<% if @person["personColorData_ss"] %>
-<div class="row">
-  <div class="col-md-4 meta_label">Color:</div><!--/column-->
-  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personColorData_ss"]) %></div><!--/column-->
-</div><!--/row-->
-<% end %>
-
-<% if @person["personAffiliationData_ss"] %>
-<div class="row">
-  <div class="col-md-4 meta_label">Affiliation:</div><!--/column-->
-  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personAffiliationData_ss"]) %></div><!--/column-->
-</div><!--/row-->
-<% end %>
-
-<% if @person["personAgeData_ss"] %>
-<div class="row">
-  <div class="col-md-4 meta_label">Age:</div><!--/column-->
-  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personAgeData_ss"]) %></div><!--/column-->
-</div><!--/row-->
-<% end %>
-
-<% if @person["personBiblData_ss"] %>
-<div class="row">
-  <div class="col-md-4 meta_label">Bibl:</div><!--/column-->
-  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personBiblData_ss"]) %></div><!--/column-->
 </div><!--/row-->
 <% end %>
 
@@ -73,31 +44,24 @@
 </div><!--/row-->
 <% end %>
 
-<% if @person["personEventData_ss"] %>
+<% if @person["personAgeData_ss"] %>
 <div class="row">
-  <div class="col-md-4 meta_label">Event:</div><!--/column-->
-  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personEventData_ss"]) %></div><!--/column-->
+  <div class="col-md-4 meta_label">Age:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personAgeData_ss"]) %></div><!--/column-->
 </div><!--/row-->
 <% end %>
 
-<% if @person["personIdnoVIAF_ss"] %>
+<% if @person["personColorData_ss"] %>
 <div class="row">
-  <div class="col-md-4 meta_label">VIAF:</div><!--/column-->
-  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personIdnoVIAF_ss"]) %></div><!--/column-->
+  <div class="col-md-4 meta_label">Color:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personColorData_ss"]) %></div><!--/column-->
 </div><!--/row-->
 <% end %>
 
-<% if @person["personNationalityData_ss"] %>
+<% if @person["personSocecStatusData_ss"] %>
 <div class="row">
-  <div class="col-md-4 meta_label">Nationality:</div><!--/column-->
-  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personNationalityData_ss"]) %></div><!--/column-->
-</div><!--/row-->
-<% end %>
-
-<% if @person["personNoteData_ss"] %>
-<div class="row">
-  <div class="col-md-4 meta_label">Notes:</div><!--/column-->
-  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personNoteData_ss"]) %></div><!--/column-->
+  <div class="col-md-4 meta_label">Social Status:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personSocecStatusData_ss"]) %></div><!--/column-->
 </div><!--/row-->
 <% end %>
 
@@ -105,6 +69,13 @@
 <div class="row">
   <div class="col-md-4 meta_label">Occupation:</div><!--/column-->
   <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personOccupationData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @person["personNationalityData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Nationality:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personNationalityData_ss"]) %></div><!--/column-->
 </div><!--/row-->
 <% end %>
 
@@ -123,14 +94,40 @@
 </div><!--/row-->
 <% end %>
 
-<% if @person["personSocecStatusData_ss"] %>
+<% if @person["personAffiliationData_ss"] %>
 <div class="row">
-  <div class="col-md-4 meta_label">Social Status:</div><!--/column-->
-  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personSocecStatusData_ss"]) %></div><!--/column-->
+  <div class="col-md-4 meta_label">Affiliation:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personAffiliationData_ss"]) %></div><!--/column-->
 </div><!--/row-->
 <% end %>
 
+<% if @person["personBiblData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Bibl:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personBiblData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
 
+<% if @person["personEventData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Event:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personEventData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @person["personIdnoVIAF_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">VIAF:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personIdnoVIAF_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+<% if @person["personNoteData_ss"] %>
+<div class="row">
+  <div class="col-md-4 meta_label">Notes:</div><!--/column-->
+  <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personNoteData_ss"]) %></div><!--/column-->
+</div><!--/row-->
+<% end %>
 
 
 <!-- Jessica's old code commented out till everything is checked over -KMD TODO delete 
