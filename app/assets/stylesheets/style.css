@@ -82,7 +82,7 @@ table td {
 	font-size: .7em;
 	vertical-align: super;
 	line-height: 1em;
-    /*margin-left: 2px;*/
+    margin-left: 2px;
 }
 
 .foot a {
@@ -616,6 +616,10 @@ figcaption {
 
 .figure_medium figcaption {
 	max-width: 400px;
+}
+
+.figure_large figcaption {
+	max-width: 600px;
 }
 
 .byline {
