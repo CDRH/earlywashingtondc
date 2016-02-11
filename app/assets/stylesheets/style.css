@@ -28,7 +28,11 @@ Sitewide/basic HTML
 	border-bottom: solid 1px #a51400;
 }
 
+/* Content of Cases / Documents */
 
+.body ul {
+	list-style: none;
+}
 
 /* Tables */
 
