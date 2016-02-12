@@ -16,9 +16,10 @@ class CasesController < ApplicationController
       # :facet => "true", 
       "facet.sort" => "index",
       "facet.mincount" => "1",
-      "facet.limit" => "-1"}, ["jurisdiction_ss", "outcome_ss"])
+      "facet.limit" => "-1"}, ["jurisdiction_ss", "outcome_ss", "claims_ss"])
     @term_facet = dropdownify_facets(doc_facets['term_ss'], true)
     @subCategory_facet = dropdownify_facets(doc_facets['subCategory'])
+    @claims_facet = dropdownify_facets(case_facets['claims_ss'])
     @jurisdiction_facet = dropdownify_facets(case_facets['jurisdiction_ss'])
     @outcome_facet = dropdownify_facets(case_facets['outcome_ss'])
     @places_facet = dropdownify_facets(doc_facets['places'])
