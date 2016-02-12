@@ -24,8 +24,8 @@
 </div><!--/row-->
 <% end %>
 
-<% if @doc["dateDisplay"] %>
-<div class="row">
+<% if date_exists?(@doc["dateDisplay"]) %>
+  <div class="row">
   <div class="col-md-2 meta_label">Date:</div><!--/column-->
   <div class="col-md-10 meta_data"><ul><li><%= @doc["dateDisplay"] %></li></ul></div><!--/column-->
 </div><!--/row-->
