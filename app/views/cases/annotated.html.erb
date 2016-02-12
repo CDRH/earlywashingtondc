@@ -16,8 +16,7 @@
 
 <ul>
   <% @docs[:docs].each do |doc| %>
-    <%# date = doc["dateDisplay"] ? "(#{doc['dateDisplay']})" : "" %>
-    <%# label = "#{doc['title']} #{date}" %>
+    <%# label = title_date_label(doc["title"], doc["dateDisplay"]) %>
     <% label = "#{doc['title']}" %>
     <li>
       <%= link_to label, case_path(doc["id"]) %>

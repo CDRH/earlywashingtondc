@@ -1,6 +1,24 @@
 module ApplicationHelper
 
   #######################
+  #   General Helpers   #
+  #######################
+
+  def date_exists?(date)
+    return date && !(date.empty?) && (date != "n.d.")
+  end
+
+  def title_date_label(title, date)
+    title_text = title && !(title.empty?) ? title : "Untitled"
+    if date_exists?(date)
+      return "#{title_text} (#{date})"
+    else
+      return title_text
+    end
+  end
+
+
+  #######################
   #    Index Display    #
   #######################
 
@@ -138,7 +156,7 @@ module ApplicationHelper
 
       data.each do |item|
         begin
-          date = item['dateDisplay'] ? "(#{item['dateDisplay']}) " : ""
+          date = date_exists?(item['dateDisplay']) ? item['dateDisplay'] : ""
           if item['id'] =~ URI::regexp
             # if this has a real url then use
             res += "<p><a href=\"#{item['id']}\">#{item['label']}</a> #{date}</p>"
@@ -165,7 +183,7 @@ module ApplicationHelper
       data.each do |item|
         begin
           hash = JSON.parse(item)
-          date = hash['dateDisplay'] ? "(#{hash['dateDisplay']}) " : ""
+          date = date_exists?(hash['dateDisplay']) ? hash['dateDisplay'] : ""
           if hash['id'] =~ URI::regexp
             # if this has a real url then use
             res += "<li>" + hash['label'] + " <span class='source_note'>[" + "<a href=\"#{hash['id']}\">source</a>" + "]</span></li>"
