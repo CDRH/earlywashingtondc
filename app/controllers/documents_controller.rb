@@ -28,6 +28,13 @@ class DocumentsController < ApplicationController
         :facet => "caseid"
         })
       return true
+    elsif params.has_key?(:claims)
+      redirect_to search_path({
+        :qfield => "claims_ss",
+        :qtext => params[:claims],
+        :facet => "caseid"
+        })
+      return true
     elsif params.has_key?(:places)
       qfield = "places"
       qtext = params[:places]
