@@ -3,7 +3,9 @@
 
 <p>Multiple generations of the Davis family petitioned in multiple jurisdictions for their freedom from various masters, arguing that as descendants of a free, English woman, they should be entitled to their liberty. Whether or not they were successful depended upon if their case was decided before the 1810 decision in <em><%= link_to "Queen v. Hepburn", case_path("oscys.caseid.0011") %></em> which disallowed hearsay evidence.</p>
 
-<p>The matriarch of the family, Mary Davis, was a white Englishwoman. According to a 1664 act of the Maryland General Assembly, her marriage to an enslaved black man meant that she was to be in servitude for the duration of his life, and any children they may have would be enslaved for life.</p> 
+<p>The matriarch of the family, Mary Davis, was a white Englishwoman. According to a 1664 act of the Maryland General Assembly, her marriage to an enslaved black man meant that she was to be in servitude for the duration of his life, and any children they may have would be enslaved for life. For more information on this family and their struggle for freedom, see <%= story_link("A Mother's Inheritance: Women, Interracial Identity, and Emancipation in Maryland, 1664-1820".html_safe, "mothers_inheritance") %>.</p>
+
+<hr/>
 
 <p>
 <ul class="tree">
@@ -11,11 +13,13 @@
 <em>+ Domingo</em> - enslaved by Joseph Tilley of Calvert County, Md.</li>
     <ul><!-- Mary children -->
         <li>Thomas Davis - b. March 14, 1677 on plantation of Charles Calvert, Third Lord Baltimore, Calvert County, Md.</li>
-        <li>Rose Davis - b. August 11, 1684 in St. Mary's County, Md. - did not win freedom petition in Anne Arundel County, Md.</li>
+        <li>Rose Davis - b. August 11, 1684 on property of Lord Baltimore, St. Mary's County, Md. - did not win 1715 freedom petition in Anne Arundel County, Md. against Henry Darnall</li>
             <ul><!-- Rose children -->
-               <li>Elizabeth Bentley (a.k.a. Indian Polly) ?</li>
+               <li>Elizabeth Bentley (a.k.a. Indian Polly ?) - enslaved by Lettice Thomson in Prince George's County, Md.; petitioned for her freedom in 1772, but died of smallpox before it concluded</li>
                     <ul><!-- Elizabeth children -->
-                        <li><%= link_to "Rosamond Bentley", person_path("per.000159") %> - freed by petition in Prince George's County, Md.;<span class="foot"><a href="#footn2" id="bodyn2">2</a></span> was a witness for the petitions of Susan, Ann, & Letitia Davis in Washington, D.C. - <em>see <a href="#davis">Davis Siblings</a> below</em></li>
+                        <li>Margaret Bentley</li>                        
+                        <li>William Bentley</li>
+                        <li><%= link_to "Rosamond Bentley", person_path("per.000159") %> - freed by petition in Prince George's County, Md. against <%= link_to "Anthony Addison", person_path("per.000167") %> in 1781;<span class="foot"><a href="#footn2" id="bodyn2">2</a></span> was a witness for the petitions of Susan, Ann, & Letitia Davis in Washington, D.C. - <em>see <a href="#davis">Davis Siblings</a> below</em></li>
 <!--                            <ul><!-\-Rosamond children-\->
                                 <li>Nancy Barton - manumitted</li>
                                     <ul><!-\-Nancy children-\->
@@ -28,7 +32,7 @@
                                     </ul><!-\-end Nancy-\->
                                 <li>Eleanor Cooper - manumitted</li>
                             </ul><!-\-end Rosamond-\->-->
-                        <li><%= link_to "Mary Bentley", person_path("per.000169") %> - did not win freedom petition in Prince George's County, Md.<span class="foot"><a href="#footn3" id="bodyn3">3</a></span></li>
+                        <li><%= link_to "Mary Bentley", person_path("per.000169") %> - did not win 1781 petition against <%= link_to "William Digges", person_path("per.000174") %> filed in Prince George's County, Md.<span class="foot"><a href="#footn3" id="bodyn3">3</a></span></li>
 <!--                            <ul><!-\-Mary children-\->
                                 <li>Lucy Bentley</li>
                                 <li>Sophia Bentley</li>
@@ -41,25 +45,9 @@
                                 <li>Rose Bentley</li>
                                 <li>Eleanor Bentley</li>
                             </ul><!-\-end Mary-\->-->
-                        <li><%= link_to "Eleanor 'Nell' Bentley", person_path("per.001181") %> - did not win freedom petition in Prince George's County, Md.<span class="foot"><a href="#footn3" id="bodyn3">3</a></span></li>
-<!--                            <ul><!-\-Nell children-\->
-                                <li>Polly Bentley</li>
-                                <li>William Bentley</li>
-                                <li>Sophia Bentley</li>
-                                <li>John Bentley</li>
-                                <li>Bell Bentley</li>
-                            </ul><!-\-end Nell-\->-->
-                        <li>Margaret Bentley</li>                        
-                        <li>William Bentley</li>
-                    </ul><!-- end Elizabeth -->
-            </ul><!-- end Rose -->
-        <li>Unknown Mother, possibly Rose Davis</li>
-            <ul><!-- UKN children 1-->
-                <li>Unknown Mother, possibly Elizabeth Bentley</li>
-                    <ul><!-- UKN children 2-->  
-                        <li>Unknown Mother</li>
-                            <ul><!-- UKN children 3-->
-                                <li><%= link_to "Elizabeth Bentley", person_path("per.000035") %> - b. in Md.; freed by <%= link_to "petition", case_path("oscys.caseid.0008") %> along with her children<span class="foot"><a href="#footn4" id="bodyn4">4</a></span></li>
+                        <li><%= link_to "Eleanor 'Nell' Bentley", person_path("per.001181") %> - did not win 1781 petition against <%= link_to "John Hawkins", person_path("per.000029") %> filed in Prince George's County, Md.<span class="foot"><a href="#footn3" id="bodyn3">3</a></span></li>
+                            <ul><!--Nell children-->
+                                <li><%= link_to "Elizabeth Bentley", person_path("per.000035") %> - b. in Md.; freed by <%= link_to "petition", case_path("oscys.caseid.0008") %> (along with her children) in Washington, D.C., against <%= link_to "Thomas Keen", person_path("per.000043") %> in 1809<span class="foot"><a href="#footn4" id="bodyn4">4</a></span></li>
                                     <ul><!-- Elizabeth children 3-->
                                         <li><%= link_to "Daniel Bentley", person_path("per.000032") %></li>
                                         <li><%= link_to "William Bentley", person_path("per.000042") %></li>
@@ -73,9 +61,14 @@
                                         <li><%= link_to "Anne Bentley", person_path("per.000031") %></li>
                                         <li><%= link_to "Eleanor Bentley", person_path("per.000034") %></li>
                                     </ul><!-- end Elizabeth -->
-                            </ul><!-- end UKN 3 -->
-                    </ul><!-- end UKN 2-->
-            </ul><!-- end UKN 1-->
+<!--                            <li>Polly Bentley</li>
+                                <li>William Bentley</li>
+                                <li>Sophia Bentley</li>
+                                <li>John Bentley</li>
+                                <li>Bell Bentley</li>-->
+                            </ul><!--end Nell-->
+                    </ul><!-- end Elizabeth -->
+            </ul><!-- end Rose -->
     </ul><!-- end Mary -->
 </ul><!-- end tree -->
 </p>
@@ -84,29 +77,29 @@
 
 <h3 id="davis">Davis Siblings</h3>
 
-<p class="small">These sisters and their children are descendants of Mary Davis, but it is not specified in the court documents how.</p> 
+<p class="small">These sisters and their children are descendants of Mary Davis, but it is not specified in the court documents how. Rosamond Bentley, the great-granddaughter of Mary Davis, was a witness for their petitions.</p> 
 
 <p>
 <ul class="tree">
-    <li><%= link_to "Susan Davis", person_path("per.000160") %> - freed by <%= link_to "petition", case_path("oscys.caseid.0249") %>; was a witness for the petitions of her sisters, Ann & Letitia</li>
+    <li><%= link_to "Susan Davis", person_path("per.000160") %> - freed by <%= link_to "petition", case_path("oscys.caseid.0249") %> in 1809 against <%= link_to "Caleb Swann", person_path("per.000168") %> in Washington, D.C.; was a witness for the petitions of her sisters, Ann & Letitia</li>
         <ul><!-- Susan children -->
-            <li>Airy Davis - freed by <%= link_to "petition", case_path("oscys.caseid.0249") %></li>
-            <li>John Davis - did not win <%= link_to "freedom petition", case_path("oscys.caseid.0251") %></li>
-            <li>Teresa "Tracy" Davis - did not win <%= link_to "freedom petition", case_path("oscys.caseid.0251") %></li>
-            <li>Mary Ann Davis - did not win <%= link_to "freedom petition", case_path("oscys.caseid.0251") %></li>
+            <li>Airy Davis - freed by <%= link_to "petition", case_path("oscys.caseid.0249") %> in 1809 against <%= link_to "Caleb Swann", person_path("per.000168") %> in Washington, D.C.</li>
+            <li>John Davis - lost <%= link_to "freedom petition", case_path("oscys.caseid.0251") %> in 1816 against <%= link_to "Hezekiah Wood", person_path("per.001604") %> in Washington, D.C.</li>
+            <li>Teresa "Tracy" Davis - lost <%= link_to "freedom petition", case_path("oscys.caseid.0251") %> in 1816 against <%= link_to "Hezekiah Wood", person_path("per.001604") %> in Washington, D.C.</li>
+            <li>Mary Ann Davis - lost <%= link_to "freedom petition", case_path("oscys.caseid.0251") %> in 1816 against <%= link_to "Hezekiah Wood", person_path("per.001604") %> in Washington, D.C.</li>
         </ul><!-- end Susan -->
-    <li><%= link_to "Ann Davis", person_path("per.000161") %> - outcome of <%= link_to "petition", case_path("oscys.caseid.0018") %> unknown</li>
+    <li><%= link_to "Ann Davis", person_path("per.000161") %> - outcome of 1809 <%= link_to "petition", case_path("oscys.caseid.0018") %> in Washington, D.C., against <%= link_to "Charles Minifee", person_path("per.000166") %> unknown</li>
         <ul><!-- Ann children -->
-            <li><%= link_to "David Davis", person_path("per.000162") %></li>
-            <li><%= link_to "Sarah Davis", person_path("per.000165") %></li>
-            <li><%= link_to "Frederick Davis", person_path("per.000163") %></li>
-            <li><%= link_to "Hanson Davis", person_path("per.000164") %></li>
+            <li><%= link_to "David Davis", person_path("per.000162") %> - outcome of petition unknown</li>
+            <li><%= link_to "Sarah Davis", person_path("per.000165") %> - outcome of petition unknown</li>
+            <li><%= link_to "Frederick Davis", person_path("per.000163") %> - outcome of petition unknown</li>
+            <li><%= link_to "Hanson Davis", person_path("per.000164") %> - outcome of petition unknown</li>
         </ul><!-- end Ann -->
-    <li><%= link_to "Letitia 'Letty' Davis", person_path("per.000150") %> - outcome of <%= link_to "petition", case_path("oscys.caseid.0017") %> unknown</li>
+    <li><%= link_to "Letitia 'Letty' Davis", person_path("per.000150") %> - outcome of 1809 <%= link_to "petition", case_path("oscys.caseid.0018") %> in Washington, D.C., against <%= link_to "Rebecca Forrest", person_path("per.000153") %> unknown</li>
         <ul><!-- Letty children -->
-            <li><%= link_to "Rachel Davis", person_path("per.000151") %></li>
+            <li><%= link_to "Rachel Davis", person_path("per.000151") %> - outcome of petition unknown</li>
                 <ul><!-- Rachel children -->
-                    <li><%= link_to "Henry Davis", person_path("per.000152") %></li>
+                    <li><%= link_to "Henry Davis", person_path("per.000152") %> - outcome of petition unknown</li>
                 </ul><!-- end Rachel -->
         </ul><!-- end Letty -->
 </ul><!-- end tree -->
@@ -135,7 +128,7 @@
 
 <p><span class="notenumber" id="footn3">3.</span> It is stated that Eleanor and Mary are the "full sister[s]" of Rosamond in a <%= link_to "bill of exceptions", doc_path("oscys.case.0018.003") %> filed in <em>Davis v. Minifee</em> and <em>Davis v. Forrest</em>. <a href="#bodyn3">[back]</a></p>
 
-<p><span class="notenumber" id="footn4">4.</span> Elizabeth's <%= link_to "petition for freedom", doc_path("oscys.case.0008.001") %> states that she is the great-great-grandaughter of Mary Davis. <a href="#bodyn4">[back]</a></p>
+<p><span class="notenumber" id="footn4">4.</span> Elizabeth's <%= link_to "petition for freedom", doc_path("oscys.case.0008.001") %> states that she is the great-great-grandaughter of Mary Davis. Hobson's research shows that Elizabeth was the daughter of Nell Bentley. Elizabeth was listed as "Polly" along with her mother in a 1760 inventory. On another inventory in 1772, Nell is listed with her daughter, Elizabeth, and two grandchildren: Susanna and William. <a href="#bodyn4">[back]</a></p>
 
 </div>
 

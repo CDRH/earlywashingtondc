@@ -3,13 +3,15 @@
 
 <h2 id="top">Queen Family Network</h2>
 
-<p>Many members of the Queen family petitioned courts in Maryland and D.C. for their freedom based upon their descent from a free woman. They had varying degrees of success.</p>  
+<p>Many members of the Queen family petitioned for their freedom in courts in Maryland and Washington, D.C., based upon their descent from a free woman. They had varying degrees of success. For further information on the Queens and their legal battles, see <%= story_link("The Timing of <i>Queen v. Hepburn</i>: An exploration of African American Networks in the Early Republic".html_safe, "queen_v_hepburn") %>.</p>
+
+<hr/>
 
 <p>
 <ul class="tree">
-<li><!--Mary Poppow Queen--><%= link_to "Mary Poppow Queen", person_path("per.000068") %> - b. abt 1704<span class="foot"><a href="#footn1" id="bodyn1">1</a></span></li>
+<li><%= link_to "Mary Poppow Queen", person_path("per.000068") %> - b. abt 1704; brought to Maryland by <%= link_to "Thomas Larkin", person_path("per.001475") %>; enslaved by <%= link_to "James Carroll", person_path("per.000065") %><span class="foot"><a href="#footn1" id="bodyn1">1</a></span></li>
     <ul><!-- Mary children -->
-        <li><!--Nanny Cooper--><%= link_to "Nanny Cooper", person_path("per.000066") %> (a.k.a. Queen) - b. abt 1720 - possibly freed by petition in Prince George's County, Md.<span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
+        <li><%= link_to "Nanny Cooper", person_path("per.000066") %> (a.k.a. Queen) - b. abt 1720 - possibly freed in 1796 by petition against <%= link_to "John Ashton", person_path("per.000215") %> in Prince George's County, Md.<span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
             <ul><!-- Nanny children -->
                 <li>Thomas - b. June 2, 1735, White Marsh Plantation, Md.</li>
                 <li>Mary Queen - b. February 28, 1737, White Marsh</li>
@@ -22,19 +24,22 @@
                 <li>Priscilla Queen - b. June 8, 1744, White Marsh</li>
                 <li>Ralph Queen - b. September 8, 1745, White Marsh</li>
                 <li>Fanny Queen - b. February 7, 1751, White Marsh</li>
-                <li>Mima Queen - b. September 7, 1755, White Marsh - <em>see <a href="#mima-allen">Mima Allen</a> below</em></li>
-                <li><!--Simon Queen--><%= link_to "Simon Queen", person_path("per.000076") %> - b. January 7, 1759, White Marsh - freed by petition in Prince George's County, Md.<span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
+                <li id="mima-queen">Mima Queen - b. September 7, 1755, White Marsh - <em>see <a href="#mima-allen">Mima Allen</a> below</em></li>
+                <li><%= link_to "Simon Queen", person_path("per.000076") %> - b. January 7, 1759, White Marsh - freed by 1796 petition against <%= link_to "John Ashton", person_path("per.000215") %> in Prince George's County, Md.<span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
                 <li>Henny Queen - b. October 26, 1760, White Marsh</li>
-                <li>David Queen - b. abt 1764 - petitioned for freedom in Harford County, Md.<span class="foot"><a href="#footn3" id="bodyn3">3</a></span></li>
+                    <ul><!-- Henny children -->
+                        <li>Nanny Queen - awarded freedom in 1794 petition against Sylvester Boarman in Harford County, Md.<span class="foot"><a href="#footn3" id="bodyn3">3</a></span></li>
+                    </ul><!-- end Henny -->
+                <li>David Queen - b. abt 1764 - awarded freedom in 1794 petition against Sylvester Boarman in Harford County, Md.<span class="foot"><a href="#footn3" id="bodyn3">3</a></span></li>
             </ul><!-- Nanny children -->
-        <li>Phyllis (Phillis) Queen - b. abt 1721 - freed by petition in Prince George's County, Md.<span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
+        <li>Phyllis (Phillis) Queen - b. abt 1721 - freed by 1796 petition against <%= link_to "John Ashton", person_path("per.000215") %> in Prince George's County, Md.<span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
             <ul><!-- Phyllis children -->
                 <li>Susanna "Suky" Queen - b. February 14, 1720, White Marsh</li>
                 <li>Betty Queen - b. August 1, 1745, White Marsh</li>
-                <li>Proteus Queen - b. abt 1750, White Marsh; twin to Gervais - freed by petition in Prince George's County, Md.<span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
-                <li>Gervais (Jarvis) Queen - b. abt 1750, White Marsh; twin to Proteus - freed by petition in Prince George's County, Md.<span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
-                <li><%= link_to "Edward 'Ned' Queen", person_path("per.000078") %> - b. May 3, 1754, White Marsh - freed by <%= link_to "petition", case_path("oscys.caseid.0338") %> in Maryland's General Court of the Western Shore</li>
-                <li>Mary Queen - b. May 17, 1757, White Marsh - freed by petition in Prince George's County, Md.<span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
+                <li>Proteus Queen - b. abt 1750, White Marsh; twin to Gervais - freed by 1796 petition against <%= link_to "John Ashton", person_path("per.000215") %> in Prince George's County, Md.<span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
+                <li>Gervais (Jarvis) Queen - b. abt 1750, White Marsh; twin to Proteus - freed by 1796 petition against <%= link_to "John Ashton", person_path("per.000215") %> in Prince George's County, Md.<span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
+                <li><%= link_to "Edward 'Ned' Queen", person_path("per.000078") %> - b. May 3, 1754, White Marsh - freed by <%= link_to "petition", case_path("oscys.caseid.0338") %> against <%= link_to "John Ashton", person_path("per.000215") %> 1794 in Maryland's General Court of the Western Shore</li>
+                <li>Mary Queen - b. May 17, 1757, White Marsh - freed by 1796 petition against <%= link_to "John Ashton", person_path("per.000215") %> in Prince George's County, Md.<span class="foot"><a href="#footn2" id="bodyn2">2</a></span></li>
                 <li>Sall Queen - b. April 6, 1758, White Marsh; died before 1763, White Marsh</li>
                 <li>Johnny Queen - b. January 16, 1759, White Marsh; died before 1763, White Marsh</li>
                 <li>Margaret "Peggy" Queen - b. January 7, 1761, White Marsh</li>
@@ -61,7 +66,7 @@
 
 <p>
 <ul class="tree">
-<li><%= link_to "Mina (Mima) Queen", person_path("per.000057") %> - did not win <%= link_to "freedom petition", case_path("oscys.caseid.0011") %></li>
+<li><%= link_to "Mina (Mima) Queen", person_path("per.000057") %> - did not win 1810 <%= link_to "freedom petition", case_path("oscys.caseid.0011") %> against <%= link_to "John Ashton", person_path("per.000215") %></li>
     <ul>
         <li><%= link_to "Louisa Queen", person_path("per.000056") %> - b. after 1782, most likely in Md.</li>
     </ul>
@@ -76,7 +81,7 @@
 
 <p>
 <ul class="tree">
-<li><%= link_to "Priscilla Queen", person_path("per.000213") %> - did not win <%= link_to "freedom petition", case_path("oscys.caseid.0025") %></li>
+<li><%= link_to "Priscilla Queen", person_path("per.000213") %> - outcome of 1810 <%= link_to "freedom petition", case_path("oscys.caseid.0025") %> against <%= link_to "Francis Neale", person_path("per.000214") %> unknown</li>
 </ul>
 </p>
 
@@ -84,11 +89,11 @@
 
 <h3>Hester Queen</h3>
 
-<p class="small">Priscilla Queen was a descendant of Mary Queen, through which line is uncertain. It is most likely through one of the daughters of Nanny Cooper or Phyllis.</p>
+<p class="small">Hester Queen was a descendant of Mary Queen, through which line is uncertain. It is most likely through one of the daughters of Nanny Cooper or Phyllis.</p>
 
 <p>
 <ul class="tree">
-<li><%= link_to "Hester Queen", person_path("per.000223") %> - did not win <%= link_to "freedom petition", case_path("oscys.caseid.0026") %>?</li>
+<li><%= link_to "Hester Queen", person_path("per.000223") %> - outcome of 1810 <%= link_to "freedom petition", case_path("oscys.caseid.0026") %> against <%= link_to "Richard Nally", person_path("per.000225") %> and <%= link_to "James Nevitt", person_path("per.000224") %> unknown</li>
 </ul>
 </p>
 
@@ -100,7 +105,7 @@
 
 <p>
 <ul class="tree">
-<li><%= link_to "Alexis Queen", person_path("per.000115") %> - did not win <%= link_to "freedom petition", case_path("oscys.caseid.0012") %>?</li>
+<li><%= link_to "Alexis Queen", person_path("per.000115") %> - outcome of 1810 <%= link_to "freedom petition", case_path("oscys.caseid.0012") %> against <%= link_to "John Davis", person_path("per.000116") %> unknown</li>
 </ul>
 </p>
 
@@ -108,7 +113,7 @@
 
 <h3 id="mima-allen">Mima Allen née Queen(?)</h3>
 
-<p class="small">It is possible that Mima Queen&#8212;born 1755, the daughter of Nanny Cooper&#8212;was transferred to the neighboring plantation of Daniel Clarke, where she had four children with a man enslaved by the Clarke family.</p>
+<p class="small">It is possible that <a href="#mima-queen">Mima Queen</a>&#8212;born 1755, the daughter of Nanny Cooper&#8212;was transferred to the neighboring plantation of Daniel Clarke, where she had four children with a man enslaved by the Clarke family.</p>
 
 <p>
 <ul class="tree">
@@ -126,7 +131,7 @@
 
 <h3>Monica</h3>
 
-<p class="small">Monica was enslaved by a John Hepburn, who sold her and her family to Samuel Hamilton. She may be a possibility for the mother of the <a href="#mina-queen">Mina Queen</a> that filed against John Hepburn. It is possible that Mina was born after the date of the 1796 deed where this information is found. Both Monica's name and the names of her children reflect a possible Queen heritage.</p>
+<p class="small">Monica was enslaved by a <%= link_to "John Hepburn", person_path("per.000058") %>, who sold her and her family to Samuel Hamilton. She may be a possibility for the mother of the <a href="#mina-queen">Mina Queen</a> that filed against John Hepburn. It is possible that Mina was born after the date of the 1796 deed where this information is found. Both Monica's name and the names of her children reflect a possible Queen heritage.</p>
 
 <p>
 <ul class="tree">
@@ -198,8 +203,7 @@
 
 <p><span class="notenumber" id="footn2">2.</span> This group of Queens successfully petitioned for their freedom from Jesuit priest John Ashton in Prince George's County Court (Docket), 1722-1851, April 1796, MSA C1203-43, MdHR 5848-1, Maryland State Archives. <a href="#bodyn2">[back]</a></p>
 
-<p><span class="notenumber" id="footn3">3.</span> David petitioned for freedom in Harford County, Md. as the son of Nanny Cooper.
-<em>David Queen v. Sylvester Boarman</em>, Harford County Court, 1794, Historical Society of Harford County. <a href="#bodyn3">[back]</a></p>
+<p><span class="notenumber" id="footn3">3.</span> David petitioned for freedom in Harford County, Md. as the son of Nanny Cooper. Nanny identified herself as the "daughter of Henny, who was the daughter of Nanny who was the Daughter of Mary Queen." <em>Nanny Queen and David Queen v. Sylvester Boarman</em>, Harford County Court, 1794, Historical Society of Harford County. <a href="#bodyn3">[back]</a></p>
 
 <p><span class="notenumber" id="footn4">4.</span> The details of Mima Allen and her children comes from the certificates in Prince George's County Court (Certificates of Freedom), 1806-1829, <a href="http://msa.maryland.gov/megafile/msa/speccol/sc2900/sc2908/000001/000762/html/">Volume 762</a>, MSA CM 1182-1, Maryland State Archives. <a href="#bodyn4">[back]</a></p>
 
