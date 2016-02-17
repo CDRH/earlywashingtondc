@@ -665,7 +665,7 @@ blockquote {
 
 ul.tree, ul.tree ul {
 	list-style-type: none;
-	background: url(vline.jpg) repeat-y;
+	background: url(' <%= asset_path("vline.jpg") %>') repeat-y;
 	margin: 0;
 	padding: 0;
 }
@@ -694,13 +694,13 @@ ul.tree li {
 	margin: 0;
 	padding: 0 12px;
 	line-height: 25px;
-	background: url(node.jpg) no-repeat;
+	background: url(' <%= asset_path("node.jpg") %>') no-repeat;
 	color: #000;
 	font-weight: normal;
 }
 
 ul.tree li:last-child {
-	background: #fff url(lastnode.jpg) no-repeat;
+	background: #fff url(' <%= asset_path("lastnode.jpg") %>') no-repeat;
 }
 
 a.gen, a.gen:visited, a.gen:active {
@@ -727,7 +727,7 @@ a.cas, a.cas:visited, a.cas:active {
 .visualize_link {
 	padding: 8em 0 0em 0;
 	display: block;
-	background: url(visualization_illustration.png) no-repeat center center;
+	background: url(' <%= asset_path("visualization_illustration.png") %>') no-repeat center center;
 	background-size: 80%;
 	border: 1px solid #ddd;
 	border-radius: 4px;
@@ -781,14 +781,14 @@ Home
 /* Top Callout */
 
 .home_description {
-	background: #eee0c4 url(./bg_paper_lighter.jpg) repeat fixed right center;
+	background: #eee0c4 url(' <%= asset_path("bg_paper_lighter.jpg") %>') repeat fixed right center;
 	border: solid 1px #aaa;
 	border-right: none;
 	border-left: none;
 }
 
 .home_description .container {
-	background: url(./map_big_png8.png) no-repeat right center;
+	background: url(' <%= asset_path("map_big_png8.png") %>') no-repeat right center;
 	height: 100%;
 	background-size: 100% auto;
 }
@@ -808,7 +808,7 @@ Home
 }
 
 .home_visualizations .container {
-	background: url(./network_rollover_1.png) 0 bottom;
+	background: url(' <%= asset_path("network_rollover_1.png") %>') 0 bottom;
 
 	
 }
@@ -816,7 +816,7 @@ Home
 /* Removed rollover on home page */
 /* .home_visualizations:hover .container {
 	background-color: transparent;
-	background: url(./network_rollover_2.png) 0 bottom;
+	background: url(' <%= asset_path("network_rollover_2.png") %>') 0 bottom;
 }
 */
 
