@@ -6,7 +6,7 @@
 
 
 <ul>
-	<li>Documents follow the <a href="http://www.tei-c.org/Guidelines/P5/">Text Encoding initiative P5 standard.</a></li>
+	<li>Documents follow the <a href="http://www.tei-c.org/Guidelines/P5/">Text Encoding Initiative P5 standard</a>.</li>
 	<li>Relationships follow the <a href="http://www.w3.org/RDF/">RDF standard</a>, using our own schema.</li>
 </ul>
 
@@ -20,7 +20,7 @@
 	<li>RDF Querying: <a href="http://jena.apache.org/download/#jena-fuseki">Apache Jena Fuseki</a></li>
 	<li>Data Querying and Transformation: XSLT Scripts (powered by <a href="http://saxon.sourceforge.net/#F9.6HE">Saxon 9 HE</a>)</li>
 	<li>Data Indexing: Ruby Scripts</li>
-	<li>Vsualizations: <a href="http://philogb.github.io/jit/">InfoVis Toolkit</a></li>
+	<li>Visualizations: <a href="http://philogb.github.io/jit/">InfoVis Toolkit</a></li>
 	
 </ul>
 
@@ -28,19 +28,19 @@
 
 <h4>Data Creation</h4>
 
-<p>First pictures were taken of all documents. Since these pictures did not serve an archival purpose, these were not taken according to any specifications.</p>
+<p>First, photographs were taken of all documents. Since these photos did not serve an archival purpose, these were not taken according to any specifications.</p>
 
 <p>Each document was encoded from the photographs, including in depth encoding of people, places, outcomes, relations, and more.</p>
 
 <p>Separately, a CSV file was created that marks the relationships which can be inferred from documents. This process is not automated because of the complexity of relationships and the way they are recorded.</p>
 
-<p>To index the data into Solr, a script goes through each TEI file and creates a static HTML view. A seperate script creates xml suitible for ingest into Solr, and a Ruby script posts these to the solr database. Much of the linking between documents happens during this process. For instance, a case document marks the related case, so we add the people mentioned in the case document to the case file.</p>
+<p>To index the data into Solr, a script goes through each TEI file and creates a static HTML view. A separate script creates XML suitable for ingest into Solr, and a Ruby script posts these to the Solr database. Much of the linking between documents happens during this process. For instance, a case document marks the related case, so we add the people mentioned in the case document to the case file.</p>
 
-<p>In order to create the RDF for querying, a script is run on the CSV which specifies the relationships and pulls data from a TEI personography <!-- TODO I would like to link to a personography definition, but can't find a suitible one -KMD --> to create a triple file. Seperately, the metadata specialist creates an RDF file to describe and constrain the data in the triple file.  </p>
+<p>In order to create the RDF for querying, a script is run on the CSV which specifies the relationships and pulls data from a TEI personography <!-- TODO I would like to link to a personography definition, but can't find a suitible one -KMD --> to create a triple file. Separately, the metadata specialist creates an RDF file to describe and constrain the data in the triple file.  </p>
 
 <h4>Website Creation</h4>
 
-<p>The first version of the OSCYS website was written in Apache Cocoon. The current version of the site is written in Ruby on Rails.</p>
+<p>The first version of the <em>OSCYS</em> website was written in Apache Cocoon. The current version of the site is written in Ruby on Rails.</p>
 
 <p>After data is created, it is indexed into Solr, and the Rails website calls on Solr for most data operations, such as listings for the browse pages, pulling metadata for the document pages, and pulling most of the information for case pages. </p>
 

@@ -15,7 +15,7 @@
 <h2>Relationship Querying</h2>
 
 <p>
-  The relationships between individuals involved with the cases in the OSCYS project have been described with RDF (Resource Description Framework).  The relationships themselves are available in the <%= link_to "relationships.ttl", rdf_path %> file, above, and the definitions of the types of relationships are in <%= link_to "ontology.owl", owl_path %> file.  The RDF was generated from a <%= link_to "CSV", csv_path %> file, which contains citations for the cases from which the relationships were defined.
+  The relationships between individuals involved with the cases in the OSCYS project have been described with Resource Description Framework (RDF).  The relationships themselves are available in the <%= link_to "relationships.ttl", rdf_path %> file, above, and the definitions of the types of relationships are in <%= link_to "ontology.owl", owl_path %> file.  The RDF was generated from a <%= link_to "CSV", csv_path %> file, which contains citations for the cases from which the relationships were defined.
 </p>
 
 <h3>Simple Relationship API</h3>
@@ -32,7 +32,7 @@
 </div>
 
 <p>
-Additionally, on the "search by relationship type" page at /people/connection_type, the xml and json results are available.
+Additionally, on the "search by relationship type" page at /people/connection_type, the XML and JSON results are available.
 </p>
 <div class="list-group">
   <%= link_to "Example of JSON results for 'witness of' relationship", connection_type_path({:type => 'witnessOf', :format => :json}), class: "list-group-item" %>
@@ -42,9 +42,10 @@ Additionally, on the "search by relationship type" page at /people/connection_ty
 <h3>Getting Started with RDF</h3>
 
 <p>
-  Not sure where to begin?  An intro to RDF and some of the queries used to power the OSCYS site are available online.  Check out these tutorials from UNL's <a href="http://cdrh.unl.edu">Center for Digital Research in the Humanities</a>:
+  Not sure where to begin?  An intro to RDF and some of the queries used to power the <em>OSCYS</em> site are available online.  Check out these tutorials from UNL's <a href="http://cdrh.unl.edu">Center for Digital Research in the Humanities</a>:
   <ul>
     <li><a href="http://cdrh.github.io/oscys/rdf/2015/06/22/rdf-part-1.html">RDF Part I: Triples</a></li>
     <li><a href="http://cdrh.github.io/oscys/rdf/sparql/2015/07/06/rdf-part-2.html">RDF Part II: Getting Set Up</a></li>
+    <li><a href="http://cdrh.github.io/oscys/rdf/sparql/2015/10/09/rdf-part-3.html">RDF Part III: Some Queries</a></li>
   </ul>
 </p>
