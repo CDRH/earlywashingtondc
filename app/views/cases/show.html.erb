@@ -10,7 +10,7 @@
   <% end %>
 
   <div class="jump_menu">
-    <%= '<a href="#claims">Claims for Freedom</a>'.html_safe if @case["claims_ss"] %>
+    <%= '<a href="#claims">Claim for Freedom</a>'.html_safe if @case["claims_ss"] %>
     <%= '<a href="#outcome">Outcome</a>'.html_safe if @case["outcomeData_ss"] %>
     <%= '<a href="#documents">Case Documents</a>'.html_safe if @case["caseDocumentData_ss"] %>
     <%= '<a href="#rel_documents">Related Documents</a>'.html_safe if @case["caseRelatedDocumentData_ss"] %>
@@ -26,9 +26,11 @@
   <% end %>
 	
   <% if @case["claims_ss"] %>
-    <h3>Claims for Freedom</h3>
+    <h3>Claim for Freedom Made</h3>
     <%# link to search for cases with similar claims %>
-    <%= metadata_list(@case["claims_ss"], @case["claims_ss"], "claims_ss") %>
+    <!--<%= metadata_list(@case["claims_ss"], @case["claims_ss"], "claims_ss") %>-->
+    <%= find_unique_strings(@case["claims_ss"]) %> 
+    <!-- lost the ability to click on claim to view other cases with the same claim -- probably for the best -->
   <% end %>
 
 	 <% if @case["outcomeData_ss"] %>
