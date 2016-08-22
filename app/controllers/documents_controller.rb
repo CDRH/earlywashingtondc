@@ -87,13 +87,15 @@ class DocumentsController < ApplicationController
     @page_class = "cases"
     # if this is actually a person or a case, redirect
     @doc = $solr.get_item_by_id(params[:id])
-    if @doc["recordType_s"] == "person"
-      redirect_to person_path(params[:id])
-    elsif @doc["recordType_s"] == "caseid"
-      redirect_to case_path(params[:id])
-    else
-      url = @doc["uriHTML"]
-      @res = Net::HTTP.get(URI.parse(url))
+    if @doc
+      if @doc["recordType_s"] == "person"
+        redirect_to person_path(params[:id])
+      elsif @doc["recordType_s"] == "caseid"
+        redirect_to case_path(params[:id])
+      else
+        url = @doc["uriHTML"]
+        @res = Net::HTTP.get(URI.parse(url))
+      end
     end
   end
   
