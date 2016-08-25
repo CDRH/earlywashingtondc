@@ -50,7 +50,7 @@ class PeopleController < ApplicationController
     id = params[:id]
     @person = $solr.get_item_by_id(id)
 
-    @docs = $solr.query({:qfield => "personID_ss", :qtext => id})
+    @docs = $solr.query({:qfield => "personID_ss", :qtext => id, :sort => "date asc"})
     @cases = $solr.query({:q => "personID_ss:#{id}", :fq => "recordType_s:caseid"})
 
     respond_to do |format|
