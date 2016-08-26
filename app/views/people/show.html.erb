@@ -129,7 +129,7 @@
       <!-- Cases -->
       <a name="cases"></a>
       <% if @cases[:docs].length > 0 %>
-        <h3><%= @cases[:num_found] %> Related Cases:</h3>
+        <h3><%= @cases[:num_found] %> Related <%= "Case".pluralize(@cases[:docs].length) %>:</h3>
         <ul>
         <% @cases[:docs].each do |doc| %>
           <li><%= link_to doc["title"], case_path(doc["id"]) %></li>
@@ -141,7 +141,7 @@
       <!-- Documents -->
       <a name="documents"></a>
       <% if @docs[:docs].length > 0 %>
-        <h3><%= @docs[:num_found] %> Related Documents: </h3>
+        <h3><%= @docs[:num_found] %> Related <%= "Document".pluralize(@docs[:docs]) %>: </h3>
         <ul>
         <% @docs[:docs].each do |doc| %>
           <li><%= link_to title_date_label(doc['title'], doc['dateDisplay']), doc_path(doc["id"]) %></li>
