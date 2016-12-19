@@ -8,11 +8,12 @@
 <div class="jump_menu">
   <h4>Sort Results: </h4>
   <% sort = params[:sort] ? params[:sort] : "title" %>
-  <%= link_to "Alphabetical", documents_path(sort_results("title")), :class => selected_sort?("title", sort) %>
-  <%= link_to "Date", documents_path(sort_results("date")), :class => selected_sort?("date", sort) %>
+  <%= link_to "Alphabetical", documents_path(sort("title")), :class => selected_sort?("title", sort) %>
+  <%= link_to "Date", documents_path(sort("date")), :class => selected_sort?("date", sort) %>
 </div>
 
-<%= render "partials/pagination" %>
+<%= paginator(@total_pages) %>
+
 <ul>
   <% @docs[:docs].each do |doc| %>
     <% label = title_date_label(doc["title"], doc["dateDisplay"]) %>
@@ -21,4 +22,4 @@
     </li>
   <% end %>
 </ul>
-<%= render "partials/pagination" %>
+<%= paginator(@total_pages) %>

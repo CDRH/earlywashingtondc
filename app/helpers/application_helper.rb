@@ -22,68 +22,14 @@ module ApplicationHelper
   #    Index Display    #
   #######################
 
-  def paginator_numbers(total_pages)
-    current_page = params[:page] ? params[:page].to_i : 1
-    total_pages = total_pages.to_i
-    html = ""
-    # weed out the first and last page, they'll be handled separately
-    prior_three = (current_page-3..current_page-1).reject { |x| x <= 1 }
-    next_three = (current_page+1..current_page+3).reject { |x| x >= total_pages }
-
-    # add the first page if you're not on it and add dots if it is far from the other pages
-    if current_page != 1
-      html += "<li>"
-      html += link_to "1", to_page("1") 
-      html += "</li>"
-      html += "<li class='disabled'><span>...</span></li>" if prior_three.min != 2 && current_page != 2
-    end
-
-    # prior three, current page, and next three
-    html += _add_paginator_options(prior_three)
-    html += "<li class='active'>"
-    html += link_to current_page.to_s, to_page(current_page)
-    html += "</li>"
-    html += _add_paginator_options(next_three)
-
-    # add the last page if you're not on it and add dots if it is far from the other pages
-    if current_page != total_pages
-      html += "<li class='disabled'><span>...</span></li>" if next_three.max != total_pages-1 && current_page != total_pages-1
-      html += "<li>"
-      html += link_to total_pages.to_s, to_page(total_pages)
-      html += "</li>"
-    end
-
-    return html.html_safe
-  end
-
-  def _add_paginator_options(range)
-    html = ""
-    range.each do |page|
-      html += "<li>"
-      html += link_to page.to_s, to_page(page)
-      html += "</li>"
-    end
-    return html
-  end
-
   def selected_sort?(field, sort_param)
     return "selected" if sort_param == field
   end
 
-  def sort_results(sort_field)
-    params[:sort] = sort_field
-    return params
-  end
 
-  # paginator method
-  def to_page(page)
-    merged = params.merge({:page => page.to_s})
-    return merged
-  end
-
-#######################
-#     Item Display    #
-#######################
+  #######################
+  #     Item Display    #
+  #######################
 
   def format_list(items, route="doc", sort_on_field=nil)
     if !items.nil?
