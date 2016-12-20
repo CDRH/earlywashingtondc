@@ -17,18 +17,6 @@ class ApplicationHelperTest < ActionView::TestCase
         ]
   end
 
-  test "_add_paginator_options" do
-    assert_equal _add_paginator_options(1..3), "<li><a href=\"/cases/all?page=1\">1</a></li><li><a href=\"/cases/all?page=2\">2</a></li><li><a href=\"/cases/all?page=3\">3</a></li>"
-  end
-
-  test "paginator_numbers" do
-    assert_equal paginator_numbers(9), "<li class='active'><a href=\"/cases/all?page=1\">1</a></li><li><a href=\"/cases/all?page=2\">2</a></li><li><a href=\"/cases/all?page=3\">3</a></li><li><a href=\"/cases/all?page=4\">4</a></li><li class='disabled'><span>...</span></li><li><a href=\"/cases/all?page=9\">9</a></li>"
-  end
-
-  test "to_page" do
-    assert_equal to_page(3), {:controller => "cases", :action => "all", :page => "3"}
-  end
-
   test "format_list with json" do
     assert_equal format_list(@solr_json), "<ul><li><a href=\"/doc/per.000046\">Oakley, Eliza</a></li><li><a href=\"/doc/per.000011\">Hiort, Henry</a></li></ul>"
   end

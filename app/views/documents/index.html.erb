@@ -12,7 +12,9 @@
   <%= link_to "Date", documents_path(sort("date")), :class => selected_sort?("date", sort) %>
 </div>
 
-<%= paginator(@total_pages) %>
+<div class="pagination_container">
+  <%= paginator(@total_pages) %>
+</div>
 
 <ul>
   <% @docs[:docs].each do |doc| %>
@@ -22,4 +24,7 @@
     </li>
   <% end %>
 </ul>
-<%= paginator(@total_pages) %>
+
+<div class="pagination_container">
+  <%= paginator(@total_pages) %>
+</div>

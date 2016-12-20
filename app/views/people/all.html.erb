@@ -4,7 +4,9 @@
 <%= make_alphabet_menu(@alphabet) %>
 </div>
 
-<%= paginator(@total_pages) %>
+<div class="pagination_container">
+  <%= paginator(@total_pages) %>
+</div>
 
 <ul>
   <% @docs[:docs].each do |person| %>
@@ -14,4 +16,6 @@
   <% end %>
 </ul>
 
-<%= paginator(@total_pages) %>
+<div class="pagination_container">
+  <%= paginator(@total_pages) %>
+</div>
