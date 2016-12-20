@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
     @docs = $solr.query(options)
     @total_found = @docs[:num_found]
     # default response is 50 pages, divide and round up for all
-    @total_pages = (@total_found.to_f/50).ceil
+    @total_pages = @docs[:pages]
   end
 
   def format_date(date)

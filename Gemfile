@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 # Custom CDRH gem
-gem 'rsolr_cdrh', :git => 'git://github.com/CDRH/rsolr_cdrh.git', :tag => '0.1.0'
+gem 'rsolr_cdrh', :git => 'https://github.com/CDRH/rsolr_cdrh.git', :tag => '0.1.0'
+gem 'solr_helpers', :git => 'https://github.com/CDRH/solr_helpers.git', :tag => '0.0.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.10'

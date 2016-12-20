@@ -80,7 +80,8 @@ class DocumentsController < ApplicationController
       :qtext => params[:qtext], :facet => "true"}, ["recordType_s"])
     @categories = facets["recordType_s"]
     # default response is 50 pages, divide and round up for all
-    @total_pages = (@docs[:num_found].to_f/rows).ceil
+    # @total_pages = (@docs[:num_found].to_f/rows).ceil
+    @total_pages = @docs[:pages]
   end
 
   def show

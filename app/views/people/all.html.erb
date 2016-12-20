@@ -4,10 +4,9 @@
 <%= make_alphabet_menu(@alphabet) %>
 </div>
 
-<%= render "partials/pagination" %>
-
-
-
+<div class="pagination_container">
+  <%= paginator(@total_pages) %>
+</div>
 
 <ul>
   <% @docs[:docs].each do |person| %>
@@ -17,6 +16,6 @@
   <% end %>
 </ul>
 
-<% if @total_pages.to_i > 1 %>
-  <%= render "partials/pagination" %>
-<% end %>
+<div class="pagination_container">
+  <%= paginator(@total_pages) %>
+</div>

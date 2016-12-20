@@ -5,9 +5,9 @@
   <div class="jump_menu">
     <h4>Sort Results: </h4>
     <% sort = params[:sort] %>
-    <%= link_to "Alphabetical", search_path(sort_results("title")), :class => selected_sort?("title", sort) %>
-    <%= link_to "Date", search_path(sort_results("date")), :class => selected_sort?("date", sort) %>
-    <%= link_to "Relevance", search_path(sort_results("score")), :class => selected_sort?("score", sort) %>
+    <%= link_to "Alphabetical", search_path(sort("title")), :class => selected_sort?("title", sort) %>
+    <%= link_to "Date", search_path(sort("date")), :class => selected_sort?("date", sort) %>
+    <%= link_to "Relevance", search_path(sort("score")), :class => selected_sort?("score", sort) %>
   </div>
 
   <div class="jump_menu">
@@ -16,7 +16,9 @@
   </div>
 </div><!-- /well -->
 
-<%= render "partials/pagination" %>
+<div class="pagination_container">
+  <%= paginator(@total_pages) %>
+</div>
 
 <% if @docs[:docs].length > 0 %>
 <ul>
@@ -28,6 +30,6 @@
 </ul>
 <% end %>
 
-<% if @total_pages.to_i > 1 %>
-<%= render "partials/pagination" %>
-<% end %>
+<div class="pagination_container">
+  <%= paginator(@total_pages) %>
+</div>
