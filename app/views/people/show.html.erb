@@ -4,8 +4,13 @@
   <p>This person may not exist or we may be experiencing technical issues.</p>
 <% else %>
   <h2><strong><%= @person["title"]%></strong> <!--(<%= @person["id"] %>)--></h2>
-  <p><%= "Alternate names: #{@person['personAltName_ss'].join(', ')}" if @person["personAltName_ss"] %>
-
+  <% if @person["personAltName_ss"] %>
+    <p><%= "Alternate Names: #{@person['personAltName_ss'].join(", ")}" %></p>
+  <% end %>
+  <% if @person["personMaidenName_ss"] %>
+    <p><%= "Maiden Name: #{@person['personMaidenName_ss'].join(", ")}" %></p>
+  <% end %>
+  
   <div class="jump_menu">
   
     <%= '<a href="#cases">Related Cases</a>'.html_safe if @cases[:docs].length > 0 %>
