@@ -7,8 +7,8 @@
   <% if @person["personAltName_ss"] %>
     <p><%= "Alternate Names: #{@person['personAltName_ss'].join(", ")}" %></p>
   <% end %>
-  <% if @person["personMaidenName_ss"] %>
-    <p><%= "Maiden Name: #{@person['personMaidenName_ss'].join(", ")}" %></p>
+  <% if @person["personBirthName_ss"] %>
+    <p><%= "Birth Name: #{@person['personBirthName_ss'].join(", ")}" %></p>
   <% end %>
   
   <div class="jump_menu">
