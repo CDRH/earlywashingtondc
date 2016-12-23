@@ -21,7 +21,7 @@ class Relationships
 
     test_query = self.query("{ ?s ?p ?o } LIMIT 1")
     @ready = !test_query.nil?
-    puts "Warning: Connection with RDF server not established!" if !@ready
+    Rails.logger.error "Warning: Connection with RDF server not established!" if !@ready
   end
 
   def query(query_string, include_owl=false, format="json", order_by=nil)
@@ -30,7 +30,7 @@ class Relationships
     begin
       return Net::HTTP.get(URI.parse(url))
     rescue => e
-      puts "There was an error while querying rdf / parsing: #{e}"
+      Rails.logger.error "There was an error while querying rdf / parsing: #{e}"
       return nil
     end
   end
