@@ -30,5 +30,9 @@ Find people related by a specific type of connection in the OSCYS data.
     </table>
   </div>
 <% elsif params[:type] %>
-  <h4>No results found</h4>
+  <% if $rdf_ready %>
+    <h4>No results found</h4>
+  <% else %>
+    <h4>Relationships currently unavailable</h4>
+  <% end %>
 <% end %>

@@ -55,16 +55,18 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       format.html {
-        # only display this error in HTML to allow for local testing
-        # and usability of the website for average users
-        begin
-          @rdfresults = JSON.parse(Relationships.new.query_one_removed(id))
-        rescue
-          @rdfresults = nil
-        end
+        @rdfresults = $rdf_ready ? JSON.parse(Relationships.new.query_one_removed(id)) : nil
       }
-      format.json { render :json => Relationships.new.query_one_removed(id) }
-      format.xml { render :xml => Relationships.new.query_one_removed(id, "xml") }
+      format.json do
+        res = $rdf_ready ? Relationships.new.query_one_removed(id)
+          : { :error => "Relationships currently unavailable" }
+        render :json => res
+      end
+      format.xml do
+        res = $rdf_ready ? Relationships.new.query_one_removed(id, "xml")
+          : "<xml><error>Relationships currently unavailable</error></xml>"
+        render :xml => res
+      end
     end
   end
 
@@ -76,12 +78,20 @@ class PeopleController < ApplicationController
     @person_url = request.base_url + network_vis_path.sub(/per\.[0-9]{6}/, "")
     respond_to do |format|
       format.html { 
-        @res = Hypertree.new(@id, true).json
+        @res = $rdf_ready ? Hypertree.new(@id, true).json : nil
         # optional to avoid all the header / footer
         render layout: false
       }
-      format.json { render :json => Relationships.new.query_two_removed(@id, "json") }
-      format.xml { render :xml => Relationships.new.query_two_removed(@id, "xml") }
+      format.json do
+        res = $rdf_ready ? Relationships.new.query_two_removed(@id, "json")
+          : { :error => "Network for #{@id} currently unavailable" }
+        render :json => res
+      end
+      format.xml do
+        res = $rdf_ready ? Relationships.new.query_two_removed(@id, "xml")
+          : "<xml><error>Network for #{@id} currently unavailable</error></xml>"
+        render :xml => res
+      end
     end
   end
 
@@ -95,10 +105,9 @@ class PeopleController < ApplicationController
       "facet.limit" => "-1", 
       :facet => "true",
       "facet.mincount" => "1"}, ["attorneyData_ss"])
-    rdf = Relationships.new
     @people = dropdownify_data_facets(facets["attorneyData_ss"], false)
 
-    if params["per1id"] && params["per2id"]
+    if $rdf_ready && params["per1id"] && params["per2id"]
       # rdf queries to get the relationships
       rdf = Relationships.new
       @relationOne = _get_rdf_good_stuff(rdf.query_first_relation(params["per1id"], params["per2id"]))
@@ -110,11 +119,19 @@ class PeopleController < ApplicationController
 
   def connection_type
     @page_class = "people"
-    rdf = Relationships.new
-    respond_to do |format|
-      format.html { @res = _get_rdf_good_stuff(rdf.query_by_connection(params[:type])) }
-      format.json { render :json => rdf.query_by_connection(params[:type]) }
-      format.xml { render :xml => rdf.query_by_connection(params[:type], "xml") }
+    if $rdf_ready
+      rdf = Relationships.new
+      respond_to do |format|
+        format.html { @res = _get_rdf_good_stuff(rdf.query_by_connection(params[:type])) }
+        format.json { render :json => rdf.query_by_connection(params[:type]) }
+        format.xml { render :xml => rdf.query_by_connection(params[:type], "xml") }
+      end
+    else
+      respond_to do |format|
+        format.html { @res = nil }
+        format.json { render :json => { :error => "Relationships currently unavailable" } }
+        format.xml { render :xml => "<xml><error>Relationships currently unavailable</error></xml>" }
+      end
     end
   end
 
