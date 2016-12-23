@@ -54,8 +54,14 @@ class PeopleController < ApplicationController
     @cases = $solr.query({:q => "personID_ss:#{id}", :fq => "recordType_s:caseid"})
 
     respond_to do |format|
-      format.html { 
-        @rdfresults = JSON.parse(Relationships.new.query_one_removed(id)) 
+      format.html {
+        # only display this error in HTML to allow for local testing
+        # and usability of the website for average users
+        begin
+          @rdfresults = JSON.parse(Relationships.new.query_one_removed(id))
+        rescue
+          @rdfresults = nil
+        end
       }
       format.json { render :json => Relationships.new.query_one_removed(id) }
       format.xml { render :xml => Relationships.new.query_one_removed(id, "xml") }
