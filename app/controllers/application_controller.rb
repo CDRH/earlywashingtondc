@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
       "facet.mincount" => "1",
       "facet.limit" => "-1"
     })
+    $rdf_ready = Relationships.new.ready
   end
 
   private

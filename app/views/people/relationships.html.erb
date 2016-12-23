@@ -14,7 +14,7 @@ Find connections up to four removed for attorneys in the OSCYS data.
   </div>
 <% end %>
 
-<% if params["per1id"] && params["per2id"] %>
+<% if $rdf_ready && params["per1id"] && params["per2id"] %>
 
 <!-- Navigate relationships -->
   <div class="jump_menu">
@@ -119,4 +119,6 @@ Find connections up to four removed for attorneys in the OSCYS data.
       <% end %>
     </table>
   <% end %>
+<% else %>
+  <p>Relationship connections currently unavailable</p>
 <% end %>  <%# end checking if any RDF results should be displayed %>

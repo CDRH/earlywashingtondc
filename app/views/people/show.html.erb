@@ -15,8 +15,8 @@
   
     <%= '<a href="#cases">Related Cases</a>'.html_safe if @cases[:docs].length > 0 %>
     <%= '<a href="#documents">Related Documents</a>'.html_safe if @docs[:docs].length > 0 %> 
-    <%= '<a href="#visualizations">Visualization</a>'.html_safe if @rdfresults["results"]["bindings"].length > 0 %>
-    <%= '<a href="#relationships">Relationships</a>'.html_safe if @rdfresults["results"]["bindings"].length > 0 %>
+    <%= '<a href="#visualizations">Visualization</a>'.html_safe if @rdfresults && @rdfresults["results"]["bindings"].length > 0 %>
+    <%= '<a href="#relationships">Relationships</a>'.html_safe if @rdfresults && @rdfresults["results"]["bindings"].length > 0 %>
   </div>
   
   <div class="row">
@@ -157,14 +157,16 @@
   	  
     </div><!--/column-->
     <div class="col-md-6">
-      <% if @rdfresults["results"]["bindings"].length > 0 %>
+      <% if @rdfresults && @rdfresults["results"]["bindings"].length > 0 %>
 	      <%= link_to "<div class='btn btn-default btn-lg btn-block' id='visualizations'>Visualize Relationships</div>".html_safe, network_vis_path(@person["id"]), class: "visualize_link", role: "button"  %>
-      <% end %>	  
+      <% else %>
+        <div class="btn btn-default btn-lg btn-block" id="visualizations">Relationship visualization<br/>currently unavailable</div>
+      <% end %>
 	  
       <!-- Relationships -->
       <a name="relationships"></a>
-      <% if @rdfresults["results"]["bindings"].length > 0 %>
-        <h3>Relationships:</h3>
+      <h3>Relationships:</h3>
+      <% if @rdfresults && @rdfresults["results"]["bindings"].length > 0 %>
         <% if @rdfresults && @rdfresults["results"] && @rdfresults["results"]["bindings"] %>
           <ul>
           <%# TODO clean this huge mess up %>
@@ -174,6 +176,8 @@
           <% end %>
           </ul>
         <% end %>
+      <% else %>
+        <p>Relationship information currently unavailable</p>
       <% end %>
     </div><!--/column-->
   </div><!--/row-->
