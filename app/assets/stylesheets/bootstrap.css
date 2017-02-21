@@ -4,8 +4,8 @@
 /*@import url(http://fonts.googleapis.com/css?family=Oranienbaum);
 @import url(http://fonts.googleapis.com/css?family=Dosis:200);*/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-@import url(http://fonts.googleapis.com/css?family=Oranienbaum);
-@import url(http://fonts.googleapis.com/css?family=Dosis:200);
+@import url(//fonts.googleapis.com/css?family=Oranienbaum);
+@import url(//fonts.googleapis.com/css?family=Dosis:200);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
