@@ -157,27 +157,24 @@
   	  
     </div><!--/column-->
     <div class="col-md-6">
-      <% if @rdfresults && @rdfresults["results"]["bindings"].length > 0 %>
-	      <%= link_to "<div class='btn btn-default btn-lg btn-block' id='visualizations'>Visualize Relationships</div>".html_safe, network_vis_path(@person["id"]), class: "visualize_link", role: "button"  %>
+      <%# don't display the relationship column if there are no relationships %>
+      <% if !$rdf_ready %>
+        <div class="alert alert-danger" id="visualizations">Relationships currently unavailable</div>
       <% else %>
-        <div class="btn btn-default btn-lg btn-block" id="visualizations">Relationship visualization<br/>currently unavailable</div>
-      <% end %>
+        <% if @rdfresults && @rdfresults["results"]["bindings"].length > 0 %>
+	        <%= link_to "<div class='btn btn-default btn-lg btn-block' id='visualizations'>Visualize Relationships</div>".html_safe, network_vis_path(@person["id"]), class: "visualize_link", role: "button"  %>
 	  
-      <!-- Relationships -->
-      <a name="relationships"></a>
-      <h3>Relationships:</h3>
-      <% if @rdfresults && @rdfresults["results"]["bindings"].length > 0 %>
-        <% if @rdfresults && @rdfresults["results"] && @rdfresults["results"]["bindings"] %>
+          <!-- Relationships -->
+          <a name="relationships"></a>
+          <h3>Relationships:</h3>
           <ul>
-          <%# TODO clean this huge mess up %>
-          <% @rdfresults["results"]["bindings"].each do |rel| %>
-            <% label = rel["rel1"]["value"].sub(/.*#/, "").titleize + " " +rel["name1"]["value"] %>
-            <li><%= link_to label, person_path(rel["per1"]["value"].sub(/.*#/, "")) %></li>
-          <% end %>
+            <%# TODO clean this huge mess up %>
+            <% @rdfresults["results"]["bindings"].each do |rel| %>
+              <% label = rel["rel1"]["value"].sub(/.*#/, "").titleize + " " +rel["name1"]["value"] %>
+              <li><%= link_to label, person_path(rel["per1"]["value"].sub(/.*#/, "")) %></li>
+            <% end %>
           </ul>
         <% end %>
-      <% else %>
-        <p>Relationship information currently unavailable</p>
       <% end %>
     </div><!--/column-->
   </div><!--/row-->
