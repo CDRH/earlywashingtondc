@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   get 'rdf/relationships.ttl' => redirect("http://earlywashingtondc.org/rdf/oscys.relationships.ttl"), :as => :rdf
   get 'rdf/ontology.owl' => redirect("http://earlywashingtondc.org/rdf/oscys.objectproperties.owl"), :as => :owl
   get 'rdf/relationships.csv' => redirect("http://earlywashingtondc.org/rdf/oscys.relationships.csv"), :as => :csv
-    # change the TEI to point at github once the repository is public
-  get 'tei.xml' => redirect("http://cdrhsites.unl.edu/data/projects/oscys/tei"), :as => :tei
+
+  # external links with named routes
   get 'github' => redirect("https://github.com/CDRH/earlywashingtondc"), :as => :repo
   get 'contribute' => 'static#contribute', as: :contribute
   get 'changelog' => 'static#changelog', as: :changelog
