@@ -92,7 +92,7 @@
     </div><!-- /.navbar -->
     <div id="main" class="main_content">
       <!-- begin content -->
-      <%= yield %>
+      <%= yield.to_s.force_encoding("UTF-8") %>
       <!-- end content -->
     </div>
     <div id="footer" class="footer">
