@@ -305,19 +305,45 @@ del {
 	color: #aaa;
 }
 
+.tei_gap {
+	color: #60693e;
+	color: #aaa;
+    font-style: italic;
+/* for some reason, the class for this is tei_gap, not gap - KLN */
+}
+
 .unclear {
 	color: #49502F;
-	color: #aaa;
+	color: #888;
 }
 
 .gap.sampling {
 	display: none;
 }
 
+.tei_gap_reason_sampling {
+	display: none;
+/* correct class for this - KLN */
+}
+
 .titlePage, .titlePart, .byline, .docImprint, .pubPlace, .publisher, .date {
   display: block;
   font: 1.3em "Oranienbaum", Georgia, "Times New Roman", Times, serif;
   line-height: 1.6;
+}
+
+.tei_fw {
+  display: block;
+  font: 1.3em "Oranienbaum", Georgia, "Times New Roman", Times, serif;
+  line-height: 1.6;
+}
+
+.tei_fw_type_catch {
+  display: inline;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.42857;
+  font-style: italic;
 }
 
 
