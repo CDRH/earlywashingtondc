@@ -2,7 +2,6 @@ with_period = /[^\/]+/
 with_period_ext = /[^\/]+(?=(\.json)|(\.xml)|(\.html))+/
 
 Rails.application.routes.draw do
-
   root 'static#index'
 
   # static pages
@@ -60,5 +59,4 @@ Rails.application.routes.draw do
   # error handling
   match '/404', to: 'errors#not_found', via: :all
   match '/500', to: 'errors#server_error', via: :all
-
 end
