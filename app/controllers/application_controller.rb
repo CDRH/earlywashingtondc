@@ -83,4 +83,8 @@ class ApplicationController < ActionController::Base
   end
   helper_method :linkable_id?
 
+  def params_permit
+    params.permit!
+  end
+
 end
