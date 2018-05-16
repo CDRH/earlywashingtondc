@@ -1,4 +1,6 @@
 class DocumentsController < ApplicationController
+  before_action :params_permit
+
   def index
     @page_class = "cases"
     options = params[:sort] ? { :sort => "#{params[:sort]} asc" } : {}
