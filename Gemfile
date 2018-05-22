@@ -42,5 +42,6 @@ gem 'listen',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem "ffi", "~> 1.0", '!= 1.9.22', '!= 1.9.23'
 
 
