@@ -273,6 +273,11 @@ a.sic, a.orig {
 	font-style: italic;
 }
 
+.tei_bibl {
+	font-style: italic;
+/* for some reason, the class for this is tei_bibl, not bibl - KLN */
+}
+
 .source_date, .source_note {
 	margin-left: .1em;
 	font-size: .8em;
@@ -685,6 +690,26 @@ blockquote {
     font-size: 90%;
     border-left: 5px solid #eeeeee;
     border-right: 5px solid #eeeeee;
+}
+
+.glyphicon-alert:before {
+  content: "\e209";
+}
+.alert {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 1.1em;
+}
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-info a {
+  color: #245269;
+  font-weight: bold;
 }
 
 
