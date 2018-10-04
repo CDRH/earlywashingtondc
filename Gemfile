@@ -5,7 +5,7 @@ gem 'rsolr_cdrh', :git => 'https://github.com/CDRH/rsolr_cdrh.git', :tag => '2.1
 gem 'solr_helpers', :git => 'https://github.com/CDRH/solr_helpers.git', :tag => '1.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.0'
+gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
