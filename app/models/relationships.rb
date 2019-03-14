@@ -26,7 +26,7 @@ class Relationships
 
   def query(query_string, include_owl=false, format="json", order_by=nil)
     url = _build_url(query_string, order_by, include_owl, format)
-    Rails.logger.info "Querying rdf with #{url}"
+    Rails.logger.debug "Querying rdf with #{url}"
     begin
       return Net::HTTP.get(URI.parse(url))
     rescue => e
