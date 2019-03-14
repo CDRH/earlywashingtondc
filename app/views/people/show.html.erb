@@ -119,7 +119,11 @@
         <% if @person["personIdnoVIAF_ss"] %>
         <div class="row">
           <div class="col-md-4 meta_label">VIAF:</div><!--/column-->
-          <div class="col-md-8 meta_data"><%= metadata_people_list(@person["personIdnoVIAF_ss"]) %></div><!--/column-->
+          <div class="col-md-8 meta_data">
+            <a href="<%= @person["personIdnoVIAF_ss"].first %>">
+              <%= @person["personIdnoVIAF_ss"].first %>
+            </a>
+          </div>
         </div><!--/row-->
         <% end %>
 
