@@ -7,9 +7,9 @@ gem 'solr_helpers', :git => 'https://github.com/CDRH/solr_helpers.git', :tag => 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.6'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0.7'
+gem 'sassc-rails', '~> 2.1.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
