@@ -55,6 +55,10 @@ Rails.application.routes.draw do
   # about
   get 'about', to: 'about#index', as: :about
   get 'about/:name', to: 'about#sub', as: :aboutSub, :constraints => { :name => with_period }
+
+  # maps
+  get 'maps', to: 'maps#index', as: :maps
+  get 'maps/:name', to: 'maps#sub', as: :mapsSub, :constraints => { :name => with_period }
   
   # error handling
   match '/404', to: 'errors#not_found', via: :all
