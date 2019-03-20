@@ -81,7 +81,29 @@ class Hypertree < Relationships
       # if per0's initial relationships exceed allowed number, disable outer ring
       if info["children"].length > @num_allowed
         notes = "Due to number of relationships, only displaying first level of familiarity"
-        info["children"].each { |c| c["children"] = [] }
+        # for each of the first ring's children, empty out the dataset
+        # so that they will not be displayed
+        info["children"].each do |c|
+          c["name"] = _omitted_label(c["name"], c["children"])
+          c["children"] = []
+        end
+      end
+      # TODO this also removes relationships to other individuals already being
+      # displayed for other people on the visualization
+      omitted = []
+      info["children"].each do |c|
+        if c["children"].length > @num_allowed
+          omitted << c["name"]
+          c["name"] = _omitted_label(c["name"], c["children"])
+          c["children"] = []
+        end
+      end
+      if omitted.length > 0
+        notes = <<-TEXT
+          Due to a large number of relationships,
+          these relationship networks have been omitted:
+        TEXT
+        notes += omitted.join("; ")
       end
     end
     # File.open("scripts/test_output.json", "w") { |file| file.write(info.to_json) }
@@ -103,6 +125,12 @@ class Hypertree < Relationships
 
   def _omit_rel?(rel)
     return rel == "judgeOf" || rel == "clerkOf" || rel == "judgedBy" || rel == "clerkedBy"
+  end
+
+  def _omitted_label(persname, children)
+    # add a warning to the person's name
+    num = children.length
+    label = "#{persname}<br/>(#{num} people omitted)"
   end
 
   def _value(rdf_item)
