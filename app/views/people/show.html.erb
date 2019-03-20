@@ -166,8 +166,15 @@
         <div class="alert alert-danger" id="visualizations">Relationships currently unavailable</div>
       <% else %>
         <% if @rdfresults && @rdfresults["results"]["bindings"].length > 0 %>
-	        <%= link_to "<div class='btn btn-default btn-lg btn-block' id='visualizations'>Visualize Relationships</div>".html_safe, network_vis_path(@person["id"]), class: "visualize_link", role: "button"  %>
-	  
+	        <%= link_to network_vis_path(@person["id"]), class: "visualize_link", role: "button" do %>
+            <div class="btn btn-default btn-lg btn-block" id="visualizations">
+              Visualize Relationships
+            </div>
+          <% end %>
+          <div id="visualize_warning">
+            Warning: visualizations with many relationships may load slowly or crash the browser tab
+          </div>
+
           <!-- Relationships -->
           <a name="relationships"></a>
           <h3>Relationships:</h3>
