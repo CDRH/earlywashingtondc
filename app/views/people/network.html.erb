@@ -93,23 +93,21 @@
             <li class="rtype_multiple"><span>Multiple</span></li>
             <li class="rtype_missing"><span>Unknown</span></li>
           </ul>
-          
-          <p>Visualizations do not contain judge and clerk relationships due to the large number of largely impersonal results.</p>
-          <% if @notes.present? %>
-            <p><%= @notes %></p>
-          <% else %>
-            <p>Displaying relationships two degrees out from selected individual.</p>
-          <% end %>
         </div> <!-- /key -->
       </div><!-- /inner -->
     </div><!-- /left-container -->
 
     <% if @res && @res["children"] && @res["children"].length > 0 %>
       <div id="center-container">
+        <% if @notes.present? %>
+          <div class="vis-notice">
+            <%= @notes %>
+          </div>
+        <% end %>
         <div id="infovis"/>
       </div>
     <% else %>
-      <div id="no-relationship">
+      <div class="vis-notice">
         <h4>No relationships of this type found. Network may be currently unavailable.</h4>
       </div>
     <% end %> 
