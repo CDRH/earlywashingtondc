@@ -94,7 +94,12 @@
             <li class="rtype_missing"><span>Unknown</span></li>
           </ul>
           
-          <p>Visualizations show relationships to two degrees out, and do not contain judge and clerk relationships.</p>
+          <p>Visualizations do not contain judge and clerk relationships due to the large number of largely impersonal results.</p>
+          <% if @notes.present? %>
+            <p><%= @notes %></p>
+          <% else %>
+            <p>Displaying relationships two degrees out from selected individual.</p>
+          <% end %>
         </div> <!-- /key -->
       </div><!-- /inner -->
     </div><!-- /left-container -->

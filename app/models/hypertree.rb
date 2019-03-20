@@ -6,6 +6,7 @@ class Hypertree < Relationships
     @id = person
     @omit = omit
     @type = type
+    @num_allowed = 40
     # we are taking the "types" out of the hypertree
     # but we could add it back in the future
     # raw_res = query_two_removed(person, "json", type)
@@ -19,6 +20,7 @@ class Hypertree < Relationships
   def format_results(raw_json)
     # expects results from self.class.query_two_removed in ruby json form
     info = {}
+    notes = ""
     # get the actual results
     bindings = raw_json["results"] && raw_json["results"]["bindings"] ? raw_json["results"]["bindings"] : nil
     if bindings.nil?
@@ -76,9 +78,14 @@ class Hypertree < Relationships
           end
         end
       end
+      # if per0's initial relationships exceed allowed number, disable outer ring
+      if info["children"].length > @num_allowed
+        notes = "Due to number of relationships, only displaying first level of familiarity"
+        info["children"].each { |c| c["children"] = [] }
+      end
     end
     # File.open("scripts/test_output.json", "w") { |file| file.write(info.to_json) }
-    return info
+    { info: info, notes: notes }
   end
 
   def _new_person(id, name, level, relation=nil, relationType=nil, children_exist=false, first=false)
