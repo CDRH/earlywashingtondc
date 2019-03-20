@@ -78,7 +78,8 @@ class PeopleController < ApplicationController
     @person_url = request.base_url + network_vis_path.sub(/per\.[0-9]{6}/, "")
     respond_to do |format|
       format.html { 
-        @res = $rdf_ready ? Hypertree.new(@id, true).json : nil
+        # @res = $rdf_ready ? Hypertree.new(@id, true).json : nil
+        @res = $rdf_ready ? NetworkVisualization.new(@id, true).format_results : nil
         # optional to avoid all the header / footer
         render layout: false
       }

@@ -5,117 +5,91 @@
   <title>OSCYS: Visualization</title> 
 
   <!-- CSS Files -->
+  <%= stylesheet_link_tag 'vis-network', media: 'all', 'data-turbolinks-track' => false %>
   <%= stylesheet_link_tag 'hypertree', media: 'all', 'data-turbolinks-track' => false %>
 
   <!-- JIT Files -->
-  <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", :async => false %>
-  <%= javascript_include_tag "defiant.min", "data-turbolinks-track" => false %>
-  <%= javascript_include_tag 'jit.min', 'data-turbolinks-track' => false %>
+  <%# javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", :async => false %>
+  <%# javascript_include_tag "defiant.min", "data-turbolinks-track" => false %>
+  <%# javascript_include_tag 'jit.min', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'vis', 'data-turbolinks-track' => false %>
   <script>
     <%# need non-ruby json and a string to call html safe, apparently %>
     var json = <%= @res.to_json.to_s.html_safe %>;
     var graphType;
     var personUrl = "<%= @person_url %>";
   </script>
-  <%= javascript_include_tag 'hypertree', 'data-turbolinks-track' => false %>
+  <%# javascript_include_tag 'hypertree', 'data-turbolinks-track' => false %>
+
+  <style type="text/css">
+    #mynetwork {
+      width: 800px;
+      height: 700px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
 
 </head>
 
-<body onload="initHypertree();">
+<!-- <body onload="initHypertree();"> -->
   <!-- back button -->
-
+<body>
   <div id="container">
 
-    <div id="left-container">
-      <div class="inner">
-	  	<div class="back_pan_group">
-        <div class="back_button">
-          <%= link_to "Back to Person View", person_path(@id) %>
-        </div>
-
-        <!-- thanks for the panning and zooming, SNAC!
-        http://socialarchive.iath.virginia.edu/ -->
-        <div id="panZoomControl">
-          <div id="panZoomControl_pan">
-            <div>
-              <button id="panUp">∧</button>
-            </div>
-            <div>
-              <button id="panLeft">&lt;</button>
-              <button id="panRight">&gt;</button>
-            </div>
-            <div>
-              <button id="panDown">∨</button>
-            </div>
-          </div><!-- /panZoomControl_pan -->
-          <div id="panZoomControl_zoom">
-            <div>
-              <button id="zoomIn">+</button>
-            </div>
-            <div>
-              <button id="zoomReset">•</button>
-            </div>
-            <div>
-              <button id="zoomOut">-</button>
-            </div>
-          </div><!--/panZoomControl_zoom-->
-        </div> <!-- /panZoomControl -->
-	  	</div> <!-- /back_pan_group -->
-
-        <div class="visualization_types">
-          <h4>Limit relationship by:</h4>
-          <ul>
-            <li class="limiter selected">
-              <a href="#">All</a>
-            </li>
-            <li class="limiter" type="familyRelationship">
-              <a href="#">Family</a>
-            </li>
-            <li class="limiter" type="legalRelationship">
-              <a href="#">Legal</a>
-            </li>
-            <li class="limiter" type="socialRelationship">
-              <a href="#">Social</a>
-            </li>
-            <li class="limiter" type="workRelationship">
-              <a href="#">Work</a>
-            </li>
-          </ul>
-        </div> <!-- /visualization_types -->
-
-        <div id="key">
-          <h4>Relationship Types</h4>
-          <ul>
-            <li class="rtype_family"><span>Family</span></li>
-            <li class="rtype_legal"><span>Legal</span></li>
-            <li class="rtype_acquaintance"><span>Social</span></li>
-            <li class="rtype_employment"><span>Work</span></li>
-            <li class="rtype_multiple"><span>Multiple</span></li>
-            <li class="rtype_missing"><span>Unknown</span></li>
-          </ul>
-          
-          <p>Visualizations show relationships to two degrees out, and do not contain judge and clerk relationships.</p>
-        </div> <!-- /key -->
-      </div><!-- /inner -->
-    </div><!-- /left-container -->
-
-    <% if @res && @res["children"] && @res["children"].length > 0 %>
-      <div id="center-container">
-        <div id="infovis"/>
+    <% if @res %>
+    <!-- todo this is the part I'm adding for vis js -->
+    <div id="mynetwork">
+      <!-- <div class="vis-network" style="position: relative; overflow: hidden; touch-action: pan-y; -moz-user-select: none; width: 100%; height: 100%;" tabindex="900"> -->
+      <div class="vis-network">
+        <canvas style="position: relative; touch-action: none; -moz-user-select: none; width: 100%; height: 100%; width: 1200px height: 800px"></canvas>
       </div>
+    </div>
     <% else %>
       <div id="no-relationship">
         <h4>No relationships of this type found. Network may be currently unavailable.</h4>
       </div>
     <% end %> 
 
-  </div><!-- /center-container -->
-
-  <div id="right-container">
-    <div id="inner-details"></div>
-  </div>
-
-  <div id="log"></div>
   </div><!-- /container -->
+  <script>
+    var container = document.getElementById('mynetwork');
+    var data = {
+      nodes: json["nodes"],
+      edges: json["edges"]
+    };
+    var options = {
+      nodes: {
+        shape: "dot",
+        size: 16
+      },
+      edges: {
+        hoverWidth: 12,
+      },
+      // groups: {
+      //   2: {
+      //     color: "blue", size: 3
+      //   }
+      // },
+      physics: {
+            forceAtlas2Based: {
+                gravitationalConstant: -26,
+                centralGravity: 0.005,
+                springLength: 230,
+                springConstant: 0.18
+            },
+            maxVelocity: 146,
+            solver: 'forceAtlas2Based',
+            timestep: 0.35,
+            // stabilization: {iterations: 150}
+            stabilization: { enabled: false}
+        }
+    };
+    var network = new vis.Network(container, data, options);
+    console.log(network.getConnectedEdges());
+  </script>
 </body>
 <!-- </html> -->

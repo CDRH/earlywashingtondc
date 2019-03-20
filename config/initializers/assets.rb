@@ -17,9 +17,10 @@ Rails.application.config.assets.precompile += %w( bootstrap.js )
 Rails.application.config.assets.precompile += %w( prettyPhoto.js )
 Rails.application.config.assets.precompile += %w( script.js )
 
+Rails.application.config.assets.precompile += %w( vis-network.css )
 Rails.application.config.assets.precompile += %w( hypertree.css )
-Rails.application.config.assets.precompile += %w( jit.min.js )
-Rails.application.config.assets.precompile += %w( hypertree.js )
+Rails.application.config.assets.precompile += %w( vis.js )
+# Rails.application.config.assets.precompile += %w( hypertree.js )
 
 Rails.application.config.assets.precompile += %w( jquery-ui.min.js )
 Rails.application.config.assets.precompile += %w( jquery-ui.css )
