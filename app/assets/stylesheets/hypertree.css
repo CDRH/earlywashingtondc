@@ -54,6 +54,13 @@ a {
 	overflow: hidden;
 }
 
+.vis-notice {
+	background-color: #F5CB7D;
+	font-size: 14px;
+	padding: 5px;
+	text-align: center;
+}
+
 /* Might not need this -KMD */
 #infovis {
 	width: 100%;

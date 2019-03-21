@@ -192,6 +192,7 @@ var initHypertree = function() {
       onBeforePlotNode: function(node) {
         var nodeDepth = node._depth;
         var color = nodeColors[nodeDepth];
+        // this appears to only affect the primary individual's node
         node.Node.color = color ? color : nodeColors["default"];
       },
       onBeforePlotLine: function(adj) {
