@@ -1,0 +1,429 @@
+// ********** //
+// MAP SET UP //
+// ********** //
+
+// create a map zoomed to the middle of Washington DC
+var map = L.map('map').setView([38.89, -77.02], 13.5);
+
+
+// enable to use open street maps baselayer
+// L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//     attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>',
+//     subdomains: ['a','b','c']
+// }).addTo( map );
+
+// stamen map layer, comment this if you are uncommenting the open street maps layer
+var terrainLayer = new L.StamenTileLayer('terrain');
+map.addLayer(terrainLayer);
+
+
+// temporary historical basemap
+// will need to put on production for more permenant basemap
+var wms = "https://cdrhdev1.unl.edu/geoserver/gwc/service/wms";
+historical = new L.TileLayer.WMS(wms, {
+    layers: "oscys:WashingtonDC1",
+    format: "image/png",
+    transparent: true
+});
+map.addLayer(historical);
+
+// add a scale to the map
+L.control.scale({maxWidth: 200, position: "bottomleft"}).addTo(map);
+
+// ******** //
+// SETTINGS //
+// ******** //
+
+// all circular markers on the map start with these settings
+// by default markers are a light grey
+function defaultMarker(color = "#B7B7B7") {
+  return {
+    // border color
+    color: "#000",
+    // inner color
+    fillColor: color,
+    fillOpacity: 0.8,
+    opacity: 1,
+    radius: 4,
+    weight: 1,
+  }
+};
+
+// these are the fields from the spreadsheet used in the popups
+var buildingFields = [
+  "Description",
+  "Location"
+];
+
+// these are the fields from the spreadsheet used in the popups
+var congressFields = [
+  "State",
+  "Occupation",
+  "Role_in_Congress",
+  "Political_Party",
+  "Address",
+  "With_whom_they_board"
+];
+
+// this uses fields from the spreadsheet to create an abbreviated image name
+var congressMapping = {
+  // parties
+  "Democratic-Republican" : "dr",
+  "Federalist" : "fed",
+  // roles
+  "Delegate, Representative" : "delegate",
+  "Representative" : "rep",
+  "vice-president of the U. S. and president of the Senate" : "vp",
+  "Senator" : "senator"
+};
+
+// these are the fields from the spreadsheet used in the popups
+var directoryFields = [
+  "Occupation",
+  "HISCO",
+  "Address",
+  "Court_Role",
+  "Race",
+  "Gender"
+];
+
+// these are the fields from the spreadsheet used in the popups
+var foreignFields = [
+  "Country",
+  "Occupation",
+  "Title",
+  "Location"
+];
+
+// these abbrevations are mapped to more descriptive terminology
+// note quotation marks around terminology used in directory
+// they show up in the marker popup information
+var genderRaceMapping = {
+  "c" : '"colored"',
+  "f" : "female",
+  "m" : "male",
+  "u" : "unknown",
+  "w" : '"white"'
+};
+
+// selects the marker color for each of the following
+// NOTE: if you change a color here you must also update
+// the color for the legend in map.css
+var markerColors = {
+  "Court_Role" : {
+    "Attorney" : "red",
+    "Clerk" : "teal",
+    "Defendant" : "green",
+    "Judge" : "purple",
+    "Juror" : "orange",
+    "Jury Pool" : "yellow",
+    "Justice of the Peace" : "pink",
+    "Process Server" : "brown",
+    "Witness" : "aqua",
+    "Multiple Roles" : "navy"
+  },
+  "Gender" : {
+    "f" : "#F21DFF",
+    "m" : "cyan",
+    "u" : "orange"
+  },
+  // occupation
+  "HISCO" : {
+    "administrative" : "green",
+    "agricultural" : "red",
+    "clerical" : "#E3EC70",
+    "professional" : "orange",
+    "sales" : "lavender",
+    "service" : "purple",
+    "skilled labor" : "blue",
+    "unskilled labor" : "aqua"
+  },
+  "Race" : {
+    "c" : "blue",
+    "w" : "yellow"
+  }
+};
+
+// these images are used to mark building types
+var markerImages = {
+  // needs to be a fallback option
+  "default" : "missing_image.png",
+  // congress
+  "dr_delegate"         : "<%= asset_path "map_directory/dr_delegate.svg" %>",
+  "dr_rep"              : "<%= asset_path "map_directory/dr_rep.svg" %>",
+  "dr_senator"          : "<%= asset_path "map_directory/dr_senator.svg" %>",
+  "dr_vp"               : "<%= asset_path "map_directory/dr_vp.svg" %>",
+  "fed_delegate"        : "<%= asset_path "map_directory/fed_delegate.svg" %>",
+  "fed_rep"             : "<%= asset_path "map_directory/fed_rep.svg" %>",
+  "fed_senator"         : "<%= asset_path "map_directory/fed_senator.svg" %>",
+  "fed_vp"              : "<%= asset_path "map_directory/fed_vp.svg" %>",
+  // public buildings
+  "Church (White Protestant)" : "<%= asset_path "map_directory/church.png" %>",
+  "Church (Black Protestant)" : "<%= asset_path "map_directory/chapel.png" %>",
+  "Government Building"       : "<%= asset_path "map_directory/us-capitol.png" %>",
+  "Other Public Building"     : "<%= asset_path "map_directory/university.png" %>",
+  "School"                    : "<%= asset_path "map_directory/school-building.png" %>",
+  "Hotel/Tavern"              : "<%= asset_path "map_directory/single-bed.png" %>",
+  "Bank"                      : "<%= asset_path "map_directory/bank-building.png" %>",
+  "Burying Ground"            : "<%= asset_path "map_directory/headstone.png" %>",
+  // foreign dignitaries
+  "britain"  : "<%= asset_path "map_directory/britain.png" %>",
+  "france"  : "<%= asset_path "map_directory/france.png" %>",
+  "mexico"  : "<%= asset_path "map_directory/mexico.png" %>",
+  "sweden"  : "<%= asset_path "map_directory/sweden.png" %>",
+}
+
+
+// ****** //
+// LAYERS //
+// ****** //
+
+var courtRole1822 = createColorMarkerLayer(directory_json_1822, "Court_Role", false)
+courtRole1822.addTo(map);
+
+// create the additional layers but do not display yet on the map
+var race1822 = createColorMarkerLayer(directory_json_1822, "Race", true)
+var gender1822 = createColorMarkerLayer(directory_json_1822, "Gender", true)
+var occupations1822 = createColorMarkerLayer(directory_json_1822, "HISCO", true)
+
+// adds the 1822 building layer
+var buildings1822 = L.geoJSON(building_json_1822, {
+  pointToLayer: function (feature, latlng) {
+    image = markerImages[feature.properties["Description"]] || markerImages["default"];
+    var icon = L.icon({ iconUrl: image, iconSize: [20, 20] });
+    return L.marker(latlng, { icon: icon });
+  },
+  onEachFeature: onEachFeatureBuilding,
+});
+
+// adds the 1822 foreign dignitaries layer
+var foreign1822 = L.geoJSON(foreign_json_1822, {
+  pointToLayer: function (feature, latlng) {
+    country = feature.properties["Country"].toLowerCase();
+    image = markerImages[country] || markerImages["default"];
+    var icon = L.icon({ iconUrl: image, iconSize: [18, 18] });
+    return L.marker(latlng, { icon: icon });
+  },
+  onEachFeature: onEachFeatureForeign,
+});
+
+// adds the 1822 roles in congress layer
+var congress1822 = L.geoJSON(congress_json_1822, {
+  pointToLayer: function (feature, latlng) {
+    party = feature.properties["Political_Party"]
+    role = feature.properties["Role_in_Congress"]
+    // TODO a couple people (delegates) currently have NO party so they are not being mapped!
+    img_name = congressMapping[party] + "_" + congressMapping[role];
+    img_path = markerImages[img_name] || markerImages["default"];
+    var icon = L.icon({ iconUrl: img_path, iconSize: [18, 18] });
+    return L.marker(latlng, { icon: icon });
+  },
+  onEachFeature: onEachFeatureCongress,
+});
+
+// remove or comment these lines if you would prefer that these layers
+// are not displayed on the map until selected
+buildings1822.addTo(map);
+congress1822.addTo(map);
+foreign1822.addTo(map);
+
+// creates a UI control for switching between layers
+var layerControl = L.control.layers(
+  // the first group of layers only displays ONE layer at a given time
+  {
+    "1822 Court Role": courtRole1822,
+    "1822 Gender" : gender1822,
+    "1822 Occupation" : occupations1822,
+    "1822 Race" : race1822,
+  },
+  // the second group of layers may have multiple displaying at once
+  {
+    "1822 Congress" : congress1822,
+    "1822 Foreign Dignitaries" : foreign1822,
+    "1822 Public Buildings" : buildings1822,
+  },
+  // further layer control settings are available
+  // such as the location on the map ("topright" at the moment)
+  {
+    collapsed: false, autoZIndex: false, sortLayers: false,
+  }
+)
+layerControl.addTo(map);
+
+
+// ****** //
+// EVENTS //
+// ****** //
+
+// Note: baselayer refers to the directory radio buttons
+// while overlay refers to checkbox layers
+// selects where id on html element is "key-Type"
+// for example: "key-Court_Role"
+// so be careful when changing the HTML
+
+// when directory layer is changed, display the
+// selected and hide all others
+map.on('baselayerchange', function(e) {
+  name = getLayerKeyName(e.name)
+  legend_keys = document.getElementsByClassName("key-directory")
+  for (var i = 0; i < legend_keys.length; i++) {
+    id = legend_keys[i].id;
+    classes = legend_keys[i].classList;
+    // hide all directory keys except for the currently selected one
+    if (id == "key-"+name) {
+      classes.remove("key-hidden");
+    } else {
+      classes.add("key-hidden");
+    }
+  }
+});
+
+// when overlay added, search for the
+// key element by id and display
+map.on('overlayadd', function(e) {
+  name = getLayerKeyName(e.name)
+  ele = document.getElementById("key-"+name);
+  ele.classList.remove("key-hidden");
+});
+
+// when overlay removed, search for the
+// key element by id and hide
+map.on('overlayremove', function(e) {
+  name = getLayerKeyName(e.name)
+  ele = document.getElementById("key-"+name);
+  ele.classList.add("key-hidden");
+});
+
+// *********************************** //
+// GENERALIZED MARKER / POPUP CREATION //
+// *********************************** //
+
+// this function tries to consolidate all the various "names" into one string
+// which is a little tricky because there are building names and people's names
+// and some of the information doesn't use the same fields (particularly when
+// it comes to suffix / prefix / titles)
+function buildRecordName(props, name, firstName=null, prefix=null, suffix=null) {
+  var last = props[name]; // usually the surname or the name of a building, etc
+  var first = props[firstName];
+  var pre = props[prefix];
+  var post = props[suffix];
+  var filtered = [pre, first, last, post].filter(function (item) {
+    return (item != null && item.length > 0);
+  });
+  // return the name pieces in order with a space separator
+  return filtered.join(" ");
+};
+
+// creates a simple marker layer from the geojson
+// "type" passed in refers to occupation, gender, etc
+// and sets the colors and legend key which will be selected
+// unless all points specified, filter out those points in the directory which
+// do not have any values in the selected field
+function createColorMarkerLayer(geojson, type, filter=true) {
+  return L.geoJSON(geojson, {
+    pointToLayer: function pointToLayer (feature, latlng) {
+      return L.circleMarker(latlng,
+        markerSettings(type, feature.properties[type])
+      )
+    },
+    onEachFeature: onEachFeature,
+    // by default, filter the points by the particular field in question
+    // so that we're only displaying known information
+    filter: function(feature, layer) {
+      if (filter) {
+        role = feature.properties[type];
+        return (role && role.length > 0);
+      } else {
+        return true
+      }
+    }
+  });
+};
+
+// remove year from front of layer name and change spaces into underscores
+function getLayerKeyName(long_name) {
+  return long_name.replace(/^\d{4} /, "")
+             .replace(" ", "_")
+};
+
+// passes back the settings for a particular point on the map
+// for example, if an occupation point is being created, this will
+// look at the occupation field's value and then choose the correct
+// color from the occupation settings near the top of this file
+// and then return an options object to be used in the layer
+function markerSettings(type, item) {
+  // remove extra spaces from the end
+  var item = item.replace(/\s+$/, "")
+  // get the particular cluster of colors for a type or return empty
+  var items = markerColors[type] || {}
+  // match against the list of items and create a marker with the color
+  var color = items[item]
+  return defaultMarker(color)
+};
+
+// props expected to be the geoJSON feature.properties
+// returns html for the marker popups
+//   div with h2 (heading), li for each item, and url link (if supplied)
+// changes HISCO to "Occupation Group"
+// and maps gender and race abbreviations
+function htmlBuilder(heading, props, fieldList, url) {
+  var html = '<div class="marker_popup">';
+  html += '<h2>'+heading+'</h2>';
+  html += '<ul>';
+  for (var i = 0; i < fieldList.length; i++) {
+    var field = fieldList[i];
+    if (props.hasOwnProperty(field) && props[field].length > 0) {
+      var label = field.replace(/_/g, " ");
+      if (label == "HISCO") { label = "Occupation Group"; }
+      var val = props[field];
+      if (label == "Gender" || label == "Race") {
+        val = genderRaceMapping[val] || val;
+      }
+      html += '<li>'+label+': '+val+'</li>';
+    }
+  }
+  if (url) { html += '<li><a href="'+url+'" target="_blank">More Info</a></li>' }
+  html += '</ul>';
+  html += '</div>';
+  return html;
+}
+
+// creates a popup for the public building markers
+// NOTE: update the buildingFields values at the top of this file to change
+// which fields are being displayed in popups
+function onEachFeatureBuilding(feature, layer) {
+  console.log(feature.properties);
+  var name = buildRecordName(feature.properties, "Name")
+  // Change congressFields content near top of this file to change the displayed fields
+  var html = htmlBuilder(name, feature.properties, buildingFields, feature.properties["OSCYS_Link"])
+  layer.bindPopup(html);
+};
+
+// creates a popup for the congress markers
+// NOTE: update the congressFields values at the top of this file to change
+// which fields are being displayed in popups
+function onEachFeatureCongress(feature, layer) {
+  var name = buildRecordName(feature.properties, "Name", "Forename", "Prefix")
+  // Change congressFields content near top of this file to change the displayed fields
+  var html = htmlBuilder(name, feature.properties, congressFields, feature.properties["OSCYS_Link"])
+  layer.bindPopup(html);
+};
+
+// creates a popup for the foreign dignitaries markers
+// NOTE: update the foreignFields values at the top of this file to change
+// which fields are being displayed in popups
+function onEachFeatureForeign(feature, layer) {
+  props = feature.properties;
+  var name = buildRecordName(props, "Name", "Forename", "Prefix_Suffix");
+  var html = htmlBuilder(name, props, foreignFields, props["OSCYS_Link"]);
+  layer.bindPopup(html);
+};
+
+// creates a popup for the directory markers
+// NOTE: update the directoryFields values at the top of this file to change
+// which fields are being displayed in popups
+function onEachFeature(feature, layer) {
+  var name = buildRecordName(feature.properties, "Name", "Forename", "Prefix")
+  var html = htmlBuilder(name, feature.properties, directoryFields, feature.properties["OSCYS_Link"]);
+  layer.bindPopup(html);
+};
