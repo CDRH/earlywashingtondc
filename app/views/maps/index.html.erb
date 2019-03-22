@@ -1,4 +1,3 @@
-
 <h2>Maps</h2>
 
 <p>Introductory text here text here text here text here text here.</p>
@@ -6,44 +5,37 @@
 <div class="row">
 
   <div class="col-md-6">
-	  <h3 class="story_title"><a href="">Map</a></h3>
-    
-        <p>Map Description Here</p>
-	  
+    <h3 class="story_title">
+      <%= link_to "Washington, D.C. Directory Map", map_dc_path %>
+    </h3>
+
+    <%= link_to map_dc_path do %>
+      <figure>
+        <%= image_tag("map_directory_preview.png") %>
+      </figure>
+    <% end %>
+    <p>Interactive map of the Washington, D.C. 1822 directory which identifies individuals involved in cases as well as layers for race, gender, and occupation information. 1834 directory coming soon!</p>
   </div><!-- end col-md-6 -->
 
   <div class="col-md-6">
-	  <h3 class="story_title"><%= link_to "Mapping Early Washington, D.C., Law & Family: 1822", {:name => "1822_storymap", :action => "sub"} %></h3>
+    <div class="row">
+      <h3 class="story_title">
+        <a href="https://www.arcgis.com/apps/MapSeries/index.html?appid=644c89d35c57463b891f39bcb6f75af6" target="new">Mapping Early Washington, D.C., Law &amp; Family: 1822 (external link)</a>
+      </h3>
 
-        <p>A Story Map exploring the 1822 city directory for Washington, D.C.</p>
+      <p>A Story Map exploring the 1822 city directory for Washington, D.C.</p>
 
+      <h3 class="story_title">Mapping Early Washington, D.C., Law &amp; Family: 1834</h3>
+
+      <p>A Story Map in development.</p>
+    </div><!-- end row -->
   </div><!-- end col-md-6 -->
 
 </div><!-- end row -->
 
-<div class="row">
+<h3>Maps of Early Washington, D.C.</h3>
 
-  <div class="col-md-6">
-	  <h3 class="story_title"></h3>
-
-        <p></p>
-	  
-  </div><!-- end col-md-6 -->
-
-  <div class="col-md-6">
-	  <h3 class="story_title">Mapping Early Washington, D.C., Law &amp; Family: 1834</h3>
-
-        <p>A Story Map in development.</p>
-	  
-  </div><!-- end col-md-6 -->
-
-</div><!-- end row -->
-
-
-	  <h3>Maps of Early Washington, D.C.</h3>
-
-
-    <p><li>Bussard, William and William Harrison. <em>Map of Georgetown in the District of Columbia.</em> Map. 1830. Library of Congress Geography and Map Division. <a href="https://www.loc.gov/item/88693292/">https://www.loc.gov/item/88693292/</a></li></p>
-    <p><li>Elliot, S. Alfred and William Elliot. <em>Plan of the City of Washington.</em> Map. Washington, D.C.: S. A. Elliot, 1822. Library of Congress Geography and Map Division. <a href="https://www.loc.gov/item/88694090/">https://www.loc.gov/item/88694090/</a></li></p>
-    <p><li>Ewing, Maskell C. and T Sinclair. <em>Plan of the town of Alexandria, D.C. with the environs: exhibiting the outlet of the Alexandria Canal, the shipping channel, wharves, Hunting Cr. &amp;c.</em> Map. Philadelphia: Lith. of T. Sinclair, 1845. Library of Congress Geography and Map Division. <a href="https://www.loc.gov/item/89692516/">https://www.loc.gov/item/89692516/</a></li></p>
-    <p><li>Tanner, Henry S. <em>City of Washington.</em> Map. Philadelphia: H. S. Tanner, 1836. David Rumsey Map Collection. <a href="https://www.davidrumsey.com/luna/servlet/s/39mn62">https://www.davidrumsey.com/luna/servlet/s/39mn62</a></li></p>
+<p><li>Bussard, William and William Harrison. <em>Map of Georgetown in the District of Columbia.</em> Map. 1830. Library of Congress Geography and Map Division. <a href="https://www.loc.gov/item/88693292/">https://www.loc.gov/item/88693292/</a></li></p>
+<p><li>Elliot, S. Alfred and William Elliot. <em>Plan of the City of Washington.</em> Map. Washington, D.C.: S. A. Elliot, 1822. Library of Congress Geography and Map Division. <a href="https://www.loc.gov/item/88694090/">https://www.loc.gov/item/88694090/</a></li></p>
+<p><li>Ewing, Maskell C. and T Sinclair. <em>Plan of the town of Alexandria, D.C. with the environs: exhibiting the outlet of the Alexandria Canal, the shipping channel, wharves, Hunting Cr. &amp;c.</em> Map. Philadelphia: Lith. of T. Sinclair, 1845. Library of Congress Geography and Map Division. <a href="https://www.loc.gov/item/89692516/">https://www.loc.gov/item/89692516/</a></li></p>
+<p><li>Tanner, Henry S. <em>City of Washington.</em> Map. Philadelphia: H. S. Tanner, 1836. David Rumsey Map Collection. <a href="https://www.davidrumsey.com/luna/servlet/s/39mn62">https://www.davidrumsey.com/luna/servlet/s/39mn62</a></li></p>
