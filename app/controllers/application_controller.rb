@@ -71,7 +71,7 @@ class ApplicationController < ActionController::Base
           nil
         end
       rescue
-        puts "Not parsable!!! #{term}"
+        Rails.logger.debug "Not parsable!!! #{term}"
         nil
       end
     end
