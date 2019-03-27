@@ -10,6 +10,9 @@
   <% if @person["personBirthName_ss"] %>
     <p><%= "Birth Name: #{@person['personBirthName_ss'].join(", ")}" %></p>
   <% end %>
+  <% if @person["personRoleName_ss"] %>
+    <p><%= "Title: #{@person['personRoleName_ss'].join(", ")}" %></p>
+  <% end %>
   
   <div class="jump_menu">
   
