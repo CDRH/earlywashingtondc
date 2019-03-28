@@ -30,6 +30,14 @@ map.addLayer(historical);
 // add a scale to the map
 L.control.scale({maxWidth: 200, position: "bottomleft"}).addTo(map);
 
+// because many of the points are stacked on top of each other
+// we are using a marker cluster library, so create the marker group
+// before adding layers below
+
+var markers = L.markerClusterGroup({
+  maxClusterRadius: 10,
+});
+
 // ******** //
 // SETTINGS //
 // ******** //
@@ -179,7 +187,9 @@ var markerImages = {
 // ****** //
 
 var courtRole1822 = createColorMarkerLayer(directory_json_1822, "Court Role", false)
-courtRole1822.addTo(map);
+// courtRole1822.addTo(map);
+markers.addLayer(courtRole1822);
+map.addLayer(markers);
 
 // create the additional layers but do not display yet on the map
 var race1822 = createColorMarkerLayer(directory_json_1822, "Race", true)
