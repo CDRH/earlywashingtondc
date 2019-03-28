@@ -17,7 +17,7 @@ var foreign_json_1822 = {
     "Address":"North side Pennsylvania avenue, near western market",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -38,7 +38,7 @@ var foreign_json_1822 = {
     "Address":"North side Pennsylvania avenue, near western market",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -59,7 +59,7 @@ var foreign_json_1822 = {
     "Address":"North side Pennsylvania avenue, near western market",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -80,7 +80,7 @@ var foreign_json_1822 = {
     "Address":"North side Pennsylvania avenue, near Georgetown",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -101,7 +101,7 @@ var foreign_json_1822 = {
     "Address":"North side Pennsylvania avenue, near Georgetown",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -122,7 +122,7 @@ var foreign_json_1822 = {
     "Address":"At Strother's hotel",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -143,7 +143,7 @@ var foreign_json_1822 = {
     "Address":"At Strother's hotel",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -164,7 +164,7 @@ var foreign_json_1822 = {
     "Address":"At Strother's hotel",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -185,7 +185,7 @@ var foreign_json_1822 = {
     "Address":"At Strother's hotel",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -206,7 +206,7 @@ var foreign_json_1822 = {
     "Address":"At Strother's hotel",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -227,7 +227,7 @@ var foreign_json_1822 = {
     "Address":"At Strother's hotel",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -248,7 +248,7 @@ var foreign_json_1822 = {
     "Address":"At Strother's hotel",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -269,7 +269,7 @@ var foreign_json_1822 = {
     "Address":"At Strother's hotel",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -290,7 +290,7 @@ var foreign_json_1822 = {
     "Address":"west side of the President's square",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -311,7 +311,7 @@ var foreign_json_1822 = {
     "Address":"northeast corner Pennsylvania avenue and 14w",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }
@@ -332,7 +332,7 @@ var foreign_json_1822 = {
     "Address":"north side Pennsylvania avenue, between 18 and 19w",
     "Race":"w",
     "Gender":"m",
-    "Occupation":"administrative",
+    "HISCO":"administrative",
     "FIELD13":"",
     "FIELD14":""
     }

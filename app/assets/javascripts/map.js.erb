@@ -410,7 +410,7 @@ function onEachFeatureBuilding(feature, layer) {
 // NOTE: update the congressFields values at the top of this file to change
 // which fields are being displayed in popups
 function onEachFeatureCongress(feature, layer) {
-  var name = buildRecordName(feature.properties, "Name", "Forename", "Prefix")
+  var name = buildRecordName(feature.properties, "Name", "Forename", "Prefix", "Suffix")
   // Change congressFields content near top of this file to change the displayed fields
   var html = htmlBuilder(name, feature.properties, congressFields, feature.properties["OSCYS Link"])
   layer.bindPopup(html);
@@ -421,7 +421,7 @@ function onEachFeatureCongress(feature, layer) {
 // which fields are being displayed in popups
 function onEachFeatureForeign(feature, layer) {
   props = feature.properties;
-  var name = buildRecordName(props, "Name", "Forename", "Prefix_Suffix");
+  var name = buildRecordName(props, "Name", "Forename", "Prefix", "Suffix");
   var html = htmlBuilder(name, props, foreignFields, props["OSCYS Link"]);
   layer.bindPopup(html);
 };
@@ -430,7 +430,7 @@ function onEachFeatureForeign(feature, layer) {
 // NOTE: update the directoryFields values at the top of this file to change
 // which fields are being displayed in popups
 function onEachFeature(feature, layer) {
-  var name = buildRecordName(feature.properties, "Name", "Forename", "Prefix")
+  var name = buildRecordName(feature.properties, "Name", "Forename", "Prefix", "Suffix")
   var html = htmlBuilder(name, feature.properties, directoryFields, feature.properties["OSCYS Link"]);
   layer.bindPopup(html);
 };
