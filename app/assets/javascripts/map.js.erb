@@ -155,7 +155,9 @@ var markerImages = {
   "fed_rep"             : "<%= asset_path "map_directory/fed_rep.svg" %>",
   "fed_senator"         : "<%= asset_path "map_directory/fed_senator.svg" %>",
   "fed_vp"              : "<%= asset_path "map_directory/fed_vp.svg" %>",
+  "unknown_delegate"    : "<%= asset_path "map_directory/unknown_delegate.svg" %>",
   // public buildings
+  "Church (Catholic)"         : "<%= asset_path "map_directory/cathedral.png" %>",
   "Church (White Protestant)" : "<%= asset_path "map_directory/church.png" %>",
   "Church (Black Protestant)" : "<%= asset_path "map_directory/chapel.png" %>",
   "Government Building"       : "<%= asset_path "map_directory/us-capitol.png" %>",
@@ -208,10 +210,9 @@ var foreign1822 = L.geoJSON(foreign_json_1822, {
 // adds the 1822 roles in congress layer
 var congress1822 = L.geoJSON(congress_json_1822, {
   pointToLayer: function (feature, latlng) {
-    party = feature.properties["Political Party"]
-    role = feature.properties["Occupation"]
-    // TODO a couple people (delegates) currently have NO party so they are not being mapped!
-    imgName = congressMapping[party] + "_" + congressMapping[role];
+    party = congressMapping[feature.properties["Political Party"]] || "unknown"
+    role = congressMapping[feature.properties["Occupation"]] || "unknown"
+    imgName = party + "_" + role;
     imgPath = markerImages[imgName] || markerImages["default"];
     var icon = L.icon({ iconUrl: imgPath, iconSize: [18, 18] });
     return L.marker(latlng, { icon: icon });
@@ -219,11 +220,11 @@ var congress1822 = L.geoJSON(congress_json_1822, {
   onEachFeature: onEachFeatureCongress,
 });
 
-// remove or comment these lines if you would prefer that these layers
-// are not displayed on the map until selected
-buildings1822.addTo(map);
-congress1822.addTo(map);
-foreign1822.addTo(map);
+// uncomment these lines if you would prefer that these layers
+// are displayed on the map on startup
+// buildings1822.addTo(map);
+// congress1822.addTo(map);
+// foreign1822.addTo(map);
 
 // creates a UI control for switching between layers
 var layerControl = L.control.layers(
@@ -377,7 +378,7 @@ function htmlBuilder(heading, props, fieldList, url) {
 function onEachFeatureBuilding(feature, layer) {
   var name = buildRecordName(feature.properties, "Name")
   // Change congressFields content near top of this file to change the displayed fields
-  var html = htmlBuilder(name, feature.properties, buildingFields, feature.properties["OSCYS_Link"])
+  var html = htmlBuilder(name, feature.properties, buildingFields, feature.properties["OSCYS Link"])
   layer.bindPopup(html);
 };
 
@@ -387,7 +388,7 @@ function onEachFeatureBuilding(feature, layer) {
 function onEachFeatureCongress(feature, layer) {
   var name = buildRecordName(feature.properties, "Name", "Forename", "Prefix")
   // Change congressFields content near top of this file to change the displayed fields
-  var html = htmlBuilder(name, feature.properties, congressFields, feature.properties["OSCYS_Link"])
+  var html = htmlBuilder(name, feature.properties, congressFields, feature.properties["OSCYS Link"])
   layer.bindPopup(html);
 };
 
@@ -397,7 +398,7 @@ function onEachFeatureCongress(feature, layer) {
 function onEachFeatureForeign(feature, layer) {
   props = feature.properties;
   var name = buildRecordName(props, "Name", "Forename", "Prefix_Suffix");
-  var html = htmlBuilder(name, props, foreignFields, props["OSCYS_Link"]);
+  var html = htmlBuilder(name, props, foreignFields, props["OSCYS Link"]);
   layer.bindPopup(html);
 };
 
@@ -406,6 +407,6 @@ function onEachFeatureForeign(feature, layer) {
 // which fields are being displayed in popups
 function onEachFeature(feature, layer) {
   var name = buildRecordName(feature.properties, "Name", "Forename", "Prefix")
-  var html = htmlBuilder(name, feature.properties, directoryFields, feature.properties["OSCYS_Link"]);
+  var html = htmlBuilder(name, feature.properties, directoryFields, feature.properties["OSCYS Link"]);
   layer.bindPopup(html);
 };
