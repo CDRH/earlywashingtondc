@@ -68,14 +68,15 @@ function defaultMarker(color = "#B7B7B7") {
 
 // these are the fields from the spreadsheet used in the popups
 var buildingFields = [
-  "Address",
-  "Description"
+  "Description",
+  "Address"
+
 ];
 
 // these are the fields from the spreadsheet used in the popups
 var congressFields = [
-  "State",
   "Occupation",
+  "State",
   "Political Party",
   "Address"
 ];
@@ -94,19 +95,19 @@ var congressMapping = {
 
 // these are the fields from the spreadsheet used in the popups
 var directoryFields = [
+  "Court Role",
   "Occupation",
   "HISCO",
-  "Address",
-  "Court Role",
   "Race",
-  "Gender"
+  "Gender",
+  "Address"
 ];
 
 // these are the fields from the spreadsheet used in the popups
 var foreignFields = [
   "Country",
-  "Occupation",
   "Title",
+  "Occupation",
   "Location"
 ];
 
@@ -114,11 +115,11 @@ var foreignFields = [
 // note quotation marks around terminology used in directory
 // they show up in the marker popup information
 var genderRaceMapping = {
-  "c" : '"colored"',
+  "c" : "colored",
   "f" : "female",
   "m" : "male",
   "u" : "unknown",
-  "w" : '"white"'
+  "w" : "white"
 };
 
 // selects the marker color for each of the following
@@ -248,15 +249,15 @@ var layerControl = L.control.layers(
   // the first group of layers only displays ONE layer at a given time
   {
     "1822 Court Role": courtRole1822,
-    "1822 Gender" : gender1822,
     "1822 Occupation" : occupations1822,
     "1822 Race" : race1822,
+    "1822 Gender" : gender1822,
   },
   // the second group of layers may have multiple displaying at once
   {
+    "1822 Public Buildings" : buildings1822,
     "1822 Congress" : congress1822,
     "1822 Foreign Dignitaries" : foreign1822,
-    "1822 Public Buildings" : buildings1822,
   },
   // further layer control settings are available
   // such as the location on the map ("topright" at the moment)
@@ -371,7 +372,7 @@ function markerSettings(type, item) {
 // props expected to be the geoJSON feature.properties
 // returns html for the marker popups
 //   div with h2 (heading), li for each item, and url link (if supplied)
-// changes HISCO to "Occupation Group"
+// changes HISCO to "Work Category"
 // and maps gender and race abbreviations
 function htmlBuilder(heading, props, fieldList, url) {
   var html = '<div class="marker_popup">';
@@ -381,7 +382,7 @@ function htmlBuilder(heading, props, fieldList, url) {
     var field = fieldList[i];
     if (props.hasOwnProperty(field) && props[field].length > 0) {
       var label = field.replace(/_/g, " ");
-      if (label == "HISCO") { label = "Occupation Group"; }
+      if (label == "HISCO") { label = "Work Category"; }
       var val = props[field];
       if (label == "Gender" || label == "Race") {
         val = genderRaceMapping[val] || val;
@@ -389,7 +390,7 @@ function htmlBuilder(heading, props, fieldList, url) {
       html += '<li>'+label+': '+val+'</li>';
     }
   }
-  if (url) { html += '<li><a href="'+url+'" target="_blank">More Info</a></li>' }
+  if (url) { html += '<li><a href="'+url+'" target="_blank">More Info on <em>OSCYS</em></a></li>' }
   html += '</ul>';
   html += '</div>';
   return html;
