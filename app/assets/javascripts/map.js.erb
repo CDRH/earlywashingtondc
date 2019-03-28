@@ -30,17 +30,14 @@ map.addLayer(historical);
 // add a scale to the map
 L.control.scale({maxWidth: 200, position: "bottomleft"}).addTo(map);
 
-// because many of the points are stacked on top of each other
-// we are using a marker cluster library, so create the marker group
-// before adding layers below
-
-var markers = L.markerClusterGroup({
-  maxClusterRadius: 10,
-});
-
 // ******** //
 // SETTINGS //
 // ******** //
+
+var clusterSettings = {
+  maxClusterRadius: 1,
+  singleMarkerMode: true
+};
 
 // all circular markers on the map start with these settings
 // by default markers are a light grey
@@ -187,9 +184,7 @@ var markerImages = {
 // ****** //
 
 var courtRole1822 = createColorMarkerLayer(directory_json_1822, "Court Role", false)
-// courtRole1822.addTo(map);
-markers.addLayer(courtRole1822);
-map.addLayer(markers);
+map.addLayer(courtRole1822);
 
 // create the additional layers but do not display yet on the map
 var race1822 = createColorMarkerLayer(directory_json_1822, "Race", true)
@@ -314,7 +309,12 @@ function buildRecordName(props, name, firstName=null, prefix=null, suffix=null) 
 // unless all points specified, filter out those points in the directory which
 // do not have any values in the selected field
 function createColorMarkerLayer(geojson, type, filter=true) {
-  return L.geoJSON(geojson, {
+  // because many of the points are stacked on top of each other
+  // we are using a marker cluster library, so create the marker group
+  // before adding layers below
+  var markers = L.markerClusterGroup(clusterSettings);
+
+  var geojson = L.geoJSON(geojson, {
     pointToLayer: function pointToLayer (feature, latlng) {
       return L.circleMarker(latlng,
         markerSettings(type, feature.properties[type])
@@ -331,7 +331,8 @@ function createColorMarkerLayer(geojson, type, filter=true) {
         return true
       }
     }
-  });
+  })
+  return markers.addLayer(geojson);
 };
 
 // remove year from front of layer name and change spaces into underscores
