@@ -255,6 +255,7 @@ layerControl.addTo(map);
 
 // Note: baselayer refers to the directory radio buttons
 // while overlay refers to checkbox layers
+// only using baselayer for this implementation
 // selects where id on html element is "key-Type"
 // for example: "key-Court_Role"
 // so be careful when changing the HTML
@@ -274,22 +275,6 @@ map.on('baselayerchange', function(e) {
       classes.add("key-hidden");
     }
   }
-});
-
-// when overlay added, search for the
-// key element by id and display
-map.on('overlayadd', function(e) {
-  name = getLayerKeyName(e.name)
-  ele = document.getElementById("key-"+name);
-  ele.classList.remove("key-hidden");
-});
-
-// when overlay removed, search for the
-// key element by id and hide
-map.on('overlayremove', function(e) {
-  name = getLayerKeyName(e.name)
-  ele = document.getElementById("key-"+name);
-  ele.classList.add("key-hidden");
 });
 
 // *********************************** //

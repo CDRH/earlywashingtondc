@@ -1,26 +1,26 @@
 <h2>Maps</h2>
 
-<p>Introductory text here text here text here text here text here.</p>
+<p>This interactive map combines information from the 1822 and 1834 city directories with historic maps of Washington, D.C., to create a spatial representation of the capital city's earliest residents and neighborhoods. The map attempts to reconstruct who lived where in as much of early Washington, D.C., as we can, including the residents of Georgetown and Alexandria. We have cross-referenced the names in the city directories with names found in the D.C. Circuit Court case files for petitions for freedom, plotting jurors, witnesses, lawyers, plaintiffs, defendants, and other participants in the freedom suits. We have cross-referenced the names with other important sources, including the approximately 1,000 signatories of the 1828 Memorial to abolish slavery in the District. In the first instance, this map attempts to locate all inhabitants of early Washington, D.C. And second, it allows scholars, teachers, students, researchers, and genealogists to query the database for individuals and their spatial relationships in the city.</p>
 
 <div class="row">
 
   <div class="col-md-6">
     <h3 class="story_title">
-      <%= link_to "Washington, D.C. Directory Map", map_dc_path %>
+      <%= link_to "City Directory Map", map_dc_path %>
     </h3>
 
-    <%= link_to map_dc_path do %>
-      <figure>
-        <%= image_tag("map_directory_preview.png") %>
-      </figure>
-    <% end %>
-    <p>Interactive map of the Washington, D.C. 1822 directory which identifies individuals involved in cases as well as layers for race, gender, and occupation information. 1834 directory coming soon!</p>
+	<div class="figure_right figure_small">
+    <%= link_to map_dc_path do %><%= image_tag("map_directory_preview.jpg") %><% end %>
+    </div><!-- end figure -->
+
+    <p>An interactive map of the 1822 Washington, D.C., city directory, indentifying individuals who appear in the case papers as well as layers for race, gender, and occupation information. The 1834 directory will be included soon.</p>
+
   </div><!-- end col-md-6 -->
 
   <div class="col-md-6">
     <div class="row">
       <h3 class="story_title">
-        <a href="https://www.arcgis.com/apps/MapSeries/index.html?appid=644c89d35c57463b891f39bcb6f75af6" target="new">Mapping Early Washington, D.C., Law &amp; Family: 1822 (external link)</a>
+        <a href="https://www.arcgis.com/apps/MapSeries/index.html?appid=644c89d35c57463b891f39bcb6f75af6" target="new">Mapping Early Washington, D.C., Law &amp; Family: 1822</a>
       </h3>
 
       <p>A Story Map exploring the 1822 city directory for Washington, D.C.</p>
