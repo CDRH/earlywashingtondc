@@ -38,6 +38,8 @@ Rails.application.config.assets.precompile += %w( map_data/foreign_json_1822.js 
 # map
 Rails.application.config.assets.precompile += %w( leaflet-1.4.0.css )
 Rails.application.config.assets.precompile += %w( leaflet-1.4.0.min.js )
+Rails.application.config.assets.precompile += %w( markercluster-1.4.1.min.js )
+Rails.application.config.assets.precompile += %w( markercluster-1.4.1.css )
 Rails.application.config.assets.precompile += %w( map.css )
 Rails.application.config.assets.precompile += %w( map.js )
 
