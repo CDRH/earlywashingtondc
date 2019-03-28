@@ -106,9 +106,9 @@ var directoryFields = [
 // these are the fields from the spreadsheet used in the popups
 var foreignFields = [
   "Country",
-  "Title",
   "Occupation",
-  "Location"
+  "HISCO",
+  "Address"
 ];
 
 // these abbrevations are mapped to more descriptive terminology
@@ -387,7 +387,7 @@ function htmlBuilder(heading, props, fieldList, url) {
       if (label == "Gender" || label == "Race") {
         val = genderRaceMapping[val] || val;
       }
-      html += '<li>'+label+': '+val+'</li>';
+      html += '<li><strong>'+label+'</strong>: '+val+'</li>';
     }
   }
   if (url) { html += '<li><a href="'+url+'" target="_blank">More Info on <em>OSCYS</em></a></li>' }
