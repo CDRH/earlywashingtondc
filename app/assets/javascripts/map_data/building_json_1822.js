@@ -377,7 +377,7 @@ var building_json_1822 = {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -77.986954,38.900663 ]
+       "coordinates":  [ -76.986901,38.900749 ]
     },
     "properties": {
     "Name":"Eastern Burying Ground",

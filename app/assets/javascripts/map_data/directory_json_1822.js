@@ -3071,7 +3071,7 @@ var directory_json_1822 = {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -77.9957,38.87705 ]
+       "coordinates":  [ -76.994698,38.87726 ]
     },
     "properties": {
     "Name":"Thomas",
@@ -8006,7 +8006,7 @@ var directory_json_1822 = {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -77.9967,38.881135 ]
+       "coordinates":  [ -76.9967,38.881135 ]
     },
     "properties": {
     "Name":"Thomas",
