@@ -42,7 +42,13 @@ var clusterSettings = {
     weight: 3,
     opacity: 1
   },
-  spiderfyDistanceMultiplier: 0.4
+  iconCreateFunction: function(cluster) {
+    return L.divIcon({
+      html: cluster.getChildCount(),
+      className: 'marker_cluster',
+      iconSize: L.point(20, 20)
+    });
+  }
 };
 
 // all circular markers on the map start with these settings
