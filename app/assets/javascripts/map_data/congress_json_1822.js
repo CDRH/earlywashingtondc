@@ -1,1 +1,4265 @@
-var congress_json_1822 = {"type":"FeatureCollection","crs":{"type":"name","properties":{"name":"EPSG:4326"}},"features":[{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[-77.020968999999994,38.893315999999999]},"properties":{"OBJECTID":1,"Name":"Barbour","Forename":"Jas.","Prefix":"","State":"Vir.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893315999999999,"Long":-77.020968999999994,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":2,"geometry":{"type":"Point","coordinates":[-77.007008999999996,38.887301999999998]},"properties":{"OBJECTID":2,"Name":"Barton","Forename":"David","Prefix":"","State":"Misso.","With_whom_they_Board":"Mrs. Claxton, Capitol hill","Lat":38.887301999999998,"Long":-77.007008999999996,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":3,"geometry":{"type":"Point","coordinates":[-77.007859999999994,38.891351]},"properties":{"OBJECTID":3,"Name":"Benton","Forename":"Thomas H.","Prefix":"","State":"Misso.","With_whom_they_Board":"Mr. Dowson, Capitol hill","Lat":38.891351,"Long":-77.007859999999994,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":4,"geometry":{"type":"Point","coordinates":[-77.008636999999993,38.887385999999999]},"properties":{"OBJECTID":4,"Name":"Boardman","Forename":"Elijah","Prefix":"","State":"Conn.","With_whom_they_Board":"Mr. Frost, Capitol hill","Lat":38.887385999999999,"Long":-77.008636999999993,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":5,"geometry":{"type":"Point","coordinates":[-77.031570000000002,38.896430000000002]},"properties":{"OBJECTID":5,"Name":"Brown","Forename":"James","Prefix":"","State":"Louis.","With_whom_they_Board":"Dwlg. Near Strother's hotel","Lat":38.896430000000002,"Long":-77.031570000000002,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":6,"geometry":{"type":"Point","coordinates":[-77.017319999999998,38.893782000000002]},"properties":{"OBJECTID":6,"Name":"Brown","Forename":"Ethan A.","Prefix":"","State":"Ohio","With_whom_they_Board":"Miss Polk, near the city hall","Lat":38.893782000000002,"Long":-77.017319999999998,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":7,"geometry":{"type":"Point","coordinates":[-77.008595,38.887320000000003]},"properties":{"OBJECTID":7,"Name":"Chandler","Forename":"John","Prefix":"","State":"Maine","With_whom_they_Board":"Mr. Frost, Capitol hill","Lat":38.887320000000003,"Long":-77.008595,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":8,"geometry":{"type":"Point","coordinates":[-77.007727000000003,38.891320999999998]},"properties":{"OBJECTID":8,"Name":"D'Wolf","Forename":"James","Prefix":"","State":"R. I.","With_whom_they_Board":"Mr. Dowson, Capitol hill","Lat":38.891320999999998,"Long":-77.007727000000003,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":9,"geometry":{"type":"Point","coordinates":[-77.006604999999993,38.888464999999997]},"properties":{"OBJECTID":9,"Name":"Dickerson","Forename":"Mahlon","Prefix":"","State":"N. J.","With_whom_they_Board":"Mr. Tims, Capitol hill","Lat":38.888464999999997,"Long":-77.006604999999993,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":10,"geometry":{"type":"Point","coordinates":[-77.045415000000006,38.901322]},"properties":{"OBJECTID":10,"Name":"Eaton","Forename":"John Henry","Prefix":"","State":"Tenn.","With_whom_they_Board":"O'Neale's hotel, Penn av","Lat":38.901322,"Long":-77.045415000000006,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":11,"geometry":{"type":"Point","coordinates":[-77.021240000000006,38.892639000000003]},"properties":{"OBJECTID":11,"Name":"Edwards","Forename":"Ninian","Prefix":"","State":"Illi.","With_whom_they_Board":"Mrs. Queen, near Brown's","Lat":38.892639000000003,"Long":-77.021240000000006,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":12,"geometry":{"type":"Point","coordinates":[-77.021225999999999,38.892617000000001]},"properties":{"OBJECTID":12,"Name":"Findlay","Forename":"William","Prefix":"","State":"Penn.","With_whom_they_Board":"Mrs. Queen, near Brown's","Lat":38.892617000000001,"Long":-77.021225999999999,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":13,"geometry":{"type":"Point","coordinates":[-77.006833,38.888464999999997]},"properties":{"OBJECTID":13,"Name":"Gaillard","Forename":"John","Prefix":"","State":"S.Car.","With_whom_they_Board":"Mr. Tims, Capitol hill","Lat":38.888464999999997,"Long":-77.006833,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":14,"geometry":{"type":"Point","coordinates":[-77.007441999999998,38.891336000000003]},"properties":{"OBJECTID":14,"Name":"Holmes","Forename":"John","Prefix":"","State":"Maine","With_whom_they_Board":"Mr. Dowson, Capitol hill","Lat":38.891336000000003,"Long":-77.007441999999998,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":15,"geometry":{"type":"Point","coordinates":[-77.006448000000006,38.887889000000001]},"properties":{"OBJECTID":15,"Name":"Holmes","Forename":"David","Prefix":"","State":"Missi.","With_whom_they_Board":"Capt. Coyle, Capitol hill","Lat":38.887889000000001,"Long":-77.006448000000006,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":16,"geometry":{"type":"Point","coordinates":[-77.033409000000006,38.896991]},"properties":{"OBJECTID":16,"Name":"Johnson","Forename":"Henry","Prefix":"","State":"Louis.","With_whom_they_Board":"Mrs. Wilson, near treas dept","Lat":38.896991,"Long":-77.033409000000006,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":17,"geometry":{"type":"Point","coordinates":[-77.023593000000005,38.895929000000002]},"properties":{"OBJECTID":17,"Name":"Johnson","Forename":"Richard M.","Prefix":"","State":"Ken.","With_whom_they_Board":"Mr. Brown, near post office","Lat":38.895929000000002,"Long":-77.023593000000005,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":18,"geometry":{"type":"Point","coordinates":[-77.008522999999997,38.887152999999998]},"properties":{"OBJECTID":18,"Name":"Knight","Forename":"Nehemiah","Prefix":"","State":"R. I.","With_whom_they_Board":"Mr. Frost, Capitol hill","Lat":38.887152999999998,"Long":-77.008522999999997,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":19,"geometry":{"type":"Point","coordinates":[-77.016968000000006,38.893777999999998]},"properties":{"OBJECTID":19,"Name":"Lanman","Forename":"James","Prefix":"","State":"Conn.","With_whom_they_Board":"Mrs. Peyton, near city hall","Lat":38.893777999999998,"Long":-77.016968000000006,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":20,"geometry":{"type":"Point","coordinates":[-77.048010000000005,38.901905999999997]},"properties":{"OBJECTID":20,"Name":"Lloyd","Forename":"James","Prefix":"","State":"Mass.","With_whom_they_Board":"Mr. Woodside, 6 buildings","Lat":38.901905999999997,"Long":-77.048010000000005,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":21,"geometry":{"type":"Point","coordinates":[-77.045572000000007,38.901299999999999]},"properties":{"OBJECTID":21,"Name":"Lloyd","Forename":"Edward","Prefix":"","State":"Md.","With_whom_they_Board":"O'Neale's hotel, Pen av","Lat":38.901299999999999,"Long":-77.045572000000007,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":22,"geometry":{"type":"Point","coordinates":[-77.020567999999997,38.892401999999997]},"properties":{"OBJECTID":22,"Name":"Lowrie","Forename":"Walter","Prefix":"","State":"Penn.","With_whom_they_Board":"Mr. Sawyer, oppos. Brown's","Lat":38.892401999999997,"Long":-77.020567999999997,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":23,"geometry":{"type":"Point","coordinates":[-77.007214000000005,38.891336000000003]},"properties":{"OBJECTID":23,"Name":"Macon","Forename":"Nathaniel","Prefix":"","State":"N.Car.","With_whom_they_Board":"Mr. Dowson, Capitol hill","Lat":38.891336000000003,"Long":-77.007214000000005,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":24,"geometry":{"type":"Point","coordinates":[-77.045815000000005,38.901311]},"properties":{"OBJECTID":24,"Name":"Mills","Forename":"Elijah H.","Prefix":"","State":"Mass.","With_whom_they_Board":"O'Neale's hotel, Pen av","Lat":38.901311,"Long":-77.045815000000005,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":25,"geometry":{"type":"Point","coordinates":[-77.005188000000004,38.889510999999999]},"properties":{"OBJECTID":25,"Name":"Morrill","Forename":"David L.","Prefix":"","State":"N. H.","With_whom_they_Board":"Mr. Emack, Capitol hill","Lat":38.889510999999999,"Long":-77.005188000000004,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":26,"geometry":{"type":"Point","coordinates":[-77.017291,38.892493999999999]},"properties":{"OBJECTID":26,"Name":"Noble","Forename":"James","Prefix":"","State":"Ind.","With_whom_they_Board":"Miss Polk, near the city hall","Lat":38.892493999999999,"Long":-77.017291,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":27,"geometry":{"type":"Point","coordinates":[-77.005645000000001,38.889510999999999]},"properties":{"OBJECTID":27,"Name":"Palmer","Forename":"William A.","Prefix":"","State":"Ver.","With_whom_they_Board":"Mrs. Hamilton, Capitol hill","Lat":38.889510999999999,"Long":-77.005645000000001,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":28,"geometry":{"type":"Point","coordinates":[-77.006580999999997,38.887903000000001]},"properties":{"OBJECTID":28,"Name":"Parrot","Forename":"John F.","Prefix":"","State":"N. H.","With_whom_they_Board":"Capt. Coyle, Capitol hill","Lat":38.887903000000001,"Long":-77.006580999999997,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":29,"geometry":{"type":"Point","coordinates":[-77.008494999999996,38.887064000000002]},"properties":{"OBJECTID":29,"Name":"Ruggles","Forename":"Benjamin","Prefix":"","State":"Ohio","With_whom_they_Board":"Mr. Frost, Capitol hill","Lat":38.887064000000002,"Long":-77.008494999999996,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":30,"geometry":{"type":"Point","coordinates":[-77.007080000000002,38.888464999999997]},"properties":{"OBJECTID":30,"Name":"Rodney","Forename":"Cesar A.","Prefix":"","State":"Del.","With_whom_they_Board":"Mr. Tims, Capitol hill","Lat":38.888464999999997,"Long":-77.007080000000002,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":31,"geometry":{"type":"Point","coordinates":[-77.005626000000007,38.889363000000003]},"properties":{"OBJECTID":31,"Name":"Seymour","Forename":"Horatio","Prefix":"","State":"Ver.","With_whom_they_Board":"Mr.s Hamilton, Capitol hill","Lat":38.889363000000003,"Long":-77.005626000000007,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":32,"geometry":{"type":"Point","coordinates":[-77.005475000000004,38.890219999999999]},"properties":{"OBJECTID":32,"Name":"Smith","Forename":"William","Prefix":"","State":"S.Car.","With_whom_they_Board":"Capt. Burch, Capitol hill","Lat":38.890219999999999,"Long":-77.005475000000004,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":33,"geometry":{"type":"Point","coordinates":[-77.007023000000004,38.891320999999998]},"properties":{"OBJECTID":33,"Name":"Smith","Forename":"Samuel","Prefix":"","State":"Md.","With_whom_they_Board":"Mr Dowson, Capitol hill","Lat":38.891320999999998,"Long":-77.007023000000004,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":34,"geometry":{"type":"Point","coordinates":[-77.026200000000003,38.895066999999997]},"properties":{"OBJECTID":34,"Name":"Southard","Forename":"Saml. L.","Prefix":"","State":"N. J.","With_whom_they_Board":"Mrs. Blake, 10w near Pa av","Lat":38.895066999999997,"Long":-77.026200000000003,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":35,"geometry":{"type":"Point","coordinates":[-77.020754999999994,38.893272000000003]},"properties":{"OBJECTID":35,"Name":"Stokes","Forename":"Montfort","Prefix":"","State":"N. C.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893272000000003,"Long":-77.020754999999994,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":36,"geometry":{"type":"Point","coordinates":[-77.016835,38.893822]},"properties":{"OBJECTID":36,"Name":"Talbot","Forename":"Isham","Prefix":"","State":"Ken.","With_whom_they_Board":"Mrs. Peyton, near city hall","Lat":38.893822,"Long":-77.016835,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":37,"geometry":{"type":"Point","coordinates":[-77.020655000000005,38.893248999999997]},"properties":{"OBJECTID":37,"Name":"Taylor","Forename":"Waller","Prefix":"","State":"Ind.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893248999999997,"Long":-77.020655000000005,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":38,"geometry":{"type":"Point","coordinates":[-77.020662999999999,38.892443]},"properties":{"OBJECTID":38,"Name":"Thomas","Forename":"Jesse B.","Prefix":"","State":"Illi.","With_whom_they_Board":"Mr. Sawyer, oppos. Brown's","Lat":38.892443,"Long":-77.020662999999999,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":39,"geometry":{"type":"Point","coordinates":[-77.032905999999997,38.897436999999996]},"properties":{"OBJECTID":39,"Name":"Van Dyke","Forename":"Nicholas","Prefix":"","State":"Del.","With_whom_they_Board":"Mrs. Clarke, near treas dpt","Lat":38.897436999999996,"Long":-77.032905999999997,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":40,"geometry":{"type":"Point","coordinates":[-77.016626000000002,38.893793000000002]},"properties":{"OBJECTID":40,"Name":"Ware","Forename":"Nicholas","Prefix":"","State":"Geo.","With_whom_they_Board":"Mrs. Peyton, near city hall","Lat":38.893793000000002,"Long":-77.016626000000002,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":41,"geometry":{"type":"Point","coordinates":[-77.006828999999996,38.887873999999996]},"properties":{"OBJECTID":41,"Name":"Williams","Forename":"Thomas H.","Prefix":"","State":"Missi.","With_whom_they_Board":"Capt. Coyle, Capitol hill","Lat":38.887873999999996,"Long":-77.006828999999996,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":42,"geometry":{"type":"Point","coordinates":[-77.016360000000006,38.893808]},"properties":{"OBJECTID":42,"Name":"Williams","Forename":"John","Prefix":"","State":"Tenn.","With_whom_they_Board":"Mrs. Peyton, near city hall","Lat":38.893808,"Long":-77.016360000000006,"Role_in_Congress":"Senator","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":43,"geometry":{"type":"Point","coordinates":[-77.006737999999999,38.891320999999998]},"properties":{"OBJECTID":43,"Name":"Tompkins","Forename":"Daniel D.","Prefix":"","State":"N.Y.","With_whom_they_Board":"Mr. Dowson's, C. hill","Lat":38.891320999999998,"Long":-77.006737999999999,"Role_in_Congress":"vice-president of the U. S. and president of the Senate","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":44,"geometry":{"type":"Point","coordinates":[-77.005285000000001,38.890237999999997]},"properties":{"OBJECTID":44,"Name":"Abbot","Forename":"Joel","Prefix":"","State":"Geo.","With_whom_they_Board":"Capt Burch, Capitol hill","Lat":38.890237999999997,"Long":-77.005285000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":45,"geometry":{"type":"Point","coordinates":[-77.006529,38.891306]},"properties":{"OBJECTID":45,"Name":"Alexander","Forename":"Mark","Prefix":"","State":"Vir.","With_whom_they_Board":"Mr Dowson, Capitol hill","Lat":38.891306,"Long":-77.006529,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":46,"geometry":{"type":"Point","coordinates":[-77.004998999999998,38.890219999999999]},"properties":{"OBJECTID":46,"Name":"Allen","Forename":"Robert","Prefix":"","State":"Tenn.","With_whom_they_Board":"Capt Burch, Capitol hill","Lat":38.890219999999999,"Long":-77.004998999999998,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":47,"geometry":{"type":"Point","coordinates":[-77.021467999999999,38.896465999999997]},"properties":{"OBJECTID":47,"Name":"Allen","Forename":"Samuel C.","Prefix":"","State":"Mass.","With_whom_they_Board":"Mr Fletcher, near post office","Lat":38.896465999999997,"Long":-77.021467999999999,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":48,"geometry":{"type":"Point","coordinates":[-77.006377000000001,38.891306]},"properties":{"OBJECTID":48,"Name":"Archer","Forename":"William S.","Prefix":"","State":"Vir.","With_whom_they_Board":"Mr Dowson, Capitol hill","Lat":38.891306,"Long":-77.006377000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":49,"geometry":{"type":"Point","coordinates":[-77.020527000000001,38.893216000000002]},"properties":{"OBJECTID":49,"Name":"Ball","Forename":"William Lee","Prefix":"","State":"Vir","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893216000000002,"Long":-77.020527000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":50,"geometry":{"type":"Point","coordinates":[-77.018866000000003,38.892823999999997]},"properties":{"OBJECTID":50,"Name":"Barber","Forename":"Levi","Prefix":"","State":"Ohio","With_whom_they_Board":"Mr Gardiner, near Brown's","Lat":38.892823999999997,"Long":-77.018866000000003,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":51,"geometry":{"type":"Point","coordinates":[-77.005326999999994,38.88937]},"properties":{"OBJECTID":51,"Name":"Barber","Forename":"Noyes","Prefix":"","State":"Conn.","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.88937,"Long":-77.005326999999994,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":52,"geometry":{"type":"Point","coordinates":[-77.020655000000005,38.893304999999998]},"properties":{"OBJECTID":52,"Name":"Barbour","Forename":"P. P.","Prefix":"spkr.","State":"Vir.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893304999999998,"Long":-77.020655000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":53,"geometry":{"type":"Point","coordinates":[-77.00676,38.887329999999999]},"properties":{"OBJECTID":53,"Name":"Bassett","Forename":"Burwell","Prefix":"","State":"Vir.","With_whom_they_Board":"Mrs Claxton, Capitol hill","Lat":38.887329999999999,"Long":-77.00676,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":54,"geometry":{"type":"Point","coordinates":[-77.018488000000005,38.892724000000001]},"properties":{"OBJECTID":54,"Name":"Bateman","Forename":"Ephraim","Prefix":"","State":"N. J.","With_whom_they_Board":"Mrs Gaither, near city hall","Lat":38.892724000000001,"Long":-77.018488000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":55,"geometry":{"type":"Point","coordinates":[-77.028538999999995,38.895487000000003]},"properties":{"OBJECTID":55,"Name":"Bates","Forename":"James W.","Prefix":"","State":"Ark. T.","With_whom_they_Board":"Mr Handy, Pen av near 12w","Lat":38.895487000000003,"Long":-77.028538999999995,"Role_in_Congress":"Delegate, Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"","field":"","N_S":"S"}},{"type":"Feature","id":56,"geometry":{"type":"Point","coordinates":[-77.007114000000001,38.887873999999996]},"properties":{"OBJECTID":56,"Name":"Baylies","Forename":"Francis","Prefix":"","State":"Mass.","With_whom_they_Board":"Capt Coyle, Capitol hill","Lat":38.887873999999996,"Long":-77.007114000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":57,"geometry":{"type":"Point","coordinates":[-77.020527000000001,38.893293999999997]},"properties":{"OBJECTID":57,"Name":"Bayly","Forename":"Thomas","Prefix":"","State":"Md.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893293999999997,"Long":-77.020527000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"S"}},{"type":"Feature","id":58,"geometry":{"type":"Point","coordinates":[-77.021319000000005,38.896442999999998]},"properties":{"OBJECTID":58,"Name":"Bigelow","Forename":"Lewis","Prefix":"","State":"Mass.","With_whom_they_Board":"Mr Fletcher, near post office","Lat":38.896442999999998,"Long":-77.021319000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":59,"geometry":{"type":"Point","coordinates":[-77.007819999999995,38.888432000000002]},"properties":{"OBJECTID":59,"Name":"Blackledge","Forename":"Wm. S.","Prefix":"","State":"N. C.","With_whom_they_Board":"Mrs Hickey, Capitol hill","Lat":38.888432000000002,"Long":-77.007819999999995,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":60,"geometry":{"type":"Point","coordinates":[-77.021022000000002,38.896465999999997]},"properties":{"OBJECTID":60,"Name":"Borland, jr.","Forename":"Charles","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mr Fletcher, near post office","Lat":38.896465999999997,"Long":-77.021022000000002,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":61,"geometry":{"type":"Point","coordinates":[-77.028745999999998,38.895603000000001]},"properties":{"OBJECTID":61,"Name":"Breckenridge","Forename":"Js. D.","Prefix":"","State":"Ken.","With_whom_they_Board":"Mr Handy, Pen av near 12w","Lat":38.895603000000001,"Long":-77.028745999999998,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":62,"geometry":{"type":"Point","coordinates":[-77.021623000000005,38.892389999999999]},"properties":{"OBJECTID":62,"Name":"Brown","Forename":"John","Prefix":"","State":"Penn.","With_whom_they_Board":"Mrs Myer, opp centre mrkt","Lat":38.892389999999999,"Long":-77.021623000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":63,"geometry":{"type":"Point","coordinates":[-77.020583999999999,38.893227000000003]},"properties":{"OBJECTID":63,"Name":"Buchanan","Forename":"James","Prefix":"","State":"Penn.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893227000000003,"Long":-77.020583999999999,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":64,"geometry":{"type":"Point","coordinates":[-76.991850999999997,38.878661000000001]},"properties":{"OBJECTID":64,"Name":"Burrows","Forename":"Daniel","Prefix":"","State":"Conn.","With_whom_they_Board":"Mr Friend, Navy Yard","Lat":38.878661000000001,"Long":-76.991850999999997,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":65,"geometry":{"type":"Point","coordinates":[-77.007782000000006,38.888292]},"properties":{"OBJECTID":65,"Name":"Butler","Forename":"Josiah","Prefix":"","State":"N. H.","With_whom_they_Board":"Mrs Hickey, Capitol hill","Lat":38.888292,"Long":-77.007782000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":66,"geometry":{"type":"Point","coordinates":[-77.044342,38.900697000000001]},"properties":{"OBJECTID":66,"Name":"Cambreleng","Forename":"C. C.","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mr Kervand, near 7 bldgs","Lat":38.900697000000001,"Long":-77.044342,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":67,"geometry":{"type":"Point","coordinates":[-77.018637999999996,38.892780000000002]},"properties":{"OBJECTID":67,"Name":"Campbell","Forename":"John W.","Prefix":"","State":"Ohio","With_whom_they_Board":"Mr Gardiner, near Brown's","Lat":38.892780000000002,"Long":-77.018637999999996,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":68,"geometry":{"type":"Point","coordinates":[-77.021559999999994,38.892744999999998]},"properties":{"OBJECTID":68,"Name":"Campbell","Forename":"Samuel","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mrs Queen, near cntr mrkt","Lat":38.892744999999998,"Long":-77.021559999999994,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":69,"geometry":{"type":"Point","coordinates":[-77.021396999999993,38.892488999999998]},"properties":{"OBJECTID":69,"Name":"Cannon","Forename":"Newton","Prefix":"","State":"Tenn.","With_whom_they_Board":"Mrs M'Cardle, opp Brown's","Lat":38.892488999999998,"Long":-77.021396999999993,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":70,"geometry":{"type":"Point","coordinates":[-77.016301999999996,38.893808]},"properties":{"OBJECTID":70,"Name":"Carter","Forename":"John","Prefix":"","State":"S. C.","With_whom_they_Board":"Mrs Peyton, near city hall","Lat":38.893808,"Long":-77.016301999999996,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":71,"geometry":{"type":"Point","coordinates":[-77.005326999999994,38.889265999999999]},"properties":{"OBJECTID":71,"Name":"Cassedy","Forename":"George","Prefix":"","State":"N. J.","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.889265999999999,"Long":-77.005326999999994,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":72,"geometry":{"type":"Point","coordinates":[-77.022234999999995,38.894123]},"properties":{"OBJECTID":72,"Name":"Chambers","Forename":"David","Prefix":"","State":"Ohio","With_whom_they_Board":"Mrs Tucker, opp cntr mrkt","Lat":38.894123,"Long":-77.022234999999995,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":73,"geometry":{"type":"Point","coordinates":[-77.007259000000005,38.887357999999999]},"properties":{"OBJECTID":73,"Name":"Cocke","Forename":"John","Prefix":"","State":"Tenn.","With_whom_they_Board":"Mrs Claxton, Capitol hill","Lat":38.887357999999999,"Long":-77.007259000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":74,"geometry":{"type":"Point","coordinates":[-77.008252999999996,38.886409]},"properties":{"OBJECTID":74,"Name":"Colden","Forename":"Cadw. D.","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mr M'Leod, Capitol hill","Lat":38.886409,"Long":-77.008252999999996,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":75,"geometry":{"type":"Point","coordinates":[-77.008234999999999,38.886319999999998]},"properties":{"OBJECTID":75,"Name":"Condict","Forename":"Lewis","Prefix":"","State":"N. J.","With_whom_they_Board":"Mr M'Leod, Capitol hill","Lat":38.886319999999998,"Long":-77.008234999999999,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":76,"geometry":{"type":"Point","coordinates":[-77.008178000000001,38.886217000000002]},"properties":{"OBJECTID":76,"Name":"Conklin","Forename":"Alfred","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mr M'Leod, Capitol hill","Lat":38.886217000000002,"Long":-77.008178000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":77,"geometry":{"type":"Point","coordinates":[-77.004689999999997,38.890219999999999]},"properties":{"OBJECTID":77,"Name":"Conner","Forename":"Henry","Prefix":"","State":"N. C.","With_whom_they_Board":"Capt Burch, Capitol hill","Lat":38.890219999999999,"Long":-77.004689999999997,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":78,"geometry":{"type":"Point","coordinates":[-77.007644999999997,38.887416000000002]},"properties":{"OBJECTID":78,"Name":"Cook","Forename":"Daniel P.","Prefix":"","State":"Illi.","With_whom_they_Board":"Mr Young, Capitol hill","Lat":38.887416000000002,"Long":-77.007644999999997,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":79,"geometry":{"type":"Point","coordinates":[-77.005606999999998,38.889215]},"properties":{"OBJECTID":79,"Name":"Crafts","Forename":"Samuel C.","Prefix":"","State":"Ver.","With_whom_they_Board":"Mrs Hamilton, Capitol hill","Lat":38.889215,"Long":-77.005606999999998,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":80,"geometry":{"type":"Point","coordinates":[-77.006428,38.886837999999997]},"properties":{"OBJECTID":80,"Name":"Crudup","Forename":"Josiah","Prefix":"","State":"N. C.","With_whom_they_Board":"Mr Dunn, Capitol hill","Lat":38.886837999999997,"Long":-77.006428,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":81,"geometry":{"type":"Point","coordinates":[-77.020635999999996,38.896442999999998]},"properties":{"OBJECTID":81,"Name":"Cushman","Forename":"Joshua","Prefix":"","State":"Maine","With_whom_they_Board":"Mr Fletcher, near post office","Lat":38.896442999999998,"Long":-77.020635999999996,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":82,"geometry":{"type":"Point","coordinates":[-77.016112000000007,38.893808]},"properties":{"OBJECTID":82,"Name":"Cuthbert","Forename":"Alfred","Prefix":"","State":"Geo.","With_whom_they_Board":"Mrs Peyton, near city hall","Lat":38.893808,"Long":-77.016112000000007,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":83,"geometry":{"type":"Point","coordinates":[-77.021041999999994,38.892496000000001]},"properties":{"OBJECTID":83,"Name":"Dane","Forename":"Joseph","Prefix":"","State":"Maine","With_whom_they_Board":"Mr Hyatt, opposite Brown's","Lat":38.892496000000001,"Long":-77.021041999999994,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":84,"geometry":{"type":"Point","coordinates":[-77.021647000000002,38.892446]},"properties":{"OBJECTID":84,"Name":"Darlington","Forename":"William","Prefix":"","State":"Penn.","With_whom_they_Board":"Mrs Myer, opp centre mrkt","Lat":38.892446,"Long":-77.021647000000002,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":85,"geometry":{"type":"Point","coordinates":[-77.020787999999996,38.892443]},"properties":{"OBJECTID":85,"Name":"Denison","Forename":"George","Prefix":"","State":"Penn.","With_whom_they_Board":"Mr. Sawyer, opp Brown's","Lat":38.892443,"Long":-77.020787999999996,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":86,"geometry":{"type":"Point","coordinates":[-77.045856999999998,38.901299999999999]},"properties":{"OBJECTID":86,"Name":"Dickinson","Forename":"John D.","Prefix":"","State":"N. Y.","With_whom_they_Board":"O'Neale's hotel, Penn av","Lat":38.901299999999999,"Long":-77.045856999999998,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":87,"geometry":{"type":"Point","coordinates":[-77.008482000000001,38.886439000000003]},"properties":{"OBJECTID":87,"Name":"Durfee","Forename":"Job","Prefix":"","State":"R. I.","With_whom_they_Board":"Mr M'Leod, Capitol hill","Lat":38.886439000000003,"Long":-77.008482000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":88,"geometry":{"type":"Point","coordinates":[-77.044520000000006,38.900751999999997]},"properties":{"OBJECTID":88,"Name":"Dwight","Forename":"Henry W.","Prefix":"","State":"Mass.","With_whom_they_Board":"Mr Kervand, near 7 bldgs","Lat":38.900751999999997,"Long":-77.044520000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":89,"geometry":{"type":"Point","coordinates":[-77.008386999999999,38.88635]},"properties":{"OBJECTID":89,"Name":"Eddy","Forename":"Samuel","Prefix":"","State":"R. I.","With_whom_they_Board":"Mr M'Leod, Capitol hill","Lat":38.88635,"Long":-77.008386999999999,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":90,"geometry":{"type":"Point","coordinates":[-77.007512000000006,38.887400999999997]},"properties":{"OBJECTID":90,"Name":"Edwards","Forename":"H. W.","Prefix":"","State":"Conn.","With_whom_they_Board":"Mr Young, Capitol hill","Lat":38.887400999999997,"Long":-77.007512000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":91,"geometry":{"type":"Point","coordinates":[-77.007917000000006,38.891454000000003]},"properties":{"OBJECTID":91,"Name":"Edwards","Forename":"Weldon N.","Prefix":"","State":"N. C.","With_whom_they_Board":"Mr Dowson, Capitol hill","Lat":38.891454000000003,"Long":-77.007917000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":92,"geometry":{"type":"Point","coordinates":[-77.007745999999997,38.891440000000003]},"properties":{"OBJECTID":92,"Name":"Eustis","Forename":"William","Prefix":"","State":"Mass.","With_whom_they_Board":"Mr Dowson, Capitol hill","Lat":38.891440000000003,"Long":-77.007745999999997,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":93,"geometry":{"type":"Point","coordinates":[-77.026223000000002,38.894044000000001]},"properties":{"OBJECTID":93,"Name":"Farrelly","Forename":"Patrick","Prefix":"","State":"Penn.","With_whom_they_Board":"Mr Sardo, corn Pa av & 10w","Lat":38.894044000000001,"Long":-77.026223000000002,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":94,"geometry":{"type":"Point","coordinates":[-77.021659,38.892584999999997]},"properties":{"OBJECTID":94,"Name":"Findlay","Forename":"John","Prefix":"","State":"Penn.","With_whom_they_Board":"Mrs Myer, opp centre mrkt","Lat":38.892584999999997,"Long":-77.021659,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":95,"geometry":{"type":"Point","coordinates":[-77.015827000000002,38.893808]},"properties":{"OBJECTID":95,"Name":"Floyd","Forename":"John","Prefix":"","State":"Vir.","With_whom_they_Board":"Mrs Peyton, near city hall","Lat":38.893808,"Long":-77.015827000000002,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":96,"geometry":{"type":"Point","coordinates":[-77.022210000000001,38.894190000000002]},"properties":{"OBJECTID":96,"Name":"Forrest","Forename":"Thomas","Prefix":"","State":"Penn.","With_whom_they_Board":"Mrs Tucker, opp cntr mrkt","Lat":38.894190000000002,"Long":-77.022210000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":97,"geometry":{"type":"Point","coordinates":[-77.021586999999997,38.892733]},"properties":{"OBJECTID":97,"Name":"Fuller","Forename":"Timothy","Prefix":"","State":"Mass.","With_whom_they_Board":"Mrs Myer, opp cntr mrkt","Lat":38.892733,"Long":-77.021586999999997,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":98,"geometry":{"type":"Point","coordinates":[-77.020742999999996,38.892409000000001]},"properties":{"OBJECTID":98,"Name":"Forward","Forename":"Walter","Prefix":"","State":"Penn.","With_whom_they_Board":"Mr Sawyer, opp Brown's","Lat":38.892409000000001,"Long":-77.020742999999996,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":99,"geometry":{"type":"Point","coordinates":[-77.032342,38.895769000000001]},"properties":{"OBJECTID":99,"Name":"Garnett","Forename":"Robert S","Prefix":"","State":"Vir.","With_whom_they_Board":"Mr M'Gowan, op Strother's","Lat":38.895769000000001,"Long":-77.032342,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":100,"geometry":{"type":"Point","coordinates":[-77.008330000000001,38.886217000000002]},"properties":{"OBJECTID":100,"Name":"Gebhard","Forename":"John","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mr M'Leod, Capitol hill","Lat":38.886217000000002,"Long":-77.008330000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":101,"geometry":{"type":"Point","coordinates":[-77.005356000000006,38.890349000000001]},"properties":{"OBJECTID":101,"Name":"Gilmer","Forename":"George R.","Prefix":"","State":"Geo.","With_whom_they_Board":"Capt Burch, Capitol hill","Lat":38.890349000000001,"Long":-77.005356000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":102,"geometry":{"type":"Point","coordinates":[-77.008759999999995,38.887399000000002]},"properties":{"OBJECTID":102,"Name":"Gist","Forename":"Joseph","Prefix":"","State":"S. C.","With_whom_they_Board":"Mr Rapine, Capitol hill","Lat":38.887399000000002,"Long":-77.008759999999995,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":103,"geometry":{"type":"Point","coordinates":[-77.017043999999999,38.893926]},"properties":{"OBJECTID":103,"Name":"Govan","Forename":"Andrew R.","Prefix":"","State":"S. C.","With_whom_they_Board":"Mrs Peyton, near city hall","Lat":38.893926,"Long":-77.017043999999999,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":104,"geometry":{"type":"Point","coordinates":[-77.020567999999997,38.892372000000002]},"properties":{"OBJECTID":104,"Name":"Gross","Forename":"Samuel","Prefix":"","State":"Penn.","With_whom_they_Board":"Mr Sawyer, opp Brown's","Lat":38.892372000000002,"Long":-77.020567999999997,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":105,"geometry":{"type":"Point","coordinates":[-77.007518000000005,38.891454000000003]},"properties":{"OBJECTID":105,"Name":"Hall","Forename":"Thomas H.","Prefix":"","State":"N. C.","With_whom_they_Board":"Mr Dowson, Capitol hill","Lat":38.891454000000003,"Long":-77.007518000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":106,"geometry":{"type":"Point","coordinates":[-77.005142000000006,38.890368000000002]},"properties":{"OBJECTID":106,"Name":"Hardin","Forename":"Benjamin","Prefix":"","State":"Ken.","With_whom_they_Board":"Capt Burch, Capitol hill","Lat":38.890368000000002,"Long":-77.005142000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":107,"geometry":{"type":"Point","coordinates":[-77.008437999999998,38.886920000000003]},"properties":{"OBJECTID":107,"Name":"Harris","Forename":"Mark","Prefix":"","State":"Maine","With_whom_they_Board":"Mr Frost, Capitol hill","Lat":38.886920000000003,"Long":-77.008437999999998,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":108,"geometry":{"type":"Point","coordinates":[-77.006794999999997,38.887247000000002]},"properties":{"OBJECTID":108,"Name":"Harvey","Forename":"Matthew","Prefix":"","State":"N. H.","With_whom_they_Board":"Mrs Claxton, Capitol hill","Lat":38.887247000000002,"Long":-77.006794999999997,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":109,"geometry":{"type":"Point","coordinates":[-77.021501000000001,38.892726000000003]},"properties":{"OBJECTID":109,"Name":"Hawks","Forename":"John","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mrs Queen, near cntre mrkt","Lat":38.892726000000003,"Long":-77.021501000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":110,"geometry":{"type":"Point","coordinates":[-77.006410000000002,38.888021999999999]},"properties":{"OBJECTID":110,"Name":"Hemphill","Forename":"Joseph","Prefix":"","State":"Penn.","With_whom_they_Board":"Capt Coyle, Capitol hill","Lat":38.888021999999999,"Long":-77.006410000000002,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":111,"geometry":{"type":"Point","coordinates":[-77.005326999999994,38.889102999999999]},"properties":{"OBJECTID":111,"Name":"Herrick","Forename":"Ebenezer","Prefix":"","State":"Maine","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.889102999999999,"Long":-77.005326999999994,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":112,"geometry":{"type":"Point","coordinates":[-77.007658000000006,38.888477000000002]},"properties":{"OBJECTID":112,"Name":"Hill","Forename":"Mark Langdon","Prefix":"","State":"Maine","With_whom_they_Board":"Mrs Hickey, Capitol hill","Lat":38.888477000000002,"Long":-77.007658000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":113,"geometry":{"type":"Point","coordinates":[-77.006938000000005,38.887163000000001]},"properties":{"OBJECTID":113,"Name":"Hobart","Forename":"Aaron","Prefix":"","State":"Mass.","With_whom_they_Board":"Mrs Claxton, Capitol hill","Lat":38.887163000000001,"Long":-77.006938000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":114,"geometry":{"type":"Point","coordinates":[-77.026200000000003,38.895159]},"properties":{"OBJECTID":114,"Name":"Holcombe","Forename":"George","Prefix":"","State":"N. J.","With_whom_they_Board":"Mrs Blake, 10w near Pen av","Lat":38.895159,"Long":-77.026200000000003,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":115,"geometry":{"type":"Point","coordinates":[-77.005174999999994,38.889339999999997]},"properties":{"OBJECTID":115,"Name":"Hooks","Forename":"Charles","Prefix":"","State":"N. C.","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.889339999999997,"Long":-77.005174999999994,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":116,"geometry":{"type":"Point","coordinates":[-77.005194000000003,38.889251000000002]},"properties":{"OBJECTID":116,"Name":"Hubbard","Forename":"Thomas H.","Prefix":"","State":"N. Y.","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.889251000000002,"Long":-77.005194000000003,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":117,"geometry":{"type":"Point","coordinates":[-77.021421000000004,38.892690999999999]},"properties":{"OBJECTID":117,"Name":"Ingham","Forename":"Samuel D.","Prefix":"","State":"Penn.","With_whom_they_Board":"Mrs Queen, near Brown's","Lat":38.892690999999999,"Long":-77.021421000000004,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":118,"geometry":{"type":"Point","coordinates":[-77.021157000000002,38.892479000000002]},"properties":{"OBJECTID":118,"Name":"Jackson","Forename":"Edward B.","Prefix":"","State":"Vir.","With_whom_they_Board":"Mrs M'Cardle, opp Brown's","Lat":38.892479000000002,"Long":-77.021157000000002,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":119,"geometry":{"type":"Point","coordinates":[-77.017133999999999,38.892316000000001]},"properties":{"OBJECTID":119,"Name":"Jennings","Forename":"Jonathan","Prefix":"","State":"Ind.","With_whom_they_Board":"Miss Polk, near city hall","Lat":38.892316000000001,"Long":-77.017133999999999,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":120,"geometry":{"type":"Point","coordinates":[-77.024766,38.896377000000001]},"properties":{"OBJECTID":120,"Name":"Johnson","Forename":"Francis","Prefix":"","State":"Ken.","With_whom_they_Board":"Mr Davis, near post office","Lat":38.896377000000001,"Long":-77.024766,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":121,"geometry":{"type":"Point","coordinates":[-77.023736999999997,38.895941999999998]},"properties":{"OBJECTID":121,"Name":"Johnson","Forename":"John T.","Prefix":"","State":"Ken.","With_whom_they_Board":"Mr Brown, near post office","Lat":38.895941999999998,"Long":-77.023736999999997,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":122,"geometry":{"type":"Point","coordinates":[-77.033396999999994,38.896898]},"properties":{"OBJECTID":122,"Name":"Johnston","Forename":"Josiah S.","Prefix":"","State":"Louis.","With_whom_they_Board":"Mrs Wilson, near treas dept","Lat":38.896898,"Long":-77.033396999999994,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":123,"geometry":{"type":"Point","coordinates":[-77.007366000000005,38.887191000000001]},"properties":{"OBJECTID":123,"Name":"Jones","Forename":"Francis","Prefix":"","State":"Tenn.","With_whom_they_Board":"Mrs Claxton, Capitol hill","Lat":38.887191000000001,"Long":-77.007366000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":124,"geometry":{"type":"Point","coordinates":[-77.007384999999999,38.891483999999998]},"properties":{"OBJECTID":124,"Name":"Jones","Forename":"James","Prefix":"","State":"Vir.","With_whom_they_Board":"Mr Dowson, Capitol hill","Lat":38.891483999999998,"Long":-77.007384999999999,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":125,"geometry":{"type":"Point","coordinates":[-77.026366999999993,38.895085000000002]},"properties":{"OBJECTID":125,"Name":"Kent","Forename":"Joseph","Prefix":"","State":"Md.","With_whom_they_Board":"Mrs Blake, 10w near Pen av","Lat":38.895085000000002,"Long":-77.026366999999993,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":126,"geometry":{"type":"Point","coordinates":[-77.005606999999998,38.889052]},"properties":{"OBJECTID":126,"Name":"Keyes","Forename":"Elias","Prefix":"","State":"Ver.","With_whom_they_Board":"Mrs Hamilton, Capitol hill","Lat":38.889052,"Long":-77.005606999999998,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":127,"geometry":{"type":"Point","coordinates":[-77.021467999999999,38.896557999999999]},"properties":{"OBJECTID":127,"Name":"Lathrop","Forename":"Samuel","Prefix":"","State":"Mass.","With_whom_they_Board":"Mr Fletcher, near post office","Lat":38.896557999999999,"Long":-77.021467999999999,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":128,"geometry":{"type":"Point","coordinates":[-77.007259000000005,38.887357999999999]},"properties":{"OBJECTID":128,"Name":"Leftwich","Forename":"Jabez","Prefix":"","State":"Vir.","With_whom_they_Board":"Mrs Claxton, Capitol hill","Lat":38.887357999999999,"Long":-77.007259000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":129,"geometry":{"type":"Point","coordinates":[-77.022383000000005,38.894137000000001]},"properties":{"OBJECTID":129,"Name":"Lincoln","Forename":"Enoch","Prefix":"","State":"Maine","With_whom_they_Board":"Mrs Tucker, opp. cntr mrkt","Lat":38.894137000000001,"Long":-77.022383000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":130,"geometry":{"type":"Point","coordinates":[-77.020499000000001,38.893326999999999]},"properties":{"OBJECTID":130,"Name":"Litchfield","Forename":"Elisha","Prefix":"","State":"N. Y.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893326999999999,"Long":-77.020499000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":131,"geometry":{"type":"Point","coordinates":[-76.997127000000006,38.877274]},"properties":{"OBJECTID":131,"Name":"Little","Forename":"Peter","Prefix":"","State":"Md.","With_whom_they_Board":"Mr Little, Navy Yard","Lat":38.877274,"Long":-76.997127000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":132,"geometry":{"type":"Point","coordinates":[-77.021321999999998,38.892671999999997]},"properties":{"OBJECTID":132,"Name":"Long","Forename":"John","Prefix":"","State":"N. C.","With_whom_they_Board":"Mrs Queen, near Brown's","Lat":38.892671999999997,"Long":-77.021321999999998,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":133,"geometry":{"type":"Point","coordinates":[-77.005194000000003,38.889118000000003]},"properties":{"OBJECTID":133,"Name":"Mallary","Forename":"Rollin C.","Prefix":"","State":"Ver.","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.889118000000003,"Long":-77.005194000000003,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":134,"geometry":{"type":"Point","coordinates":[-77.018225999999999,38.892668]},"properties":{"OBJECTID":134,"Name":"Matlack","Forename":"James","Prefix":"","State":"N. J.","With_whom_they_Board":"Mrs Gaither, near city hall","Lat":38.892668,"Long":-77.018225999999999,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":135,"geometry":{"type":"Point","coordinates":[-77.005016999999995,38.889524999999999]},"properties":{"OBJECTID":135,"Name":"Matson","Forename":"Aaron","Prefix":"","State":"N. H.","With_whom_they_Board":"Mr Emack, Capitol hill","Lat":38.889524999999999,"Long":-77.005016999999995,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":136,"geometry":{"type":"Point","coordinates":[-77.005435000000006,38.889524999999999]},"properties":{"OBJECTID":136,"Name":"Mattocks","Forename":"John","Prefix":"","State":"Ver.","With_whom_they_Board":"Mrs Hamilton, Capitol hill","Lat":38.889524999999999,"Long":-77.005435000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":137,"geometry":{"type":"Point","coordinates":[-77.021097999999995,38.893349000000001]},"properties":{"OBJECTID":137,"Name":"M'Carty","Forename":"Richard","Prefix":"","State":"N. Y.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893349000000001,"Long":-77.021097999999995,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":138,"geometry":{"type":"Point","coordinates":[-77.018463999999994,38.892890000000001]},"properties":{"OBJECTID":138,"Name":"M'Coy","Forename":"William","Prefix":"","State":"Vir.","With_whom_they_Board":"Mrs Gaither, near city hall","Lat":38.892890000000001,"Long":-77.018463999999994,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":139,"geometry":{"type":"Point","coordinates":[-77.02158,38.892687000000002]},"properties":{"OBJECTID":139,"Name":"M'Neill","Forename":"Archibald","Prefix":"","State":"N. C.","With_whom_they_Board":"Mrs Queen, oppos Brown's","Lat":38.892687000000002,"Long":-77.02158,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"S"}},{"type":"Feature","id":140,"geometry":{"type":"Point","coordinates":[-77.007346999999996,38.886755999999998]},"properties":{"OBJECTID":140,"Name":"M'Sherry","Forename":"James","Prefix":"","State":"Penn.","With_whom_they_Board":"Miss Heyer, Capitol hill","Lat":38.886755999999998,"Long":-77.007346999999996,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":141,"geometry":{"type":"Point","coordinates":[-77.025119000000004,38.896377000000001]},"properties":{"OBJECTID":141,"Name":"Metcalfe","Forename":"Thomas","Prefix":"","State":"Ken.","With_whom_they_Board":"Mr Davis, near post office","Lat":38.896377000000001,"Long":-77.025119000000004,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":142,"geometry":{"type":"Point","coordinates":[-77.021563999999998,38.892389999999999]},"properties":{"OBJECTID":142,"Name":"Mitchell","Forename":"James S.","Prefix":"","State":"Penn.","With_whom_they_Board":"Mrs Myer, opp centre mrkt","Lat":38.892389999999999,"Long":-77.021563999999998,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":143,"geometry":{"type":"Point","coordinates":[-77.018694999999994,38.892854]},"properties":{"OBJECTID":143,"Name":"Mitchell","Forename":"Thomas R.","Prefix":"","State":"S. C.","With_whom_they_Board":"Mr Gardiner, near Brown's","Lat":38.892854,"Long":-77.018694999999994,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":144,"geometry":{"type":"Point","coordinates":[-77.021360999999999,38.892435999999996]},"properties":{"OBJECTID":144,"Name":"Montgomery","Forename":"Thos.","Prefix":"","State":"Ken.","With_whom_they_Board":"Mrs M'Cardle, opp Brown's","Lat":38.892435999999996,"Long":-77.021360999999999,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":145,"geometry":{"type":"Point","coordinates":[-77.026364999999998,38.893970000000003]},"properties":{"OBJECTID":145,"Name":"Moore","Forename":"Gabriel","Prefix":"","State":"Alab.","With_whom_they_Board":"Mr Sardo, corn Pa av & 10w","Lat":38.893970000000003,"Long":-77.026364999999998,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":146,"geometry":{"type":"Point","coordinates":[-76.994245000000006,38.880049999999997]},"properties":{"OBJECTID":146,"Name":"Moore","Forename":"Thomas L.","Prefix":"","State":"Vir.","With_whom_they_Board":"Col. Henderson, Navy Yard","Lat":38.880049999999997,"Long":-76.994245000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":147,"geometry":{"type":"Point","coordinates":[-77.004732000000004,38.889524999999999]},"properties":{"OBJECTID":147,"Name":"Murray, jun.","Forename":"Thos.","Prefix":"","State":"Penn.","With_whom_they_Board":"Mr Emack, Capitol hill","Lat":38.889524999999999,"Long":-77.004732000000004,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":148,"geometry":{"type":"Point","coordinates":[-77.026223999999999,38.895381]},"properties":{"OBJECTID":148,"Name":"Neale","Forename":"Raphael","Prefix":"","State":"Md.","With_whom_they_Board":"Mrs Blake, 10w near Pen av","Lat":38.895381,"Long":-77.026223999999999,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"S"}},{"type":"Feature","id":149,"geometry":{"type":"Point","coordinates":[-77.032458000000005,38.895814000000001]},"properties":{"OBJECTID":149,"Name":"Nelson","Forename":"Hugh","Prefix":"","State":"Vir.","With_whom_they_Board":"Mr M'Gowan, opp Strother's","Lat":38.895814000000001,"Long":-77.032458000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":150,"geometry":{"type":"Point","coordinates":[-77.020968999999994,38.892470000000003]},"properties":{"OBJECTID":150,"Name":"Nelson","Forename":"Jeremiah","Prefix":"","State":"Mass.","With_whom_they_Board":"Mr Hyatt, opposite Brown's","Lat":38.892470000000003,"Long":-77.020968999999994,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":151,"geometry":{"type":"Point","coordinates":[-77.006831000000005,38.887413000000002]},"properties":{"OBJECTID":151,"Name":"New","Forename":"Anthony","Prefix":"","State":"Ken.","With_whom_they_Board":"Mrs Claxton, Capitol hill","Lat":38.887413000000002,"Long":-77.006831000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":152,"geometry":{"type":"Point","coordinates":[-77.032730000000001,38.895890999999999]},"properties":{"OBJECTID":152,"Name":"Newton","Forename":"Thomas","Prefix":"","State":"Virg.","With_whom_they_Board":"Mr M'Gowan, opp Strother's","Lat":38.895890999999999,"Long":-77.032730000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":153,"geometry":{"type":"Point","coordinates":[-77.021528000000004,38.892482999999999]},"properties":{"OBJECTID":153,"Name":"Patterson","Forename":"Thomas","Prefix":"","State":"Penn.","With_whom_they_Board":"Mrs Myer, opp centre mrkt","Lat":38.892482999999999,"Long":-77.021528000000004,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":154,"geometry":{"type":"Point","coordinates":[-77.046143000000001,38.901400000000002]},"properties":{"OBJECTID":154,"Name":"Patterson","Forename":"Walter","Prefix":"","State":"N. Y.","With_whom_they_Board":"O'Neale's hotel, Penn av","Lat":38.901400000000002,"Long":-77.046143000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":155,"geometry":{"type":"Point","coordinates":[-77.021491999999995,38.892612]},"properties":{"OBJECTID":155,"Name":"Phillips","Forename":"John","Prefix":"","State":"Penn.","With_whom_they_Board":"Mrs Myer, opp centre mrkt","Lat":38.892612,"Long":-77.021491999999995,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":156,"geometry":{"type":"Point","coordinates":[-77.008409,38.886853000000002]},"properties":{"OBJECTID":156,"Name":"Pierson","Forename":"Jerem. H.","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mr Frost, Capitol hill","Lat":38.886853000000002,"Long":-77.008409,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":157,"geometry":{"type":"Point","coordinates":[-77.020570000000006,38.893338]},"properties":{"OBJECTID":157,"Name":"Pitcher","Forename":"Nathaniel","Prefix":"","State":"N. Y.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893338,"Long":-77.020570000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":158,"geometry":{"type":"Point","coordinates":[-77.017177000000004,38.892439000000003]},"properties":{"OBJECTID":158,"Name":"Plumer","Forename":"George","Prefix":"","State":"Penn.","With_whom_they_Board":"Miss Polk, near the city hall","Lat":38.892439000000003,"Long":-77.017177000000004,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":159,"geometry":{"type":"Point","coordinates":[-77.007187000000002,38.886997000000001]},"properties":{"OBJECTID":159,"Name":"Plumer, jun.","Forename":"Wm.","Prefix":"","State":"N. H.","With_whom_they_Board":"Mrs Claxton, Capitol hill","Lat":38.886997000000001,"Long":-77.007187000000002,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":160,"geometry":{"type":"Point","coordinates":[-77.007023000000004,38.891483999999998]},"properties":{"OBJECTID":160,"Name":"Randolph","Forename":"John","Prefix":"","State":"Vir.","With_whom_they_Board":"Mr Dowson, Capitol hill","Lat":38.891483999999998,"Long":-77.007023000000004,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":161,"geometry":{"type":"Point","coordinates":[-77.006657000000004,38.888007000000002]},"properties":{"OBJECTID":161,"Name":"Rankin","Forename":"Christopher","Prefix":"","State":"Missi.","With_whom_they_Board":"Capt Coyle, Capitol hill","Lat":38.888007000000002,"Long":-77.006657000000004,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":162,"geometry":{"type":"Point","coordinates":[-77.020882,38.892440999999998]},"properties":{"OBJECTID":162,"Name":"Reed","Forename":"John","Prefix":"","State":"Mass.","With_whom_they_Board":"Mr Hyatt, opposite Brown's","Lat":38.892440999999998,"Long":-77.020882,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":163,"geometry":{"type":"Point","coordinates":[-77.016835,38.893956000000003]},"properties":{"OBJECTID":163,"Name":"Reid","Forename":"Robert R.","Prefix":"","State":"Geo.","With_whom_they_Board":"Mrs Peyton, near city hall","Lat":38.893956000000003,"Long":-77.016835,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":164,"geometry":{"type":"Point","coordinates":[-77.032312000000005,38.896532000000001]},"properties":{"OBJECTID":164,"Name":"Rhea","Forename":"John","Prefix":"","State":"Tenn.","With_whom_they_Board":"Sanford's hotel, Penn av","Lat":38.896532000000001,"Long":-77.032312000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":165,"geometry":{"type":"Point","coordinates":[-77.005454,38.889259000000003]},"properties":{"OBJECTID":165,"Name":"Rich","Forename":"Charles","Prefix":"","State":"Ver.","With_whom_they_Board":"Mrs. Hamilton, Capitol hill","Lat":38.889259000000003,"Long":-77.005454,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":166,"geometry":{"type":"Point","coordinates":[-77.004947000000001,38.889414000000002]},"properties":{"OBJECTID":166,"Name":"Rochester","Forename":"Wm. B.","Prefix":"","State":"N. Y.","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.889414000000002,"Long":-77.004947000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":167,"geometry":{"type":"Point","coordinates":[-77.002882,38.889479000000001]},"properties":{"OBJECTID":167,"Name":"Rodney","Forename":"Daniel","Prefix":"","State":"Del.","With_whom_they_Board":"Mrs Scott, Capitol hill","Lat":38.889479000000001,"Long":-77.002882,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":168,"geometry":{"type":"Point","coordinates":[-77.004928000000007,38.889339999999997]},"properties":{"OBJECTID":168,"Name":"Rogers","Forename":"Thomas J.","Prefix":"","State":"Penn.","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.889339999999997,"Long":-77.004928000000007,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":169,"geometry":{"type":"Point","coordinates":[-77.017162999999996,38.892583000000002]},"properties":{"OBJECTID":169,"Name":"Ross","Forename":"Thos. R.","Prefix":"","State":"Ohio","With_whom_they_Board":"Miss Polk, near city hall","Lat":38.892583000000002,"Long":-77.017162999999996,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":170,"geometry":{"type":"Point","coordinates":[-77.004928000000007,38.889206999999999]},"properties":{"OBJECTID":170,"Name":"Reed","Forename":"Philip","Prefix":"","State":"Md.","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.889206999999999,"Long":-77.004928000000007,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":171,"geometry":{"type":"Point","coordinates":[-77.008705000000006,38.886333999999998]},"properties":{"OBJECTID":171,"Name":"Ruggles","Forename":"Charles H.","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mr M'Leod, Capitol hill","Lat":38.886333999999998,"Long":-77.008705000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":172,"geometry":{"type":"Point","coordinates":[-77.006794999999997,38.891469000000001]},"properties":{"OBJECTID":172,"Name":"Russell","Forename":"Jonathan","Prefix":"","State":"Mass.","With_whom_they_Board":"Mr Dowson, Capitol hill","Lat":38.891469000000001,"Long":-77.006794999999997,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":173,"geometry":{"type":"Point","coordinates":[-77.021079,38.892431000000002]},"properties":{"OBJECTID":173,"Name":"Russ","Forename":"John","Prefix":"","State":"Conn.","With_whom_they_Board":"Mr Hyatt, opposite Brown's","Lat":38.892431000000002,"Long":-77.021079,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":174,"geometry":{"type":"Point","coordinates":[-77.006547999999995,38.891469000000001]},"properties":{"OBJECTID":174,"Name":"Sanders","Forename":"Romulus","Prefix":"","State":"N. C.","With_whom_they_Board":"Mr Downson, Capitol hill","Lat":38.891469000000001,"Long":-77.006547999999995,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":175,"geometry":{"type":"Point","coordinates":[-77.012638999999993,38.891174999999997]},"properties":{"OBJECTID":175,"Name":"Sawyer","Forename":"Lemuel","Prefix":"","State":"N. C.","With_whom_they_Board":"Mr Wurtz, Penn av","Lat":38.891174999999997,"Long":-77.012638999999993,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":176,"geometry":{"type":"Point","coordinates":[-77.020926000000003,38.893326999999999]},"properties":{"OBJECTID":176,"Name":"Scott","Forename":"John","Prefix":"","State":"Misso.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893326999999999,"Long":-77.020926000000003,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":177,"geometry":{"type":"Point","coordinates":[-77.022333000000003,38.894190000000002]},"properties":{"OBJECTID":177,"Name":"Sibley","Forename":"Solomon","Prefix":"","State":"Mich.","With_whom_they_Board":"Mrs Tucker, opp cntr mrkt","Lat":38.894190000000002,"Long":-77.022333000000003,"Role_in_Congress":"Delegate, Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"","field":"","N_S":"N"}},{"type":"Feature","id":178,"geometry":{"type":"Point","coordinates":[-77.008352000000002,38.886709000000003]},"properties":{"OBJECTID":178,"Name":"Sloan","Forename":"John","Prefix":"","State":"Ohio","With_whom_they_Board":"Mr Frost, Capitol hill","Lat":38.886709000000003,"Long":-77.008352000000002,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":179,"geometry":{"type":"Point","coordinates":[-77.020684000000003,38.893248999999997]},"properties":{"OBJECTID":179,"Name":"Smith","Forename":"Arthur","Prefix":"","State":"Vir.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893248999999997,"Long":-77.020684000000003,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":180,"geometry":{"type":"Point","coordinates":[-77.028983999999994,38.895648999999999]},"properties":{"OBJECTID":180,"Name":"Smith","Forename":"John S.","Prefix":"","State":"Ken.","With_whom_they_Board":"Mr Handy, Penn av","Lat":38.895648999999999,"Long":-77.028983999999994,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":181,"geometry":{"type":"Point","coordinates":[-77.004497999999998,38.890219000000002]},"properties":{"OBJECTID":181,"Name":"Smith","Forename":"William","Prefix":"","State":"Vir.","With_whom_they_Board":"Capt Burch, Capitol hill","Lat":38.890219000000002,"Long":-77.004497999999998,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":182,"geometry":{"type":"Point","coordinates":[-77.021213000000003,38.892440999999998]},"properties":{"OBJECTID":182,"Name":"Smyth","Forename":"Alexander","Prefix":"","State":"Vir.","With_whom_they_Board":"Mrs M'Cardle, opp Brown's","Lat":38.892440999999998,"Long":-77.021213000000003,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":183,"geometry":{"type":"Point","coordinates":[-77.021490999999997,38.892632999999996]},"properties":{"OBJECTID":183,"Name":"Spencer","Forename":"Elijah","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mrs Queen, near cntr mrkt","Lat":38.892632999999996,"Long":-77.021490999999997,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":184,"geometry":{"type":"Point","coordinates":[-77.004890000000003,38.889059000000003]},"properties":{"OBJECTID":184,"Name":"Sterling","Forename":"Ansel","Prefix":"","State":"Conn.","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.889059000000003,"Long":-77.004890000000003,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":185,"geometry":{"type":"Point","coordinates":[-77.021259999999998,38.896580999999998]},"properties":{"OBJECTID":185,"Name":"Sterling","Forename":"Micah","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mr Fletcher, near post office","Lat":38.896580999999998,"Long":-77.021259999999998,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":186,"geometry":{"type":"Point","coordinates":[-77.020769999999999,38.893326999999999]},"properties":{"OBJECTID":186,"Name":"Stevenson","Forename":"Andrew","Prefix":"","State":"Vir.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893326999999999,"Long":-77.020769999999999,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":187,"geometry":{"type":"Point","coordinates":[-77.020470000000003,38.893248999999997]},"properties":{"OBJECTID":187,"Name":"Stephenson","Forename":"James","Prefix":"","State":"Vir.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893248999999997,"Long":-77.020470000000003,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"S"}},{"type":"Feature","id":188,"geometry":{"type":"Point","coordinates":[-77.007569000000004,38.887267999999999]},"properties":{"OBJECTID":188,"Name":"Stewart","Forename":"Andrew","Prefix":"","State":"Penn.","With_whom_they_Board":"Mr. Young, Capitol hill","Lat":38.887267999999999,"Long":-77.007569000000004,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":189,"geometry":{"type":"Point","coordinates":[-77.004718999999994,38.889310999999999]},"properties":{"OBJECTID":189,"Name":"Stoddard","Forename":"Ebenezer","Prefix":"","State":"Conn.","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.889310999999999,"Long":-77.004718999999994,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":190,"geometry":{"type":"Point","coordinates":[-77.004738000000003,38.889206999999999]},"properties":{"OBJECTID":190,"Name":"Swan","Forename":"Samuel","Prefix":"","State":"N. J.","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.889206999999999,"Long":-77.004738000000003,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":191,"geometry":{"type":"Point","coordinates":[-77.006395999999995,38.891440000000003]},"properties":{"OBJECTID":191,"Name":"Tattnall","Forename":"Edward F.","Prefix":"","State":"Geo.","With_whom_they_Board":"Mr Dowson, Capitol hill","Lat":38.891440000000003,"Long":-77.006395999999995,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":192,"geometry":{"type":"Point","coordinates":[-77.021094000000005,38.892600999999999]},"properties":{"OBJECTID":192,"Name":"Taylor","Forename":"John W.","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mrs Pratt, opposite Brown's","Lat":38.892600999999999,"Long":-77.021094000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":193,"geometry":{"type":"Point","coordinates":[-77.004761999999999,38.890385999999999]},"properties":{"OBJECTID":193,"Name":"Thompson","Forename":"Wiley","Prefix":"","State":"Geo.","With_whom_they_Board":"Capt Burch, Capitol hill","Lat":38.890385999999999,"Long":-77.004761999999999,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":194,"geometry":{"type":"Point","coordinates":[-77.016878000000005,38.892426999999998]},"properties":{"OBJECTID":194,"Name":"Tod","Forename":"John","Prefix":"","State":"Penn.","With_whom_they_Board":"Miss Polk, near the city hall","Lat":38.892426999999998,"Long":-77.016878000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":195,"geometry":{"type":"Point","coordinates":[-77.008295000000004,38.886532000000003]},"properties":{"OBJECTID":195,"Name":"Tomlinson","Forename":"Gideon","Prefix":"","State":"Conn.","With_whom_they_Board":"Mr Frost, Capitol hill","Lat":38.886532000000003,"Long":-77.008295000000004,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":196,"geometry":{"type":"Point","coordinates":[-77.022475,38.894131999999999]},"properties":{"OBJECTID":196,"Name":"Tracey","Forename":"Albert H.","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mrs Tucker, opp cntr mrkt","Lat":38.894131999999999,"Long":-77.022475,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":197,"geometry":{"type":"Point","coordinates":[-77.020669999999996,38.893371000000002]},"properties":{"OBJECTID":197,"Name":"Trimble","Forename":"David","Prefix":"","State":"Ken.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893371000000002,"Long":-77.020669999999996,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":198,"geometry":{"type":"Point","coordinates":[-77.033219000000003,38.896980999999997]},"properties":{"OBJECTID":198,"Name":"Tucker","Forename":"George","Prefix":"","State":"Vir.","With_whom_they_Board":"Mrs Wilson, near treas dept","Lat":38.896980999999997,"Long":-77.033219000000003,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":199,"geometry":{"type":"Point","coordinates":[-77.00515,38.889437000000001]},"properties":{"OBJECTID":199,"Name":"Tucker","Forename":"Sterling","Prefix":"","State":"S. C.","With_whom_they_Board":"Mr Emack, Capitol hill","Lat":38.889437000000001,"Long":-77.00515,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":200,"geometry":{"type":"Point","coordinates":[-77.004718999999994,38.889059000000003]},"properties":{"OBJECTID":200,"Name":"Upham","Forename":"Nathaniel","Prefix":"","State":"N. H.","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.889059000000003,"Long":-77.004718999999994,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":201,"geometry":{"type":"Point","coordinates":[-77.016963000000004,38.89255]},"properties":{"OBJECTID":201,"Name":"Vance","Forename":"Joseph","Prefix":"","State":"Ohio","With_whom_they_Board":"Miss Polk, near the city hall","Lat":38.89255,"Long":-77.016963000000004,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":202,"geometry":{"type":"Point","coordinates":[-77.004491000000002,38.889443999999997]},"properties":{"OBJECTID":202,"Name":"Van Wyck","Forename":"Wm. W.","Prefix":"","State":"N. Y.","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.889443999999997,"Long":-77.004491000000002,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":203,"geometry":{"type":"Point","coordinates":[-77.012966000000006,38.891267999999997]},"properties":{"OBJECTID":203,"Name":"Walker","Forename":"Felix","Prefix":"","State":"N. C.","With_whom_they_Board":"Mr Wurtz, Penn av","Lat":38.891267999999997,"Long":-77.012966000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":204,"geometry":{"type":"Point","coordinates":[-77.020570000000006,38.893259999999998]},"properties":{"OBJECTID":204,"Name":"Walworth","Forename":"Reub. H.","Prefix":"","State":"N. Y.","With_whom_they_Board":"Brown's hotel, Penn av","Lat":38.893259999999998,"Long":-77.020570000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":205,"geometry":{"type":"Point","coordinates":[-77.006653,38.886997000000001]},"properties":{"OBJECTID":205,"Name":"Whipple, jun.","Forename":"Thos.","Prefix":"","State":"N. H.","With_whom_they_Board":"Mrs Claxton, Capitol hill","Lat":38.886997000000001,"Long":-77.006653,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":206,"geometry":{"type":"Point","coordinates":[-77.021022000000002,38.896604000000004]},"properties":{"OBJECTID":206,"Name":"White","Forename":"Phineas","Prefix":"","State":"Ver.","With_whom_they_Board":"Mr Fletcher, near post office","Lat":38.896604000000004,"Long":-77.021022000000002,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":207,"geometry":{"type":"Point","coordinates":[-77.018321,38.892871999999997]},"properties":{"OBJECTID":207,"Name":"Williams","Forename":"Jared","Prefix":"","State":"Vir.","With_whom_they_Board":"Mrs Gaither, near city hall","Lat":38.892871999999997,"Long":-77.018321,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":208,"geometry":{"type":"Point","coordinates":[-77.020948000000004,38.892552000000002]},"properties":{"OBJECTID":208,"Name":"Williams","Forename":"Lewis","Prefix":"","State":"N. C.","With_whom_they_Board":"Mrs Sawyer, opp Brown's","Lat":38.892552000000002,"Long":-77.020948000000004,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":209,"geometry":{"type":"Point","coordinates":[-77.020784000000006,38.896628]},"properties":{"OBJECTID":209,"Name":"Williamson","Forename":"Wm. D.","Prefix":"","State":"Maine","With_whom_they_Board":"Mr Fletcher, near post office","Lat":38.896628,"Long":-77.020784000000006,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":210,"geometry":{"type":"Point","coordinates":[-77.007592000000002,38.888328999999999]},"properties":{"OBJECTID":210,"Name":"Woodcock","Forename":"David","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mrs Hickey, Capitol hill","Lat":38.888328999999999,"Long":-77.007592000000002,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"N"}},{"type":"Feature","id":211,"geometry":{"type":"Point","coordinates":[-77.004694000000001,38.889406999999999]},"properties":{"OBJECTID":211,"Name":"Wood","Forename":"Silas","Prefix":"","State":"N. Y.","With_whom_they_Board":"Mr Emack, Capitol hill","Lat":38.889406999999999,"Long":-77.004694000000001,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Federalist","field":"","N_S":"N"}},{"type":"Feature","id":212,"geometry":{"type":"Point","coordinates":[-77.026366999999993,38.895307000000003]},"properties":{"OBJECTID":212,"Name":"Woodson","Forename":"Saml. H.","Prefix":"","State":"Ken.","With_whom_they_Board":"Mrs Blake, 10th street","Lat":38.895307000000003,"Long":-77.026366999999993,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}},{"type":"Feature","id":213,"geometry":{"type":"Point","coordinates":[-77.004529000000005,38.889310999999999]},"properties":{"OBJECTID":213,"Name":"Wright","Forename":"Robert","Prefix":"","State":"Md.","With_whom_they_Board":"Queen's hotel, Capitol hill","Lat":38.889310999999999,"Long":-77.004529000000005,"Role_in_Congress":"Representative","Race":"w","Gender":"m","Occupation":"administrative","Modern_Location":"","Political_Party":"Democratic-Republican","field":"","N_S":"S"}}]}
+var congress_json_1822 = {
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020969,38.893316 ]
+    },
+    "properties": {
+    "Name":"Barbour",
+    "Forename":"James",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020755,38.893272 ]
+    },
+    "properties": {
+    "Name":"Stokes",
+    "Forename":"Montfort",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"North Carolina",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020655,38.893249 ]
+    },
+    "properties": {
+    "Name":"Taylor",
+    "Forename":"Waller",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Indiana",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020527,38.893216 ]
+    },
+    "properties": {
+    "Name":"Ball",
+    "Forename":"William Lee",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020655,38.893305 ]
+    },
+    "properties": {
+    "Name":"Barbour",
+    "Forename":"P. P.",
+    "Prefix":"",
+    "Suffix":"Spkr.",
+    "State":"Virginia",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020527,38.893294 ]
+    },
+    "properties": {
+    "Name":"Bayly",
+    "Forename":"Thomas",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maryland",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020584,38.893227 ]
+    },
+    "properties": {
+    "Name":"Buchanan",
+    "Forename":"James",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020499,38.893327 ]
+    },
+    "properties": {
+    "Name":"Litchfield",
+    "Forename":"Elisha",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021098,38.893349 ]
+    },
+    "properties": {
+    "Name":"McCarty",
+    "Forename":"Richard",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.02057,38.893338 ]
+    },
+    "properties": {
+    "Name":"Pitcher",
+    "Forename":"Nathaniel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020926,38.893327 ]
+    },
+    "properties": {
+    "Name":"Scott",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Missouri",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020684,38.893249 ]
+    },
+    "properties": {
+    "Name":"Smith",
+    "Forename":"Arthur",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.02077,38.893327 ]
+    },
+    "properties": {
+    "Name":"Stevenson",
+    "Forename":"Andrew",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.02047,38.893249 ]
+    },
+    "properties": {
+    "Name":"Stephenson",
+    "Forename":"James",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.02067,38.893371 ]
+    },
+    "properties": {
+    "Name":"Trimble",
+    "Forename":"David",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Kentucky",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.02057,38.89326 ]
+    },
+    "properties": {
+    "Name":"Walworth",
+    "Forename":"Reuben. H.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Brown's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005285,38.890238 ]
+    },
+    "properties": {
+    "Name":"Abbot",
+    "Forename":"Joel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Georgia",
+    "Address":"Capt Burch, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004999,38.89022 ]
+    },
+    "properties": {
+    "Name":"Allen",
+    "Forename":"Robert",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Tennessee",
+    "Address":"Capt Burch, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.00469,38.89022 ]
+    },
+    "properties": {
+    "Name":"Conner",
+    "Forename":"Henry",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"North Carolina",
+    "Address":"Capt Burch, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005356,38.890349 ]
+    },
+    "properties": {
+    "Name":"Gilmer",
+    "Forename":"George R.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Georgia",
+    "Address":"Capt Burch, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005142,38.890368 ]
+    },
+    "properties": {
+    "Name":"Hardin",
+    "Forename":"Benjamin",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Kentucky",
+    "Address":"Capt Burch, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004498,38.890219 ]
+    },
+    "properties": {
+    "Name":"Smith",
+    "Forename":"William",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Capt Burch, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004762,38.890386 ]
+    },
+    "properties": {
+    "Name":"Thompson",
+    "Forename":"Wiley",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Georgia",
+    "Address":"Capt Burch, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007114,38.887874 ]
+    },
+    "properties": {
+    "Name":"Baylies",
+    "Forename":"Francis",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Massachusetts",
+    "Address":"Capt Coyle, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.00641,38.888022 ]
+    },
+    "properties": {
+    "Name":"Hemphill",
+    "Forename":"Joseph",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Capt Coyle, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006657,38.888007 ]
+    },
+    "properties": {
+    "Name":"Rankin",
+    "Forename":"Christopher",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Mississippi",
+    "Address":"Capt Coyle, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005475,38.89022 ]
+    },
+    "properties": {
+    "Name":"Smith",
+    "Forename":"William",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"South Carolina",
+    "Address":"Capt. Burch, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006448,38.887889 ]
+    },
+    "properties": {
+    "Name":"Holmes",
+    "Forename":"David",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Mississippi",
+    "Address":"Capt. Coyle, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006581,38.887903 ]
+    },
+    "properties": {
+    "Name":"Parrot",
+    "Forename":"John F.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New Hampshire",
+    "Address":"Capt. Coyle, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006829,38.887874 ]
+    },
+    "properties": {
+    "Name":"Williams",
+    "Forename":"Thomas H.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Mississippi",
+    "Address":"Capt. Coyle, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.994245,38.88005 ]
+    },
+    "properties": {
+    "Name":"Moore",
+    "Forename":"Thomas L.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Col. Henderson, Navy Yard",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.03157,38.89643 ]
+    },
+    "properties": {
+    "Name":"Brown",
+    "Forename":"James",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Louisiana",
+    "Address":"Dwlg. Near Strother's hotel",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007347,38.886756 ]
+    },
+    "properties": {
+    "Name":"McSherry",
+    "Forename":"James",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Miss Heyer, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.017134,38.892316 ]
+    },
+    "properties": {
+    "Name":"Jennings",
+    "Forename":"Jonathan",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Indiana",
+    "Address":"Miss Polk, near city hall",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.017163,38.892583 ]
+    },
+    "properties": {
+    "Name":"Ross",
+    "Forename":"Thomas R.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Ohio",
+    "Address":"Miss Polk, near city hall",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.01732,38.893782 ]
+    },
+    "properties": {
+    "Name":"Brown",
+    "Forename":"Ethan A.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Ohio",
+    "Address":"Miss Polk, near the city hall",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.017291,38.892494 ]
+    },
+    "properties": {
+    "Name":"Noble",
+    "Forename":"James",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Indiana",
+    "Address":"Miss Polk, near the city hall",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.017177,38.892439 ]
+    },
+    "properties": {
+    "Name":"Plumer",
+    "Forename":"George",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Miss Polk, near the city hall",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.016878,38.892427 ]
+    },
+    "properties": {
+    "Name":"Tod",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Miss Polk, near the city hall",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.016963,38.89255 ]
+    },
+    "properties": {
+    "Name":"Vance",
+    "Forename":"Joseph",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Ohio",
+    "Address":"Miss Polk, near the city hall",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.023737,38.895942 ]
+    },
+    "properties": {
+    "Name":"Johnson",
+    "Forename":"John T.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Kentucky",
+    "Address":"Mr Brown, near post office",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.024766,38.896377 ]
+    },
+    "properties": {
+    "Name":"Johnson",
+    "Forename":"Francis",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Kentucky",
+    "Address":"Mr Davis, near post office",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.025119,38.896377 ]
+    },
+    "properties": {
+    "Name":"Metcalfe",
+    "Forename":"Thomas",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Kentucky",
+    "Address":"Mr Davis, near post office",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006548,38.891469 ]
+    },
+    "properties": {
+    "Name":"Sanders",
+    "Forename":"Romulus",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"North Carolina",
+    "Address":"Mr Downson, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007023,38.891321 ]
+    },
+    "properties": {
+    "Name":"Smith",
+    "Forename":"Samuel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maryland",
+    "Address":"Mr Dowson, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006529,38.891306 ]
+    },
+    "properties": {
+    "Name":"Alexander",
+    "Forename":"Mark",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mr Dowson, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006377,38.891306 ]
+    },
+    "properties": {
+    "Name":"Archer",
+    "Forename":"William S.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mr Dowson, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007917,38.891454 ]
+    },
+    "properties": {
+    "Name":"Edwards",
+    "Forename":"Weldon N.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"North Carolina",
+    "Address":"Mr Dowson, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007746,38.89144 ]
+    },
+    "properties": {
+    "Name":"Eustis",
+    "Forename":"William",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Massachusetts",
+    "Address":"Mr Dowson, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007518,38.891454 ]
+    },
+    "properties": {
+    "Name":"Hall",
+    "Forename":"Thomas H.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"North Carolina",
+    "Address":"Mr Dowson, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007385,38.891484 ]
+    },
+    "properties": {
+    "Name":"Jones",
+    "Forename":"James",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mr Dowson, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007023,38.891484 ]
+    },
+    "properties": {
+    "Name":"Randolph",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mr Dowson, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006795,38.891469 ]
+    },
+    "properties": {
+    "Name":"Russell",
+    "Forename":"Jonathan",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Massachusetts",
+    "Address":"Mr Dowson, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006396,38.89144 ]
+    },
+    "properties": {
+    "Name":"Tattnall",
+    "Forename":"Edward F.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Georgia",
+    "Address":"Mr Dowson, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006428,38.886838 ]
+    },
+    "properties": {
+    "Name":"Crudup",
+    "Forename":"Josiah",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"North Carolina",
+    "Address":"Mr Dunn, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005017,38.889525 ]
+    },
+    "properties": {
+    "Name":"Matson",
+    "Forename":"Aaron",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New Hampshire",
+    "Address":"Mr Emack, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004732,38.889525 ]
+    },
+    "properties": {
+    "Name":"Murray",
+    "Forename":"Thomas",
+    "Prefix":"",
+    "Suffix":"Jr.",
+    "State":"Pennsylvania",
+    "Address":"Mr Emack, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.00515,38.889437 ]
+    },
+    "properties": {
+    "Name":"Tucker",
+    "Forename":"Sterling",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"South Carolina",
+    "Address":"Mr Emack, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004694,38.889407 ]
+    },
+    "properties": {
+    "Name":"Wood",
+    "Forename":"Silas",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mr Emack, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021468,38.896466 ]
+    },
+    "properties": {
+    "Name":"Allen",
+    "Forename":"Samuel C.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Massachusetts",
+    "Address":"Mr Fletcher, near post office",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021319,38.896443 ]
+    },
+    "properties": {
+    "Name":"Bigelow",
+    "Forename":"Lewis",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Massachusetts",
+    "Address":"Mr Fletcher, near post office",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021022,38.896466 ]
+    },
+    "properties": {
+    "Name":"Borland",
+    "Forename":"Charles",
+    "Prefix":"",
+    "Suffix":"Jr.",
+    "State":"New York",
+    "Address":"Mr Fletcher, near post office",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020636,38.896443 ]
+    },
+    "properties": {
+    "Name":"Cushman",
+    "Forename":"Joshua",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maine",
+    "Address":"Mr Fletcher, near post office",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021468,38.896558 ]
+    },
+    "properties": {
+    "Name":"Lathrop",
+    "Forename":"Samuel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Massachusetts",
+    "Address":"Mr Fletcher, near post office",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.02126,38.896581 ]
+    },
+    "properties": {
+    "Name":"Sterling",
+    "Forename":"Micah",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mr Fletcher, near post office",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021022,38.896604 ]
+    },
+    "properties": {
+    "Name":"White",
+    "Forename":"Phineas",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Vermont",
+    "Address":"Mr Fletcher, near post office",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020784,38.896628 ]
+    },
+    "properties": {
+    "Name":"Williamson",
+    "Forename":"William D.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maine",
+    "Address":"Mr Fletcher, near post office",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.991851,38.878661 ]
+    },
+    "properties": {
+    "Name":"Burrows",
+    "Forename":"Daniel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Connecticut",
+    "Address":"Mr Friend, Navy Yard",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.008438,38.88692 ]
+    },
+    "properties": {
+    "Name":"Harris",
+    "Forename":"Mark",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maine",
+    "Address":"Mr Frost, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.008409,38.886853 ]
+    },
+    "properties": {
+    "Name":"Pierson",
+    "Forename":"Jeremiah H.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mr Frost, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.008352,38.886709 ]
+    },
+    "properties": {
+    "Name":"Sloan",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Ohio",
+    "Address":"Mr Frost, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.008295,38.886532 ]
+    },
+    "properties": {
+    "Name":"Tomlinson",
+    "Forename":"Gideon",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Connecticut",
+    "Address":"Mr Frost, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.018866,38.892824 ]
+    },
+    "properties": {
+    "Name":"Barber",
+    "Forename":"Levi",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Ohio",
+    "Address":"Mr Gardiner, near Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.018638,38.89278 ]
+    },
+    "properties": {
+    "Name":"Campbell",
+    "Forename":"John W.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Ohio",
+    "Address":"Mr Gardiner, near Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.018695,38.892854 ]
+    },
+    "properties": {
+    "Name":"Mitchell",
+    "Forename":"Thomas R.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"South Carolina",
+    "Address":"Mr Gardiner, near Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.028539,38.895487 ]
+    },
+    "properties": {
+    "Name":"Bates",
+    "Forename":"James W.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Arkansas Territory",
+    "Address":"Mr Handy, Pen av near 12w",
+    "Occupation":"Delegate, Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.028746,38.895603 ]
+    },
+    "properties": {
+    "Name":"Breckenridge",
+    "Forename":"James D.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Kentucky",
+    "Address":"Mr Handy, Pen av near 12w",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.028984,38.895649 ]
+    },
+    "properties": {
+    "Name":"Smith",
+    "Forename":"John S.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Kentucky",
+    "Address":"Mr Handy, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021042,38.892496 ]
+    },
+    "properties": {
+    "Name":"Dane",
+    "Forename":"Joseph",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maine",
+    "Address":"Mr Hyatt, opposite Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020969,38.89247 ]
+    },
+    "properties": {
+    "Name":"Nelson",
+    "Forename":"Jeremiah",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Massachusetts",
+    "Address":"Mr Hyatt, opposite Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020882,38.892441 ]
+    },
+    "properties": {
+    "Name":"Reed",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Massachusetts",
+    "Address":"Mr Hyatt, opposite Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021079,38.892431 ]
+    },
+    "properties": {
+    "Name":"Russ",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Connecticut",
+    "Address":"Mr Hyatt, opposite Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.044342,38.900697 ]
+    },
+    "properties": {
+    "Name":"Cambreleng",
+    "Forename":"C. C.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mr Kervand, near 7 bldgs",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.04452,38.900752 ]
+    },
+    "properties": {
+    "Name":"Dwight",
+    "Forename":"Henry W.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Massachusetts",
+    "Address":"Mr Kervand, near 7 bldgs",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.997127,38.877274 ]
+    },
+    "properties": {
+    "Name":"Little",
+    "Forename":"Peter",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maryland",
+    "Address":"Mr Little, Navy Yard",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.032342,38.895769 ]
+    },
+    "properties": {
+    "Name":"Garnett",
+    "Forename":"Robert S",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mr McGowan, op Strother's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.032458,38.895814 ]
+    },
+    "properties": {
+    "Name":"Nelson",
+    "Forename":"Hugh",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mr McGowan, opp Strother's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.03273,38.895891 ]
+    },
+    "properties": {
+    "Name":"Newton",
+    "Forename":"Thomas",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mr McGowan, opp Strother's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.008253,38.886409 ]
+    },
+    "properties": {
+    "Name":"Colden",
+    "Forename":"Cadwallader D.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mr McLeod, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.008235,38.88632 ]
+    },
+    "properties": {
+    "Name":"Condict",
+    "Forename":"Lewis",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New Jersey",
+    "Address":"Mr McLeod, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.008178,38.886217 ]
+    },
+    "properties": {
+    "Name":"Conklin",
+    "Forename":"Alfred",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mr McLeod, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.008482,38.886439 ]
+    },
+    "properties": {
+    "Name":"Durfee",
+    "Forename":"Job",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Rhode Island",
+    "Address":"Mr McLeod, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.008387,38.88635 ]
+    },
+    "properties": {
+    "Name":"Eddy",
+    "Forename":"Samuel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Rhode Island",
+    "Address":"Mr McLeod, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.00833,38.886217 ]
+    },
+    "properties": {
+    "Name":"Gebhard",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mr McLeod, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.008705,38.886334 ]
+    },
+    "properties": {
+    "Name":"Ruggles",
+    "Forename":"Charles H.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mr McLeod, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.00876,38.887399 ]
+    },
+    "properties": {
+    "Name":"Gist",
+    "Forename":"Joseph",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"South Carolina",
+    "Address":"Mr Rapine, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.026223,38.894044 ]
+    },
+    "properties": {
+    "Name":"Farrelly",
+    "Forename":"Patrick",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mr Sardo, corn Pa av & 10w",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.026365,38.89397 ]
+    },
+    "properties": {
+    "Name":"Moore",
+    "Forename":"Gabriel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Alabama",
+    "Address":"Mr Sardo, corn Pa av & 10w",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020743,38.892409 ]
+    },
+    "properties": {
+    "Name":"Forward",
+    "Forename":"Walter",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mr Sawyer, opp Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020568,38.892372 ]
+    },
+    "properties": {
+    "Name":"Gross",
+    "Forename":"Samuel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mr Sawyer, opp Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.012639,38.891175 ]
+    },
+    "properties": {
+    "Name":"Sawyer",
+    "Forename":"Lemuel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"North Carolina",
+    "Address":"Mr Wurtz, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.012966,38.891268 ]
+    },
+    "properties": {
+    "Name":"Walker",
+    "Forename":"Felix",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"North Carolina",
+    "Address":"Mr Wurtz, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007645,38.887416 ]
+    },
+    "properties": {
+    "Name":"Cook",
+    "Forename":"Daniel P.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Illinois",
+    "Address":"Mr Young, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007512,38.887401 ]
+    },
+    "properties": {
+    "Name":"Edwards",
+    "Forename":"H. W.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Connecticut",
+    "Address":"Mr Young, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.023593,38.895929 ]
+    },
+    "properties": {
+    "Name":"Johnson",
+    "Forename":"Richard M.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Kentucky",
+    "Address":"Mr. Brown, near post office",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.00786,38.891351 ]
+    },
+    "properties": {
+    "Name":"Benton",
+    "Forename":"Thomas H.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Missouri",
+    "Address":"Mr. Dowson, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007727,38.891321 ]
+    },
+    "properties": {
+    "Name":"D'Wolf",
+    "Forename":"James",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Rhode Island",
+    "Address":"Mr. Dowson, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007442,38.891336 ]
+    },
+    "properties": {
+    "Name":"Holmes",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maine",
+    "Address":"Mr. Dowson, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007214,38.891336 ]
+    },
+    "properties": {
+    "Name":"Macon",
+    "Forename":"Nathaniel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"North Carolina",
+    "Address":"Mr. Dowson, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006738,38.891321 ]
+    },
+    "properties": {
+    "Name":"Tompkins",
+    "Forename":"Daniel D.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mr. Dowson's, C. hill",
+    "Occupation":"Vice-President of the U. S. and President of the Senate",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005188,38.889511 ]
+    },
+    "properties": {
+    "Name":"Morrill",
+    "Forename":"David L.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New Hampshire",
+    "Address":"Mr. Emack, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.008637,38.887386 ]
+    },
+    "properties": {
+    "Name":"Boardman",
+    "Forename":"Elijah",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Connecticut",
+    "Address":"Mr. Frost, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.008595,38.88732 ]
+    },
+    "properties": {
+    "Name":"Chandler",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maine",
+    "Address":"Mr. Frost, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.008523,38.887153 ]
+    },
+    "properties": {
+    "Name":"Knight",
+    "Forename":"Nehemiah",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Rhode Island",
+    "Address":"Mr. Frost, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.008495,38.887064 ]
+    },
+    "properties": {
+    "Name":"Ruggles",
+    "Forename":"Benjamin",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Ohio",
+    "Address":"Mr. Frost, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020788,38.892443 ]
+    },
+    "properties": {
+    "Name":"Denison",
+    "Forename":"George",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mr. Sawyer, opp Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020568,38.892402 ]
+    },
+    "properties": {
+    "Name":"Lowrie",
+    "Forename":"Walter",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mr. Sawyer, oppos. Brown's",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020663,38.892443 ]
+    },
+    "properties": {
+    "Name":"Thomas",
+    "Forename":"Jesse B.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Illinois",
+    "Address":"Mr. Sawyer, oppos. Brown's",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006605,38.888465 ]
+    },
+    "properties": {
+    "Name":"Dickerson",
+    "Forename":"Mahlon",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New Jersey",
+    "Address":"Mr. Tims, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006833,38.888465 ]
+    },
+    "properties": {
+    "Name":"Gaillard",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"South Carolina",
+    "Address":"Mr. Tims, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.00708,38.888465 ]
+    },
+    "properties": {
+    "Name":"Rodney",
+    "Forename":"Cesar A.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Delaware",
+    "Address":"Mr. Tims, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.04801,38.901906 ]
+    },
+    "properties": {
+    "Name":"Lloyd",
+    "Forename":"James",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Massachusetts",
+    "Address":"Mr. Woodside, 6 buildings",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007569,38.887268 ]
+    },
+    "properties": {
+    "Name":"Stewart",
+    "Forename":"Andrew",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mr. Young, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005626,38.889363 ]
+    },
+    "properties": {
+    "Name":"Seymour",
+    "Forename":"Horatio",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Vermont",
+    "Address":"Mr.s Hamilton, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.026367,38.895307 ]
+    },
+    "properties": {
+    "Name":"Woodson",
+    "Forename":"Samuel H.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Kentucky",
+    "Address":"Mrs Blake, 10th street",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.0262,38.895159 ]
+    },
+    "properties": {
+    "Name":"Holcombe",
+    "Forename":"George",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New Jersey",
+    "Address":"Mrs Blake, 10w near Pen av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.026367,38.895085 ]
+    },
+    "properties": {
+    "Name":"Kent",
+    "Forename":"Joseph",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maryland",
+    "Address":"Mrs Blake, 10w near Pen av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.026224,38.895381 ]
+    },
+    "properties": {
+    "Name":"Neale",
+    "Forename":"Raphael",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maryland",
+    "Address":"Mrs Blake, 10w near Pen av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.00676,38.88733 ]
+    },
+    "properties": {
+    "Name":"Bassett",
+    "Forename":"Burwell",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mrs Claxton, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007259,38.887358 ]
+    },
+    "properties": {
+    "Name":"Cocke",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Tennessee",
+    "Address":"Mrs Claxton, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006795,38.887247 ]
+    },
+    "properties": {
+    "Name":"Harvey",
+    "Forename":"Matthew",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New Hampshire",
+    "Address":"Mrs Claxton, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006938,38.887163 ]
+    },
+    "properties": {
+    "Name":"Hobart",
+    "Forename":"Aaron",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Massachusetts",
+    "Address":"Mrs Claxton, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007366,38.887191 ]
+    },
+    "properties": {
+    "Name":"Jones",
+    "Forename":"Francis",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Tennessee",
+    "Address":"Mrs Claxton, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007259,38.887358 ]
+    },
+    "properties": {
+    "Name":"Leftwich",
+    "Forename":"Jabez",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mrs Claxton, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006831,38.887413 ]
+    },
+    "properties": {
+    "Name":"New",
+    "Forename":"Anthony",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Kentucky",
+    "Address":"Mrs Claxton, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007187,38.886997 ]
+    },
+    "properties": {
+    "Name":"Plumer",
+    "Forename":"William",
+    "Prefix":"",
+    "Suffix":"Jr.",
+    "State":"New Hampshire",
+    "Address":"Mrs Claxton, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.006653,38.886997 ]
+    },
+    "properties": {
+    "Name":"Whipple",
+    "Forename":"Thomas",
+    "Prefix":"",
+    "Suffix":"Jr.",
+    "State":"New Hampshire",
+    "Address":"Mrs Claxton, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.018488,38.892724 ]
+    },
+    "properties": {
+    "Name":"Bateman",
+    "Forename":"Ephraim",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New Jersey",
+    "Address":"Mrs Gaither, near city hall",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.018226,38.892668 ]
+    },
+    "properties": {
+    "Name":"Matlack",
+    "Forename":"James",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New Jersey",
+    "Address":"Mrs Gaither, near city hall",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.018464,38.89289 ]
+    },
+    "properties": {
+    "Name":"McCoy",
+    "Forename":"William",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mrs Gaither, near city hall",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.018321,38.892872 ]
+    },
+    "properties": {
+    "Name":"Williams",
+    "Forename":"Jared",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mrs Gaither, near city hall",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005607,38.889215 ]
+    },
+    "properties": {
+    "Name":"Crafts",
+    "Forename":"Samuel C.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Vermont",
+    "Address":"Mrs Hamilton, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005607,38.889052 ]
+    },
+    "properties": {
+    "Name":"Keyes",
+    "Forename":"Elias",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Vermont",
+    "Address":"Mrs Hamilton, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005435,38.889525 ]
+    },
+    "properties": {
+    "Name":"Mattocks",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Vermont",
+    "Address":"Mrs Hamilton, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.00782,38.888432 ]
+    },
+    "properties": {
+    "Name":"Blackledge",
+    "Forename":"William S.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"North Carolina",
+    "Address":"Mrs Hickey, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007782,38.888292 ]
+    },
+    "properties": {
+    "Name":"Butler",
+    "Forename":"Josiah",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New Hampshire",
+    "Address":"Mrs Hickey, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007658,38.888477 ]
+    },
+    "properties": {
+    "Name":"Hill",
+    "Forename":"Mark Langdon",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maine",
+    "Address":"Mrs Hickey, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007592,38.888329 ]
+    },
+    "properties": {
+    "Name":"Woodcock",
+    "Forename":"David",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mrs Hickey, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021397,38.892489 ]
+    },
+    "properties": {
+    "Name":"Cannon",
+    "Forename":"Newton",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Tennessee",
+    "Address":"Mrs McCardle, opp Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021157,38.892479 ]
+    },
+    "properties": {
+    "Name":"Jackson",
+    "Forename":"Edward B.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mrs McCardle, opp Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021361,38.892436 ]
+    },
+    "properties": {
+    "Name":"Montgomery",
+    "Forename":"Thomas",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Kentucky",
+    "Address":"Mrs McCardle, opp Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021213,38.892441 ]
+    },
+    "properties": {
+    "Name":"Smyth",
+    "Forename":"Alexander",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mrs McCardle, opp Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021623,38.89239 ]
+    },
+    "properties": {
+    "Name":"Brown",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mrs Myer, opp centre mrkt",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021647,38.892446 ]
+    },
+    "properties": {
+    "Name":"Darlington",
+    "Forename":"William",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mrs Myer, opp centre mrkt",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021659,38.892585 ]
+    },
+    "properties": {
+    "Name":"Findlay",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mrs Myer, opp centre mrkt",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021564,38.89239 ]
+    },
+    "properties": {
+    "Name":"Mitchell",
+    "Forename":"James S.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mrs Myer, opp centre mrkt",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021528,38.892483 ]
+    },
+    "properties": {
+    "Name":"Patterson",
+    "Forename":"Thomas",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mrs Myer, opp centre mrkt",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021492,38.892612 ]
+    },
+    "properties": {
+    "Name":"Phillips",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mrs Myer, opp centre mrkt",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021587,38.892733 ]
+    },
+    "properties": {
+    "Name":"Fuller",
+    "Forename":"Timothy",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Massachusetts",
+    "Address":"Mrs Myer, opp cntr mrkt",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.016302,38.893808 ]
+    },
+    "properties": {
+    "Name":"Carter",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"South Carolina",
+    "Address":"Mrs Peyton, near city hall",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.016112,38.893808 ]
+    },
+    "properties": {
+    "Name":"Cuthbert",
+    "Forename":"Alfred",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Georgia",
+    "Address":"Mrs Peyton, near city hall",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.015827,38.893808 ]
+    },
+    "properties": {
+    "Name":"Floyd",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mrs Peyton, near city hall",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.017044,38.893926 ]
+    },
+    "properties": {
+    "Name":"Govan",
+    "Forename":"Andrew R.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"South Carolina",
+    "Address":"Mrs Peyton, near city hall",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.016835,38.893956 ]
+    },
+    "properties": {
+    "Name":"Reid",
+    "Forename":"Robert R.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Georgia",
+    "Address":"Mrs Peyton, near city hall",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021094,38.892601 ]
+    },
+    "properties": {
+    "Name":"Taylor",
+    "Forename":"John W.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mrs Pratt, opposite Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021421,38.892691 ]
+    },
+    "properties": {
+    "Name":"Ingham",
+    "Forename":"Samuel D.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mrs Queen, near Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021322,38.892672 ]
+    },
+    "properties": {
+    "Name":"Long",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"North Carolina",
+    "Address":"Mrs Queen, near Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.02156,38.892745 ]
+    },
+    "properties": {
+    "Name":"Campbell",
+    "Forename":"Samuel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mrs Queen, near cntr mrkt",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021491,38.892633 ]
+    },
+    "properties": {
+    "Name":"Spencer",
+    "Forename":"Elijah",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mrs Queen, near cntr mrkt",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021501,38.892726 ]
+    },
+    "properties": {
+    "Name":"Hawks",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mrs Queen, near cntre mrkt",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.02158,38.892687 ]
+    },
+    "properties": {
+    "Name":"McNeill",
+    "Forename":"Archibald",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"North Carolina",
+    "Address":"Mrs Queen, oppos Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020948,38.892552 ]
+    },
+    "properties": {
+    "Name":"Williams",
+    "Forename":"Lewis",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"North Carolina",
+    "Address":"Mrs Sawyer, opp Brown's",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.002882,38.889479 ]
+    },
+    "properties": {
+    "Name":"Rodney",
+    "Forename":"Daniel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Delaware",
+    "Address":"Mrs Scott, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.022235,38.894123 ]
+    },
+    "properties": {
+    "Name":"Chambers",
+    "Forename":"David",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Ohio",
+    "Address":"Mrs Tucker, opp cntr mrkt",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.02221,38.89419 ]
+    },
+    "properties": {
+    "Name":"Forrest",
+    "Forename":"Thomas",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mrs Tucker, opp cntr mrkt",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.022333,38.89419 ]
+    },
+    "properties": {
+    "Name":"Sibley",
+    "Forename":"Solomon",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Michigan",
+    "Address":"Mrs Tucker, opp cntr mrkt",
+    "Occupation":"Delegate, Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.022475,38.894132 ]
+    },
+    "properties": {
+    "Name":"Tracey",
+    "Forename":"Albert H.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Mrs Tucker, opp cntr mrkt",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.022383,38.894137 ]
+    },
+    "properties": {
+    "Name":"Lincoln",
+    "Forename":"Enoch",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maine",
+    "Address":"Mrs Tucker, opp. cntr mrkt",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.033397,38.896898 ]
+    },
+    "properties": {
+    "Name":"Johnston",
+    "Forename":"Josiah S.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Louisiana",
+    "Address":"Mrs Wilson, near treas dept",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.033219,38.896981 ]
+    },
+    "properties": {
+    "Name":"Tucker",
+    "Forename":"George",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Virginia",
+    "Address":"Mrs Wilson, near treas dept",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.0262,38.895067 ]
+    },
+    "properties": {
+    "Name":"Southard",
+    "Forename":"Samuel L.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New Jersey",
+    "Address":"Mrs. Blake, 10w near Pa av",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.032906,38.897437 ]
+    },
+    "properties": {
+    "Name":"Van Dyke",
+    "Forename":"Nicholas",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Delaware",
+    "Address":"Mrs. Clarke, near treas dpt",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007009,38.887302 ]
+    },
+    "properties": {
+    "Name":"Barton",
+    "Forename":"David",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Missouri",
+    "Address":"Mrs. Claxton, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005645,38.889511 ]
+    },
+    "properties": {
+    "Name":"Palmer",
+    "Forename":"William A.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Vermont",
+    "Address":"Mrs. Hamilton, Capitol hill",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005454,38.889259 ]
+    },
+    "properties": {
+    "Name":"Rich",
+    "Forename":"Charles",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Vermont",
+    "Address":"Mrs. Hamilton, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.016968,38.893778 ]
+    },
+    "properties": {
+    "Name":"Lanman",
+    "Forename":"James",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Connecticut",
+    "Address":"Mrs. Peyton, near city hall",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.016835,38.893822 ]
+    },
+    "properties": {
+    "Name":"Talbot",
+    "Forename":"Isham",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Kentucky",
+    "Address":"Mrs. Peyton, near city hall",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.016626,38.893793 ]
+    },
+    "properties": {
+    "Name":"Ware",
+    "Forename":"Nicholas",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Georgia",
+    "Address":"Mrs. Peyton, near city hall",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.01636,38.893808 ]
+    },
+    "properties": {
+    "Name":"Williams",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Tennessee",
+    "Address":"Mrs. Peyton, near city hall",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.02124,38.892639 ]
+    },
+    "properties": {
+    "Name":"Edwards",
+    "Forename":"Ninian",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Illinois",
+    "Address":"Mrs. Queen, near Brown's",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021226,38.892617 ]
+    },
+    "properties": {
+    "Name":"Findlay",
+    "Forename":"William",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Mrs. Queen, near Brown's",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.033409,38.896991 ]
+    },
+    "properties": {
+    "Name":"Johnson",
+    "Forename":"Henry",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Louisiana",
+    "Address":"Mrs. Wilson, near treas dept",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.045572,38.9013 ]
+    },
+    "properties": {
+    "Name":"Lloyd",
+    "Forename":"Edward",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maryland",
+    "Address":"O'Neale's hotel, Pen av",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.045815,38.901311 ]
+    },
+    "properties": {
+    "Name":"Mills",
+    "Forename":"Elijah H.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Massachusetts",
+    "Address":"O'Neale's hotel, Pen av",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.045415,38.901322 ]
+    },
+    "properties": {
+    "Name":"Eaton",
+    "Forename":"John Henry",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Tennessee",
+    "Address":"O'Neale's hotel, Penn av",
+    "Occupation":"Senator",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.045857,38.9013 ]
+    },
+    "properties": {
+    "Name":"Dickinson",
+    "Forename":"John D.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"O'Neale's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.046143,38.9014 ]
+    },
+    "properties": {
+    "Name":"Patterson",
+    "Forename":"Walter",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"O'Neale's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Federalist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005327,38.88937 ]
+    },
+    "properties": {
+    "Name":"Barber",
+    "Forename":"Noyes",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Connecticut",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005327,38.889266 ]
+    },
+    "properties": {
+    "Name":"Cassedy",
+    "Forename":"George",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New Jersey",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005327,38.889103 ]
+    },
+    "properties": {
+    "Name":"Herrick",
+    "Forename":"Ebenezer",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maine",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005175,38.88934 ]
+    },
+    "properties": {
+    "Name":"Hooks",
+    "Forename":"Charles",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"North Carolina",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005194,38.889251 ]
+    },
+    "properties": {
+    "Name":"Hubbard",
+    "Forename":"Thomas H.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.005194,38.889118 ]
+    },
+    "properties": {
+    "Name":"Mallary",
+    "Forename":"Rollin C.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Vermont",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004947,38.889414 ]
+    },
+    "properties": {
+    "Name":"Rochester",
+    "Forename":"William B.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004928,38.88934 ]
+    },
+    "properties": {
+    "Name":"Rogers",
+    "Forename":"Thomas J.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Pennsylvania",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004928,38.889207 ]
+    },
+    "properties": {
+    "Name":"Reed",
+    "Forename":"Philip",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maryland",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.00489,38.889059 ]
+    },
+    "properties": {
+    "Name":"Sterling",
+    "Forename":"Ansel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Connecticut",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004719,38.889311 ]
+    },
+    "properties": {
+    "Name":"Stoddard",
+    "Forename":"Ebenezer",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Connecticut",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004738,38.889207 ]
+    },
+    "properties": {
+    "Name":"Swan",
+    "Forename":"Samuel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New Jersey",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004719,38.889059 ]
+    },
+    "properties": {
+    "Name":"Upham",
+    "Forename":"Nathaniel",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New Hampshire",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004491,38.889444 ]
+    },
+    "properties": {
+    "Name":"Van Wyck",
+    "Forename":"William W.",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"New York",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004529,38.889311 ]
+    },
+    "properties": {
+    "Name":"Wright",
+    "Forename":"Robert",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Maryland",
+    "Address":"Queen's hotel, Capitol hill",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.032312,38.896532 ]
+    },
+    "properties": {
+    "Name":"Rhea",
+    "Forename":"John",
+    "Prefix":"",
+    "Suffix":"",
+    "State":"Tennessee",
+    "Address":"Sanford's hotel, Penn av",
+    "Occupation":"Representative",
+    "Race":"w",
+    "Gender":"m",
+    "HISCO":"administrative",
+    "Political Party":"Democratic-Republican"
+    }
+  }
+]
+}

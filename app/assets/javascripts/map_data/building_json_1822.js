@@ -1,1 +1,1157 @@
-var building_json_1822 = {"type":"FeatureCollection","crs":{"type":"name","properties":{"name":"EPSG:4326"}},"features":[{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[-77.022480999999999,38.896557000000001]},"properties":{"OBJECTID":1,"Name":"General Post Office","Location":"btw E and Fn and 7 and 8w","Lat":38.896557000000001,"Long":-77.022480999999999,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":2,"geometry":{"type":"Point","coordinates":[-77.005539999999996,38.890748000000002]},"properties":{"OBJECTID":2,"Name":"Clerk of Circuit Court, Marshal","Location":"corner An and 1e Cap Hill","Lat":38.890748000000002,"Long":-77.005539999999996,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":3,"geometry":{"type":"Point","coordinates":[-77.03004,38.896667999999998]},"properties":{"OBJECTID":3,"Name":"Judge of Orphan's Court, Register of Wills","Location":"w side 13w btw E and Fn","Lat":38.896667999999998,"Long":-77.03004,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":4,"geometry":{"type":"Point","coordinates":[-77.029077000000001,38.894809000000002]},"properties":{"OBJECTID":4,"Name":"Sealer of Weights and Measures","Location":"s side Penn av btw 12 and 13w","Lat":38.894809000000002,"Long":-77.029077000000001,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":5,"geometry":{"type":"Point","coordinates":[-77.029255000000006,38.897556000000002]},"properties":{"OBJECTID":5,"Name":"Branch of U.S. Bank","Location":"n e corner Fn and 13w","Lat":38.897556000000002,"Long":-77.029255000000006,"Description":"Bank","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"x","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":6,"geometry":{"type":"Point","coordinates":[-77.024726999999999,38.894421000000001]},"properties":{"OBJECTID":6,"Name":"Patriotic Bank","Location":"n side Penn av btw 9 and 10w","Lat":38.894421000000001,"Long":-77.024726999999999,"Description":"Bank","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"x","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":7,"geometry":{"type":"Point","coordinates":[-77.007245999999995,38.886845000000001]},"properties":{"OBJECTID":7,"Name":"Bank of Washington","Location":"e side N Jer av btw B and Cs Cap Hill","Lat":38.886845000000001,"Long":-77.007245999999995,"Description":"Bank","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"x","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":8,"geometry":{"type":"Point","coordinates":[-77.033343000000002,38.897463999999999]},"properties":{"OBJECTID":8,"Name":"Bank of the Metropolis","Location":"Corner Fn and 15w opposite the treaury deaprtment","Lat":38.897463999999999,"Long":-77.033343000000002,"Description":"Bank","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"x","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":9,"geometry":{"type":"Point","coordinates":[-77.024527000000006,38.894385]},"properties":{"OBJECTID":9,"Name":"Franklin Insurance Office","Location":"n side Penn av btw 9 and 10w","Lat":38.894385,"Long":-77.024527000000006,"Description":"Other Public Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"x","Tavern_Hotel":""}},{"type":"Feature","id":10,"geometry":{"type":"Point","coordinates":[-77.021342000000004,38.906446000000003]},"properties":{"OBJECTID":10,"Name":"Washington Asylum","Location":"7w between M and Nn","Lat":38.906446000000003,"Long":-77.021342000000004,"Description":"Other Public Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"x","Tavern_Hotel":""}},{"type":"Feature","id":11,"geometry":{"type":"Point","coordinates":[-77.022388000000007,38.900267999999997]},"properties":{"OBJECTID":11,"Name":"Orphan Asylm","Location":"w side 7w btw H and In","Lat":38.900267999999997,"Long":-77.022388000000007,"Description":"Other Public Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"x","Tavern_Hotel":""}},{"type":"Feature","id":12,"geometry":{"type":"Point","coordinates":[-77.001607000000007,38.875660000000003]},"properties":{"OBJECTID":12,"Name":"Tobacco Inspection Warehouse","Location":"3e btw M and Ns near the Eastern Branch","Lat":38.875660000000003,"Long":-77.001607000000007,"Description":"Other Public Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"x","Tavern_Hotel":""}},{"type":"Feature","id":13,"geometry":{"type":"Point","coordinates":[-77.026713000000001,38.893718999999997]},"properties":{"OBJECTID":13,"Name":"Washington Assembly Rooms","Location":"e side 11w btw Penn av and the Tiber","Lat":38.893718999999997,"Long":-77.026713000000001,"Description":"Other Public Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"x","Tavern_Hotel":""}},{"type":"Feature","id":14,"geometry":{"type":"Point","coordinates":[-77.044276999999994,38.914732000000001]},"properties":{"OBJECTID":14,"Name":"Western Burying Ground","Location":"btw S and Tn and 19 and 20w","Lat":38.914732000000001,"Long":-77.044276999999994,"Description":"Burying Ground","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"x","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":15,"geometry":{"type":"Point","coordinates":[-76.987048999999999,38.900612000000002]},"properties":{"OBJECTID":15,"Name":"Eastern Burying Ground","Location":"btw H and In and 13 and 14e","Lat":38.900612000000002,"Long":-76.987048999999999,"Description":"Burying Ground","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"x","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":16,"geometry":{"type":"Point","coordinates":[-76.978016999999994,38.880682999999998]},"properties":{"OBJECTID":16,"Name":"Episcopalian Burying Ground","Location":"near Eastern Branch upper bridge","Lat":38.880682999999998,"Long":-76.978016999999994,"Description":"Burying Ground","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"x","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":17,"geometry":{"type":"Point","coordinates":[-77.028761000000003,38.913401]},"properties":{"OBJECTID":17,"Name":"New Episcopalian Burying Ground","Location":"btw 12 and 13w and R and Sn","Lat":38.913401,"Long":-77.028761000000003,"Description":"Burying Ground","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"x","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":18,"geometry":{"type":"Point","coordinates":[-77.014386000000002,38.913710999999999]},"properties":{"OBJECTID":18,"Name":"Catholic Burying Ground","Location":"near the north end of 3w outside city limits","Lat":38.913710999999999,"Long":-77.014386000000002,"Description":"Burying Ground","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"x","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":19,"geometry":{"type":"Point","coordinates":[-77.017522999999997,38.89631]},"properties":{"OBJECTID":19,"Name":"County Jail","Location":"En back of and near the city hall","Lat":38.89631,"Long":-77.017522999999997,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":20,"geometry":{"type":"Point","coordinates":[-77.035793999999996,38.900500000000001]},"properties":{"OBJECTID":20,"Name":"St. John's Church","Location":"corner Hn and 16w opposite President's house","Lat":38.900500000000001,"Long":-77.035793999999996,"Description":"Church (White Protestant)","Church__White_Protestant_":"x","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":21,"geometry":{"type":"Point","coordinates":[-76.997315999999998,38.881757]},"properties":{"OBJECTID":21,"Name":"Christ Church","Location":"square 877, N Yard","Lat":38.881757,"Long":-76.997315999999998,"Description":"Church (White Protestant)","Church__White_Protestant_":"x","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":22,"geometry":{"type":"Point","coordinates":[-77.009771000000001,38.887233000000002]},"properties":{"OBJECTID":22,"Name":"First Presbyterian Church","Location":"S Cap Street, near capitol","Lat":38.887233000000002,"Long":-77.009771000000001,"Description":"Church (White Protestant)","Church__White_Protestant_":"x","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":23,"geometry":{"type":"Point","coordinates":[-77.031490000000005,38.899926000000001]},"properties":{"OBJECTID":23,"Name":"Second Presbyterian Church","Location":"N York Av btw 13 and 14w","Lat":38.899926000000001,"Long":-77.031490000000005,"Description":"Church (White Protestant)","Church__White_Protestant_":"x","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":24,"geometry":{"type":"Point","coordinates":[-77.032596999999996,38.896928000000003]},"properties":{"OBJECTID":24,"Name":"Dr. Laurie's Presbyterian Church","Location":"s side Fn btw 14 and 15w","Lat":38.896928000000003,"Long":-77.032596999999996,"Description":"Church (White Protestant)","Church__White_Protestant_":"x","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":25,"geometry":{"type":"Point","coordinates":[-77.043991000000005,38.900818999999998]},"properties":{"OBJECTID":25,"Name":"First Baptsit Church","Location":"corner In and 19w","Lat":38.900818999999998,"Long":-77.043991000000005,"Description":"Church (White Protestant)","Church__White_Protestant_":"x","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":26,"geometry":{"type":"Point","coordinates":[-77.031448999999995,38.898522]},"properties":{"OBJECTID":26,"Name":"Methodist Foundry Chapel","Location":"corner of Gn and 14w","Lat":38.898522,"Long":-77.031448999999995,"Description":"Church (White Protestant)","Church__White_Protestant_":"x","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":27,"geometry":{"type":"Point","coordinates":[-77.000310999999996,38.882271000000003]},"properties":{"OBJECTID":27,"Name":"Methodist Church at Navy Yard","Location":"","Lat":38.882271000000003,"Long":-77.000310999999996,"Description":"Church (White Protestant)","Church__White_Protestant_":"x","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":28,"geometry":{"type":"Point","coordinates":[-77.019767999999999,38.895141000000002]},"properties":{"OBJECTID":28,"Name":"Unitarian Church","Location":"n e corner Dn and 6w","Lat":38.895141000000002,"Long":-77.019767999999999,"Description":"Church (White Protestant)","Church__White_Protestant_":"x","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":29,"geometry":{"type":"Point","coordinates":[-77.025383000000005,38.897565]},"properties":{"OBJECTID":29,"Name":"St. Patrick's Church","Location":"n side Fn btw 9 and 10w","Lat":38.897565,"Long":-77.025383000000005,"Description":"Church (Catholic)","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"x","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":30,"geometry":{"type":"Point","coordinates":[-77.004019,38.885567999999999]},"properties":{"OBJECTID":30,"Name":"St. Peter's Church","Location":"2e btw C and Ds","Lat":38.885567999999999,"Long":-77.004019,"Description":"Church (Catholic)","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"x","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":31,"geometry":{"type":"Point","coordinates":[-77.042720000000003,38.901361000000001]},"properties":{"OBJECTID":31,"Name":"Friend's Meetinghouse","Location":"n side In btw 18 and 19w","Lat":38.901361000000001,"Long":-77.042720000000003,"Description":"Church (White Protestant)","Church__White_Protestant_":"x","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":32,"geometry":{"type":"Point","coordinates":[-77.000405999999998,38.880212]},"properties":{"OBJECTID":32,"Name":"African Church at Navy Yard","Location":"4e btw Vir av and Gs","Lat":38.880212,"Long":-77.000405999999998,"Description":"Church (Black Protestant)","Church__White_Protestant_":"","Church__Black_Protestant_":"x","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":33,"geometry":{"type":"Point","coordinates":[-76.973275000000001,38.881959999999999]},"properties":{"OBJECTID":33,"Name":"Navy Magazine","Location":"on marine hospital reservation, Eastern branch","Lat":38.881959999999999,"Long":-76.973275000000001,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":34,"geometry":{"type":"Point","coordinates":[-76.992419999999996,38.883681000000003]},"properties":{"OBJECTID":34,"Name":"Navy Hospital","Location":"corner 10e and Penn Av","Lat":38.883681000000003,"Long":-76.992419999999996,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":35,"geometry":{"type":"Point","coordinates":[-76.994381000000004,38.880406000000001]},"properties":{"OBJECTID":35,"Name":"Marine Barracks","Location":"btw G and Is and 8 and 9e","Lat":38.880406000000001,"Long":-76.994381000000004,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":36,"geometry":{"type":"Point","coordinates":[-77.004268999999994,38.875031]},"properties":{"OBJECTID":36,"Name":"Coote's Brewery","Location":"s end of N Jer av Eastern Branch","Lat":38.875031,"Long":-77.004268999999994,"Description":"Other Public Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"x","Tavern_Hotel":""}},{"type":"Feature","id":37,"geometry":{"type":"Point","coordinates":[-77.047961000000001,38.891843000000001]},"properties":{"OBJECTID":37,"Name":"Glass House","Location":"near the southern termination of 20w","Lat":38.891843000000001,"Long":-77.047961000000001,"Description":"Other Public Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"x","Tavern_Hotel":""}},{"type":"Feature","id":38,"geometry":{"type":"Point","coordinates":[-77.025024999999999,38.897528999999999]},"properties":{"OBJECTID":38,"Name":"Washington Catholic Seminary","Location":"n side Fn btw 9 and 10 w","Lat":38.897528999999999,"Long":-77.025024999999999,"Description":"School","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"x","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":39,"geometry":{"type":"Point","coordinates":[-77.001547000000002,38.884734999999999]},"properties":{"OBJECTID":39,"Name":"Eastern Public School","Location":"corner Ds and 3e","Lat":38.884734999999999,"Long":-77.001547000000002,"Description":"School","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"x","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":40,"geometry":{"type":"Point","coordinates":[-77.031493999999995,38.897889999999997]},"properties":{"OBJECTID":40,"Name":"Western Public School","Location":"corner Gn and 14w","Lat":38.897889999999997,"Long":-77.031493999999995,"Description":"School","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"x","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":41,"geometry":{"type":"Point","coordinates":[-77.027345999999994,38.893746999999998]},"properties":{"OBJECTID":41,"Name":"Masonic Hall","Location":"11w opposite Wash assembly rooms","Lat":38.893746999999998,"Long":-77.027345999999994,"Description":"Other Public Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"x","Tavern_Hotel":""}},{"type":"Feature","id":42,"geometry":{"type":"Point","coordinates":[-76.999977999999999,38.880127999999999]},"properties":{"OBJECTID":42,"Name":"Masonic Hall","Location":"Vir av btw 4 and 5e N Yard","Lat":38.880127999999999,"Long":-76.999977999999999,"Description":"Other Public Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"x","Tavern_Hotel":""}},{"type":"Feature","id":43,"geometry":{"type":"Point","coordinates":[-77.013597000000004,38.889786000000001]},"properties":{"OBJECTID":43,"Name":"Botanic Garden","Location":"Opposite west front of the capitol","Lat":38.889786000000001,"Long":-77.013597000000004,"Description":"Other Public Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"x","Tavern_Hotel":""}},{"type":"Feature","id":44,"geometry":{"type":"Point","coordinates":[-77.009212000000005,38.890008000000002]},"properties":{"OBJECTID":44,"Name":"Capitol","Location":"","Lat":38.890008000000002,"Long":-77.009212000000005,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":45,"geometry":{"type":"Point","coordinates":[-77.036539000000005,38.897601000000002]},"properties":{"OBJECTID":45,"Name":"President's House","Location":"","Lat":38.897601000000002,"Long":-77.036539000000005,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":46,"geometry":{"type":"Point","coordinates":[-77.038550999999998,38.897818000000001]},"properties":{"OBJECTID":46,"Name":"War Department","Location":"","Lat":38.897818000000001,"Long":-77.038550999999998,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":47,"geometry":{"type":"Point","coordinates":[-77.034526999999997,38.897914]},"properties":{"OBJECTID":47,"Name":"State Department","Location":"","Lat":38.897914,"Long":-77.034526999999997,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":48,"geometry":{"type":"Point","coordinates":[-77.038520000000005,38.897407999999999]},"properties":{"OBJECTID":48,"Name":"Department of the Navy","Location":"","Lat":38.897407999999999,"Long":-77.038520000000005,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":49,"geometry":{"type":"Point","coordinates":[-77.034526999999997,38.897457000000003]},"properties":{"OBJECTID":49,"Name":"Department of the Treasury","Location":"","Lat":38.897457000000003,"Long":-77.034526999999997,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":50,"geometry":{"type":"Point","coordinates":[-77.017565000000005,38.895409000000001]},"properties":{"OBJECTID":50,"Name":"City Hall","Location":"","Lat":38.895409000000001,"Long":-77.017565000000005,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":51,"geometry":{"type":"Point","coordinates":[-76.995265000000003,38.874675000000003]},"properties":{"OBJECTID":51,"Name":"Navy Yard","Location":"","Lat":38.874675000000003,"Long":-76.995265000000003,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":52,"geometry":{"type":"Point","coordinates":[-77.017214999999993,38.863487999999997]},"properties":{"OBJECTID":52,"Name":"Greenleaf's Point ","Location":"","Lat":38.863487999999997,"Long":-77.017214999999993,"Description":"Government Building","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"x","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":""}},{"type":"Feature","id":53,"geometry":{"type":"Point","coordinates":[-77.020826,38.892525999999997]},"properties":{"OBJECTID":53,"Name":"City Hotel (Rumpff's Hotel)","Location":"Penn av opposite Brown's hotel","Lat":38.892525999999997,"Long":-77.020826,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":54,"geometry":{"type":"Point","coordinates":[-77.032365999999996,38.896576000000003]},"properties":{"OBJECTID":54,"Name":"Strother's Hotel (Mansion Hotel)","Location":"","Lat":38.896576000000003,"Long":-77.032365999999996,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":55,"geometry":{"type":"Point","coordinates":[-77.045907999999997,38.901322]},"properties":{"OBJECTID":55,"Name":"O'Neale's Hotel (Franklin Hotel) ","Location":"n side Penn av btw 20 and 21w","Lat":38.901322,"Long":-77.045907999999997,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":56,"geometry":{"type":"Point","coordinates":[-77.005600000000001,38.889297999999997]},"properties":{"OBJECTID":56,"Name":"Queen's Hotel","Location":"1e btw E Cap street and As fronting capitol square","Lat":38.889297999999997,"Long":-77.005600000000001,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":57,"geometry":{"type":"Point","coordinates":[-77.033054000000007,38.896689000000002]},"properties":{"OBJECTID":57,"Name":"Sanford's Hotel (Washington Hotel)","Location":"n side Penn av btw 14 and 15w","Lat":38.896689000000002,"Long":-77.033054000000007,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":58,"geometry":{"type":"Point","coordinates":[-77.020674999999997,38.893295999999999]},"properties":{"OBJECTID":58,"Name":"Brown's Hotel","Location":"","Lat":38.893295999999999,"Long":-77.020674999999997,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":59,"geometry":{"type":"Point","coordinates":[-77.027711999999994,38.895364999999998]},"properties":{"OBJECTID":59,"Name":"Appler's Tavern","Location":"n e corner Penn av and 12w","Lat":38.895364999999998,"Long":-77.027711999999994,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":60,"geometry":{"type":"Point","coordinates":[-77.021113,38.894427999999998]},"properties":{"OBJECTID":60,"Name":"Barry's Tavern","Location":"Louis av btw 6 and 7w","Lat":38.894427999999998,"Long":-77.021113,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":61,"geometry":{"type":"Point","coordinates":[-77.033163000000002,38.897812999999999]},"properties":{"OBJECTID":61,"Name":"Bassett's Tavern","Location":"s side Gn near 15w","Lat":38.897812999999999,"Long":-77.033163000000002,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":62,"geometry":{"type":"Point","coordinates":[-77.019582999999997,38.873472999999997]},"properties":{"OBJECTID":62,"Name":"Black's Tavern","Location":"Union st. Greenleaf's pt","Lat":38.873472999999997,"Long":-77.019582999999997,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":63,"geometry":{"type":"Point","coordinates":[-77.055353999999994,38.905340000000002]},"properties":{"OBJECTID":63,"Name":"Bradfield's Tavern","Location":"1st door from Georgetown upper bridge","Lat":38.905340000000002,"Long":-77.055353999999994,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":64,"geometry":{"type":"Point","coordinates":[-77.022315000000006,38.894314000000001]},"properties":{"OBJECTID":64,"Name":"Crain's Tavern","Location":"w side 7w near Penn av","Lat":38.894314000000001,"Long":-77.022315000000006,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":65,"geometry":{"type":"Point","coordinates":[-77.000057999999996,38.876941000000002]},"properties":{"OBJECTID":65,"Name":"Cummerfod's Tavern","Location":"Ms btw 4 1/2 and 6w Grnlf's Pt","Lat":38.876941000000002,"Long":-77.000057999999996,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":66,"geometry":{"type":"Point","coordinates":[-77.030101000000002,38.896714000000003]},"properties":{"OBJECTID":66,"Name":"Delaney's Tavern","Location":"w side 13w btw E and Fn","Lat":38.896714000000003,"Long":-77.030101000000002,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":67,"geometry":{"type":"Point","coordinates":[-77.031232000000003,38.896889000000002]},"properties":{"OBJECTID":67,"Name":"Dougherty's Tavern","Location":"s side Fn btw 13 & 14w","Lat":38.896889000000002,"Long":-77.031232000000003,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":68,"geometry":{"type":"Point","coordinates":[-77.030413999999993,38.896982000000001]},"properties":{"OBJECTID":68,"Name":"Dowling's Tavern","Location":"s side Fn btw 13 & 14w","Lat":38.896982000000001,"Long":-77.030413999999993,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":69,"geometry":{"type":"Point","coordinates":[-77.041167999999999,38.898733999999997]},"properties":{"OBJECTID":69,"Name":"Drain's Tavern ","Location":"s side Penn av btw 17 & 18w","Lat":38.898733999999997,"Long":-77.041167999999999,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":70,"geometry":{"type":"Point","coordinates":[-77.032402000000005,38.897500000000001]},"properties":{"OBJECTID":70,"Name":"Dumbleton's Tavern","Location":"n side Fn btw 14 & 15w","Lat":38.897500000000001,"Long":-77.032402000000005,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":71,"geometry":{"type":"Point","coordinates":[-77.005380000000002,38.891713000000003]},"properties":{"OBJECTID":71,"Name":"Ennis' Tavern","Location":"1e btw A and Bs Cap hill","Lat":38.891713000000003,"Long":-77.005380000000002,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":72,"geometry":{"type":"Point","coordinates":[-77.007417000000004,38.888382999999997]},"properties":{"OBJECTID":72,"Name":"Fowler's Tavern","Location":"As btw N Jer av and 1e Cap hill","Lat":38.888382999999997,"Long":-77.007417000000004,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":73,"geometry":{"type":"Point","coordinates":[-77.003133000000005,38.891694000000001]},"properties":{"OBJECTID":73,"Name":"Hazel's Tavern","Location":"2e btw A and Bn Cp hill","Lat":38.891694000000001,"Long":-77.003133000000005,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":74,"geometry":{"type":"Point","coordinates":[-77.022349000000006,38.895924000000001]},"properties":{"OBJECTID":74,"Name":"Hendley's Tavern","Location":"s w corner En and 7w near gen post office","Lat":38.895924000000001,"Long":-77.022349000000006,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":75,"geometry":{"type":"Point","coordinates":[-77.028412000000003,38.893276999999998]},"properties":{"OBJECTID":75,"Name":"Hughes' Tavern","Location":"corner Cn and 12w","Lat":38.893276999999998,"Long":-77.028412000000003,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":76,"geometry":{"type":"Point","coordinates":[-77.030964999999995,38.896939000000003]},"properties":{"OBJECTID":76,"Name":"Kennedy's Tavern","Location":"s side Fn btw 13 and 14w","Lat":38.896939000000003,"Long":-77.030964999999995,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":77,"geometry":{"type":"Point","coordinates":[-77.021636000000001,38.899112000000002]},"properties":{"OBJECTID":77,"Name":"Patrick Kiernan's Tavern","Location":"e side 7w btw G and Hn","Lat":38.899112000000002,"Long":-77.021636000000001,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":78,"geometry":{"type":"Point","coordinates":[-77.022408999999996,38.899898]},"properties":{"OBJECTID":78,"Name":"James Kiernan's Tavern","Location":"n w corner 7w and Hn","Lat":38.899898,"Long":-77.022408999999996,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":79,"geometry":{"type":"Point","coordinates":[-77.023419000000004,38.894348999999998]},"properties":{"OBJECTID":79,"Name":"Hugh Kiernan's Tavern","Location":"Penn av opposite the centre market","Lat":38.894348999999998,"Long":-77.023419000000004,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":80,"geometry":{"type":"Point","coordinates":[-77.013390000000001,38.891419999999997]},"properties":{"OBJECTID":80,"Name":"Marr's Tavern","Location":"Penn av west of and near the capitol","Lat":38.891419999999997,"Long":-77.013390000000001,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":81,"geometry":{"type":"Point","coordinates":[-77.002457000000007,38.874259000000002]},"properties":{"OBJECTID":81,"Name":"Mattingly's Tavern","Location":"3e near the Eastern branch","Lat":38.874259000000002,"Long":-77.002457000000007,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":82,"geometry":{"type":"Point","coordinates":[-77.026168999999996,38.894036]},"properties":{"OBJECTID":82,"Name":"Globe Tavern","Location":"10w near Penn av","Lat":38.894036,"Long":-77.026168999999996,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":83,"geometry":{"type":"Point","coordinates":[-77.030685000000005,38.896903000000002]},"properties":{"OBJECTID":83,"Name":"Miller's Tavern","Location":"s side Fn btw 13 and 14w","Lat":38.896903000000002,"Long":-77.030685000000005,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":84,"geometry":{"type":"Point","coordinates":[-76.995445000000004,38.877719999999997]},"properties":{"OBJECTID":84,"Name":"Moss' Tavern","Location":"n side Ls btw 7 and 8e N Yrd","Lat":38.877719999999997,"Long":-76.995445000000004,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":85,"geometry":{"type":"Point","coordinates":[-77.024500000000003,38.895028000000003]},"properties":{"OBJECTID":85,"Name":"Murray's Tavern","Location":"w side 9w btw D & En","Lat":38.895028000000003,"Long":-77.024500000000003,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":86,"geometry":{"type":"Point","coordinates":[-77.040916999999993,38.898687000000002]},"properties":{"OBJECTID":86,"Name":"Payne's Tavern","Location":"s side Pa av btw 17 & 18w","Lat":38.898687000000002,"Long":-77.040916999999993,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":87,"geometry":{"type":"Point","coordinates":[-76.982568999999998,38.878697000000003]},"properties":{"OBJECTID":87,"Name":"Reynolds' Tavern","Location":"Ks near the Eastern branch upper bridge","Lat":38.878697000000003,"Long":-76.982568999999998,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":88,"geometry":{"type":"Point","coordinates":[-77.042968999999999,38.913795999999998]},"properties":{"OBJECTID":88,"Name":"Ridgeway's Tavern","Location":"21w near the western grave yard","Lat":38.913795999999998,"Long":-77.042968999999999,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":89,"geometry":{"type":"Point","coordinates":[-77.031452000000002,38.884552999999997]},"properties":{"OBJECTID":89,"Name":"Smith Tavern","Location":"Maryland av near Washington bridge","Lat":38.884552999999997,"Long":-77.031452000000002,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":90,"geometry":{"type":"Point","coordinates":[-77.043201999999994,38.897919000000002]},"properties":{"OBJECTID":90,"Name":"Street's Tavern","Location":"s side Gn btw 18 and 19w","Lat":38.897919000000002,"Long":-77.043201999999994,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":91,"geometry":{"type":"Point","coordinates":[-77.004948999999996,38.889518000000002]},"properties":{"OBJECTID":91,"Name":"Sullivan's Tavern","Location":"s side E Cap st opposite market, Cap hill","Lat":38.889518000000002,"Long":-77.004948999999996,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":92,"geometry":{"type":"Point","coordinates":[-77.028362999999999,38.892874999999997]},"properties":{"OBJECTID":92,"Name":"Ticer's Tavern","Location":"12w near the Tiber","Lat":38.892874999999997,"Long":-77.028362999999999,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":93,"geometry":{"type":"Point","coordinates":[-77.023865999999998,38.895178999999999]},"properties":{"OBJECTID":93,"Name":"Tweedy's Tavern","Location":"e side 9w btw D and En","Lat":38.895178999999999,"Long":-77.023865999999998,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}},{"type":"Feature","id":94,"geometry":{"type":"Point","coordinates":[-76.995468000000002,38.877102999999998]},"properties":{"OBJECTID":94,"Name":"Wood's Tavern","Location":"8e near N Yrd","Lat":38.877102999999998,"Long":-76.995468000000002,"Description":"Hotel/Tavern","Church__White_Protestant_":"","Church__Black_Protestant_":"","Church__Catholic_":"","Government_Building":"","Bank":"","Burying_Ground":"","School":"","Other_Public_Buildings":"","Tavern_Hotel":"x"}}]}
+var building_json_1822 = {
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.000406,38.880212 ]
+    },
+    "properties": {
+    "Name":"African Church at Navy Yard",
+    "Address":"4e btw Vir av and Gs",
+    "Description":"Church (Black Protestant)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.027712,38.895365 ]
+    },
+    "properties": {
+    "Name":"Appler's Tavern",
+    "Address":"n e corner Penn av and 12w",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.033343,38.897464 ]
+    },
+    "properties": {
+    "Name":"Bank of the Metropolis",
+    "Address":"Corner Fn and 15w opposite the treaury deaprtment",
+    "Description":"Bank"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007246,38.886845 ]
+    },
+    "properties": {
+    "Name":"Bank of Washington",
+    "Address":"e side N Jer av btw B and Cs Cap Hill",
+    "Description":"Bank"
+    }
+  },
+  // {
+  //   "type": "Feature",
+  //   "geometry": {
+  //      "type": "Point",
+  //      "coordinates":  { }
+  //   },
+  //   "properties": {
+  //   "Name":"Baptist Church at Navy Yard",
+  //   "Address":"",
+  //   "Description":"Church (White Protestant)"
+  //   }
+  // },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021113,38.894428 ]
+    },
+    "properties": {
+    "Name":"Barry's Tavern",
+    "Address":"Louis av btw 6 and 7w",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.033163,38.897813 ]
+    },
+    "properties": {
+    "Name":"Bassett's Tavern",
+    "Address":"s side Gn near 15w",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.019583,38.873473 ]
+    },
+    "properties": {
+    "Name":"Black's Tavern",
+    "Address":"Union st. Greenleaf's pt",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.013597,38.889786 ]
+    },
+    "properties": {
+    "Name":"Botanic Garden",
+    "Address":"Opposite west front of the capitol",
+    "Description":"Other Public Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.055354,38.90534 ]
+    },
+    "properties": {
+    "Name":"Bradfield's Tavern",
+    "Address":"1st door from Georgetown upper bridge",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.029255,38.897556 ]
+    },
+    "properties": {
+    "Name":"Branch of U.S. Bank",
+    "Address":"n e corner Fn and 13w",
+    "Description":"Bank"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020675,38.893296 ]
+    },
+    "properties": {
+    "Name":"Brown's Hotel",
+    "Address":"",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.009212,38.890008 ]
+    },
+    "properties": {
+    "Name":"Capitol",
+    "Address":"",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.014386,38.913711 ]
+    },
+    "properties": {
+    "Name":"Catholic Burying Ground",
+    "Address":"near the north end of 3w outside city limits",
+    "Description":"Burying Ground"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.997316,38.881757 ]
+    },
+    "properties": {
+    "Name":"Christ Church",
+    "Address":"square 877, N Yard",
+    "Description":"Church (White Protestant)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.017565,38.895409 ]
+    },
+    "properties": {
+    "Name":"City Hall",
+    "Address":"",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.020826,38.892526 ]
+    },
+    "properties": {
+    "Name":"City Hotel (Rumpff's Hotel)",
+    "Address":"Penn av opposite Brown's hotel",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.00554,38.890748 ]
+    },
+    "properties": {
+    "Name":"Clerk of Circuit Court, Marshal",
+    "Address":"corner An and 1e Cap Hill",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.03197,38.9203 ]
+    },
+    "properties": {
+    "Name":"Columbian College",
+    "Address":"near the north end of 14w",
+    "Description":"School"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004269,38.875031 ]
+    },
+    "properties": {
+    "Name":"Coote's Brewery",
+    "Address":"s end of N Jer av Eastern Branch",
+    "Description":"Other Public Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.017523,38.89631 ]
+    },
+    "properties": {
+    "Name":"County Jail",
+    "Address":"En back of and near the city hall",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.022315,38.894314 ]
+    },
+    "properties": {
+    "Name":"Crain's Tavern",
+    "Address":"w side 7w near Penn av",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.000058,38.876941 ]
+    },
+    "properties": {
+    "Name":"Cummerfod's Tavern",
+    "Address":"Ms btw 4 1/2 and 6w Grnlf's Pt",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.030101,38.896714 ]
+    },
+    "properties": {
+    "Name":"Delaney's Tavern",
+    "Address":"w side 13w btw E and Fn",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.03852,38.897408 ]
+    },
+    "properties": {
+    "Name":"Department of the Navy",
+    "Address":"",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.034527,38.897457 ]
+    },
+    "properties": {
+    "Name":"Department of the Treasury",
+    "Address":"",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.031232,38.896889 ]
+    },
+    "properties": {
+    "Name":"Dougherty's Tavern",
+    "Address":"s side Fn btw 13 & 14w",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.030414,38.896982 ]
+    },
+    "properties": {
+    "Name":"Dowling's Tavern",
+    "Address":"s side Fn btw 13 & 14w",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.032597,38.896928 ]
+    },
+    "properties": {
+    "Name":"Dr. Laurie's Presbyterian Church",
+    "Address":"s side Fn btw 14 and 15w",
+    "Description":"Church (White Protestant)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.041168,38.898734 ]
+    },
+    "properties": {
+    "Name":"Drain's Tavern ",
+    "Address":"s side Penn av btw 17 & 18w",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.032402,38.8975 ]
+    },
+    "properties": {
+    "Name":"Dumbleton's Tavern",
+    "Address":"n side Fn btw 14 & 15w",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.986954,38.900663 ]
+    },
+    "properties": {
+    "Name":"Eastern Burying Ground",
+    "Address":"btw H and In and 13 and 14e",
+    "Description":"Burying Ground"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.001547,38.884735 ]
+    },
+    "properties": {
+    "Name":"Eastern Public School",
+    "Address":"corner Ds and 3e",
+    "Description":"School"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.00538,38.891713 ]
+    },
+    "properties": {
+    "Name":"Ennis' Tavern",
+    "Address":"1e btw A and Bs Cap hill",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.978017,38.880683 ]
+    },
+    "properties": {
+    "Name":"Episcopalian Burying Ground",
+    "Address":"near Eastern Branch upper bridge",
+    "Description":"Burying Ground"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.043991,38.900819 ]
+    },
+    "properties": {
+    "Name":"First Baptsit Church",
+    "Address":"corner In and 19w",
+    "Description":"Church (White Protestant)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.009771,38.887233 ]
+    },
+    "properties": {
+    "Name":"First Presbyterian Church",
+    "Address":"S Cap Street, near capitol",
+    "Description":"Church (White Protestant)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.007417,38.888383 ]
+    },
+    "properties": {
+    "Name":"Fowler's Tavern",
+    "Address":"As btw N Jer av and 1e Cap hill",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.024527,38.894385 ]
+    },
+    "properties": {
+    "Name":"Franklin Insurance Office",
+    "Address":"n side Penn av btw 9 and 10w",
+    "Description":"Other Public Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.04272,38.901361 ]
+    },
+    "properties": {
+    "Name":"Friend's Meetinghouse",
+    "Address":"n side In btw 18 and 19w",
+    "Description":"Church (White Protestant)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.022481,38.896557 ]
+    },
+    "properties": {
+    "Name":"General Post Office",
+    "Address":"btw E and Fn and 7 and 8w",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.047961,38.891843 ]
+    },
+    "properties": {
+    "Name":"Glass House",
+    "Address":"near the southern termination of 20w",
+    "Description":"Other Public Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.026169,38.894036 ]
+    },
+    "properties": {
+    "Name":"Globe Tavern",
+    "Address":"10w near Penn av",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.017215,38.863488 ]
+    },
+    "properties": {
+    "Name":"Greenleaf's Point ",
+    "Address":"",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.003133,38.891694 ]
+    },
+    "properties": {
+    "Name":"Hazel's Tavern",
+    "Address":"2e btw A and Bn Cp hill",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.022349,38.895924 ]
+    },
+    "properties": {
+    "Name":"Hendley's Tavern",
+    "Address":"s w corner En and 7w near gen post office",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.023419,38.894349 ]
+    },
+    "properties": {
+    "Name":"Hugh Kiernan's Tavern",
+    "Address":"Penn av opposite the centre market",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.028412,38.893277 ]
+    },
+    "properties": {
+    "Name":"Hughes' Tavern",
+    "Address":"corner Cn and 12w",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.022409,38.899898 ]
+    },
+    "properties": {
+    "Name":"James Kiernan's Tavern",
+    "Address":"n w corner 7w and Hn",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.03004,38.896668 ]
+    },
+    "properties": {
+    "Name":"Judge of Orphan's Court, Register of Wills",
+    "Address":"w side 13w btw E and Fn",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.030965,38.896939 ]
+    },
+    "properties": {
+    "Name":"Kennedy's Tavern",
+    "Address":"s side Fn btw 13 and 14w",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.994381,38.880406 ]
+    },
+    "properties": {
+    "Name":"Marine Barracks",
+    "Address":"btw G and Is and 8 and 9e",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.01339,38.89142 ]
+    },
+    "properties": {
+    "Name":"Marr's Tavern",
+    "Address":"Penn av west of and near the capitol",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.027346,38.893747 ]
+    },
+    "properties": {
+    "Name":"Masonic Hall",
+    "Address":"11w opposite Wash assembly rooms",
+    "Description":"Other Public Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.999978,38.880128 ]
+    },
+    "properties": {
+    "Name":"Masonic Hall",
+    "Address":"Vir av btw 4 and 5e N Yard",
+    "Description":"Other Public Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.002457,38.874259 ]
+    },
+    "properties": {
+    "Name":"Mattingly's Tavern",
+    "Address":"3e near the Eastern branch",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.000311,38.882271 ]
+    },
+    "properties": {
+    "Name":"Methodist Church at Navy Yard",
+    "Address":"",
+    "Description":"Church (White Protestant)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.031449,38.898522 ]
+    },
+    "properties": {
+    "Name":"Methodist Foundry Chapel",
+    "Address":"corner of Gn and 14w",
+    "Description":"Church (White Protestant)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.030685,38.896903 ]
+    },
+    "properties": {
+    "Name":"Miller's Tavern",
+    "Address":"s side Fn btw 13 and 14w",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.995445,38.87772 ]
+    },
+    "properties": {
+    "Name":"Moss' Tavern",
+    "Address":"n side Ls btw 7 and 8e N Yrd",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.0245,38.895028 ]
+    },
+    "properties": {
+    "Name":"Murray's Tavern",
+    "Address":"w side 9w btw D & En",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.99242,38.883681 ]
+    },
+    "properties": {
+    "Name":"Navy Hospital",
+    "Address":"corner 10e and Penn Av",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.973275,38.88196 ]
+    },
+    "properties": {
+    "Name":"Navy Magazine",
+    "Address":"on marine hospital reservation, Eastern branch",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.995265,38.874675 ]
+    },
+    "properties": {
+    "Name":"Navy Yard",
+    "Address":"",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.028761,38.913401 ]
+    },
+    "properties": {
+    "Name":"New Episcopalian Burying Ground",
+    "Address":"btw 12 and 13w and R and Sn",
+    "Description":"Burying Ground"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.045908,38.901322 ]
+    },
+    "properties": {
+    "Name":"O'Neale's Hotel (Franklin Hotel) ",
+    "Address":"n side Penn av btw 20 and 21w",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.022388,38.900268 ]
+    },
+    "properties": {
+    "Name":"Orphan Asylm",
+    "Address":"w side 7w btw H and In",
+    "Description":"Other Public Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021636,38.899112 ]
+    },
+    "properties": {
+    "Name":"Patrick Kiernan's Tavern",
+    "Address":"e side 7w btw G and Hn",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.024727,38.894421 ]
+    },
+    "properties": {
+    "Name":"Patriotic Bank",
+    "Address":"n side Penn av btw 9 and 10w",
+    "Description":"Bank"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.040917,38.898687 ]
+    },
+    "properties": {
+    "Name":"Payne's Tavern",
+    "Address":"s side Pa av btw 17 & 18w",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.036539,38.897601 ]
+    },
+    "properties": {
+    "Name":"President's House",
+    "Address":"",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.0056,38.889298 ]
+    },
+    "properties": {
+    "Name":"Queen's Hotel",
+    "Address":"1e btw E Cap street and As fronting capitol square",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.982569,38.878697 ]
+    },
+    "properties": {
+    "Name":"Reynolds' Tavern",
+    "Address":"Ks near the Eastern branch upper bridge",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.042969,38.913796 ]
+    },
+    "properties": {
+    "Name":"Ridgeway's Tavern",
+    "Address":"21w near the western grave yard",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.033054,38.896689 ]
+    },
+    "properties": {
+    "Name":"Sanford's Hotel (Washington Hotel)",
+    "Address":"n side Penn av btw 14 and 15w",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.029077,38.894809 ]
+    },
+    "properties": {
+    "Name":"Sealer of Weights and Measures",
+    "Address":"s side Penn av btw 12 and 13w",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.03149,38.899926 ]
+    },
+    "properties": {
+    "Name":"Second Presbyterian Church",
+    "Address":"N York Av btw 13 and 14w",
+    "Description":"Church (White Protestant)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.031452,38.884553 ]
+    },
+    "properties": {
+    "Name":"Smith Tavern",
+    "Address":"Maryland av near Washington bridge",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.035794,38.9005 ]
+    },
+    "properties": {
+    "Name":"St. John's Church",
+    "Address":"corner Hn and 16w opposite President's house",
+    "Description":"Church (White Protestant)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.025383,38.897565 ]
+    },
+    "properties": {
+    "Name":"St. Patrick's Church",
+    "Address":"n side Fn btw 9 and 10w",
+    "Description":"Church (Catholic)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004019,38.885568 ]
+    },
+    "properties": {
+    "Name":"St. Peter's Church",
+    "Address":"2e btw C and Ds",
+    "Description":"Church (Catholic)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.034527,38.897914 ]
+    },
+    "properties": {
+    "Name":"State Department",
+    "Address":"",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.043202,38.897919 ]
+    },
+    "properties": {
+    "Name":"Street's Tavern",
+    "Address":"s side Gn btw 18 and 19w",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.032366,38.896576 ]
+    },
+    "properties": {
+    "Name":"Strother's Hotel (Mansion Hotel)",
+    "Address":"",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.004949,38.889518 ]
+    },
+    "properties": {
+    "Name":"Sullivan's Tavern",
+    "Address":"s side E Cap st opposite market, Cap hill",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.028363,38.892875 ]
+    },
+    "properties": {
+    "Name":"Ticer's Tavern",
+    "Address":"12w near the Tiber",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.001607,38.87566 ]
+    },
+    "properties": {
+    "Name":"Tobacco Inspection Warehouse",
+    "Address":"3e btw M and Ns near the Eastern Branch",
+    "Description":"Other Public Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.023866,38.895179 ]
+    },
+    "properties": {
+    "Name":"Tweedy's Tavern",
+    "Address":"e side 9w btw D and En",
+    "Description":"Hotel/Tavern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.019768,38.895141 ]
+    },
+    "properties": {
+    "Name":"Unitarian Church",
+    "Address":"n e corner Dn and 6w",
+    "Description":"Church (White Protestant)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.038551,38.897818 ]
+    },
+    "properties": {
+    "Name":"War Department",
+    "Address":"",
+    "Description":"Government Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.026713,38.893719 ]
+    },
+    "properties": {
+    "Name":"Washington Assembly Rooms",
+    "Address":"e side 11w btw Penn av and the Tiber",
+    "Description":"Other Public Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.021342,38.906446 ]
+    },
+    "properties": {
+    "Name":"Washington Asylum",
+    "Address":"7w between M and Nn",
+    "Description":"Other Public Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.025025,38.897529 ]
+    },
+    "properties": {
+    "Name":"Washington Catholic Seminary",
+    "Address":"n side Fn btw 9 and 10 w",
+    "Description":"School"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.044277,38.914732 ]
+    },
+    "properties": {
+    "Name":"Western Burying Ground",
+    "Address":"btw S and Tn and 19 and 20w",
+    "Description":"Burying Ground"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.031494,38.89789 ]
+    },
+    "properties": {
+    "Name":"Western Public School",
+    "Address":"corner Gn and 14w",
+    "Description":"School"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.995468,38.877103 ]
+    },
+    "properties": {
+    "Name":"Wood's Tavern",
+    "Address":"8e near N Yrd",
+    "Description":"Hotel/Tavern"
+    }
+  }
+]
+}

@@ -51,18 +51,16 @@ function defaultMarker(color = "#B7B7B7") {
 
 // these are the fields from the spreadsheet used in the popups
 var buildingFields = [
-  "Description",
-  "Location"
+  "Address",
+  "Description"
 ];
 
 // these are the fields from the spreadsheet used in the popups
 var congressFields = [
   "State",
   "Occupation",
-  "Role_in_Congress",
-  "Political_Party",
-  "Address",
-  "With_whom_they_board"
+  "Political Party",
+  "Address"
 ];
 
 // this uses fields from the spreadsheet to create an abbreviated image name
@@ -82,7 +80,7 @@ var directoryFields = [
   "Occupation",
   "HISCO",
   "Address",
-  "Court_Role",
+  "Court Role",
   "Race",
   "Gender"
 ];
@@ -110,7 +108,7 @@ var genderRaceMapping = {
 // NOTE: if you change a color here you must also update
 // the color for the legend in map.css
 var markerColors = {
-  "Court_Role" : {
+  "Court Role" : {
     "Attorney" : "red",
     "Clerk" : "teal",
     "Defendant" : "green",
@@ -147,7 +145,7 @@ var markerColors = {
 // these images are used to mark building types
 var markerImages = {
   // needs to be a fallback option
-  "default" : "missing_image.png",
+  "default" : "<%= asset_path "map_directory/missing_image.svg" %>",
   // congress
   "dr_delegate"         : "<%= asset_path "map_directory/dr_delegate.svg" %>",
   "dr_rep"              : "<%= asset_path "map_directory/dr_rep.svg" %>",
@@ -178,7 +176,7 @@ var markerImages = {
 // LAYERS //
 // ****** //
 
-var courtRole1822 = createColorMarkerLayer(directory_json_1822, "Court_Role", false)
+var courtRole1822 = createColorMarkerLayer(directory_json_1822, "Court Role", false)
 courtRole1822.addTo(map);
 
 // create the additional layers but do not display yet on the map
@@ -210,12 +208,12 @@ var foreign1822 = L.geoJSON(foreign_json_1822, {
 // adds the 1822 roles in congress layer
 var congress1822 = L.geoJSON(congress_json_1822, {
   pointToLayer: function (feature, latlng) {
-    party = feature.properties["Political_Party"]
-    role = feature.properties["Role_in_Congress"]
+    party = feature.properties["Political Party"]
+    role = feature.properties["Occupation"]
     // TODO a couple people (delegates) currently have NO party so they are not being mapped!
-    img_name = congressMapping[party] + "_" + congressMapping[role];
-    img_path = markerImages[img_name] || markerImages["default"];
-    var icon = L.icon({ iconUrl: img_path, iconSize: [18, 18] });
+    imgName = congressMapping[party] + "_" + congressMapping[role];
+    imgPath = markerImages[imgName] || markerImages["default"];
+    var icon = L.icon({ iconUrl: imgPath, iconSize: [18, 18] });
     return L.marker(latlng, { icon: icon });
   },
   onEachFeature: onEachFeatureCongress,
@@ -392,7 +390,6 @@ function htmlBuilder(heading, props, fieldList, url) {
 // NOTE: update the buildingFields values at the top of this file to change
 // which fields are being displayed in popups
 function onEachFeatureBuilding(feature, layer) {
-  console.log(feature.properties);
   var name = buildRecordName(feature.properties, "Name")
   // Change congressFields content near top of this file to change the displayed fields
   var html = htmlBuilder(name, feature.properties, buildingFields, feature.properties["OSCYS_Link"])
