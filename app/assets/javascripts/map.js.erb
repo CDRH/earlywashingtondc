@@ -19,7 +19,7 @@ map.addLayer(terrainLayer);
 
 // temporary historical basemap
 // will need to put on production for more permenant basemap
-var wms = "https://cdrhdev1.unl.edu/geoserver/gwc/service/wms";
+var wms = "https://cors1601.unl.edu/geoserver/gwc/service/wms";
 historical = new L.TileLayer.WMS(wms, {
     layers: "oscys:WashingtonDC1",
     format: "image/png",
