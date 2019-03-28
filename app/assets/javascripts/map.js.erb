@@ -37,7 +37,12 @@ L.control.scale({maxWidth: 200, position: "bottomleft"}).addTo(map);
 var clusterSettings = {
   maxClusterRadius: 0,
   singleMarkerMode: true,
-
+  spiderLegPolylineOptions: {
+    color: '#FFF',
+    weight: 3,
+    opacity: 1
+  },
+  spiderfyDistanceMultiplier: 0.4
 };
 
 // all circular markers on the map start with these settings
