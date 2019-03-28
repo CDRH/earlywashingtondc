@@ -1,12 +1,7 @@
 .map_container {
-  height: 79vh;
   border: solid 5px #aaa;
   border-right: none;
   border-left: none;
-}
-
-.map_container_map {
-  height: 100%; // needed for when page is smaller
 }
 
 .map_container_key {
@@ -15,24 +10,27 @@
 
 .map_container_key_nav {
   background-color: #e8e8e8;
-}
-
-.nav-tabs > li.active > a, .nav-tabs > li.active {
-  background-color: #fff;
-}
-
-.nav > li > a:hover, .nav > li > a:focus,
-.nav > li > a:hover, .nav > li > a:hover {
-  background-color: #fff;
+  & .nav-tabs > li.active > a, 
+  & .nav-tabs > li.active > a:hover, 
+  & .nav-tabs > li.active > a:focus {
+    background-color: #fff;
+  }
 }
 
 #map {
   height: 100%;
 }
 
+@media only screen and (max-width: 699px) {
+  .map_container_map {
+    height: 79vh;
+  }
+}
+
 @media only screen and (min-width: 700px) {
 
   .map_container {
+    height: 79vh;
     display: flex; // children are .map_container_map and .map_container_key
     & .nav-tabs > li > a {
       padding: .4em;
@@ -41,11 +39,12 @@
   }
 
   .map_container_map {
-    width: 66vw;
+    // width: 75vw;
+    flex: 1;
   }
 
   .map_container_key {
-    width: 34vw;
+    width: 17em;
     display: flex;
     flex-direction: column;
   }
@@ -120,7 +119,7 @@
 }
 
 .label-key {
-  column-count: 2;
+  // column-count: 2;
   margin-bottom: 1em;
   display: block;
   li {
