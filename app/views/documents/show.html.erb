@@ -99,6 +99,14 @@
 </div><!--/row-->
 <% end %>
 
+<% if @doc["contributors"] %>
+<div class="row">
+  <div class="col-md-2 meta_label">Transcription and Encoding By:</div><!--/column-->
+  <div class="col-md-10 meta_data"><%= metadata_list("Contributors", @doc["contributors"], "contributors") %></div><!--/column-->
+</div><!--/row-->
+<% end %>
+
+
 
 <div class="row">
   <div class="col-md-2 meta_label">TEI/XML:</div><!--/column-->
