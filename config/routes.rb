@@ -58,7 +58,7 @@ Rails.application.routes.draw do
 
   # maps
   get 'maps', to: 'maps#index', as: :maps
-  get 'maps/:name', to: 'maps#sub', as: :mapsSub, :constraints => { :name => with_period }
+  get 'maps/directory_dc', to: 'maps#directory_dc', as: :map_dc
   
   # error handling
   match '/404', to: 'errors#not_found', via: :all

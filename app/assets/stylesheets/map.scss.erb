@@ -1,0 +1,194 @@
+.map_container {
+  border: solid 5px #aaa;
+  border-right: none;
+  border-left: none;
+}
+
+.map_container_key {
+  background: #fff;
+}
+
+.map_container_key_nav {
+  background-color: #e8e8e8;
+  & .nav-tabs > li.active > a, 
+  & .nav-tabs > li.active > a:hover, 
+  & .nav-tabs > li.active > a:focus {
+    background-color: #fff;
+  }
+}
+
+#map {
+  height: 100%;
+}
+
+@media only screen and (max-width: 699px) {
+  .map_container_map {
+    height: 79vh;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+
+  .map_container {
+    height: 79vh;
+    display: flex; // children are .map_container_map and .map_container_key
+    & .nav-tabs > li > a {
+      padding: .4em;
+      font-size: .9em;
+    }
+  }
+
+  .map_container_map {
+    // width: 75vw;
+    flex: 1;
+  }
+
+  .map_container_key {
+    width: 17em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tab-content {
+    font-size: .9em;
+    height: 95%;
+    line-height: 1.15em;
+    overflow: scroll;
+    overflow-x: hidden; //must come after overflow
+    overflow-y: auto;
+
+    & ul, & li {
+      padding: 0;
+    }
+
+    h3 {
+      font-size: 1.4em;
+      margin: 0 0 .5em 0;
+      padding: 0;
+    }
+  }
+}
+
+.leaflet-popup-content {
+  h2 {
+    font-size: 2em;
+    margin: 0 0 .2em 0;
+    padding:0;
+  }
+  ul {
+    padding: 0;
+  }
+}
+
+.directory-example {
+  height: auto;
+  width: 100%;
+}
+
+.marker_popup ul {
+  list-style: none;
+}
+
+.marker_cluster {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+  color: black;
+  opacity: .85;
+  text-align: center;
+};
+
+/* LEGEND */
+
+/* this part sets it up so that the individual keys will
+   automatically float around the page as they are added
+   and removed */
+.key-container {
+  // display: flex;
+  // flex-wrap: wrap;
+}
+
+.key {
+  // flex-basis: 200px;
+  // flex-grow: 1;
+  // padding: 1em;
+}
+
+.tab-pane {
+  padding: .8em;
+}
+
+.key ul {
+  list-style: none;
+}
+
+/* individual key entries */
+.key li {
+  margin-right: 10px;
+}
+
+.label-key {
+  // column-count: 2;
+  margin-bottom: 1em;
+  display: block;
+  li {
+    -webkit-column-break-inside: avoid; /* Chrome, Safari */
+    page-break-inside: avoid;           /* Theoretically FF 20+ */
+    break-inside: avoid-column;         /* IE 11 */
+    display:table;                      /* Actually FF 20+ */
+    span {
+      border-radius: 50%;
+      border: 1px solid black;
+      display: inline-block;
+      height: 15px;
+      margin: 2px 5px 2px 2px;
+      width: 15px;
+    }
+  }
+}
+
+.key-hidden {
+  display: none;
+}
+
+.key-icon {
+  height: 30px;
+  margin: 2px 5px 2px 2px;
+  width: 30px;
+}
+
+/* directory */
+.key .default {
+  background-color: #B7B7B7;
+}
+
+/* court role key colors */
+.key .role-attorney { background-color: red; }
+.key .role-clerk { background-color: teal; }
+.key .role-defendant { background-color: green; }
+.key .role-judge { background-color: purple; }
+.key .role-juror { background-color: orange; }
+.key .role-pool { background-color: yellow; }
+.key .role-jop { background-color: pink; }
+.key .role-server { background-color: brown; }
+.key .role-witness { background-color: aqua; }
+.key .role-mult { background-color: navy; }
+
+/* gender key colors */
+.key .gender-f { background-color: #F21DFF; }
+.key .gender-m { background-color: cyan; }
+.key .gender-u { background-color: orange; }
+
+/* occupation key colors */
+.key .occ-admin { background-color: green; }
+.key .occ-ag { background-color: red; }
+.key .occ-clerical { background-color: #E3EC70; }
+.key .occ-prof { background-color: orange; }
+.key .occ-sales { background-color: lavender; }
+.key .occ-service { background-color: purple; }
+.key .occ-skilled { background-color: blue; }
+.key .occ-unskilled { background-color: aqua; }
+
+/* race key colors */
+.key .race-c { background-color: blue; }
+.key .race-w { background-color: yellow; }

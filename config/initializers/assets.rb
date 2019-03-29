@@ -21,6 +21,24 @@ Rails.application.config.assets.precompile += %w( hypertree.css )
 Rails.application.config.assets.precompile += %w( jit.min.js )
 Rails.application.config.assets.precompile += %w( hypertree.js )
 
+# map data
+Dir.glob(Rails.root.join('app', 'assets', 'javascripts', 'map_data', '*')).each do |path|
+  Rails.application.config.assets.precompile << path
+end
+
+# map icons
+icons = Dir.glob(Rails.root.join('app', 'assets', 'images', 'map_directory'))
+Rails.application.config.assets.precompile += icons
+
+# map
+Rails.application.config.assets.precompile += %w( leaflet-1.4.0.css )
+Rails.application.config.assets.precompile += %w( leaflet-1.4.0.min.js )
+Rails.application.config.assets.precompile += %w( markercluster-1.4.1.min.js )
+Rails.application.config.assets.precompile += %w( markercluster-1.4.1.css )
+Rails.application.config.assets.precompile += %w( map.css )
+Rails.application.config.assets.precompile += %w( map.js )
+
+
 Rails.application.config.assets.precompile += %w( jquery-ui.min.js )
 Rails.application.config.assets.precompile += %w( jquery-ui.css )
 Rails.application.config.assets.precompile += %w( defiant.min.js )
