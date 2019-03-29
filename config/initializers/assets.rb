@@ -26,15 +26,10 @@ Dir.glob(Rails.root.join('app', 'assets', 'javascripts', 'map_data', '*')).each 
   Rails.application.config.assets.precompile << path
 end
 
+# map icons
 icons = Dir.glob(Rails.root.join('app', 'assets', 'images', 'map_directory'))
 Rails.application.config.assets.precompile += icons
 
-# map icons
-
-Rails.application.config.assets.precompile += %w( map_data/building_json_1822.js )
-Rails.application.config.assets.precompile += %w( map_data/congress_json_1822.js )
-Rails.application.config.assets.precompile += %w( map_data/directory_json_1822.js )
-Rails.application.config.assets.precompile += %w( map_data/foreign_json_1822.js )
 # map
 Rails.application.config.assets.precompile += %w( leaflet-1.4.0.css )
 Rails.application.config.assets.precompile += %w( leaflet-1.4.0.min.js )
