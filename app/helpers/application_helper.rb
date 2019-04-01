@@ -69,7 +69,7 @@ module ApplicationHelper
         JSON.parse(item)
       rescue
         # if it can't be parsed into JSON just display what you can
-        puts "this item isn't making it through #{item}"
+        Rails.logger.debug "this item isn't making it through #{item}"
         item
       end
     end
