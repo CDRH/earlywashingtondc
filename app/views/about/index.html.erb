@@ -12,7 +12,6 @@
   </div><!-- /column -->
   <div class="col-md-6">
 	  
-	  
 <ul class="list-group">
 
   <%= link_to "Technical Information", {:name => "technical", :action => "sub"}, class: "list-group-item" %>
@@ -23,52 +22,36 @@
   </div><!-- /column -->
 </div><!-- /row -->
 
+<p>This project collects, digitizes, and makes accessible the freedom suits brought by enslaved families in the Circuit Court for the District of Columbia, Maryland state courts, and the U.S. Supreme Court. In making these documents accessible, the project invites you to explore the legal history of American slavery and the web of litigants, jurists, legal actors, and participants in the freedom suits. This project places these families in the foreground of our interpretive framework of slavery and national formation.</p>
 
-<p>This project explores multigenerational black, white, and mixed family networks in early Washington, D.C., by collecting, digitizing, making accessible, and analyzing thousands of case files from the Circuit Court for the District of Columbia, <!--the--> Maryland <!--and Virginia -->state courts, and the U.S. Supreme Court. We include petitions for freedom, civil, criminal, and chancery cases. And we incorporate where possible related documents about these families from special collections, archives, churches, and local historical societies. Scholars from the University of Nebraska-Lincoln and the University of Maryland will collaborate by uncovering the web of litigants, jurists, legal actors, and participants in this community, and by placing these family networks in the foreground of our interpretive framework of slavery and national formation.</p>
+<p>Why are we doing this? First, printed legal sources such as Judge William Cranch’s reports on the cases in the D.C. Circuit Court have been cited routinely in appellate decisions and legal briefs, as well as relied upon by legal historians for years. Yet much information—the names, occupations, and experiences—about enslaved and free African American litigants did not make it into Cranch's volumes. Cranch rarely included the last names of African Americans, did not publish the original papers for their freedom cases, and focused only on the handful of cases that he thought established legal procedures and rules. The result is a historical and genealogical erasure that needs repair.</p>
 
-<p>Newly updated and highlighted materials are featured on the project's <a href="http://earlydc.tumblr.com" target="new">Tumblr</a>; the <%= link_to "Changelog", changelog_path %> records the major updates to the site.</p>
+<p>Second, freedom suits presented a significant legal challenge to slavery and slaveholders. Freedom suits were, in fact, common across the Americas—thousands of cases were brought in the U.S., Brazil, Cuba, and the French and British Caribbean. In the U.S., African American enslaved families accumulated legal knowledge, legal acumen, and experience with the law that they passed from one generation to the next. The freedom suits they brought against slaveholders exposed slavery <em>a priori</em> as subject to legal question. The suits in Washington, D.C., the nation's capital, raised questions about the constitutional and legal legitimacy of slavery, and by extension, affected slavery and law in Maryland, Virginia, and all of the federal territories. Fundamentally, slavery was more susceptible to legal challenge than many scholars have accounted for.</p>
 
-<h3>Project Goals</h3>
-
-<p>The project will collect, digitize, and edit relevant legal and personal records in the following order:
-    <ul>
-        <li>All petitions for freedom cases originating in the D.C. Circuit Court sittings in Washington and Alexandria, 1800-1862<!-- (75% complete, September 2015)--></li>
-        <li>Civil Cases involving African American families, 1800-1820</li>
-        <li>Chancery Records involving African American families, 1800-1820</li>
-        <li>Criminal Records involving African American families, 1800-1820</li>
-    </ul>
-</p>
-
-<p>The project will also release an updated index and an enhanced EAD for the National Archives and Records Administration's index of "Black Washingtonian" legal records held in Record Group 21.</p>
+<p>Third, these cases and the documents about them reveal the terrible scale and scope of the domestic interstate slave trade in U.S. history and the ways that families used the law, especially to resist the slave trade and the breakup and separation of their families.</p>
 
 
-<h4>Relationship & People Encoding</h4>
+<h3>Encoding People & Relationships</h3>
 
-<p>The project attempts to infer relationships between every individual named in the legal records, to assemble a complete set of ascribed relationships for every individual, and to make visible what has been invisible in the history of slavery, including the networks of relationships of the enslaved and free. Scholars have written accounts of slavery based on models that have been quantitative (economic), institutional, political, and cultural. Many of these works have treated slavery as a system, and more recently, as a particularly exploitative feature of the process of capitalist development in the early modern and modern world. It was also experienced in individual actions and individual movements through space and time, the traces of these largely invisible in the historical record.</p>
+<p>The project attempts to document and infer relationships between every individual named in the legal records, to assemble a complete set of ascribed relationships for each individual, and to make visible connections in the freedom suits, including the networks of relationships of the enslaved and free. Using the D.C. Circuit Court case papers and other records, we attempt to reconstruct the situation for the participants in each freedom suit.</p>
 
-<p>In the digital space, using the D.C. Circuit Court case files, we are attempting to model a multidimensional approach to documenting the lived experience of individual enslaved and free African Americans in the early republic. Each individual has a record where their status, color, and other attributes might change over time&#8212;presented in one way at one time and in another way at another time. Just as important, every relationship of every person, as expressed in these documents (enslaved by, parent of, child of, neighbor of, witness for, client of, . . .), will be encoded into a standard, extensible, and widely sharable format. For further information, see <%= link_to "Data Download & Query", {:name => "data", :action => "sub"} %>.</p>
+<p>There are significant challenges. First, the records are fragmentary and incomplete. Second, the records we have are ones produced by and through a legal culture controlled by slaveholders.</p>
+
+<p>This digital archive, therefore, is an alternate archive, one designed to put the evidentiary fragments in relation to one another and to expose and simultaneously move beyond the legal culture that produced them. It is both an archive and a shadow archive, a diptych that shows in relief what would otherwise remain hidden.</p>
+
+<p>To this end, every individual mentioned in the case papers has an individual project record. We expose the instability of each person's described attributes such as status, color, gender, occupation, and residence, by linking each instance of ascription in the documentary record. Attributes change over time and from describer to describer—they are presented in one way at one time and in another way at another time, depending on the situation and the author.</p>
+
+<p>Just as important, every relationship of every person, as expressed in these documents (enslaved by, parent of, child of, neighbor of, witness for, client of, . . .), is encoded into a standard, extensible, and widely sharable format. For further information, see <%= link_to "Data Download & Query", {:name => "data", :action => "sub"} %>.</p>
 
 <p>Here's an example of the TEI encoding of people:<br/>
 <%= link_to image_tag("about.01.jpg"), person_path("per.000451") %></p>
 
-<p>Each entry points to the source document for each attribute. Each attribute can change over time. Name, age, and especially color appeared differently in different documents over time. Residences of the enslaved are named and can be tracked. <!-- I don't know if Laura has been doing this. --> Our encoding of the relationships in these legal cases begins to suggest the extraordinary range of contacts and connections in the social world of the early republic.</p> 
+<p>Each descriptive entry points to the source document for each attribute. Each attribute can have multiple instances. Name, age, and especially color appeared differently in different documents over time. Residences of the enslaved are named and can be tracked.</p>
 
-<p>In 168 cases&#8212;all petitions for freedom&#8212;we have found the names of 1,244 individuals, and these 1,244 individuals had 10,146 different relationships.</p> 
-
-<p>If we were to extrapolate on the basis of the encoding, we have approximately <!--35-->60 relationships contained in each case. With over 4,000 cases we might have <!--142,144-->240,000 relationships.</p>
-
-<h4>Recovering African American Histories</h4>
-
-<p>The project's goal is also to make visible the lives of enslaved and free African Americans. Much information&#8212;the names, occupations, and experiences&#8212;about enslaved and free African Americans did not make it into William Cranch's reports on the cases in the D.C. Circuit Court. He rarely included last names of African Americans, yet detailed information is contained in the original case papers and minute books. Cranch's volumes have been cited routinely in appellate decisions and legal briefs, as well as relied upon by legal historians for years. Yet, Cranch excluded last names of African Americans throughout his volumes and focused mainly on legal procedures and rules. The result is a historical and genealogical erasure that needs repair.</p>
+<p>Our encoding of the relationships in these freedom suits begins to reveal the extraordinary range of contacts, descriptions, and connections in this social and legal world. In 509 petitions for freedom, we have found the names of over 4,800 individuals and 55,000 relationships.</p>
 
 
 <h3>Funding & Support</h3>
 
 <p>Funding and support are provided by the <a href="http://www.neh.gov/">National Endowment for the Humanities</a>, the <a href="http://cdrh.unl.edu">Center for Digital Research in the Humanities</a> at the University of Nebraska–Lincoln, and the University of Maryland's <a href="http://mith.umd.edu/">Maryland Institute for Technology in the Humanities</a>.</p>
 
-
-
-
-<!--<p>This project explores multigenerational black and white family networks in early Washington, D.C., by collecting, digitizing, making accessible, and analyzing thousands of case files from the Circuit Court for the District of Columbia, records of Maryland courts, and related documents about these families. Scholars from the University of Nebraska-Lincoln and the University of Maryland will collaborate by uncovering the web of litigants, jurists, legal actors, and participants in this community, and by placing these family networks in the foreground of our interpretive framework of slavery and national formation.</p>
-
-<p>Funding and support are provided by the National Endowment for the Humanities, the Center for Digital Research in the Humanities at the University of Nebraska–Lincoln, and the University of Maryland's Maryland Institute for Technology in the Humanities.</p>-->
