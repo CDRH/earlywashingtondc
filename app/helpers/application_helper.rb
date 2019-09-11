@@ -133,8 +133,10 @@ module ApplicationHelper
           if hash['id'] =~ URI::regexp
             # if this has a real url then use
             res += "<li>" + hash['label'] + " <span class='source_note'>[" + "<a href=\"#{hash['id']}\">source</a>" + "]</span></li>"
-          else
+          elsif hash['id'].present?
             res += "<li>" + hash['label'] + " <span class='source_date'>#{date}</span> " +  "<span class='source_note'>[" + "#{link_to 'source', doc_path(hash['id'])}" + "]</span></li>"
+          else
+            res += "<li>" + hash['label'] + " <span class='source_date'>#{date}</span></li>"
           end
         rescue
           # if it can't be parsed into JSON just display what you can
