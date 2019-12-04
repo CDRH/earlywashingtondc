@@ -112,6 +112,15 @@ var foreignFields = [
   "Address"
 ];
 
+var wardFields = [
+  "F1820_Total_Pop",
+  "F1830_Total_Pop",
+  "F1820_Perc_AA",
+  "F1830_Perc_AA",
+  "F1830_Property_Values",
+  "F1830_Improvement_Values"
+];
+
 // these abbrevations are mapped to more descriptive terminology
 // note quotation marks around terminology used in directory
 // they show up in the marker popup information
@@ -197,13 +206,16 @@ var markerImages = {
 // LAYERS //
 // ****** //
 
+// court role 1822 will be added to the map below
 var courtRole1822 = createColorMarkerLayer(directory_json_1822, "Court Role", false)
-map.addLayer(courtRole1822);
-
-// create the additional layers but do not display yet on the map
 var race1822 = createColorMarkerLayer(directory_json_1822, "Race", true)
 var gender1822 = createColorMarkerLayer(directory_json_1822, "Gender", true)
 var occupations1822 = createColorMarkerLayer(directory_json_1822, "HISCO", true)
+
+var courtRole1834 = createColorMarkerLayer(directory_json_1834, "Court Role", false)
+var race1834 = createColorMarkerLayer(directory_json_1834, "Race", true)
+var gender1834 = createColorMarkerLayer(directory_json_1834, "Gender", true)
+var occupations1834 = createColorMarkerLayer(directory_json_1834, "HISCO", true)
 
 // adds the 1822 building layer
 var buildings1822 = L.geoJSON(building_json_1822, {
@@ -239,6 +251,37 @@ var congress1822 = L.geoJSON(congress_json_1822, {
   onEachFeature: onEachFeatureCongress,
 });
 
+// adds the 1820 wards for race percentage
+var wards = L.geoJSON(wards_json, {
+  onEachFeature: function (feature, layer) {
+    props = feature.properties;
+    var name = props["Name"];
+    var html = htmlBuilder(name, props, wardFields, null);
+    html += "<div>"+props["F1830_Property_Values"]+"</div>";
+    layer.bindPopup(html);
+  },
+  style: function(feature) {
+    var pop = feature.properties.F1820_Total_Pop;
+    var fill = "grey";
+    console.log(feature.properties.F1820_Total_Pop);
+    if (pop < 1500) {
+      fill = "yellow";
+    } else if (pop < 2000) {
+      fill = "orange";
+    } else if (pop < 2500) {
+      fill = "red";
+    } else {
+      fill = "purple";
+    }
+    return { fillColor: fill, color: "grey", fillOpacity: 0.3 };
+  }
+});
+
+// add wards first so that court roles are "on top" of them
+// for user clicks
+wards.addTo(map);
+map.addLayer(courtRole1822);
+
 // uncomment these lines if you would prefer that these layers
 // are displayed on the map on startup
 // buildings1822.addTo(map);
@@ -253,6 +296,10 @@ var layerControl = L.control.layers(
     "1822 Occupation" : occupations1822,
     "1822 Race" : race1822,
     "1822 Gender" : gender1822,
+    "1834 Court Role": courtRole1834,
+    "1834 Occupation": occupations1834,
+    "1834 Race": race1834,
+    "1834 Gender": gender1834,
   },
   // the second group of layers may have multiple displaying at once
   {
@@ -267,6 +314,21 @@ var layerControl = L.control.layers(
   }
 )
 layerControl.addTo(map);
+
+var layerControl2 = L.control.layers(
+  // the first group of layers only displays ONE layer at a given time
+  {},
+  // the second group of layers may have multiple displaying at once
+  {
+    "1820 Ward Population": wards,
+  },
+  // further layer control settings are available
+  // such as the location on the map ("topright" at the moment)
+  {
+    collapsed: false, autoZIndex: false, sortLayers: false, position: "topright"
+  }
+)
+layerControl2.addTo(map);
 
 
 // ****** //
