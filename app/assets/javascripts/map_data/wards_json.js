@@ -388,12 +388,12 @@ var wards_json = {
         "Name" : "6th Ward",
         "Shape_Length" : 0.128793885341692,
         "Shape_Area" : 0.00052861849086650241,
-        "F1820_Total_Pop" : 2359,
-        "F1830_Total_Pop" : 2130,
-        "F1820_Perc_AA" : 14,
-        "F1830_Perc_AA" : 14,
-        "F1830_Property_Values" : 36125,
-        "F1830_Improvement_Values" : 208585
+        "1820_Total_Population" : 2359,
+        "1830_Total_Population" : 2130,
+        "1820_Percent_Colored" : 14,
+        "1830_Percent_Colored" : 14,
+        "1830_Property_Values" : 36125,
+        "1830_Improvement_Values" : 208585
       }
     },
     {
@@ -695,12 +695,12 @@ var wards_json = {
         "Name" : "5th Ward",
         "Shape_Length" : 0.093899940515166036,
         "Shape_Area" : 0.000322572602964622,
-        "F1820_Total_Pop" : 1453,
-        "F1830_Total_Pop" : 1356,
-        "F1820_Perc_AA" : 34,
-        "F1830_Perc_AA" : 31,
-        "F1830_Property_Values" : 24175,
-        "F1830_Improvement_Values" : 169810
+        "1820_Total_Population" : 1453,
+        "1830_Total_Population" : 1356,
+        "1820_Percent_Colored" : 34,
+        "1830_Percent_Colored" : 31,
+        "1830_Property_Values" : 24175,
+        "1830_Improvement_Values" : 169810
       }
     },
     {
@@ -754,12 +754,12 @@ var wards_json = {
         "Name" : "4th Ward",
         "Shape_Length" : 0.087549846705122364,
         "Shape_Area" : 0.0004390721639335456,
-        "F1820_Total_Pop" : 1610,
-        "F1830_Total_Pop" : 1860,
-        "F1820_Perc_AA" : 33,
-        "F1830_Perc_AA" : 39,
-        "F1830_Property_Values" : 43150,
-        "F1830_Improvement_Values" : 250200
+        "1820_Total_Population" : 1610,
+        "1830_Total_Population" : 1860,
+        "1820_Percent_Colored" : 33,
+        "1830_Percent_Colored" : 39,
+        "1830_Property_Values" : 43150,
+        "1830_Improvement_Values" : 250200
       }
     },
     {
@@ -813,12 +813,12 @@ var wards_json = {
         "Name" : "3rd Ward",
         "Shape_Length" : 0.096957280836895712,
         "Shape_Area" : 0.00044202310087044751,
-        "F1820_Total_Pop" : 2550,
-        "F1830_Total_Pop" : 5747,
-        "F1820_Perc_AA" : 22,
-        "F1830_Perc_AA" : 25,
-        "F1830_Property_Values" : 183370,
-        "F1830_Improvement_Values" : 999475
+        "1820_Total_Population" : 2550,
+        "1830_Total_Population" : 5747,
+        "1820_Percent_Colored" : 22,
+        "1830_Percent_Colored" : 25,
+        "1830_Property_Values" : 183370,
+        "1830_Improvement_Values" : 999475
       }
     },
     {
@@ -908,12 +908,12 @@ var wards_json = {
         "Name" : "2nd Ward",
         "Shape_Length" : 0.094178855361347458,
         "Shape_Area" : 0.00031753993027125855,
-        "F1820_Total_Pop" : 2467,
-        "F1830_Total_Pop" : 4049,
-        "F1820_Perc_AA" : 28,
-        "F1830_Perc_AA" : 29,
-        "F1830_Property_Values" : 131600,
-        "F1830_Improvement_Values" : 671605
+        "1820_Total_Population" : 2467,
+        "1830_Total_Population" : 4049,
+        "1820_Percent_Colored" : 28,
+        "1830_Percent_Colored" : 29,
+        "1830_Property_Values" : 131600,
+        "1830_Improvement_Values" : 671605
       }
     },
     {
@@ -1263,12 +1263,12 @@ var wards_json = {
         "Name" : "1st Ward",
         "Shape_Length" : 0.1196270800012957,
         "Shape_Area" : 0.00052309016262374805,
-        "F1820_Total_Pop" : 2808,
-        "F1830_Total_Pop" : 3675,
-        "F1820_Perc_AA" : 36,
-        "F1830_Perc_AA" : 36,
-        "F1830_Property_Values" : 133600,
-        "F1830_Improvement_Values" : 624783
+        "1820_Total_Population" : 2808,
+        "1830_Total_Population" : 3675,
+        "1820_Percent_Colored" : 36,
+        "1830_Percent_Colored" : 36,
+        "1830_Property_Values" : 133600,
+        "1830_Improvement_Values" : 624783
       }
     }
   ]

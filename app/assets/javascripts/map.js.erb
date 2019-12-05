@@ -94,7 +94,6 @@ function defaultMarker(color = "#B7B7B7") {
 var buildingFields = [
   "Description",
   "Address"
-
 ];
 
 // these are the fields from the spreadsheet used in the popups
@@ -125,7 +124,8 @@ var directoryFields = [
   "HISCO",
   "Race",
   "Gender",
-  "Address"
+  "Address",
+  "Memorial"
 ];
 
 // these are the fields from the spreadsheet used in the popups
@@ -139,12 +139,14 @@ var foreignFields = [
 // these abbrevations are mapped to more descriptive terminology
 // note quotation marks around terminology used in directory
 // they show up in the marker popup information
-var genderRaceMapping = {
+var fieldMapping = {
   "c" : "colored",
+  "e" : "Signatory of Memorial",
   "f" : "female",
   "m" : "male",
   "u" : "unknown",
-  "w" : "white"
+  "w" : "white",
+  "?" : "Possible Signatory of Memorial"
 };
 
 // selects the marker color for each of the following
@@ -178,6 +180,10 @@ var markerColors = {
     "service" : "purple",
     "skilled labor" : "blue",
     "unskilled labor" : "aqua"
+  },
+  "Memorial" : {
+    "e" : "white",
+    "?" : "darkturquoise"
   },
   "Race" : {
     "c" : "blue",
@@ -248,6 +254,7 @@ var create_and_apply_layers = function(directory_json) {
   var race = createColorMarkerLayer(directory_json, "Race", true)
   var gender = createColorMarkerLayer(directory_json, "Gender", true)
   var occupations = createColorMarkerLayer(directory_json, "HISCO", true)
+  var memorial = createColorMarkerLayer(directory_json, "Memorial", true)
 
   if (year == "1822") {
     // adds the building layer
@@ -286,13 +293,13 @@ var create_and_apply_layers = function(directory_json) {
   }
 
   // adds the wards with population coloring
-  var wpfield = (year == "1822") ? "F1820_Total_Pop" : "F1830_Total_Pop";
+  var wpfield = (year == "1822") ? "1820_Total_Population" : "1830_Total_Population";
   var wardPop = L.geoJSON(wards_json, {
     onEachFeature: onEachFeatureWard([wpfield]),
     style: styleWardPopulation,
   });
 
-  var wrfield = (year == "1822") ? "F1820_Perc_AA" : "F1830_Perc_AA";
+  var wrfield = (year == "1822") ? "1820_Percent_Colored" : "1830_Percent_Colored";
   var wardRace = L.geoJSON(wards_json, {
     onEachFeature: onEachFeatureWard([wrfield]),
     style: styleWardRace,
@@ -300,7 +307,7 @@ var create_and_apply_layers = function(directory_json) {
 
   if (year == "1834") {
     var wardPropertyValues = L.geoJSON(wards_json, {
-      onEachFeature: onEachFeatureWard(["F1830_Property_Values", "F1830_Improvement_Values"]),
+      onEachFeature: onEachFeatureWard(["1830_Property_Values", "1830_Improvement_Values"]),
       style: styleWardPropertyValues,
     });
   }
@@ -336,6 +343,7 @@ var create_and_apply_layers = function(directory_json) {
       "Occupation" : occupations,
       "Race" : race,
       "Gender" : gender,
+      "Memorial" : memorial
     },
     // the second group of layers may have multiple displaying at once
     checkboxes,
@@ -465,8 +473,8 @@ function htmlBuilder(heading, props, fieldList, url) {
       var label = field.replace(/_/g, " ");
       if (label == "HISCO") { label = "Work Category"; }
       var val = props[field];
-      if (label == "Gender" || label == "Race") {
-        val = genderRaceMapping[val] || val;
+      if (label == "Gender" || label == "Race" || label == "Memorial") {
+        val = fieldMapping[val] || val;
       }
       html += '<li><strong>'+label+'</strong>: '+val+'</li>';
     }
@@ -526,7 +534,7 @@ function onEachFeature(feature, layer) {
 };
 
 function styleWardPopulation(feature) {
-  var pop = (year == "1822") ? feature.properties.F1820_Total_Pop : feature.properties.F1830_Total_Pop;
+  var pop = (year == "1822") ? feature.properties["1820_Total_Population"] : feature.properties["1830_Total_Population"];
   var colors = polygonColors["population"];
   var fill = "grey";
   if (pop < 1500) { fill = colors[1500] }
@@ -538,7 +546,7 @@ function styleWardPopulation(feature) {
 }
 
 function styleWardPropertyValues(feature) {
-  var val = feature.properties.F1830_Property_Values;
+  var val = feature.properties["1830_Property_Values"];
   var colors = polygonColors["property_values"];
   var fill = "grey";
   if (val < 50000) { fill = colors["low"] }
@@ -550,7 +558,7 @@ function styleWardPropertyValues(feature) {
 }
 
 function styleWardRace(feature) {
-  var perc = (year == "1822") ? feature.properties.F1820_Perc_AA : feature.properties.F1830_Perc_AA;
+  var perc = (year == "1822") ? feature.properties["1820_Percent_Colored"] : feature.properties["1830_Percent_Colored"];
   var colors = polygonColors["race"];
   var fill = "grey";
   if (perc < 25) { fill = colors[25] }
