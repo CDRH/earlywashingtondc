@@ -2,18 +2,24 @@
 // MAP SET UP //
 // ********** //
 
+<%# TODO set up variable for location of media server on dev / production %>
+
 // request the geojson and load it behind the scenes from the map interface
 // then add the layers to the map when ready
+<%# note currently there is only one request being made at a given time, but
+    in the future there may be more layers for 1834 so leaving as is %>
+console.log("URL: " + "https://cdrhdev1.unl.edu/media/data/oscys/output/development/json/"+year+"_directory.json")
 var requests = [
-  $.getJSON("https://cdrhdev1.unl.edu/media/data/oscys/output/development/json/1822_directory.json"),
-  $.getJSON("https://cdrhdev1.unl.edu/media/data/oscys/output/development/json/1834_directory.json")
+  $.getJSON("https://cdrhdev1.unl.edu/media/data/oscys/output/development/json/"+year+"_directory.json"),
+  // $.getJSON("https://cdrhdev1.unl.edu/media/data/oscys/output/development/json/1834_directory.json")
 ];
 
 $.when
   .apply($,requests)
   .done(function() {
-    // assume the same order as outgoing requests
-    create_and_apply_layers(arguments[0][0], arguments[1][0])
+    // assume the same order as outgoing requests, multiple commented out for now
+    // create_and_apply_layers(arguments[0][0], arguments[1][0])
+    create_and_apply_layers(arguments[0])
   })
   .fail(function() {
     console.error("something went wrong with request for directory geojson");
@@ -229,51 +235,48 @@ var markerImages = {
 // LAYERS //
 // ****** //
 
-var create_and_apply_layers = function(directory_json_1822, directory_json_1834) {
-  // court role 1822 will be added to the map below
-  var courtRole1822 = createColorMarkerLayer(directory_json_1822, "Court Role", false)
-  var race1822 = createColorMarkerLayer(directory_json_1822, "Race", true)
-  var gender1822 = createColorMarkerLayer(directory_json_1822, "Gender", true)
-  var occupations1822 = createColorMarkerLayer(directory_json_1822, "HISCO", true)
+var create_and_apply_layers = function(directory_json) {
+  // court role  will be added to the map below
+  var courtRole = createColorMarkerLayer(directory_json, "Court Role", false)
+  var race = createColorMarkerLayer(directory_json, "Race", true)
+  var gender = createColorMarkerLayer(directory_json, "Gender", true)
+  var occupations = createColorMarkerLayer(directory_json, "HISCO", true)
 
-  var courtRole1834 = createColorMarkerLayer(directory_json_1834, "Court Role", false)
-  var race1834 = createColorMarkerLayer(directory_json_1834, "Race", true)
-  var gender1834 = createColorMarkerLayer(directory_json_1834, "Gender", true)
-  var occupations1834 = createColorMarkerLayer(directory_json_1834, "HISCO", true)
+  if (year == "1822") {
+    // adds the building layer
+    var buildings = L.geoJSON(building_json_1822, {
+      pointToLayer: function (feature, latlng) {
+        image = markerImages[feature.properties["Description"]] || markerImages["default"];
+        var icon = L.icon({ iconUrl: image, iconSize: [20, 20] });
+        return L.marker(latlng, { icon: icon });
+      },
+      onEachFeature: onEachFeatureBuilding,
+    })
 
-  // adds the 1822 building layer
-  var buildings1822 = L.geoJSON(building_json_1822, {
-    pointToLayer: function (feature, latlng) {
-      image = markerImages[feature.properties["Description"]] || markerImages["default"];
-      var icon = L.icon({ iconUrl: image, iconSize: [20, 20] });
-      return L.marker(latlng, { icon: icon });
-    },
-    onEachFeature: onEachFeatureBuilding,
-  })
+    // adds the foreign dignitaries layer
+    var foreign = L.geoJSON(foreign_json_1822, {
+      pointToLayer: function (feature, latlng) {
+        country = feature.properties["Country"].toLowerCase();
+        image = markerImages[country] || markerImages["default"];
+        var icon = L.icon({ iconUrl: image, iconSize: [18, 18] });
+        return L.marker(latlng, { icon: icon });
+      },
+      onEachFeature: onEachFeatureForeign,
+    });
 
-  // adds the 1822 foreign dignitaries layer
-  var foreign1822 = L.geoJSON(foreign_json_1822, {
-    pointToLayer: function (feature, latlng) {
-      country = feature.properties["Country"].toLowerCase();
-      image = markerImages[country] || markerImages["default"];
-      var icon = L.icon({ iconUrl: image, iconSize: [18, 18] });
-      return L.marker(latlng, { icon: icon });
-    },
-    onEachFeature: onEachFeatureForeign,
-  });
-
-  // adds the 1822 roles in congress layer
-  var congress1822 = L.geoJSON(congress_json_1822, {
-    pointToLayer: function (feature, latlng) {
-      party = congressMapping[feature.properties["Political Party"]] || "unknown"
-      role = congressMapping[feature.properties["Occupation"]] || "unknown"
-      imgName = party + "_" + role;
-      imgPath = markerImages[imgName] || markerImages["default"];
-      var icon = L.icon({ iconUrl: imgPath, iconSize: [18, 18] });
-      return L.marker(latlng, { icon: icon });
-    },
-    onEachFeature: onEachFeatureCongress,
-  });
+    // adds the roles in congress layer
+    var congress = L.geoJSON(congress_json_1822, {
+      pointToLayer: function (feature, latlng) {
+        party = congressMapping[feature.properties["Political Party"]] || "unknown"
+        role = congressMapping[feature.properties["Occupation"]] || "unknown"
+        imgName = party + "_" + role;
+        imgPath = markerImages[imgName] || markerImages["default"];
+        var icon = L.icon({ iconUrl: imgPath, iconSize: [18, 18] });
+        return L.marker(latlng, { icon: icon });
+      },
+      onEachFeature: onEachFeatureCongress,
+    });
+  }
 
   // adds the wards with population coloring
   var wardPop = L.geoJSON(wards_json, {
@@ -286,35 +289,39 @@ var create_and_apply_layers = function(directory_json_1822, directory_json_1834)
     style: styleWardRace,
   });
 
-  map.addLayer(courtRole1822);
+  map.addLayer(courtRole);
 
   // uncomment these lines if you would prefer that these layers
   // are displayed on the map on startup
-  // buildings1822.addTo(map);
-  // congress1822.addTo(map);
-  // foreign1822.addTo(map);
+  // buildings.addTo(map);
+  // congress.addTo(map);
+  // foreign.addTo(map);
 
   // creates a UI control for switching between layers
+  if (year == "1822") {
+    checkboxes = {
+      "Public Buildings" : buildings,
+      "Congress" : congress,
+      "Foreign Dignitaries" : foreign,
+      "1820/1830 Ward Pop.": wardPop,
+      "1820/1830 Ward % Colored": wardRace,
+    }
+  } else {
+    checkboxes = {
+      "1820/1830 Ward Pop.": wardPop,
+      "1820/1830 Ward % Colored": wardRace,
+    }
+  }
   var layerControl = L.control.layers(
     // the first group of layers only displays ONE layer at a given time
     {
-      "1822 Court Role": courtRole1822,
-      "1822 Occupation" : occupations1822,
-      "1822 Race" : race1822,
-      "1822 Gender" : gender1822,
-      "1834 Court Role": courtRole1834,
-      "1834 Occupation": occupations1834,
-      "1834 Race": race1834,
-      "1834 Gender": gender1834,
+      "Court Role": courtRole,
+      "Occupation" : occupations,
+      "Race" : race,
+      "Gender" : gender,
     },
     // the second group of layers may have multiple displaying at once
-    {
-      "1822 Public Buildings" : buildings1822,
-      "1822 Congress" : congress1822,
-      "1822 Foreign Dignitaries" : foreign1822,
-      "Ward Population": wardPop,
-      "Ward Percent Colored": wardRace,
-    },
+    checkboxes,
     // further layer control settings are available
     // such as the location on the map ("topright" at the moment)
     {
@@ -502,7 +509,7 @@ function onEachFeature(feature, layer) {
 };
 
 function styleWardPopulation(feature) {
-  var pop = feature.properties.F1820_Total_Pop;
+  var pop = (year == "1822") ? feature.properties.F1820_Total_Pop : feature.properties.F1830_Total_Pop;
   var colors = polygonColors["population"];
   var fill = "grey";
   if (pop < 1500) { fill = colors[1500] }
@@ -514,7 +521,7 @@ function styleWardPopulation(feature) {
 }
 
 function styleWardRace(feature) {
-  var perc = feature.properties.F1820_Perc_AA;
+  var perc = (year == "1822") ? feature.properties.F1820_Perc_AA : feature.properties.F1830_Perc_AA;
   var colors = polygonColors["race"];
   var fill = "grey";
   if (perc < 25) { fill = colors[25] }
