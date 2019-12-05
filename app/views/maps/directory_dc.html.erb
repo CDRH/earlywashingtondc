@@ -39,14 +39,21 @@
       <ul class="nav nav-tabs">
         <li class="active">
           <a href="#map_directory" data-toggle="tab">Directory</a>
-         </li>
+        </li>
+        <% if @year == "1822" %>
+          <li>
+            <a href="#other_legends" data-toggle="tab">Other</a>
+          </li>
+        <% end %>
         <li>
-          <a href="#other_legends" data-toggle="tab">Other</a>
+          <a href="#wards_legends" data-toggle="tab">Wards</a>
         </li>
       </ul>
     </div><%# map_container_key_nav %>
 
     <div class="tab-content map_container_key_content key-container">
+
+      <%# DIRECTORY LEGEND %>
 
       <div class="tab-pane active" id="map_directory">
 
@@ -66,165 +73,104 @@
             <li><span class="role-mult"></span>Multiple Roles</li>
             <li><span class="default"></span>None</li>
           </ul>
+        </div><%# /key-directory %>
 
-      </div><%# /key-directory %>
+        <!-- these layers should not be displayed on page load
+             but will be displayed when a user selects them -->
+        <div id="key-Gender" class="key key-directory key-hidden">
+          <h3>Gender</h3>
+          <ul class="label-key">
+            <li><span class="gender-f"></span>Female</li>
+            <li><span class="gender-m"></span>Male</li>
+            <li><span class="gender-u"></span>Unknown</li>
+          </ul>
+          <p>Some individuals were listed only by their initials, so their gender was unclear.</p>
+        </div> <%# /key-Gender %>
 
-      <!-- these layers should not be displayed on page load
-           but will be displayed when a user selects them -->
-      <div id="key-Gender" class="key key-directory key-hidden">
-        <h3>Gender</h3>
-        <ul class="label-key">
-          <li><span class="gender-f"></span>Female</li>
-          <li><span class="gender-m"></span>Male</li>
-          <li><span class="gender-u"></span>Unknown</li>
-        </ul>
-        <p>Some individuals were listed only by their initials, so their gender was unclear.</p>
-      </div> <%# /key-Gender %>
+        <div id="key-Occupation" class="key key-directory key-hidden">
+          <h3>Occupation <a href="#occupations">*</a></h3>
+          <ul class="label-key">
+            <li><span class="occ-admin"></span>Administrative</li>
+            <li><span class="occ-ag"></span>Agricultural</li>
+            <li><span class="occ-clerical"></span>Clerical</li>
+            <li><span class="occ-prof"></span>Professional</li>
+            <li><span class="occ-sales"></span>Sales</li>
+            <li><span class="occ-service"></span>Service</li>
+            <li><span class="occ-skilled"></span>Skilled Labor</li>
+            <li><span class="occ-unskilled"></span>Unskilled Labor</li>
+          </ul>
 
-      <div id="key-Occupation" class="key key-directory key-hidden">
-        <h3>Occupation <a href="#occupations">*</a></h3>
-        <ul class="label-key">
-          <li><span class="occ-admin"></span>Administrative</li>
-          <li><span class="occ-ag"></span>Agricultural</li>
-          <li><span class="occ-clerical"></span>Clerical</li>
-          <li><span class="occ-prof"></span>Professional</li>
-          <li><span class="occ-sales"></span>Sales</li>
-          <li><span class="occ-service"></span>Service</li>
-          <li><span class="occ-skilled"></span>Skilled Labor</li>
-          <li><span class="occ-unskilled"></span>Unskilled Labor</li>
-        </ul>
+        </div> <%# /key-Occupation %>
 
-      </div> <%# /key-Occupation %>
+        <div id="key-Race" class="key key-directory key-hidden">
+          <h3>Race <a href="#race">*</a></h3>
+          <ul class="label-key">
+            <li><span class="race-c"></span>Colored</li>
+            <li><span class="race-w"></span>White</li>
+          </ul>
 
-      <div id="key-Race" class="key key-directory key-hidden">
-        <h3>Race <a href="#race">*</a></h3>
-        <ul class="label-key">
-          <li><span class="race-c"></span>Colored</li>
-          <li><span class="race-w"></span>White</li>
-        </ul>
+          <p>The original language of the directory is preserved in this map in order to provide an image of the world in which freedom petitioners lived and the structures they navigated in the pursuit of their freedom.</p>
 
-        <p>The original language of the directory is preserved in this map in order to provide an image of the world in which freedom petitioners lived and the structures they navigated in the pursuit of their freedom.</p>
+        </div> <%# /key-Race %>
 
-      </div> <%# /key-Race %>
+        <div id="key-Memorial" class="key key-directory key-hidden">
+          <h3>Memorial <a href="#memorial">*</a></h3>
+          <ul class="label-key">
+            <li><span class="memorial-e"></span>Signatory of Memorial</li>
+            <li><span class="memorial-q"></span>Possible Signatory of Memorial</li>
+          </ul>
 
-      <div id="key-Memorial" class="key key-directory key-hidden">
-        <h3>Memorial <a href="#memorial">*</a></h3>
-        <ul class="label-key">
-          <li><span class="memorial-e"></span>Signatory of Memorial</li>
-          <li><span class="memorial-q"></span>Possible Signatory of Memorial</li>
-        </ul>
+          <p>TODO language here explaining this layer</p>
 
-        <p>TODO language here explaining this layer</p>
+        </div> <%# /key-Memorial %>
 
-      </div> <%# /key-Memorial %>
+      </div><%# /map_directory tab %>
 
-    </div><%# /map_directory tab %>
+      <%# PUBLIC BUILDINGS / FOREIGN OFFICIALS LEGEND %>
 
-    <div class="tab-pane" id="other_legends">
+      <% if @year == "1822" %>
+        <%= render "directory_legend_other" %>
+      <% end %>
 
-      <!-- these layers are currently displayed on page load
-           but make sure to add "key-hidden" to the class if
-           the settings for the leaflet map change -->
-      <div id="key-Congress" class="key key-other">
-        <h3>Congress</h3>
-        <ul>
-          <li>
-            <%= image_tag "map_directory/delegate.svg", class: "key-icon" %>
-            Delegate to the House
-          </li>
-          <li>
-            <%= image_tag "map_directory/rep.svg", class: "key-icon" %>
-            Representative
-          </li>
-          <li>
-            <%= image_tag "map_directory/senator.svg", class: "key-icon" %>
-            Senator</li>
-          </li>
-          <li>
-            <%= image_tag "map_directory/vp.svg", class: "key-icon" %>
-            Vice President
-          </li>
-          <li>
-            <%= image_tag "map_directory/dr.svg", class: "key-icon" %>
-             Democratic-Republican
-          </li>
-          <li>
-            <%= image_tag "map_directory/fed.svg", class: "key-icon" %>
-            Federalist 
-          </li>
-          <li>
-            <%= image_tag "map_directory/unknown.svg", class: "key-icon" %>
-            No Party Affiliation 
-          </li>
-        </ul>
-      </div> <%# /key-Congress %>
+      <%# WARDS LEGEND %>
 
-      <div id="key-Foreign_Dignitaries" class="key key-other">
-        <h3>Foreign Dignitaries</h3>
-        <ul>
-          <li>
-            <%= image_tag "map_directory/france.png", class: "key-icon" %>
-            France
-          </li>
-          <li>
-            <%= image_tag "map_directory/britain.png", class: "key-icon" %>
-            Great Britain
-          </li>
-          <li>
-            <%= image_tag "map_directory/mexico.png", class: "key-icon" %>
-            Mexico
-          </li>
-          <li>
-            <%= image_tag "map_directory/sweden.png", class: "key-icon" %>
-            Sweden
-          </li>
-        </ul>
-      </div> <%# /key-Foreign_Dignitaries %>
+      <div class="tab-pane" id="wards_legends">
+        <p>Note: ward colors on the historic map affect the appearance of these layers</p>
 
-      <div id="key-Public_Buildings" class="key key-other">
-        <h3>Buildings</h3>
-        <ul>
-          <li>
-            <%= image_tag "map_directory/cathedral.png", class: "key-icon" %>
-            Church (Catholic)
-          </li>
-          <li>
-            <%= image_tag "map_directory/church.png", class: "key-icon" %>
-            Church (White Protestant)
-          </li>
-          <li>
-            <%= image_tag "map_directory/chapel.png", class: "key-icon" %>
-            Church (Black Protestant)
-          </li>
-          <li>
-            <%= image_tag "map_directory/us-capitol.png", class: "key-icon" %>
-            Government Building
-          </li>
-          <li>
-            <%= image_tag "map_directory/university.png", class: "key-icon" %>
-            Other Public Building
-          </li>
-          <li>
-            <%= image_tag "map_directory/school-building.png", class: "key-icon" %>
-            School
-          </li>
-          <li>
-            <%= image_tag "map_directory/single-bed.png", class: "key-icon" %>
-            Hotel / Tavern
-          </li>
-          <li>
-            <%= image_tag "map_directory/bank-building.png", class: "key-icon" %>
-            Bank
-          </li>
-          <li>
-            <%= image_tag "map_directory/headstone.png", class: "key-icon" %>
-            Burying Ground
-          </li>
-        </ul>
-      </div> <%# /key-Public_Buildings %>
-    </div> <%# /other_legends tab %>
-  </div> <%# /key_container tab-content %>
-</div> <%# /key_container_key %>
+        <div id="key-Population" class="key key-ward">
+          <h3>Population</h3>
+          <ul class="label-key label-key-ward">
+            <li><span class="population-1500"></span>< 1500 population</li>
+            <li><span class="population-2000"></span>< 2000 population</li>
+            <li><span class="population-2500"></span>< 2500 population</li>
+            <li><span class="population-gt2500"></span>≥ 2500 population</li>
+          </ul>
+        </div>
+
+        <div id="key-PercentRace" class="key key-ward">
+          <h3>Percent Colored</h3>
+          <ul class="label-key label-key-ward">
+            <li><span class="percent-25"></span>< 25% colored</li>
+            <li><span class="percent-30"></span>< 30% colored</li>
+            <li><span class="percent-35"></span>< 35% colored</li>
+            <li><span class="percent-gt35"></span>≥ 35% colored</li>
+          </ul>
+        </div>
+
+        <% if @year == "1834" %>
+          <div id="key-Property" class="key key-ward">
+            <h3>Property Values</h3>
+            <ul class="label-key label-key-ward">
+              <li><span class="property-50000"></span>< $50,000</li>
+              <li><span class="property-150000"></span>< $150,000</li>
+              <li><span class="property-gt150000"></span>≥ $150,000</li>
+            </ul>
+          </div>
+        <% end %>
+
+      </div> <%# /tab-pane (wards) %>
+    </div> <%# /key_container tab-content %>
+  </div> <%# /key_container_key %>
 </div> <%# /map_container %>
 
 <div class="container"><div> <%# Opening back up container page divs %>

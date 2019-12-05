@@ -196,7 +196,7 @@ var polygonColors = {
     1500: "yellow",
     2000: "orange",
     2500: "red",
-    "3000+" : "purple"
+    "2500+" : "purple"
   },
   "property_values" : {
     "low": "grey",
@@ -207,7 +207,7 @@ var polygonColors = {
     25: "white",
     30: "yellow",
     35: "yellowgreen",
-    "40+" : "green"
+    "35+" : "green"
   }
 }
 
@@ -326,12 +326,12 @@ var create_and_apply_layers = function(directory_json) {
       "Public Buildings" : buildings,
       "Congress" : congress,
       "Foreign Dignitaries" : foreign,
-      "1820 Ward Pop.": wardPop,
+      "1820 Ward Population": wardPop,
       "1820 Ward % Colored": wardRace,
     }
   } else {
     checkboxes = {
-      "1830 Ward Pop.": wardPop,
+      "1830 Ward Population": wardPop,
       "1830 Ward % Colored": wardRace,
       "1830 Ward Property Values": wardPropertyValues
     }
@@ -540,7 +540,7 @@ function styleWardPopulation(feature) {
   if (pop < 1500) { fill = colors[1500] }
   else if (pop < 2000) { fill = colors[2000] }
   else if (pop < 2500) { fill = colors[2500] }
-  else { fill = colors["3000+"] }
+  else { fill = colors["2500+"] }
 
   return { fillColor: fill, color: "black", fillOpacity: wardOpacity };
 }
@@ -551,8 +551,7 @@ function styleWardPropertyValues(feature) {
   var fill = "grey";
   if (val < 50000) { fill = colors["low"] }
   else if (val < 150000) { fill = colors["high"] }
-  else if (val < 200000) { fill = colors["very_high"] }
-  else { fill = colors["3000+"] }
+  else { fill = colors["very_high"] }
 
   return { fillColor: fill, color: "black", fillOpacity: wardOpacity };
 }
@@ -564,7 +563,7 @@ function styleWardRace(feature) {
   if (perc < 25) { fill = colors[25] }
   else if (perc < 30) { fill = colors[30] }
   else if (perc < 35) { fill = colors[35] }
-  else { fill = colors["40+"] }
+  else { fill = colors["35+"] }
 
   return { fillColor: fill, color: "black", fillOpacity: wardOpacity };
 }
