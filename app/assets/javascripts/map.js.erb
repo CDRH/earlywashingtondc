@@ -8,7 +8,7 @@
 // then add the layers to the map when ready
 <%# note currently there is only one request being made at a given time, but
     in the future there may be more layers for 1834 so leaving as is %>
-console.log("URL: " + "https://cdrhdev1.unl.edu/media/data/oscys/output/development/json/"+year+"_directory.json")
+console.info("Pulling directory data from: " + "https://cdrhdev1.unl.edu/media/data/oscys/output/development/json/"+year+"_directory.json")
 var requests = [
   $.getJSON("https://cdrhdev1.unl.edu/media/data/oscys/output/development/json/"+year+"_directory.json"),
   // $.getJSON("https://cdrhdev1.unl.edu/media/data/oscys/output/development/json/1834_directory.json")
@@ -192,6 +192,11 @@ var polygonColors = {
     2500: "red",
     "3000+" : "purple"
   },
+  "property_values" : {
+    "low": "grey",
+    "high": "blue",
+    "very_high": "black"
+  },
   "race" : {
     25: "white",
     30: "yellow",
@@ -199,6 +204,8 @@ var polygonColors = {
     "40+" : "green"
   }
 }
+
+var wardOpacity = 0.6;
 
 // these images are used to mark building types
 var markerImages = {
@@ -279,15 +286,24 @@ var create_and_apply_layers = function(directory_json) {
   }
 
   // adds the wards with population coloring
+  var wpfield = (year == "1822") ? "F1820_Total_Pop" : "F1830_Total_Pop";
   var wardPop = L.geoJSON(wards_json, {
-    onEachFeature: onEachFeatureWard(["F1820_Total_Pop", "F1830_Total_Pop"]),
+    onEachFeature: onEachFeatureWard([wpfield]),
     style: styleWardPopulation,
   });
 
+  var wrfield = (year == "1822") ? "F1820_Perc_AA" : "F1830_Perc_AA";
   var wardRace = L.geoJSON(wards_json, {
-    onEachFeature: onEachFeatureWard(["F1820_Perc_AA", "F1830_Perc_AA", "F1830_Property_Values", "F1830_Improvement_Values"]),
+    onEachFeature: onEachFeatureWard([wrfield]),
     style: styleWardRace,
   });
+
+  if (year == "1834") {
+    var wardPropertyValues = L.geoJSON(wards_json, {
+      onEachFeature: onEachFeatureWard(["F1830_Property_Values", "F1830_Improvement_Values"]),
+      style: styleWardPropertyValues,
+    });
+  }
 
   map.addLayer(courtRole);
 
@@ -303,13 +319,14 @@ var create_and_apply_layers = function(directory_json) {
       "Public Buildings" : buildings,
       "Congress" : congress,
       "Foreign Dignitaries" : foreign,
-      "1820/1830 Ward Pop.": wardPop,
-      "1820/1830 Ward % Colored": wardRace,
+      "1820 Ward Pop.": wardPop,
+      "1820 Ward % Colored": wardRace,
     }
   } else {
     checkboxes = {
-      "1820/1830 Ward Pop.": wardPop,
-      "1820/1830 Ward % Colored": wardRace,
+      "1830 Ward Pop.": wardPop,
+      "1830 Ward % Colored": wardRace,
+      "1830 Ward Property Values": wardPropertyValues
     }
   }
   var layerControl = L.control.layers(
@@ -517,7 +534,19 @@ function styleWardPopulation(feature) {
   else if (pop < 2500) { fill = colors[2500] }
   else { fill = colors["3000+"] }
 
-  return { fillColor: fill, color: "grey", fillOpacity: 0.4 };
+  return { fillColor: fill, color: "black", fillOpacity: wardOpacity };
+}
+
+function styleWardPropertyValues(feature) {
+  var val = feature.properties.F1830_Property_Values;
+  var colors = polygonColors["property_values"];
+  var fill = "grey";
+  if (val < 50000) { fill = colors["low"] }
+  else if (val < 150000) { fill = colors["high"] }
+  else if (val < 200000) { fill = colors["very_high"] }
+  else { fill = colors["3000+"] }
+
+  return { fillColor: fill, color: "black", fillOpacity: wardOpacity };
 }
 
 function styleWardRace(feature) {
@@ -529,5 +558,5 @@ function styleWardRace(feature) {
   else if (perc < 35) { fill = colors[35] }
   else { fill = colors["40+"] }
 
-  return { fillColor: fill, color: "grey", fillOpacity: 0.4 };
+  return { fillColor: fill, color: "black", fillOpacity: wardOpacity };
 }
