@@ -22,7 +22,7 @@
   <p>This map attempts to reconstruct who lived where in as much of early Washington, D.C., as we can. We have cross-referenced the names in the 1822 city directory with names found in the case files for petitions for freedom, plotting jurors, witnesses, lawyers, plaintiffs, defendants, and other participants in the freedom suits. Data from the 1834 directory will also be included soon.</p>
 </div>
 
-<div class="btn-group" role="group" aria-label="Map Year Selection">
+<div class="btn-group directory-map-btn-group" role="group" aria-label="Map Year Selection">
   <%= link_to "1822 Directory", :map_dc, class: "btn btn-default #{"active" if @year == "1822"}" %>
   <%= link_to "1834 Directory", :map_dc_1834, class: "btn btn-default #{"active" if @year == "1834"}" %>
 </div>
