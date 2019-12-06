@@ -390,8 +390,8 @@ var wards_json = {
         "Shape_Area" : 0.00052861849086650241,
         "1820_Total_Population" : 2359,
         "1830_Total_Population" : 2130,
-        "1820_Percent_Colored" : 14,
-        "1830_Percent_Colored" : 14,
+        "1820_Percent_Free_Black" : 14,
+        "1830_Percent_Free_Black" : 14,
         "1830_Property_Values" : 36125,
         "1830_Improvement_Values" : 208585
       }
@@ -697,8 +697,8 @@ var wards_json = {
         "Shape_Area" : 0.000322572602964622,
         "1820_Total_Population" : 1453,
         "1830_Total_Population" : 1356,
-        "1820_Percent_Colored" : 34,
-        "1830_Percent_Colored" : 31,
+        "1820_Percent_Free_Black" : 34,
+        "1830_Percent_Free_Black" : 31,
         "1830_Property_Values" : 24175,
         "1830_Improvement_Values" : 169810
       }
@@ -756,8 +756,8 @@ var wards_json = {
         "Shape_Area" : 0.0004390721639335456,
         "1820_Total_Population" : 1610,
         "1830_Total_Population" : 1860,
-        "1820_Percent_Colored" : 33,
-        "1830_Percent_Colored" : 39,
+        "1820_Percent_Free_Black" : 33,
+        "1830_Percent_Free_Black" : 39,
         "1830_Property_Values" : 43150,
         "1830_Improvement_Values" : 250200
       }
@@ -815,8 +815,8 @@ var wards_json = {
         "Shape_Area" : 0.00044202310087044751,
         "1820_Total_Population" : 2550,
         "1830_Total_Population" : 5747,
-        "1820_Percent_Colored" : 22,
-        "1830_Percent_Colored" : 25,
+        "1820_Percent_Free_Black" : 22,
+        "1830_Percent_Free_Black" : 25,
         "1830_Property_Values" : 183370,
         "1830_Improvement_Values" : 999475
       }
@@ -910,8 +910,8 @@ var wards_json = {
         "Shape_Area" : 0.00031753993027125855,
         "1820_Total_Population" : 2467,
         "1830_Total_Population" : 4049,
-        "1820_Percent_Colored" : 28,
-        "1830_Percent_Colored" : 29,
+        "1820_Percent_Free_Black" : 28,
+        "1830_Percent_Free_Black" : 29,
         "1830_Property_Values" : 131600,
         "1830_Improvement_Values" : 671605
       }
@@ -1265,8 +1265,8 @@ var wards_json = {
         "Shape_Area" : 0.00052309016262374805,
         "1820_Total_Population" : 2808,
         "1830_Total_Population" : 3675,
-        "1820_Percent_Colored" : 36,
-        "1830_Percent_Colored" : 36,
+        "1820_Percent_Free_Black" : 36,
+        "1830_Percent_Free_Black" : 36,
         "1830_Property_Values" : 133600,
         "1830_Improvement_Values" : 624783
       }

@@ -199,7 +199,7 @@ var polygonColors = {
     "2500+" : "purple"
   },
   "property_values" : {
-    "low": "grey",
+    "low": "orange",
     "high": "blue",
     "very_high": "black"
   },
@@ -299,7 +299,7 @@ var create_and_apply_layers = function(directory_json) {
     style: styleWardPopulation,
   });
 
-  var wrfield = (year == "1822") ? "1820_Percent_Colored" : "1830_Percent_Colored";
+  var wrfield = (year == "1822") ? "1820_Percent_Free_Black" : "1830_Percent_Free_Black";
   var wardRace = L.geoJSON(wards_json, {
     onEachFeature: onEachFeatureWard([wrfield]),
     style: styleWardRace,
@@ -327,12 +327,12 @@ var create_and_apply_layers = function(directory_json) {
       "Congress" : congress,
       "Foreign Dignitaries" : foreign,
       "1820 Ward Population": wardPop,
-      "1820 Ward % Colored": wardRace,
+      "1820 Ward % Free Black": wardRace,
     }
   } else {
     checkboxes = {
       "1830 Ward Population": wardPop,
-      "1830 Ward % Colored": wardRace,
+      "1830 Ward % Free Black": wardRace,
       "1830 Ward Property Values": wardPropertyValues
     }
   }
@@ -557,7 +557,7 @@ function styleWardPropertyValues(feature) {
 }
 
 function styleWardRace(feature) {
-  var perc = (year == "1822") ? feature.properties["1820_Percent_Colored"] : feature.properties["1830_Percent_Colored"];
+  var perc = (year == "1822") ? feature.properties["1820_Percent_Free_Black"] : feature.properties["1830_Percent_Free_Black"];
   var colors = polygonColors["race"];
   var fill = "grey";
   if (perc < 25) { fill = colors[25] }
