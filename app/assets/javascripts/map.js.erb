@@ -476,7 +476,13 @@ function htmlBuilder(heading, props, fieldList, url) {
       if (label == "Gender" || label == "Race" || label == "Memorial") {
         val = fieldMapping[val] || val;
       }
-      html += '<li><strong>'+label+'</strong>: '+val+'</li>';
+      // memorial needs to be a link, all other values are simply displayed
+      if (label == "Memorial") {
+        html += '<li><strong>'+label+'</strong>: ';
+        html += '<a href="'+memorialUrl+'" target="_blank">'+val+'</a>'
+      } else {
+        html += '<li><strong>'+label+'</strong>: '+val+'</li>';
+      }
     }
   }
   if (url) { html += '<li><a href="'+url+'" target="_blank">More Info on <em>OSCYS</em></a></li>' }

@@ -120,7 +120,7 @@
             <li><span class="memorial-q"></span>Possible Signatory of Memorial</li>
           </ul>
 
-          <p>TODO language here explaining this layer</p>
+          <p>In 1828, 1,055 citizens of Washington and Alexandria Counties signed the <%= link_to '"Memorial of Inhabitants of the District of Columbia, Praying for the Gradual Abolition of Slavery in the District of Columbia."', doc_path(id: "oscys.supp.0004.001"), target: "_blank" %> The signatories include judges, attorneys, slaveholders, jurors, justices, and witnesses in freedom suits.</p>
 
         </div> <%# /key-Memorial %>
 
@@ -179,5 +179,6 @@
 
 <script>
   var year = <%= @year %>;
+  var memorialUrl = "<%= doc_url(id: "oscys.supp.0004.001") %>";
 </script>
 <%= javascript_include_tag 'map' %>
