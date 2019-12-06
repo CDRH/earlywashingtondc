@@ -307,7 +307,8 @@ var create_and_apply_layers = function(directory_json) {
 
   if (year == "1834") {
     var wardPropertyValues = L.geoJSON(wards_json, {
-      onEachFeature: onEachFeatureWard(["1830_Property_Values", "1830_Improvement_Values"]),
+      // NOTE: Per_Capita is an invented field from property values / population
+      onEachFeature: onEachFeatureWard(["1830_Property_Values", "1830_Total_Population", "1830_Improvement_Values", "Per_Capita"]),
       style: styleWardPropertyValues,
     });
   }
@@ -405,6 +406,17 @@ function buildRecordName(props, name, firstName=null, prefix=null, suffix=null) 
   return filtered.join(" ");
 };
 
+// divides ward property values by ward population to determine
+// per capita number (two decimal places)
+// only relevant for 1834 map because of 1830 information
+function calculatePerCapita(props) {
+  var pv = props["1830_Property_Values"];
+  var pop = props["1830_Total_Population"];
+  if (pv && pop) {
+    return (pv / pop).toFixed(2);
+  }
+};
+
 // creates a simple marker layer from the geojson
 // "type" passed in refers to occupation, gender, etc
 // and sets the colors and legend key which will be selected
@@ -467,6 +479,8 @@ function htmlBuilder(heading, props, fieldList, url) {
   var html = '<div class="marker_popup">';
   html += '<h2>'+heading+'</h2>';
   html += '<ul>';
+
+  // fields coming straight out of the files are iterated over
   for (var i = 0; i < fieldList.length; i++) {
     var field = fieldList[i];
     if (props.hasOwnProperty(field) && props[field].length != 0) {
@@ -483,8 +497,13 @@ function htmlBuilder(heading, props, fieldList, url) {
       } else {
         html += '<li><strong>'+label+'</strong>: '+val+'</li>';
       }
+    } else if (field == "Per_Capita") {
+      // create per capita from property values / population
+      var pc = calculatePerCapita(props);
+      if (pc) { html += '<li><strong>Per Capita</strong>: '+pc+'</li>' }
     }
   }
+
   if (url) { html += '<li><a href="'+url+'" target="_blank">More Info on <em>OSCYS</em></a></li>' }
   html += '</ul>';
   html += '</div>';
