@@ -311,7 +311,7 @@ var create_and_apply_layers = function(directory_json) {
     style: styleWardPopulation,
   });
 
-  var wrfield = (year == "1822") ? "1820_Percent_Free_Black" : "1830_Percent_Free_Black";
+  var wrfield = (year == "1822") ? "1820_Percent_African_American" : "1830_Percent_African_American";
   var wardRace = L.geoJSON(wards_json, {
     onEachFeature: onEachFeatureWard([wrfield]),
     style: styleWardRace,
@@ -340,12 +340,12 @@ var create_and_apply_layers = function(directory_json) {
       "Congress" : congress,
       "Foreign Dignitaries" : foreign,
       "1820 Ward Population": wardPop,
-      "1820 Ward % Free Black": wardRace,
+      "1820 Ward % African American": wardRace,
     }
   } else {
     checkboxes = {
       "1830 Ward Population": wardPop,
-      "1830 Ward % Free Black": wardRace,
+      "1830 Ward % African American": wardRace,
       "1830 Ward Property Values": wardPropertyValues
     }
   }
@@ -594,7 +594,7 @@ function styleWardPropertyValues(feature) {
 }
 
 function styleWardRace(feature) {
-  var perc = (year == "1822") ? feature.properties["1820_Percent_Free_Black"] : feature.properties["1830_Percent_Free_Black"];
+  var perc = (year == "1822") ? feature.properties["1820_Percent_African_American"] : feature.properties["1830_Percent_African_American"];
   var colors = polygonColors["race"];
   var fill = "grey";
   if (perc < 25) { fill = colors[25] }
