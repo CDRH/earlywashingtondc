@@ -504,7 +504,6 @@ function htmlBuilder(heading, props, fieldList, url) {
       }
       // memorial needs to be a link, all other values are simply displayed
       if (label == "Memorial") {
-        html += '<li><strong>'+label+'</strong>: ';
         html += '<a href="'+memorialUrl+'" target="_blank">'+val+'</a>'
       } else {
         html += '<li><strong>'+label+'</strong>: '+val+'</li>';
@@ -516,7 +515,7 @@ function htmlBuilder(heading, props, fieldList, url) {
     }
   }
 
-  if (url) { html += '<li><a href="'+url+'" target="_blank">More Info on <em>OSCYS</em></a></li>' }
+  if (url) { html += '<li><a href="'+url+'" target="_blank">Possible Match(es) in Court Documents</a></li>' }
   html += '</ul>';
   html += '</div>';
   return html;

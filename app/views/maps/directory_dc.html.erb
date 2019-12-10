@@ -18,13 +18,15 @@
 <h1>Early Washington, D.C., Interactive Map</h1>
 
 <div class="introduction">
-  <p>This map attempts to reconstruct who lived where in as much of early Washington, D.C., as we can. We have cross-referenced the names in the 1822 city directory with names found in the case files for petitions for freedom, plotting jurors, witnesses, lawyers, plaintiffs, defendants, and other participants in the freedom suits. Data from the 1834 directory will also be included soon.</p>
+  <p>This map attempts to reconstruct who lived where in as much of early Washington, D.C., as we can. We have cross-referenced the names in the 1822 and 1834 city directories with names found in the case files for petitions for freedom, plotting jurors, witnesses, lawyers, plaintiffs, defendants, and other participants in the freedom suits.</p>
 </div>
 
+<center>
 <div class="btn-group directory-map-btn-group" role="group" aria-label="Map Year Selection">
-  <%= link_to "1822 Directory", :map_dc, class: "btn btn-default #{"active" if @year == "1822"}" %>
-  <%= link_to "1834 Directory", :map_dc_1834, class: "btn btn-default #{"active" if @year == "1834"}" %>
+  <%= link_to "1822 Directory", :map_dc, class: "btn btn-info #{"active" if @year == "1822"}" %>
+  <%= link_to "1834 Directory", :map_dc_1834, class: "btn btn-info #{"active" if @year == "1834"}" %>
 </div>
+</center>
 
 </div></div><%# Ending page divs for full width map %>
 
@@ -109,8 +111,7 @@
             <li><span class="race-w"></span>White</li>
           </ul>
 
-          <p>Free Blacks were designated in the original city directory by the term 'Col.' or 'Colored' next to their names. We have used the term Free Black instead, so as not replicate the racial nomenclature of the period.</p>
-          <p class="small"><a href="#race">More Info</a></p>
+          <p>Free Blacks were designated in the original city directory by the term "Col." or "Colored" next to their names. We have used the term Free Black instead, so as not to replicate the racial nomenclature of the period.</p>
 
         </div> <%# /key-Race %>
 
@@ -121,7 +122,7 @@
             <li><span class="memorial-q"></span>Possible Signatory of Memorial</li>
           </ul>
 
-          <p>In 1828, 1,055 citizens of Washington and Alexandria Counties signed the <%= link_to '"Memorial of Inhabitants of the District of Columbia, Praying for the Gradual Abolition of Slavery in the District of Columbia."', doc_path(id: "oscys.supp.0004.001"), target: "_blank" %> The signatories include judges, attorneys, slaveholders, jurors, justices, and witnesses in freedom suits.</p>
+          <p>In 1828, 1,055 citizens of Washington and Alexandria Counties signed the <%= link_to '"Memorial of Inhabitants of the District of Columbia, Praying for the Gradual Abolition of Slavery in the District of Columbia."', doc_path(id: "oscys.supp.0004.001"), target: "_blank" %> The signatories included judges, attorneys, slaveholders, jurors, justices of the peace, and witnesses in freedom suits.</p>
 
         </div> <%# /key-Memorial %>
 
@@ -136,7 +137,7 @@
       <%# WARDS LEGEND %>
 
       <div class="tab-pane" id="wards_legends">
-        <p>Note: ward colors on the historic map affect the appearance of these layers</p>
+        <p>Note: ward colors on the historic map affect the appearance of these layers.</p>
 
         <div id="key-Population" class="key key-ward">
           <h3>Population</h3>
