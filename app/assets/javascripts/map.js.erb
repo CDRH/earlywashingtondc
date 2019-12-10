@@ -138,6 +138,15 @@ var foreignFields = [
   "Address"
 ];
 
+// for ward population fields, see individual layer creation
+
+var ward1834PVFields = [
+  "1830_Property_Values",
+  "1830_Total_Population",
+  "Per_Capita",
+  "1830_Improvement_Values"
+];
+
 // these abbrevations are mapped to more descriptive terminology
 // note quotation marks around terminology used in directory
 // they show up in the marker popup information
@@ -311,7 +320,7 @@ var create_and_apply_layers = function(directory_json) {
   if (year == "1834") {
     var wardPropertyValues = L.geoJSON(wards_json, {
       // NOTE: Per_Capita is an invented field from property values / population
-      onEachFeature: onEachFeatureWard(["1830_Property_Values", "1830_Total_Population", "1830_Improvement_Values", "Per_Capita"]),
+      onEachFeature: onEachFeatureWard(ward1834PVFields),
       style: styleWardPropertyValues,
     });
   }
