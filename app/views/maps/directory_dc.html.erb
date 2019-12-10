@@ -5,10 +5,9 @@
 <%= javascript_include_tag "leaflet-1.6.0.min" %>
 <%= javascript_include_tag "markercluster-1.4.1.min" %>
 
-<%= javascript_include_tag "map_data/building_json_#{@year}" %>
-
 <%# we do not currently have this information for 1834, coming soon %>
 <% if @year == "1822" %>
+  <%= javascript_include_tag "map_data/building_json_1822" %>
   <%= javascript_include_tag "map_data/congress_json_1822" %>
   <%= javascript_include_tag "map_data/foreign_json_1822" %>
 <% end %>
