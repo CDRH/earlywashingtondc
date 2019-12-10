@@ -177,8 +177,10 @@
 
 <%= render "directory_introduction" %>
 
+<%# assigns variables from Rails environment to javascript for use with map %>
 <script>
-  var year = <%= @year %>;
+  var geojsonUrl = "<%= CONFIG["geojson_url"] %>";
   var memorialUrl = "<%= doc_url(id: "oscys.supp.0004.001") %>";
+  var year = <%= @year %>;
 </script>
 <%= javascript_include_tag 'map' %>

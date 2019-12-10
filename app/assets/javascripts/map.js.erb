@@ -8,9 +8,11 @@
 // then add the layers to the map when ready
 <%# note currently there is only one request being made at a given time, but
     in the future there may be more layers for 1834 so leaving as is %>
-console.info("Pulling directory data from: " + "https://cdrhdev1.unl.edu/media/data/oscys/output/development/json/"+year+"_directory.json")
+var directoryUrl = geojsonUrl+"/"+year+"_directory.json";
+
+console.info("Pulling directory data from: " + directoryUrl);
 var requests = [
-  $.getJSON("https://cdrhdev1.unl.edu/media/data/oscys/output/development/json/"+year+"_directory.json"),
+  $.getJSON(directoryUrl),
   // $.getJSON("https://cdrhdev1.unl.edu/media/data/oscys/output/development/json/1834_directory.json")
 ];
 

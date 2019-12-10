@@ -1,5 +1,7 @@
 development:
   solr_url: http://server.unl.edu:8080/solr/api_oscys_test
+  geojson_url: https://server.unl.edu/media/data/oscys/output/[environment]/json
+  # rdf setup
   prefix_owl: "oscys: <http://server.unl.edu/jessica/oscys_test.owl#>"
   prefix_rdf: "osrdf: <http://server.unl.edu/jessica/oscys_test#>"
   sparqler: "http://server.unl.edu:3030/sparql"
