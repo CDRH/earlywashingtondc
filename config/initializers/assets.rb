@@ -31,13 +31,12 @@ icons = Dir.glob(Rails.root.join('app', 'assets', 'images', 'map_directory'))
 Rails.application.config.assets.precompile += icons
 
 # map
-Rails.application.config.assets.precompile += %w( leaflet-1.4.0.css )
-Rails.application.config.assets.precompile += %w( leaflet-1.4.0.min.js )
+Rails.application.config.assets.precompile += %w( leaflet-1.6.0.css )
+Rails.application.config.assets.precompile += %w( leaflet-1.6.0.min.js )
 Rails.application.config.assets.precompile += %w( markercluster-1.4.1.min.js )
 Rails.application.config.assets.precompile += %w( markercluster-1.4.1.css )
 Rails.application.config.assets.precompile += %w( map.css )
 Rails.application.config.assets.precompile += %w( map.js )
-
 
 Rails.application.config.assets.precompile += %w( jquery-ui.min.js )
 Rails.application.config.assets.precompile += %w( jquery-ui.css )

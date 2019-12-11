@@ -1,53 +1,62 @@
-<%= stylesheet_link_tag 'leaflet-1.4.0', media: 'all' %>
-<%= stylesheet_link_tag 'markercluster-1.4.1', media: 'all' %>
-<%= stylesheet_link_tag 'map', media: 'all' %>
+<%= stylesheet_link_tag "leaflet-1.6.0", media: "all" %>
+<%= stylesheet_link_tag "markercluster-1.4.1", media: "all" %>
+<%= stylesheet_link_tag "map", media: "all" %>
 
-<%= javascript_include_tag 'leaflet-1.4.0.min' %>
-<%= javascript_include_tag 'markercluster-1.4.1.min' %>
+<%= javascript_include_tag "leaflet-1.6.0.min" %>
+<%= javascript_include_tag "markercluster-1.4.1.min" %>
 
-<%= javascript_include_tag 'map_data/building_json_1822' %>
-<%= javascript_include_tag 'map_data/congress_json_1822' %>
-<%= javascript_include_tag 'map_data/directory_json_1822' %>
-<%= javascript_include_tag 'map_data/foreign_json_1822' %>
+<%# we do not currently have this information for 1834, coming soon %>
+<% if @year == "1822" %>
+  <%= javascript_include_tag "map_data/building_json_1822" %>
+  <%= javascript_include_tag "map_data/congress_json_1822" %>
+  <%= javascript_include_tag "map_data/foreign_json_1822" %>
+<% end %>
+<%= javascript_include_tag "map_data/wards_json" %>
 
 <script type="text/javascript" src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js?v1.3.0"></script>
 
 <h1>Early Washington, D.C., Interactive Map</h1>
 
 <div class="introduction">
-
-<p>This map attempts to reconstruct who lived where in as much of early Washington, D.C., as we can. We have cross-referenced the names in the 1822 city directory with names found in the case files for petitions for freedom, plotting jurors, witnesses, lawyers, plaintiffs, defendants, and other participants in the freedom suits. Data from the 1834 directory will also be included soon.</p>
-
+  <p>This map attempts to reconstruct who lived where in as much of early Washington, D.C., as we can. We have cross-referenced the names in the 1822 and 1834 city directories with names found in the case files for petitions for freedom, plotting jurors, witnesses, lawyers, plaintiffs, defendants, and other participants in the freedom suits.</p>
 </div>
+
+<center>
+<div class="btn-group directory-map-btn-group" role="group" aria-label="Map Year Selection">
+  <%= link_to "1822 Directory", :map_dc, class: "btn btn-info #{"active" if @year == "1822"}" %>
+  <%= link_to "1834 Directory", :map_dc_1834, class: "btn btn-info #{"active" if @year == "1834"}" %>
+</div>
+</center>
 
 </div></div><%# Ending page divs for full width map %>
 
 <div class="map_container">
-
   <div class="map_container_map">
-
     <div id="map"></div>
-
   </div><%# map_container_map %>
 
   <div class="map_container_key">
-
     <div class="map_container_key_nav">
- 
       <ul class="nav nav-tabs">
         <li class="active">
-          <a  href="#1822_directory" data-toggle="tab">1822 Directory</a>
-         </li>
+          <a href="#map_directory" data-toggle="tab">Directory</a>
+        </li>
+        <% if @year == "1822" %>
+          <li>
+            <a href="#other_legends" data-toggle="tab">Other</a>
+          </li>
+        <% end %>
         <li>
-          <a href="#other_legends" data-toggle="tab">Other Legends</a>
+          <a href="#wards_legends" data-toggle="tab">Wards</a>
         </li>
       </ul>
-
     </div><%# map_container_key_nav %>
 
     <div class="tab-content map_container_key_content key-container">
 
-      <div class="tab-pane active" id="1822_directory">
+      <%# DIRECTORY LEGEND %>
+
+      <div class="tab-pane active" id="map_directory">
 
         <%# display key for court roles and total directory on page load %>
         <div id="key-Court_Role" class="key key-directory">
@@ -65,233 +74,115 @@
             <li><span class="role-mult"></span>Multiple Roles</li>
             <li><span class="default"></span>None</li>
           </ul>
+        </div><%# /key-directory %>
 
-      </div><%# /key-directory %>
+        <!-- these layers should not be displayed on page load
+             but will be displayed when a user selects them -->
+        <div id="key-Gender" class="key key-directory key-hidden">
+          <h3>Gender</h3>
+          <ul class="label-key">
+            <li><span class="gender-f"></span>Female</li>
+            <li><span class="gender-m"></span>Male</li>
+            <li><span class="gender-u"></span>Unknown</li>
+          </ul>
+          <p>Some individuals were listed only by their initials, so their gender was unclear.</p>
+        </div> <%# /key-Gender %>
 
-      <!-- these layers should not be displayed on page load
-           but will be displayed when a user selects them -->
-      <div id="key-Gender" class="key key-directory key-hidden">
-        <h3>Gender</h3>
-        <ul class="label-key">
-          <li><span class="gender-f"></span>Female</li>
-          <li><span class="gender-m"></span>Male</li>
-          <li><span class="gender-u"></span>Unknown</li>
-        </ul>
-        <p>Some individuals were listed only by their initials, so their gender was unclear.</p>
-      </div> <%# /key-Gender %>
+        <div id="key-Occupation" class="key key-directory key-hidden">
+          <h3>Occupation <a href="#occupations">*</a></h3>
+          <ul class="label-key">
+            <li><span class="occ-admin"></span>Administrative</li>
+            <li><span class="occ-ag"></span>Agricultural</li>
+            <li><span class="occ-clerical"></span>Clerical</li>
+            <li><span class="occ-prof"></span>Professional</li>
+            <li><span class="occ-sales"></span>Sales</li>
+            <li><span class="occ-service"></span>Service</li>
+            <li><span class="occ-skilled"></span>Skilled Labor</li>
+            <li><span class="occ-unskilled"></span>Unskilled Labor</li>
+          </ul>
+          <p class="small"><a href="#occupations">More Info</a></p>
 
-      <div id="key-Occupation" class="key key-directory key-hidden">
-        <h3>Occupation <a href="#occupations">*</a></h3>
-        <ul class="label-key">
-          <li><span class="occ-admin"></span>Administrative</li>
-          <li><span class="occ-ag"></span>Agricultural</li>
-          <li><span class="occ-clerical"></span>Clerical</li>
-          <li><span class="occ-prof"></span>Professional</li>
-          <li><span class="occ-sales"></span>Sales</li>
-          <li><span class="occ-service"></span>Service</li>
-          <li><span class="occ-skilled"></span>Skilled Labor</li>
-          <li><span class="occ-unskilled"></span>Unskilled Labor</li>
-        </ul>
+        </div> <%# /key-Occupation %>
 
-      </div> <%# /key-Occupation %>
+        <div id="key-Race" class="key key-directory key-hidden">
+          <h3>Race <a href="#race">*</a></h3>
+          <ul class="label-key">
+            <li><span class="race-fb"></span>Free Black</li>
+            <li><span class="race-w"></span>White</li>
+          </ul>
 
-      <div id="key-Race" class="key key-directory key-hidden">
-        <h3>Race <a href="#race">*</a></h3>
-        <ul class="label-key">
-          <li><span class="race-c"></span>Colored</li>
-          <li><span class="race-w"></span>White</li>
-        </ul>
+          <p>Free Blacks were designated in the original city directory by the term "Col." or "Colored" next to their names. We have used the term Free Black instead, so as not to replicate the racial nomenclature of the period.</p>
 
-        <p>The original language of the directory is preserved in this map in order to provide an image of the world in which freedom petitioners lived and the structures they navigated in the pursuit of their freedom.</p>
+        </div> <%# /key-Race %>
 
-      </div> <%# /key-Race %>
+        <div id="key-Memorial" class="key key-directory key-hidden">
+          <h3>Memorial</h3>
+          <ul class="label-key">
+            <li><span class="memorial-e"></span>Signatory of Memorial</li>
+            <li><span class="memorial-q"></span>Possible Signatory of Memorial</li>
+          </ul>
 
-    </div><%# /1822_directory tab %>
+          <p>In 1828, 1,055 citizens of Washington and Alexandria Counties signed the <%= link_to '"Memorial of Inhabitants of the District of Columbia, Praying for the Gradual Abolition of Slavery in the District of Columbia."', doc_path(id: "oscys.supp.0004.001"), target: "_blank" %> The signatories included judges, attorneys, slaveholders, jurors, justices of the peace, and witnesses in freedom suits.</p>
 
-    <div class="tab-pane" id="other_legends">
+        </div> <%# /key-Memorial %>
 
-      <!-- these layers are currently displayed on page load
-           but make sure to add "key-hidden" to the class if
-           the settings for the leaflet map change -->
-      <div id="key-Congress" class="key key-other">
-        <h3>Congress</h3>
-        <ul>
-          <li>
-            <%= image_tag "map_directory/delegate.svg", class: "key-icon" %>
-            Delegate to the House
-          </li>
-          <li>
-            <%= image_tag "map_directory/rep.svg", class: "key-icon" %>
-            Representative
-          </li>
-          <li>
-            <%= image_tag "map_directory/senator.svg", class: "key-icon" %>
-            Senator</li>
-          </li>
-          <li>
-            <%= image_tag "map_directory/vp.svg", class: "key-icon" %>
-            Vice President
-          </li>
-          <li>
-            <%= image_tag "map_directory/dr.svg", class: "key-icon" %>
-             Democratic-Republican
-          </li>
-          <li>
-            <%= image_tag "map_directory/fed.svg", class: "key-icon" %>
-            Federalist 
-          </li>
-          <li>
-            <%= image_tag "map_directory/unknown.svg", class: "key-icon" %>
-            No Party Affiliation 
-          </li>
-        </ul>
-      </div> <%# /key-Congress %>
+      </div><%# /map_directory tab %>
 
-      <div id="key-Foreign_Dignitaries" class="key key-other">
-        <h3>Foreign Dignitaries</h3>
-        <ul>
-          <li>
-            <%= image_tag "map_directory/france.png", class: "key-icon" %>
-            France
-          </li>
-          <li>
-            <%= image_tag "map_directory/britain.png", class: "key-icon" %>
-            Great Britain
-          </li>
-          <li>
-            <%= image_tag "map_directory/mexico.png", class: "key-icon" %>
-            Mexico
-          </li>
-          <li>
-            <%= image_tag "map_directory/sweden.png", class: "key-icon" %>
-            Sweden
-          </li>
-        </ul>
-      </div> <%# /key-Foreign_Dignitaries %>
+      <%# PUBLIC BUILDINGS / FOREIGN OFFICIALS LEGEND %>
 
-      <div id="key-Public_Buildings" class="key key-other">
-        <h3>Buildings</h3>
-        <ul>
-          <li>
-            <%= image_tag "map_directory/cathedral.png", class: "key-icon" %>
-            Church (Catholic)
-          </li>
-          <li>
-            <%= image_tag "map_directory/church.png", class: "key-icon" %>
-            Church (White Protestant)
-          </li>
-          <li>
-            <%= image_tag "map_directory/chapel.png", class: "key-icon" %>
-            Church (Black Protestant)
-          </li>
-          <li>
-            <%= image_tag "map_directory/us-capitol.png", class: "key-icon" %>
-            Government Building
-          </li>
-          <li>
-            <%= image_tag "map_directory/university.png", class: "key-icon" %>
-            Other Public Building
-          </li>
-          <li>
-            <%= image_tag "map_directory/school-building.png", class: "key-icon" %>
-            School
-          </li>
-          <li>
-            <%= image_tag "map_directory/single-bed.png", class: "key-icon" %>
-            Hotel / Tavern
-          </li>
-          <li>
-            <%= image_tag "map_directory/bank-building.png", class: "key-icon" %>
-            Bank
-          </li>
-          <li>
-            <%= image_tag "map_directory/headstone.png", class: "key-icon" %>
-            Burying Ground
-          </li>
-        </ul>
-      </div> <%# /key-Public_Buildings %>
-    </div> <%# /other_legends tab %>
-  </div> <%# /key_container tab-content %>
-</div> <%# /key_container_key %>
+      <% if @year == "1822" %>
+        <%= render "directory_legend_other" %>
+      <% end %>
+
+      <%# WARDS LEGEND %>
+
+      <div class="tab-pane" id="wards_legends">
+        <p>Note: ward colors on the historic map affect the appearance of these layers.</p>
+
+        <div id="key-Population" class="key key-ward">
+          <h3>Population</h3>
+          <ul class="label-key label-key-ward">
+            <li><span class="population-1500"></span>< 1500 population</li>
+            <li><span class="population-2000"></span>< 2000 population</li>
+            <li><span class="population-2500"></span>< 2500 population</li>
+            <li><span class="population-gt2500"></span>≥ 2500 population</li>
+          </ul>
+        </div>
+
+        <div id="key-PercentRace" class="key key-ward">
+          <h3>Percent African American</h3>
+          <ul class="label-key label-key-ward">
+            <li><span class="percent-25"></span>< 25% African American</li>
+            <li><span class="percent-30"></span>< 30% African American</li>
+            <li><span class="percent-35"></span>< 35% African American</li>
+            <li><span class="percent-gt35"></span>≥ 35% African American</li>
+          </ul>
+        </div>
+
+        <% if @year == "1834" %>
+          <div id="key-Property" class="key key-ward">
+            <h3>Property Values</h3>
+            <ul class="label-key label-key-ward">
+              <li><span class="property-50000"></span>< $50,000</li>
+              <li><span class="property-150000"></span>< $150,000</li>
+              <li><span class="property-gt150000"></span>≥ $150,000</li>
+            </ul>
+          </div>
+        <% end %>
+
+      </div> <%# /tab-pane (wards) %>
+    </div> <%# /key_container tab-content %>
+  </div> <%# /key_container_key %>
 </div> <%# /map_container %>
 
 <div class="container"><div> <%# Opening back up container page divs %>
 
-<div class="introduction">
+<%= render "directory_introduction" %>
 
-<h2>A Note on Methodology and Sources</h2>
-
-<h3>1822 Directory</h3>
-
-  <p>The 1822 city directory for Washington, D.C., is an incredibly rich resource, but one that presents a unique set of problems. First, the directory does not come close to providing information on all of the city's inhabitants. It lists the residences and business locations for about 2,000 individuals, while noting – per the 1820 Census – that over 13,000 people lived in Washington, D.C. Only a little over 10% of the population is included in the directory, and as a result, this map. It does not even take into account the 19,000 additional people living in Alexandria, Georgetown, and Washington and Alexandria Counties who were also not included in the scope of the directory.</p>
-
-  <p>Why is this picture so incomplete? The answer seems to be that the directory itself reflects the structures of the world in which it was written. The public sphere of Washington, D.C., buttressed by gendered and racial hierarchies, was dominated by white men, and it is these white men who appear overwhelmingly in the directory's pages. White women, who made up 4,820 of the city's inhabitants, do not appear in the directory unless they were widows, operated their own businesses, or otherwise served as heads of household. Free black individuals also appear in the directory, although not at the number of 1,696 as reported in the census. The city's 1,945 enslaved inhabitants are also absent from the directory, unless they lived independently and somehow managed to be mistaken for free blacks. Children of any race do not appear in the directory, nor do transient workers such as sailors.</p>
-
-  <p>Still, this directory remains an incredibly valuable resource for understanding freedom suits. Enslaved petitioners stepped into the public sphere when they made the case for their freedom – the same public sphere dominated by the names peppering the 1822 directory. Those names, although far from providing a complete picture of life in urban Washington, D.C., appear throughout the case papers as jurors, lawyers, witnesses, defendants, and more. About one in every five people listed in the directory has a link to a person page on <em>O Say Can You See</em>, showing some sort of direct connection to the freedom petition process. By mapping out the directory, we hope not only to highlight the spatial relationships and patterns that undergirded legal and personal connections, but also to demonstrate the ubiquity of participation in the freedom suit process and help bring to life an almost 200-year-old snapshot of the nation's capital.</p>
-
-<h3>Names & Addresses</h3>
-
-  <p>Some ambiguities arise when trying to reconcile the data from the directory with data from the freedom suits. To provide a fictitious example, imagine that a John Smith appears as a juror in 1822, but five John Smiths are listed in the directory for that year. Without further information, it is almost impossible to know with confidence which John Smith is the one appearing in the court documents. Misspellings, movement in and out of the city, sons named after fathers, and the inconsistent use of initials all add to the confusion.</p>
-
-   <p>Another problem presented by the 1822 directory is the ambiguity that oftentimes defines its writing. Actual house numbers are not listed, and the directory's creators contented themselves to provide locations such as "10w near Penn Ave," or "corn South Cap St and Ns." What exactly constitutes "near" or which corner of an intersection is meant is left undefined. With this in mind, the locations on the map do come relatively close to the actual locations of the city's historical inhabitants, but complete accuracy cannot be expected. The locations of larger landmarks, such as churches, hotels, and banks were slightly easier to determine, and have been placed on the map as a reference point for those hoping to glean a greater understanding of the urban geography of Washington, D.C., in 1822.</p>
-
-<a name="race"></a><h3>Race</h3>
-
-    <p>The Washington, D.C., of 1822 was governed by an oppressive racial hierarchy, and this was reflected in the language of the city directory. Directory-makers made a notation of "col'd (wo)man" next to the residents of African-American descent.</p>
-
-<figure class="figure figure_large"><%= image_tag "map_directory/example-race-directory.png", alt: "Example records from the 1822 directory with racial descriptions" %>
-<figcaption>Judah Delano, <em>The Washington Directory</em> (Washington, D.C., 1822), page 72.</figcaption>
-</figure>
-
-    <p>To reproduce the racial language of the directory is to reproduce the language of oppression and white supremacy, but to use more modern or acceptable language may be misleading, providing an inaccurate image of the world in which freedom petitioners lived and the structures they navigated in the pursuit of their freedom. For this reason, the original language of the directory is preserved in this map.</p>
-
-<a name="occupations"></a><h3>Occupations</h3>
-    <p>On the topic of decisions made regarding data, a brief word is required regarding the categorizations of occupational status in the map. All occupations were consolidated into eight categories based on HISCO occupational codes. The categories included professional, administrative, clerical, sales, service, agricultural, and labor. To better reflect the working realities of life in Washington, D.C., the "labor" classification was broken down further into "skilled" and "unskilled."</p>
-
-<blockquote>
-
-<p><em>Administrative</em> includes managerial jobs such as foreman, magistrate, and various government administrators.</p>
-
-<p><em>Agricultural</em> jobs include farmer, gardener, farrier, and other animal husbandry work.</p>
-
-<p><em>Clerical</em> is a category that encompasses the various clerks and messengers as well as inspectors and paymasters.</p>
-
-<p><em>Professional</em> contains careers such as attorney, doctor, teacher, clergyman, and ships pilots.</p>
-
-<p><em>Sales</em> jobs include merchants and shop owners.</p>
-
-<p><em>Service</em> work refers to such jobs as barber, tavern keeper, members of the military, and police officers.</p>
-
-<p><em>Skilled</em> labor requires a specialization, such as blacksmith, printer, shoemaker, or tailor.</p>
-
-<p><em>Unskilled</em> labor is for non-specialized work. These individuals are listed as "laborers" in the directory.</p>
-
-</blockquote>
-
-    <p>It is our hope that transparency concerning all of these potential problems and decisions will help this map achieve its greatest possible usefulness. </p>
-
-</div>
-
-
-<div class="citation">
-
-  <h3>How To Cite this Map</h3>
-
-  <p>Patrick Hoehne, Kaci Nash, Jessica Dussault, Karin Dalziel, and William G. Thomas III. "Early Washington, D.C., Interactive Map." Map. 1822, 1834. <em>O Say Can You See: Early Washington, D.C. Law & Family</em>, 2019. Using Leaflet. (accessed Month DD, YYYY).</p>
-
-</div>
-
-<hr/>
-
-<div class="sources">
-
-  <h4>Sources</h4>
-
-  <p class="small">Delano, Judah. <a href="https://books.google.com/books?id=-EVOAQAAMAAJ&pg=PP7#v=onepage&q&f=false" target="new"><em>The Washington Directory</em></a>. Washington: William Duncan, Twelfth Street West, 1822.</p>
-  <p class="small">Elliot, S. Alfred, and William Elliot. <em>Plan of the City of Washington</em>. Map. Washington, D.C.: S. A. Elliot, 1822. Library of Congress Maps Collection. <a href="https://www.loc.gov/item/88694090/" target="new">https://www.loc.gov/item/88694090/</a> (accessed August 22, 2018).</p>
-  <p class="small">Tanner, Henry S. <em>City of Washington</em>. Map. Philadelphia: H. S. Tanner, 1836. David Rumsey Map Collection. <a href="https://www.davidrumsey.com/luna/servlet/s/39mn62" target="new">https://www.davidrumsey.com/luna/servlet/s/39mn62</a> (accessed August 22, 2018).</p>
-  <p class="small">Flag and Public Building icons by <a href="https://icons8.com/license">Icons8</a>.</p>
-
-</div>
-
+<%# assigns variables from Rails environment to javascript for use with map %>
+<script>
+  var geojsonUrl = "<%= CONFIG["geojson_url"] %>";
+  var memorialUrl = "<%= doc_url(id: "oscys.supp.0004.001") %>";
+  var year = <%= @year %>;
+</script>
 <%= javascript_include_tag 'map' %>

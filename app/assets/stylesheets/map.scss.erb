@@ -1,3 +1,11 @@
+/* PAGE LAYOUT */
+
+.directory-map-btn-group {
+  margin-bottom: 1em;
+}
+
+/* MAP */
+
 .map_container {
   border: solid 5px #aaa;
   border-right: none;
@@ -147,6 +155,12 @@
   }
 }
 
+/* ward keys square not round */
+.label-key-ward li span {
+  border-radius: 0%;
+  width: 30px;
+}
+
 .key-hidden {
   display: none;
 }
@@ -190,5 +204,24 @@
 .key .occ-unskilled { background-color: aqua; }
 
 /* race key colors */
-.key .race-c { background-color: blue; }
+.key .race-fb { background-color: blue; }
 .key .race-w { background-color: yellow; }
+
+/* memorial key colors */
+.key .memorial-e { background-color: white; }
+.key .memorial-q { background-color: darkturquoise; }
+
+/* ward population key colors */
+.key .percent-25 { background-color: white; }
+.key .percent-30 { background-color: yellow; }
+.key .percent-35 { background-color: yellowgreen; }
+.key .percent-gt35 { background-color: green; }
+
+.key .population-1500 { background-color: yellow; }
+.key .population-2000 { background-color: orange; }
+.key .population-2500 { background-color: red; }
+.key .population-gt2500 { background-color: purple; }
+
+.key .property-50000 { background-color: orange; }
+.key .property-150000 { background-color: blue; }
+.key .property-gt150000 { background-color: black; }

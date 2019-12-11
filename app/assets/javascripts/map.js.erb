@@ -2,9 +2,35 @@
 // MAP SET UP //
 // ********** //
 
+<%# TODO set up variable for location of media server on dev / production %>
+
+// request the geojson and load it behind the scenes from the map interface
+// then add the layers to the map when ready
+<%# note currently there is only one request being made at a given time, but
+    in the future there may be more layers for 1834 so leaving as is %>
+var directoryUrl = geojsonUrl+"/"+year+"_directory.json";
+
+console.info("Pulling directory data from: " + directoryUrl);
+var requests = [
+  $.getJSON(directoryUrl),
+  // $.getJSON("https://cdrhdev1.unl.edu/media/data/oscys/output/development/json/1834_directory.json")
+];
+
+$.when
+  .apply($,requests)
+  .done(function() {
+    // assume the same order as outgoing requests, multiple commented out for now
+    // create_and_apply_layers(arguments[0][0], arguments[1][0])
+    create_and_apply_layers(arguments[0])
+  })
+  .fail(function() {
+    console.error("something went wrong with request for directory geojson");
+  });
+
+// the map is created while the above layers are loaded
+
 // create a map zoomed to the middle of Washington DC
 var map = L.map('map').setView([38.89, -77.02], 13.5);
-
 
 // enable to use open street maps baselayer
 // L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -70,7 +96,6 @@ function defaultMarker(color = "#B7B7B7") {
 var buildingFields = [
   "Description",
   "Address"
-
 ];
 
 // these are the fields from the spreadsheet used in the popups
@@ -101,7 +126,8 @@ var directoryFields = [
   "HISCO",
   "Race",
   "Gender",
-  "Address"
+  "Address",
+  "Memorial"
 ];
 
 // these are the fields from the spreadsheet used in the popups
@@ -112,15 +138,27 @@ var foreignFields = [
   "Address"
 ];
 
+// for ward population fields, see individual layer creation
+
+var ward1834PVFields = [
+  "1830_Property_Values",
+  "1830_Total_Population",
+  "Per_Capita",
+  "1830_Improvement_Values"
+];
+
 // these abbrevations are mapped to more descriptive terminology
 // note quotation marks around terminology used in directory
 // they show up in the marker popup information
-var genderRaceMapping = {
-  "c" : "colored",
+var fieldMapping = {
+  // c is a holdover from the original data recorded from the directory
+  "c" : "free black",
+  "e" : "Signatory of Memorial",
   "f" : "female",
   "m" : "male",
   "u" : "unknown",
-  "w" : "white"
+  "w" : "white",
+  "?" : "Possible Signatory of Memorial"
 };
 
 // selects the marker color for each of the following
@@ -155,11 +193,37 @@ var markerColors = {
     "skilled labor" : "blue",
     "unskilled labor" : "aqua"
   },
+  "Memorial" : {
+    "e" : "white",
+    "?" : "darkturquoise"
+  },
   "Race" : {
     "c" : "blue",
     "w" : "yellow"
   }
 };
+
+var polygonColors = {
+  "population" : {
+    1500: "yellow",
+    2000: "orange",
+    2500: "red",
+    "2500+" : "purple"
+  },
+  "property_values" : {
+    "low": "orange",
+    "high": "blue",
+    "very_high": "black"
+  },
+  "race" : {
+    25: "white",
+    30: "yellow",
+    35: "yellowgreen",
+    "35+" : "green"
+  }
+}
+
+var wardOpacity = 0.6;
 
 // these images are used to mark building types
 var markerImages = {
@@ -192,82 +256,119 @@ var markerImages = {
   "sweden"  : "<%= asset_path "map_directory/sweden.png" %>",
 }
 
-
 // ****** //
 // LAYERS //
 // ****** //
 
-var courtRole1822 = createColorMarkerLayer(directory_json_1822, "Court Role", false)
-map.addLayer(courtRole1822);
+var create_and_apply_layers = function(directory_json) {
+  // court role  will be added to the map below
+  var courtRole = createColorMarkerLayer(directory_json, "Court Role", false)
+  var race = createColorMarkerLayer(directory_json, "Race", true)
+  var gender = createColorMarkerLayer(directory_json, "Gender", true)
+  var occupations = createColorMarkerLayer(directory_json, "HISCO", true)
+  var memorial = createColorMarkerLayer(directory_json, "Memorial", true)
 
-// create the additional layers but do not display yet on the map
-var race1822 = createColorMarkerLayer(directory_json_1822, "Race", true)
-var gender1822 = createColorMarkerLayer(directory_json_1822, "Gender", true)
-var occupations1822 = createColorMarkerLayer(directory_json_1822, "HISCO", true)
+  if (year == "1822") {
+    // adds the building layer
+    var buildings = L.geoJSON(building_json_1822, {
+      pointToLayer: function (feature, latlng) {
+        image = markerImages[feature.properties["Description"]] || markerImages["default"];
+        var icon = L.icon({ iconUrl: image, iconSize: [20, 20] });
+        return L.marker(latlng, { icon: icon });
+      },
+      onEachFeature: onEachFeatureBuilding,
+    })
 
-// adds the 1822 building layer
-var buildings1822 = L.geoJSON(building_json_1822, {
-  pointToLayer: function (feature, latlng) {
-    image = markerImages[feature.properties["Description"]] || markerImages["default"];
-    var icon = L.icon({ iconUrl: image, iconSize: [20, 20] });
-    return L.marker(latlng, { icon: icon });
-  },
-  onEachFeature: onEachFeatureBuilding,
-});
+    // adds the foreign dignitaries layer
+    var foreign = L.geoJSON(foreign_json_1822, {
+      pointToLayer: function (feature, latlng) {
+        country = feature.properties["Country"].toLowerCase();
+        image = markerImages[country] || markerImages["default"];
+        var icon = L.icon({ iconUrl: image, iconSize: [18, 18] });
+        return L.marker(latlng, { icon: icon });
+      },
+      onEachFeature: onEachFeatureForeign,
+    });
 
-// adds the 1822 foreign dignitaries layer
-var foreign1822 = L.geoJSON(foreign_json_1822, {
-  pointToLayer: function (feature, latlng) {
-    country = feature.properties["Country"].toLowerCase();
-    image = markerImages[country] || markerImages["default"];
-    var icon = L.icon({ iconUrl: image, iconSize: [18, 18] });
-    return L.marker(latlng, { icon: icon });
-  },
-  onEachFeature: onEachFeatureForeign,
-});
-
-// adds the 1822 roles in congress layer
-var congress1822 = L.geoJSON(congress_json_1822, {
-  pointToLayer: function (feature, latlng) {
-    party = congressMapping[feature.properties["Political Party"]] || "unknown"
-    role = congressMapping[feature.properties["Occupation"]] || "unknown"
-    imgName = party + "_" + role;
-    imgPath = markerImages[imgName] || markerImages["default"];
-    var icon = L.icon({ iconUrl: imgPath, iconSize: [18, 18] });
-    return L.marker(latlng, { icon: icon });
-  },
-  onEachFeature: onEachFeatureCongress,
-});
-
-// uncomment these lines if you would prefer that these layers
-// are displayed on the map on startup
-// buildings1822.addTo(map);
-// congress1822.addTo(map);
-// foreign1822.addTo(map);
-
-// creates a UI control for switching between layers
-var layerControl = L.control.layers(
-  // the first group of layers only displays ONE layer at a given time
-  {
-    "1822 Court Role": courtRole1822,
-    "1822 Occupation" : occupations1822,
-    "1822 Race" : race1822,
-    "1822 Gender" : gender1822,
-  },
-  // the second group of layers may have multiple displaying at once
-  {
-    "1822 Public Buildings" : buildings1822,
-    "1822 Congress" : congress1822,
-    "1822 Foreign Dignitaries" : foreign1822,
-  },
-  // further layer control settings are available
-  // such as the location on the map ("topright" at the moment)
-  {
-    collapsed: false, autoZIndex: false, sortLayers: false,
+    // adds the roles in congress layer
+    var congress = L.geoJSON(congress_json_1822, {
+      pointToLayer: function (feature, latlng) {
+        party = congressMapping[feature.properties["Political Party"]] || "unknown"
+        role = congressMapping[feature.properties["Occupation"]] || "unknown"
+        imgName = party + "_" + role;
+        imgPath = markerImages[imgName] || markerImages["default"];
+        var icon = L.icon({ iconUrl: imgPath, iconSize: [18, 18] });
+        return L.marker(latlng, { icon: icon });
+      },
+      onEachFeature: onEachFeatureCongress,
+    });
   }
-)
-layerControl.addTo(map);
 
+  // adds the wards with population coloring
+  var wpfield = (year == "1822") ? "1820_Total_Population" : "1830_Total_Population";
+  var wardPop = L.geoJSON(wards_json, {
+    onEachFeature: onEachFeatureWard([wpfield]),
+    style: styleWardPopulation,
+  });
+
+  var wrfield = (year == "1822") ? "1820_Percent_African_American" : "1830_Percent_African_American";
+  var wardRace = L.geoJSON(wards_json, {
+    onEachFeature: onEachFeatureWard([wrfield]),
+    style: styleWardRace,
+  });
+
+  if (year == "1834") {
+    var wardPropertyValues = L.geoJSON(wards_json, {
+      // NOTE: Per_Capita is an invented field from property values / population
+      onEachFeature: onEachFeatureWard(ward1834PVFields),
+      style: styleWardPropertyValues,
+    });
+  }
+
+  map.addLayer(courtRole);
+
+  // uncomment these lines if you would prefer that these layers
+  // are displayed on the map on startup
+  // buildings.addTo(map);
+  // congress.addTo(map);
+  // foreign.addTo(map);
+
+  // creates a UI control for switching between layers
+  if (year == "1822") {
+    checkboxes = {
+      "Public Buildings" : buildings,
+      "Congress" : congress,
+      "Foreign Dignitaries" : foreign,
+      "1820 Ward Population": wardPop,
+      "1820 Ward % African American": wardRace,
+    }
+  } else {
+    checkboxes = {
+      "1830 Ward Population": wardPop,
+      "1830 Ward % African American": wardRace,
+      "1830 Ward Property Values": wardPropertyValues
+    }
+  }
+  var layerControl = L.control.layers(
+    // the first group of layers only displays ONE layer at a given time
+    {
+      "Court Role": courtRole,
+      "Occupation" : occupations,
+      "Race" : race,
+      "Gender" : gender,
+      "Memorial" : memorial
+    },
+    // the second group of layers may have multiple displaying at once
+    checkboxes,
+    // further layer control settings are available
+    // such as the location on the map ("topright" at the moment)
+    {
+      collapsed: false, autoZIndex: false, sortLayers: false,
+    }
+  )
+  layerControl.addTo(map);
+
+}
 
 // ****** //
 // EVENTS //
@@ -315,6 +416,17 @@ function buildRecordName(props, name, firstName=null, prefix=null, suffix=null) 
   });
   // return the name pieces in order with a space separator
   return filtered.join(" ");
+};
+
+// divides ward property values by ward population to determine
+// per capita number (two decimal places)
+// only relevant for 1834 map because of 1830 information
+function calculatePerCapita(props) {
+  var pv = props["1830_Property_Values"];
+  var pop = props["1830_Total_Population"];
+  if (pv && pop) {
+    return (pv / pop).toFixed(2);
+  }
 };
 
 // creates a simple marker layer from the geojson
@@ -379,19 +491,31 @@ function htmlBuilder(heading, props, fieldList, url) {
   var html = '<div class="marker_popup">';
   html += '<h2>'+heading+'</h2>';
   html += '<ul>';
+
+  // fields coming straight out of the files are iterated over
   for (var i = 0; i < fieldList.length; i++) {
     var field = fieldList[i];
-    if (props.hasOwnProperty(field) && props[field].length > 0) {
+    if (props.hasOwnProperty(field) && props[field].length != 0) {
       var label = field.replace(/_/g, " ");
       if (label == "HISCO") { label = "Work Category"; }
       var val = props[field];
-      if (label == "Gender" || label == "Race") {
-        val = genderRaceMapping[val] || val;
+      if (label == "Gender" || label == "Race" || label == "Memorial") {
+        val = fieldMapping[val] || val;
       }
-      html += '<li><strong>'+label+'</strong>: '+val+'</li>';
+      // memorial needs to be a link, all other values are simply displayed
+      if (label == "Memorial") {
+        html += '<a href="'+memorialUrl+'" target="_blank">'+val+'</a>'
+      } else {
+        html += '<li><strong>'+label+'</strong>: '+val+'</li>';
+      }
+    } else if (field == "Per_Capita") {
+      // create per capita from property values / population
+      var pc = calculatePerCapita(props);
+      if (pc) { html += '<li><strong>Per Capita</strong>: '+pc+'</li>' }
     }
   }
-  if (url) { html += '<li><a href="'+url+'" target="_blank">More Info on <em>OSCYS</em></a></li>' }
+
+  if (url) { html += '<li><a href="'+url+'" target="_blank">Possible Match(es) in Court Documents</a></li>' }
   html += '</ul>';
   html += '</div>';
   return html;
@@ -427,6 +551,15 @@ function onEachFeatureForeign(feature, layer) {
   layer.bindPopup(html);
 };
 
+function onEachFeatureWard(fields) {
+  return function onEachFeature(feature, layer) {
+    props = feature.properties;
+    var name = props["Name"];
+    var html = htmlBuilder(name, props, fields, null);
+    layer.bindPopup(html);
+  }
+};
+
 // creates a popup for the directory markers
 // NOTE: update the directoryFields values at the top of this file to change
 // which fields are being displayed in popups
@@ -435,3 +568,38 @@ function onEachFeature(feature, layer) {
   var html = htmlBuilder(name, feature.properties, directoryFields, feature.properties["OSCYS Link"]);
   layer.bindPopup(html);
 };
+
+function styleWardPopulation(feature) {
+  var pop = (year == "1822") ? feature.properties["1820_Total_Population"] : feature.properties["1830_Total_Population"];
+  var colors = polygonColors["population"];
+  var fill = "grey";
+  if (pop < 1500) { fill = colors[1500] }
+  else if (pop < 2000) { fill = colors[2000] }
+  else if (pop < 2500) { fill = colors[2500] }
+  else { fill = colors["2500+"] }
+
+  return { fillColor: fill, color: "black", fillOpacity: wardOpacity };
+}
+
+function styleWardPropertyValues(feature) {
+  var val = feature.properties["1830_Property_Values"];
+  var colors = polygonColors["property_values"];
+  var fill = "grey";
+  if (val < 50000) { fill = colors["low"] }
+  else if (val < 150000) { fill = colors["high"] }
+  else { fill = colors["very_high"] }
+
+  return { fillColor: fill, color: "black", fillOpacity: wardOpacity };
+}
+
+function styleWardRace(feature) {
+  var perc = (year == "1822") ? feature.properties["1820_Percent_African_American"] : feature.properties["1830_Percent_African_American"];
+  var colors = polygonColors["race"];
+  var fill = "grey";
+  if (perc < 25) { fill = colors[25] }
+  else if (perc < 30) { fill = colors[30] }
+  else if (perc < 35) { fill = colors[35] }
+  else { fill = colors["35+"] }
+
+  return { fillColor: fill, color: "black", fillOpacity: wardOpacity };
+}

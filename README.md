@@ -9,7 +9,7 @@ git clone git@github.com:CDRH/earlywashingtondc.git
 bundle install
 ```
 
-Copy `config/config.demo.yml` to `config/config.yml` and update it to reflect the correct solr, rdf, and owl urls.  You will need to create files in the same way at `config/database.yml` and `config/secrets.yml` if they do not exist.
+Copy `config/config.demo.yml` to `config/config.yml` and update it to reflect the correct solr, media server json directory, rdf, and owl urls.  You will need to create files in the same way at `config/database.yml` and `config/secrets.yml` if they do not exist.
 
 ```
 rails s
@@ -70,6 +70,10 @@ TEI files are converted and uploaded to Solr in the data_oscys project. The Rail
 #### TEI -> HTML
 
 On a case, document, or person page, some of the metadata is provided by Solr. For documents in particular, HTML snippets pregenerated from TEI XML files are pulled into the Rails application. These contain text, images, page breaks, and footnotes.
+
+#### Map
+
+There is a map built with Leaflet.js. It pulls a historic map layer from a GeoServer instance and contains layers drawn from geoJSON files. Some of these files are located at `app/assets/javascripts/map_data`, but the large directory files are located on the media server.
 
 #### Phusion Passenger and Apache
 
