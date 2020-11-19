@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # external links with named routes
   get 'github' => redirect("https://github.com/CDRH/earlywashingtondc"), :as => :repo
   get 'contribute' => 'static#contribute', as: :contribute
-  get 'changelog' => 'static#changelog', as: :changelog
+  get 'faq' => 'static#faq', as: :faq
   get 'ead' => 'static#ead', as: :ead
 
   # documents (browsing / searching)
