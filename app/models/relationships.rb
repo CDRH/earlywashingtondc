@@ -1,3 +1,5 @@
+require "net/http"
+
 # Does not involve active record, perhaps it should
 # Put this in models because because it feels right to
 # put the RDF retrieval here, but very wrong at the same time.

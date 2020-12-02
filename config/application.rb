@@ -18,5 +18,9 @@ module Oscys
 
     # 404 / 500 page handling
     config.exceptions_app = self.routes
+
+
+    # TODO remove when moving to rails 6
+    config.active_record.sqlite3.represent_boolean_as_integer = true
   end
 end
