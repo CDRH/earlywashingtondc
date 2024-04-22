@@ -39,9 +39,17 @@ var map = L.map('map').setView([38.89, -77.02], 13.5);
 // }).addTo( map );
 
 // stamen map layer, comment this if you are uncommenting the open street maps layer
-var terrainLayer = new L.StamenTileLayer('terrain');
+var terrainLayer = new L.TileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attributionControl: false
+  });
 map.addLayer(terrainLayer);
 
+// add attribution to openstreetmaps
+  L.control.attribution({
+    position: 'bottomleft',
+    prefix: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+  }).addTo(map);
 
 // temporary historical basemap
 // will need to put on production for more permenant basemap
