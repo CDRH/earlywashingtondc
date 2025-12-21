@@ -1,8 +1,4 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
-
   # set up SOLR configuration for the website
   solr_url = CONFIG['solr_url']
   if solr_url.nil?

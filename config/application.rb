@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module Oscys
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.0
+    config.load_defaults 5.2
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
@@ -18,9 +18,5 @@ module Oscys
 
     # 404 / 500 page handling
     config.exceptions_app = self.routes
-
-
-    # TODO remove when moving to rails 6
-    config.active_record.sqlite3.represent_boolean_as_integer = true
   end
 end

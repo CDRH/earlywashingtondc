@@ -157,7 +157,8 @@ class Relationships
     graphs = include_owl ? "FROM <#{@rdf_file}> FROM <#{@owl_file}>" : "FROM <#{@rdf_file}>"
     order = order_by.nil? ? "" :  " ORDER BY #{order_by}"
     query = %{#{@prefixes} SELECT * #{graphs} WHERE #{query_string} #{order}}.squeeze(" ")
-    query_url = URI.escape(query)
+    parser = URI::Parser.new
+    query_url = parser.escape(query)
     url = "#{@sparqler}?query=#{query_url}&format=#{format}"
   end
 

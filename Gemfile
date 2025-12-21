@@ -1,13 +1,11 @@
 source 'https://rubygems.org'
 
-# Custom CDRH gem
-gem 'rsolr_cdrh', git: 'https://github.com/CDRH/rsolr_cdrh.git', tag: 'v2.1.1'
-gem 'solr_helpers', git: 'https://github.com/CDRH/solr_helpers.git', tag: '1.0.0'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 6.0.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.3.6'
+gem 'sqlite3', '~> 1.4'
+# Use Puma as the app server
+gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sassc-rails', '~> 2.1.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -15,8 +13,6 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 #gem 'coffee-rails', '~> 4.0.0'
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 #gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -40,6 +36,15 @@ gem 'listen',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem "ffi", "~> 1.0", '!= 1.9.22', '!= 1.9.23'
+# Additions to Rails defaults
 
+# webpacker and turbolinks disabled above
 
+gem 'jquery-rails'
+
+# Custom cdrh gems for solr
+gem 'rsolr_cdrh', git: 'https://github.com/CDRH/rsolr_cdrh', tag: 'v2.1.1'
+gem 'solr_helpers', git: 'https://github.com/CDRH/solr_helpers', tag: '1.1.0'
+
+# Temp for Rails 6.0
+gem 'psych', '< 4.0'
