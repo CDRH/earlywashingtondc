@@ -146,6 +146,7 @@ class PeopleController < ApplicationController
         return json["results"]["bindings"]
       end
     rescue => e
+      Rails.logger.error "Error parsing SPARQL response to JSON: " + e.inspect
       return nil
     end
   end

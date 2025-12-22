@@ -32,7 +32,7 @@ class Relationships
     begin
       return Net::HTTP.get(URI.parse(url))
     rescue => e
-      Rails.logger.error "There was an error while querying rdf / parsing: #{e}"
+      Rails.logger.error "Error querying SPARQL server: " + e.inspect
       return nil
     end
   end
@@ -154,9 +154,11 @@ class Relationships
   private
 
   def _build_url(query_string="{}", order_by=nil, include_owl=false, format="json")
-    graphs = include_owl ? "FROM <#{@rdf_file}> FROM <#{@owl_file}>" : "FROM <#{@rdf_file}>"
     order = order_by.nil? ? "" :  " ORDER BY #{order_by}"
-    query = %{#{@prefixes} SELECT * #{graphs} WHERE #{query_string} #{order}}.squeeze(" ")
+    # New Fuseki loads graphs at server start, so FROM ... syntax removed
+    #graphs = include_owl ? "FROM <#{@rdf_file}> FROM <#{@owl_file}>" : "FROM <#{@rdf_file}>"
+    #query = %{#{@prefixes} SELECT * #{graphs} WHERE #{query_string} #{order}}.squeeze(" ")
+    query = %{#{@prefixes} SELECT * WHERE #{query_string} #{order}}.squeeze(" ")
     parser = URI::Parser.new
     query_url = parser.escape(query)
     url = "#{@sparqler}?query=#{query_url}&format=#{format}"
