@@ -3,14 +3,15 @@ default: &default
   geojson_url: https://server.unl.edu/media/data/oscys/output/development/json
 
   # RDF
-  prefix_owl: "oscys: <https://server.unl.edu/rdf/oscys.objectproperties.owl#>"
-  prefix_rdf: "osrdf: <https://server.unl.edu/rdf/oscys.relationships#>"
+  # Note: Despite servers using HTTPS, http:// in URLs was necessary
+  prefix_owl: "oscys: <http://earlywashingtondc.org/rdf/oscys.objectproperties.owl#>"
+  prefix_rdf: "osrdf: <http://earlywashingtondc.org/rdf/oscys.relationships#>"
   # owl_file and rdf_file not used with new Fuseki which required
   # loading the oscys.relationships.ttl graph file at Fuseki start.
   # But keeping in config and code, just removing FROM syntax in queries
-  owl_file: "https://server.unl.edu/rdf/oscys.objectproperties.owl"
-  rdf_file: "https://server.unl.edu/rdf/oscys.relationships.ttl"
-  sparqler: "https://server.unl.edu:3030/sparql"
+  owl_file: "http://earlywashingtondc.org/rdf/oscys.objectproperties.owl"
+  rdf_file: "http://earlywashingtondc.org/rdf/oscys.relationships.ttl"
+  sparqler: "http://localhost:3030/sparql"
 
 development:
   <<: *default
