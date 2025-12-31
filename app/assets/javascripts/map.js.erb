@@ -53,13 +53,13 @@ map.addLayer(terrainLayer);
 
 // temporary historical basemap
 // will need to put on production for more permenant basemap
-var wms = "https://cors1601.unl.edu/geoserver/gwc/service/wms";
-historical = new L.TileLayer.WMS(wms, {
-    layers: "oscys:WashingtonDC1",
-    format: "image/png",
-    transparent: true
-});
-map.addLayer(historical);
+//var wms = "https://cors1601.unl.edu/geoserver/gwc/service/wms";
+//historical = new L.TileLayer.WMS(wms, {
+//    layers: "oscys:WashingtonDC1",
+//    format: "image/png",
+//    transparent: true
+//});
+//map.addLayer(historical);
 
 // add a scale to the map
 L.control.scale({maxWidth: 200, position: "bottomleft"}).addTo(map);
