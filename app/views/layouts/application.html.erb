@@ -42,14 +42,17 @@
   gtag('config', 'G-JB747YSN6L');
 </script>
 
+<a href="#main" class="sr-only sr-only-focusable">
+  Skip to main content
+</a>
 
   <div id="wrapper" class="container">
     <%# image_tag "o-say_logo_RGB.png", :class=> "logo" %>
-    <div class="header">
+    <header id="header" class="header">
 	    
 	    <div class="oscys_mast">
 			<div class="oscys_logo">
-				<%= image_tag "oscys_logo.png" %>  
+				<%= image_tag "oscys_logo.png", alt: "O Say Can You See logo" %>  
 			</div>
 			<div class="oscys_title">
 				<h1><%= link_to "O Say Can You See", home_path %></h1>
@@ -58,23 +61,24 @@
 		</div><!-- /oscys_mast -->
 	
 	
-    </div>
+    </header>
 
     <div class="navbar navbar-default">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Expand or collapse main menu">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
       </div>
-      <div class="navbar-collapse collapse">
+      <nav class="navbar-collapse collapse" aria-label="Main Menu">
         <!--
           <ul class="nav navbar-nav">
             <li class="active"><%# link_to "Home", home_path %></li>
           </ul>
         -->
         <!--<p class="navbar-text">Discover by...</p>--> 
+        <div class="row">
         <ul class="nav navbar-nav">
           <li ><%= link_to "Cases", cases_path %></li>
           <li ><%= link_to "People", people_path %></li>
@@ -87,24 +91,28 @@
           <li><%= link_to "FAQ", faq_path %></li>
           <li><%= link_to "About", about_path %></li>
         </ul>
-      </div><!--/.nav-collapse -->
+        </div>
+      </nav><!--/.nav-collapse -->
     </div><!-- /.navbar -->
-    <div id="main" class="main_content">
+    <main id="main" class="main_content" tabindex="-1">
       <!-- begin content -->
       <%= yield.to_s.force_encoding("UTF-8") %>
       <!-- end content -->
-    </div>
-    <div id="footer" class="footer">
+    </main>
+    <footer id="footer" class="footer">
       <div class="footerinfo">
         <p><%= link_to "How to Cite this Project", {:name => "cite", :action => "sub", :controller => "about"} %>.</p>
-        <p>By William G. Thomas and the <a href="http://cdrh.unl.edu/" target="new">Center for Digital Research in the Humanities</a>, distributed under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="new">Creative Commons License.</a><br>Pierre Charles L'Enfant. <i>Plan of the City of Washington</i>. Philadelphia: Thackara &amp; Vallance, c. 1794. From <a href="http://www.loc.gov/item/88694120" target="new">Library of Congress, Map Collections</a>.</p>
+        <p>By William G. Thomas and the <a href="https://cdrh.unl.edu/" target="new">Center for Digital Research in the Humanities</a>, distributed under a <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="new">Creative Commons License.</a><br>Pierre Charles L'Enfant. <i>Plan of the City of Washington</i>. Philadelphia: Thackara &amp; Vallance, c. 1794. From <a href="https://www.loc.gov/item/88694120" target="new">Library of Congress, Map Collections</a>.</p>
       </div>
       <div class="icons">
-        <a href="http://www.neh.gov/" target="blank"><%= image_tag "logo_neh_white.gif" %></a> &nbsp;&nbsp;&nbsp; 
-        <a href="http://mith.umd.edu/" target="blank"><%= image_tag "logo_mith_white.png" %></a> &nbsp;&nbsp;&nbsp; 
-        <a href="http://www.unl.edu/" target="blank"><%= image_tag "logo_unl_white.gif" %></a>
+        <a href="https://www.neh.gov/" target="blank"><%= image_tag "logo_neh_white.gif", alt: "NEH logo" %></a> &nbsp;&nbsp;&nbsp; 
+        <a href="https://mith.umd.edu/" target="blank"><%= image_tag "logo_mith_white.png", alt: "MITH logo" %></a> &nbsp;&nbsp;&nbsp; 
+        <a href="https://www.unl.edu/" target="blank"><%= image_tag "logo_unl_white.gif", alt: "UNL logo" %></a>
       </div>
-    </div>
+      <div class="back-to-top">
+        <a href="#wrapper">Back to top</a>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
