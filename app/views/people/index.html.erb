@@ -22,7 +22,7 @@
       <div class="col-md-8">
         <!-- Browse by Attorney -->
         <%= form_tag person_browse_path do %>
-        <% select_tag :id, options_for_select(@attorneys), :prompt => "Select Attorney", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
+        <% select_tag :id, options_for_select(@attorneys), :prompt => "Select Attorney", :class => "custom-dropdown__select", :"aria-label" => "Attorney", :onchange => "this.form.submit();" %>
         <% end %>
       </div>
     </div>
@@ -33,7 +33,7 @@
       <div class="col-md-8">
         <!-- Browse by Plaintiff -->
         <%= form_tag person_browse_path do %>
-        <% select_tag :id, options_for_select(@plaintiff_facet), :prompt => "Select Plaintiff", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
+        <% select_tag :id, options_for_select(@plaintiff_facet), :prompt => "Select Plaintiff", :class => "custom-dropdown__select", :"aria-label" => "Plaintiff", :onchange => "this.form.submit();" %>
         <% end %>
       </div>
     </div>
@@ -43,7 +43,7 @@
       <div class="col-md-8">
         <!-- Browse by Defendant -->
         <%= form_tag person_browse_path do %>
-        <% select_tag :id, options_for_select(@defendant_facet), :prompt => "Select Defendant", :class => "custom-dropdown__select", :onchange => "this.form.submit();" %>
+        <% select_tag :id, options_for_select(@defendant_facet), :prompt => "Select Defendant", :class => "custom-dropdown__select", :"aria-label" => "Defendant", :onchange => "this.form.submit();" %>
         <% end %>
       </div>
     </div>
@@ -63,7 +63,7 @@
 
     <%= form_tag connection_type_path, :method => "get", :class => "form-inline" do %>
       <div class="form-group">
-        <%= select_tag :type, options_for_select(type_options, params[:type]), :prompt => "Select Relationship", :class => "custom-dropdown__select" %>
+        <%= select_tag :type, options_for_select(type_options, params[:type]), :prompt => "Select Relationship", :"aria-label" => "Relationship", :class => "custom-dropdown__select" %>
         <%= submit_tag("Go!", :class => "btn btn-info") %>
       </div>
     <% end %>
@@ -76,8 +76,8 @@
 
     <%= form_tag relationships_path, :method => "get", :class => "form-inline" do %>
       <div class="form-group">
-        <%= select_tag :per1id, options_for_select(@attorneys, params["per1id"]), :prompt => "Select First Attorney", :class => "custom-dropdown__select" %>
-        <%= select_tag :per2id, options_for_select(@attorneys, params["per2id"]), :prompt => "Select Second Attorney", :class => "custom-dropdown__select" %>
+        <%= select_tag :per1id, options_for_select(@attorneys, params["per1id"]), :prompt => "Select First Attorney", :"aria-label" => "First Attorney", :class => "custom-dropdown__select" %>
+        <%= select_tag :per2id, options_for_select(@attorneys, params["per2id"]), :prompt => "Select Second Attorney", :"aria-label" => "Second Attorney", :class => "custom-dropdown__select" %>
         <%= submit_tag("Find Relationships", :class => "btn btn-info") %>
       </div>
     <% end %>
