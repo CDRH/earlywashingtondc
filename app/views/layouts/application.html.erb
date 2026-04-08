@@ -42,9 +42,9 @@
   gtag('config', 'G-JB747YSN6L');
 </script>
 
-<a href="#main" class="sr-only sr-only-focusable">
-  Skip to main content
-</a>
+  <a href="#main" class="sr-only sr-only-focusable">
+    Skip to main content
+  </a>
 
   <div id="wrapper" class="container">
     <%# image_tag "o-say_logo_RGB.png", :class=> "logo" %>
@@ -80,16 +80,16 @@
         <!--<p class="navbar-text">Discover by...</p>--> 
         <div class="row">
         <ul class="nav navbar-nav">
-          <li ><%= link_to "Cases", cases_path %></li>
-          <li ><%= link_to "People", people_path %></li>
-          <li ><%= link_to "Families", family_path %></li>
-          <li><%= link_to "Stories", stories_path %></li>
-          <li><%= link_to "Maps", maps_path %></li>
+          <li ><%= link_to "Cases", cases_path, 'aria-current': (current_page?(cases_path) ? 'page' : nil) %></li>
+          <li ><%= link_to "People", people_path, 'aria-current': (current_page?(people_path) ? 'page' : nil) %></li>
+          <li ><%= link_to "Families", family_path, 'aria-current': (current_page?(family_path) ? 'page' : nil) %></li>
+          <li><%= link_to "Stories", stories_path, 'aria-current': (current_page?(stories_path) ? 'page' : nil) %></li>
+          <li><%= link_to "Maps", maps_path, 'aria-current': (current_page?(maps_path) ? 'page' : nil) %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Search", advancedsearch_path %></li>
-          <li><%= link_to "FAQ", faq_path %></li>
-          <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "Search", advancedsearch_path, 'aria-current': (current_page?(advancedsearch_path) ? 'page' : nil) %></li>
+          <li><%= link_to "FAQ", faq_path, 'aria-current': (current_page?(faq_path) ? 'page' : nil) %></li>
+          <li><%= link_to "About", about_path, 'aria-current': (current_page?(about_path) ? 'page' : nil) %></li>
         </ul>
         </div>
       </nav><!--/.nav-collapse -->
