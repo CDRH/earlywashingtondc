@@ -9,14 +9,14 @@
 <p class="pullquote">Documents produced for use in a courtroom, like those featured in <em>OSCYS</em>, always have multiple layers of meaning, each intended with different purposes and audiences in mind.</p>
 
 <p>The material form of the documents in the legal record can be particularly telling about the kinds of information and processes the legal establishment put the most value on. Though most American legal documents contain some vestige of handwriting into the twentieth century, it would be a mistake to view each of the 1,070 documents in the <em>OSCYS</em> database as a unique and separate creation. Lawyers and clerks relied heavily on formularies and guides, and by the late 18th and early 19th centuries, ever-cheaper print meant that nearly every routine legal procedure in major American cities had a corresponding printed form. Which legal processes deserved forms and which did not, as well as how different kinds of documents were produced, can suggest something about the frequency of these processes and how they were viewed by the legal establishment. For example, even a bird's-eye view of document images from the collection suggests how different modes of production and use characterize different kinds of documents and the time period in which they were produced. Compare, for example, this set of documents from the 1810s and 20s, showing a mix of handwritten and printed forms, mostly summonses:
-<figure class="figure_center"><%= image_tag("language_of_law.01.jpg") %></figure>
+<figure class="figure_center"><%= image_tag("language_of_law.01.jpg", alt: "Screenshot of several document images") %></figure>
  
 to this set of documents from the 1830s and 40s, where printed forms predominate (the top row, for instance, is made up entirely of forms): 
-<figure class="figure_center"><%= image_tag("language_of_law.02.jpg") %></figure></p>
+<figure class="figure_center"><%= image_tag("language_of_law.02.jpg", alt: "Screenshot of several document images") %></figure></p>
 
 <p>The <em>OSCYS</em> database includes over a thousand documents covering 255 different case files. Importantly though, only 38% of the case files in the <em>OSCYS</em> database include more than three documents, while only a few quite exceptional case files include more than ten documents. This means that the majority of the case files consist primarily of only a few standard documentary types. In fact, just two types of document&#8212; petitions for freedom and summonses&#8212;dominate the database, making up 68% of its total collection.</p>
 
-<figure class="figure_right figure_medium"><%= image_tag("language_of_law.03.jpg") %>
+<figure class="figure_right figure_medium"><%= image_tag("language_of_law.03.jpg", alt:"") %>
 <figcaption>A printed form for the sale of enslaved people. Alexander Auctions, Chesapeake City, Md., (11 February 2015), lot 986.</figcaption>
 </figure>
 
@@ -30,7 +30,7 @@ to this set of documents from the 1830s and 40s, where printed forms predominate
 
 <p>Though no printed forms were available for petitions, a quick look at the language of the documents in the <em>OSCYS</em> set shows unsurprisingly that these documents were not composed <em>de novo</em>. While most scholars know to ignore phrases like "humbly sheweth" (which appears 83 times in the <em>OSCYS</em> petition set) as stock legal jargon, it is always tempting to read petitionary language like "entitled to [his/her/their] freedom" or "[unjustly/unlawfully/illegally] held in bondage" with microscopic precision and as powerful claims of the enslaved, when in fact, these phrasings are used in nearly half the petitions and have similar formulaic origins. In some cases, precise petitionary language can be traced to the style of a given attorney. For example, the particular phrasing "grant a subpoena to" (as opposed to other subpoena request phrasings) appears in 20 petitions for freedom, all but two of which were prepared by John J. Dermott. This is not to deny that important case-specific information can be gleaned from the petitions but that care needs to be taken in the interpretation of their language. Even though no form books for preparing these petitions seem to be available today, it's likely that the lawyers who handled these cases on a regular basis had an in-house style or formulary which they relied on, "filling in the blanks' so to speak as they produced each case. It makes sense then to pay close attention to the names, places, and other proper nouns in these documents while avoiding too deep an interpretation of the broad language of each petition on its own. In addition, it might enable researchers to pay special attention to those petitions which serve as outliers in the larger set, those, for example, which go well beyond the one-side of a sheet of paper typical in such a document.</p>
 
-<figure class="figure_left figure_medium"><%= image_tag("language_of_law.04.jpg") %>
+<figure class="figure_left figure_medium"><%= image_tag("language_of_law.04.jpg", alt:"") %>
 <figcaption>Manuscript Summons: July 1, 1808. <!--Summons of Daniel Rapine--><%= link_to "Summons of Daniel Rapine", doc_path("oscys.case.0003.002") %> in the matter of <!--Kitty and -->Ann Shorter<!-- (<em>OSCYS</em> Case 3.2)--></figcaption>
 </figure>
 
@@ -42,7 +42,7 @@ to this set of documents from the 1830s and 40s, where printed forms predominate
 
 <p class="pullquote">The ability of slave owners to evade summons could stymie the legal process for years and delay any justice for those petitioning for freedom.</p>
 
-<figure class="figure_right figure_medium"><%= image_tag("language_of_law.05.jpg") %>
+<figure class="figure_right figure_medium"><%= image_tag("language_of_law.05.jpg", alt:"") %>
 <figcaption>Printed Summons: April 5, 1839. <!--Summons of Gabriel Moore--><%= link_to "Summons of Gabriel Moore", doc_path("oscys.case.0113.002") %> in the matter of Charles Cross<!-- (<em>OSCYS</em> Document 113.2)--></figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ to this set of documents from the 1830s and 40s, where printed forms predominate
 
 <p>For some cases though, the <em>OSCYS</em> database includes pre-trial material such as <!--depositions, affidavits, certificates,--><%= link_to "depositions", search_path({:qfield => "subCategory", :qtext => "Deposition"}) %>, <%= link_to "affidavits", search_path({:qfield => "subCategory", :qtext => "Affidavit"}) %>, <%= link_to "certificates", search_path({:qfield => "subCategory", :qtext => "Certificate"}) %> and other supporting documentation. Depositions were official statements of fact solicited by attorneys in a case, sworn to by a witness, and submitted to the court. Similarly, affidavits were also sworn statements volunteered by members of the community or even the parties to the case themselves in hopes of securing a point of fact. Finally, <!--interrogatories--><%= link_to "interrogatories", search_path({:qfield => "subCategory", :qtext => "Interrogatories"}) %> were lists of questions submitted by attorneys to be answered by witnesses relating to the facts at hand. Where they exist, interrogatories can prove to be the most detail-rich of any court document. Full of highly specific questions related to the background of the enslaved person and his/her claim to freedom, they frequently offer quotidian details about domestic life, conditions of enslavement, and family dynamics. These lists of questions, of course, were engineered by lawyers and the witnesses only answered what was asked of them&#8212;and not often wholly truthfully at that. Leading questions litter the documents in an attempt to spin the narrative one direction or another, such as <!--this question--><%= link_to "this question", doc_path("oscys.case.0083.006") %> on behalf of a slave owner: "Do you or do you not know that after the said sale and purchase the petitioner broke jail in the town of Alexandria and was a runaway for a considerable length of time thereafter."</p>
 
-<figure class="figure_left figure_medium"><%= image_tag("language_of_law.06.jpg") %>
+<figure class="figure_left figure_medium"><%= image_tag("language_of_law.06.jpg", alt: "Image of printed fugitive slave broadside") %>
 <figcaption><!--Fugitive Slave Broadside--><%= link_to "Fugitive Slave Broadside", doc_path("oscys.case.0020.003") %> (15 June 1809)</figcaption>
 </figure>
 
@@ -68,7 +68,7 @@ to this set of documents from the 1830s and 40s, where printed forms predominate
 
 <p><!--Jury instructions--><%= link_to "Jury instructions", search_path({:qfield => "subCategory", :qtext => "Jury Instructions"}) %> exist for 14 of the cases in the <em>OSCYS</em> database and give valuable clues as to the legal reasoning and arguments at play in a dispute. For example, in the <!--jury instructions--><%= link_to "jury instructions", doc_path("oscys.case.0243.009") %> submitted by Eleanora Bell and her attorney in an <!--1851 case--><%= link_to "1851 case", case_path("oscys.caseid.0248") %>, you can see pretty readily the direction the arguments in Court had gone. Bell's attorney reminds the jury that they must find that Bell was rightfully manumitted by her former owner if he was in sound mind at the time he wrote the document, regardless of how irrational he could be at other times. This suggests, of course, that a litany of witnesses or statements had been brought forward by the defendant to prove that her former owner was frequently not of sound mind. The existence of jury instructions in the archival record does not mean they were actually read to the jury. Several case files include jury instructions that were objected to by opposing counsel and sustained. Annotations in pencil, likely by a clerk of the Court, record the refusal of the instructions as in this 1835 example:</p>
 
-<figure class="figure_center"><%= image_tag("language_of_law.07.jpg") %>
+<figure class="figure_center"><%= image_tag("language_of_law.07.jpg", alt: "Image of handwritten jury instructions") %>
 <figcaption><!--Defendant's Jury Instructions--><%= link_to "Defendant's Jury Instructions", doc_path("oscys.case.0020.003") %>, <em>Allen v. Wallingsford</em> (3 June 1835)</figcaption>
 </figure>
 
