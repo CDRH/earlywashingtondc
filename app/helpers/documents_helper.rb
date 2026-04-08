@@ -7,7 +7,11 @@ module DocumentsHelper
     facets.each do |key, value|
       labelkey = key == "caseid" ? "case" : key
       # have to make the label html_safe before putting it inside a link or else &lg;you'll regret it&gt;
-      label = "#{labelkey.titleize} <span class='badge'>#{value}</span>".html_safe
+      if value != 1
+        label = "#{labelkey.titleize}<span class='sr-only-clip'>:</span> <span class='badge'>#{value}<span class='sr-only-clip'>#{value} results</span></span>".html_safe
+      else
+        label = "#{labelkey.titleize}<span class='sr-only-clip'>:</span> <span class='badge'>#{value}<span class='sr-only-clip'>#{value} result</span></span>".html_safe
+      end
       link = "#{link_to(label, search_path(facet_results(key)), :class => facet_classes(key, value, perm_facet))}"
       links << link
     end
