@@ -85,6 +85,18 @@ class DocumentsController < ApplicationController
     # default response is 50 pages, divide and round up for all
     # @total_pages = (@docs[:num_found].to_f/rows).ceil
     @total_pages = @docs[:pages]
+    # add search terms and filters to page title
+    title_facets = ["facet","page"]
+    param_keys = params.keys
+    if params["qtext"].present? && param_keys.intersect?(title_facets)
+      @title = "Search Results: \"#{params["qtext"]}\" - #{display_facets(params)}"
+    elsif params["qtext"].present?
+      @title = "Search Results: \"#{params["qtext"]}\""
+    elsif param_keys.intersect?(title_facets)
+      @title = "Search Results: #{display_facets(params)}"
+    else
+      @title = "Search"
+    end
   end
 
   def show
@@ -118,4 +130,9 @@ class DocumentsController < ApplicationController
     @locations = location_facets["places"].keys
   end
 
+  private
+
+  def display_facets(params)
+    params.except(:action,:sort,:controller,:qfield,:qtext,:commit,:rows).values.compact_blank.join(" / ")
+  end
 end
