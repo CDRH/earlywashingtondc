@@ -4,9 +4,9 @@
   <div class="col-md-6">
 	  
 	  <ul class="list-group">
-  <%= link_to "Credits & Staff", {:name => "credits", :action => "sub"}, class: "list-group-item" %>
-  <%= link_to "Description of Materials", {:name => "description", :action => "sub"}, class: "list-group-item" %>
-  <%= link_to "Bibliography", {:name => "bibliography", :action => "sub"}, class: "list-group-item" %>  
+  <li><%= link_to "Credits & Staff", {:name => "credits", :action => "sub"}, class: "list-group-item" %></li>
+  <li><%= link_to "Description of Materials", {:name => "description", :action => "sub"}, class: "list-group-item" %></li>
+  <li><%= link_to "Bibliography", {:name => "bibliography", :action => "sub"}, class: "list-group-item" %></li>
 </ul>
 	  
   </div><!-- /column -->
@@ -14,9 +14,9 @@
 	  
 <ul class="list-group">
 
-  <%= link_to "Technical Information", {:name => "technical", :action => "sub"}, class: "list-group-item" %>
-  <%= link_to "Data Download & Query", {:name => "data", :action => "sub"}, class: "list-group-item" %>
-  <%= link_to "How to Cite this Project", {:name => "cite", :action => "sub"}, class: "list-group-item" %>
+  <li><%= link_to "Technical Information", {:name => "technical", :action => "sub"}, class: "list-group-item" %></li>
+  <li><%= link_to "Data Download & Query", {:name => "data", :action => "sub"}, class: "list-group-item" %></li>
+  <li><%= link_to "How to Cite this Project", {:name => "cite", :action => "sub"}, class: "list-group-item" %></li>
 </ul>
 	  
   </div><!-- /column -->
@@ -44,7 +44,7 @@
 <p>Just as important, every relationship of every person, as expressed in these documents (enslaved by, parent of, child of, neighbor of, witness for, client of, . . .), is encoded into a standard, extensible, and widely sharable format. For further information, see <%= link_to "Data Download & Query", {:name => "data", :action => "sub"} %>.</p>
 
 <p>Here's an example of the TEI encoding of people:<br/>
-<%= link_to image_tag("about.01.jpg"), person_path("per.000451") %></p>
+<%= link_to image_tag("about.01.jpg", alt: "Screenshot of TEI encoding of Richard Johnson"), person_path("per.000451") %></p>
 
 <p>Each descriptive entry points to the source document for each attribute. Each attribute can have multiple instances. Name, age, and especially color appeared differently in different documents over time. Residences of the enslaved are named and can be tracked.</p>
 

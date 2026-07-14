@@ -146,8 +146,8 @@
         <% @cases[:docs].each do |doc| %>
           <li><%= link_to doc["title"], case_path(doc["id"]) %></li>
         <% end %>
-        <h4><%= link_to "View more related cases...", search_path(:qfield => "personID_ss", :qtext => @person['id'], :fqfield => "recordType_s", :fqtext => "caseid") if @cases[:num_found].to_i > 50 %></h4>
         </ul>
+        <h4 class="view-more"><%= link_to "View more related cases...", search_path(:qfield => "personID_ss", :qtext => @person['id'], :fqfield => "recordType_s", :fqtext => "caseid") if @cases[:num_found].to_i > 50 %></h4>
       <% end %>
 
       <!-- Documents -->
@@ -158,8 +158,8 @@
         <% @docs[:docs].each do |doc| %>
           <li><%= link_to title_date_label(doc['title'], doc['dateDisplay']), doc_path(doc["id"]) %></li>
         <% end %>
-        <h4><%= link_to "View more related documents...", search_path(:qfield => "personID_ss", :qtext => @person['id']) if @docs[:num_found].to_i > 50 %></h4>
         </ul>
+        <h4 class="view-more"><%= link_to "View more related documents...", search_path(:qfield => "personID_ss", :qtext => @person['id']) if @docs[:num_found].to_i > 50 %></h4>
       <% end %>
   	  
     </div><!--/column-->

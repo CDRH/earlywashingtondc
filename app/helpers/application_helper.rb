@@ -140,7 +140,7 @@ module ApplicationHelper
           end
         rescue
           # if it can't be parsed into JSON just display what you can
-          res += item.to_s
+          res += "<li>" + item.to_s + "</li>"
         end
       end
       res += "</ul>"
