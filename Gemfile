@@ -61,4 +61,4 @@ gem 'jquery-rails'
 
 # Custom cdrh gems for solr
 gem 'rsolr_cdrh', git: 'https://github.com/CDRH/rsolr_cdrh', tag: 'v2.1.1'
-gem 'solr_helpers', git: 'https://github.com/CDRH/solr_helpers', tag: '1.1.0'
+gem 'solr_helpers', git: 'https://github.com/CDRH/solr_helpers', tag: '1.2.0'
