@@ -1,8 +1,19 @@
 <h1>
-  <% if @total_found != 1 %>
-    <%= "#{@total_found} people" %><%= " start with letter #{params[:letter]}" if params[:letter] %>
+  <% if !params[:letter] %>
+    All <%= @total_found %> people
   <% else %>
-    <%= "#{@total_found} person" %><%= " starts with letter #{params[:letter]}" if params[:letter] %>
+    <%= @total_found %>
+    <% if @total_found != 1 %>
+      people start
+    <% else %>
+      person starts
+    <% end %>
+    with
+    <% if params[:letter] == "," %>
+      a comma
+    <% else %>
+      letter <%= params[:letter].capitalize %>
+    <% end %>
   <% end %>
 </h1>
 
