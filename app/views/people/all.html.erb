@@ -1,4 +1,21 @@
-<h1><%= "#{@total_found} people" %><%= " start with letter #{params[:letter]}" if params[:letter] %></h1>
+<h1>
+  <% if !params[:letter] %>
+    All <%= @total_found %> people
+  <% else %>
+    <%= @total_found %>
+    <% if @total_found != 1 %>
+      people start
+    <% else %>
+      person starts
+    <% end %>
+    with
+    <% if params[:letter] == "," %>
+      a comma
+    <% else %>
+      letter <%= params[:letter].capitalize %>
+    <% end %>
+  <% end %>
+</h1>
 
 <div class="main_alpha_menu">
 <%= make_alphabet_menu(@alphabet) %>

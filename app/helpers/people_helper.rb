@@ -6,9 +6,20 @@ module PeopleHelper
     
     link_array = ["<li>" + link_to("All", peopleAll_path()) + "</li>"]
     alphabet_hash.each do |key, value|
-      # TODO figure out what to do with blank strings / missing facet because then the solr query is different
-      label = "#{key} <span>(#{value})</span>".html_safe
-      link_array << "<li>" + link_to(label, peopleAll_path({:letter => key})) + "</li>" if !key.empty? 
+      next if key.empty?
+      label = "#{key.capitalize} ".html_safe
+      if key == ","
+        label << '<span class="sr-only-clip">comma </span>'.html_safe
+      end
+      label << <<~HTML.html_safe
+        <span class="count">#{value}<span class="sr-only-clip">
+      HTML
+      if value != 1
+        label << " people".html_safe
+      else
+        label << " person".html_safe
+      end
+      link_array << "<li>" + link_to(label, peopleAll_path({:letter => key})) + "</li>"
     end
     res += "<ul class='letter_pagination'>" + link_array.join(" ") + "</ul>"
     return res.html_safe
